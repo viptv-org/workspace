@@ -1,0 +1,26 @@
+# Cloned organization repositories (created by ./setup.sh)
+/design/
+/backend/
+/web/
+/tv-web/
+/core/
+/video/
+/tauri-video-plugin/
+/android/
+/mediamp/
+/roku/
+/.github/
+
+# Private developer environment and tooling — never commit
+/.env
+/.local-https/
+/.deploy-rollback/
+/data/
+/.playwright/
+/.playwright-cli/
+
+# Build artifacts (inside cloned repositories)
+/node_modules/
+/target/
+/dist/
+/dist-js/
