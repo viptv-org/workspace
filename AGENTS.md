@@ -13,7 +13,8 @@ own repository. Commit and push inside the owning repo.
 | `design` | Product specs, assets, interaction contract; start here for UX |
 | `backend` | Rust API, auth, catalog/media services, deployment packaging |
 | `web` | Account and admin web app (also the `backend` `dashboard` submodule) |
-| `tv-web` | Shared React viewing client for phone/desktop/Tizen/Vizio |
+| `tv-web` | Shared React viewing client for web, Smart TVs (Tizen/Vizio), and desktop |
+| `desktop` | Native Tauri v2 desktop client for Linux, Windows, macOS |
 | `core` | Shared Crux Rust state, normalization, generated bindings |
 | `video` | React/web/Tizen/Vizio video controller |
 | `tauri-video-plugin` | Tauri native playback adapter |
@@ -40,6 +41,7 @@ own repository. Commit and push inside the owning repo.
 | `backend` | `cargo test --manifest-path server/Cargo.toml`; `scripts/host-check.sh` is the read-only deployment preflight |
 | `web` | `npm run build && npm run test` (build = `tsc -b` + `vite build`) |
 | `tv-web` | `npm run typecheck && npm run test`; full validation adds `npm run build` (design/core pin checks + vite) and Playwright `npm run test:e2e` |
+| `desktop` | `cargo test --manifest-path src-tauri/Cargo.toml`; verify `npm run check` and desktop window launch |
 | `core` | `cargo test`; regenerate bindings with `cargo run -p viptv-typegen`, `scripts/build-native-bindings.sh`, `scripts/build-wasm.sh` |
 | `video` | `npm run check` (typecheck, effect diagnostics, tests) |
 | `tauri-video-plugin` | `npm run check` and `cargo test` (Rust tests need a host media runtime, e.g. GStreamer on Linux) |

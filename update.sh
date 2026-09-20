@@ -9,7 +9,7 @@ set -u
 SCRIPT_DIR=$(CDPATH='' cd -- "$(dirname -- "$0")" && pwd)
 cd "$SCRIPT_DIR"
 
-REPOS="design backend web tv-web core video tauri-video-plugin android mediamp roku .github"
+REPOS="design backend web tv-web desktop core video tauri-video-plugin android mediamp roku .github"
 failures=0
 
 update_one() {

@@ -51,6 +51,11 @@ run_tv_web() {
         in_repo tv-web npm run test
 }
 
+run_desktop() {
+    npm_install_if_needed desktop &&
+        in_repo desktop cargo test --manifest-path src-tauri/Cargo.toml
+}
+
 run_core() {
     in_repo core cargo test
 }
@@ -95,7 +100,7 @@ run_github() {
 
 run_all() {
     failures=0
-    for target in design backend web tv-web core video tauri-video-plugin android mediamp roku github; do
+    for target in design backend web tv-web desktop core video tauri-video-plugin android mediamp roku github; do
         if run_target "$target"; then
             printf '==> %s: OK\n' "$target"
         else
@@ -116,6 +121,7 @@ run_target() {
         backend) run_backend ;;
         web) run_web ;;
         tv-web) run_tv_web ;;
+        desktop) run_desktop ;;
         core) run_core ;;
         video) run_video ;;
         tauri-video-plugin) run_tauri_video_plugin ;;
@@ -134,7 +140,7 @@ run_target() {
 
 usage() {
     printf 'usage: ./run.sh <target>\n'
-    printf 'targets: design backend web tv-web core video tauri-video-plugin android mediamp roku github all\n'
+    printf 'targets: design backend web tv-web desktop core video tauri-video-plugin android mediamp roku github all\n'
 }
 
 list() {
@@ -142,6 +148,7 @@ list() {
     printf 'backend            cargo test --manifest-path server/Cargo.toml\n'
     printf 'web                npm run build && npm run test\n'
     printf 'tv-web             npm run typecheck && npm run test\n'
+    printf 'desktop            cargo test --manifest-path src-tauri/Cargo.toml\n'
     printf 'core               cargo test\n'
     printf 'video              npm run check\n'
     printf 'tauri-video-plugin npm run check && cargo test\n'
