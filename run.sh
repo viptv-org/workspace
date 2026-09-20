@@ -12,7 +12,11 @@
 set -u
 
 SCRIPT_DIR=$(CDPATH='' cd -- "$(dirname -- "$0")" && pwd)
-cd "$SCRIPT_DIR"
+if [ -d "$SCRIPT_DIR/../design" ] && [ ! -d "$SCRIPT_DIR/design" ]; then
+    cd "$SCRIPT_DIR/.."
+else
+    cd "$SCRIPT_DIR"
+fi
 
 # Run a command inside one of the cloned repositories.
 in_repo() {
