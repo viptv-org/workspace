@@ -45,15 +45,14 @@ own repository. Commit and push inside the owning repo.
 | `core` | `cargo test`; regenerate bindings with `cargo run -p viptv-typegen`, `scripts/build-native-bindings.sh`, `scripts/build-wasm.sh` |
 | `video` | `npm run check` (typecheck, effect diagnostics, tests) |
 | `tauri-video-plugin` | `npm run check` and `cargo test` (Rust tests need a host media runtime, e.g. GStreamer on Linux) |
-| `android` | provisioned machine only: `bash scripts/prepare-core.sh && ./gradlew test` (JDK 17, SDK Platform 36, Rust Android targets, cargo-ndk); hosted CI builds otherwise — keep local Gradle off the memory-constrained shared server |
+| `android` | `bash scripts/prepare-core.sh host && ./gradlew --no-daemon :testDebugUnitTest :app:testDebugUnitTest`, then `scripts/prepare-core.sh android && ./gradlew --no-daemon :app:assembleDebug` for the APK (JDK 17, SDK Platform 36, Rust Android targets, cargo-ndk — all installed locally) |
 | `mediamp` | `./gradlew :mediamp-api:compileAndroidMain :mediamp-exoplayer:compileAndroidMain :mediamp-api:assembleUnitTest :mediamp-exoplayer:assembleUnitTest :mediamp-test:assembleUnitTest` (JDK 17, SDK Platform 35) |
 | `roku` | no local automated check; CI stages BrighterScript and runs `scripts/package.py` on the staging tree; device testing is coordinated with the owner |
 | `.github` | organization profile only |
 
-Machine-specific constraints live in each repo's own AGENTS.md — for example
-tv-web bounds Node heap size and worker count on the shared server, and
-android/mediamp prefer hosted Gradle builds. Read the repo's file before
-running heavy checks there.
+Machine-specific constraints live in each repo's own AGENTS.md. The host has
+32 GB RAM and 20 cores, so full local Gradle builds and parallel test runs are
+fine; read the repo's file for any remaining tool-specific notes.
 
 ## Local testing
 
