@@ -53,7 +53,6 @@ uncommitted changes or a diverged branch is reported, never reverted.
 | `video` | React/web/Tizen/Vizio video controller |
 | `tauri-video-plugin` | Tauri native playback adapter |
 | `android` | Android/Android TV app and playback integration |
-| `mediamp` | Android Media3 Compose playback library |
 | `roku` | Native Roku client |
 | `.github` | Organization profile and shared GitHub metadata |
 

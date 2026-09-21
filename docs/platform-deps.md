@@ -21,8 +21,8 @@ not drive them from cmd/PowerShell.
 - Rust: rustup with the `x86_64-pc-windows-msvc` toolchain; this needs the
   Visual Studio Build Tools C++ workload.
 - Node.js LTS from nodejs.org or nvm-windows.
-- Android work (`android`, `mediamp`): JDK 17, Android SDK (Platform 35 for
-  `mediamp`, Platform 36 for `android`), NDK 27.2 + cargo-ndk for `android`'s
+- Android work (`android`): JDK 17, Android SDK (Platform 36), NDK 27.2 +
+  cargo-ndk for `android`'s
   core native libraries.
 - `tauri-video-plugin` Rust tests need a native media runtime available to
   the host (for example GStreamer binaries on PATH).
