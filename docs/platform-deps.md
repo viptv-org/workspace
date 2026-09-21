@@ -57,7 +57,6 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 | `video` | Node 20+ |
 | `tauri-video-plugin` | Node 20+, Rust, host media runtime (GStreamer on Linux) |
 | `android` | JDK 17, Android SDK Platform 36, NDK 27.2, cargo-ndk, Rust Android targets, Node (core sync) |
-| `mediamp` | JDK 17, Android SDK Platform 35 |
 | `roku` | git + python3 (packaging); BrighterScript staging runs in CI |
 | `.github` | nothing (organization profile) |
 
