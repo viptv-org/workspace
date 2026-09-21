@@ -19,7 +19,6 @@ own repository. Commit and push inside the owning repo.
 | `video` | React/web/Tizen/Vizio video controller |
 | `tauri-video-plugin` | Tauri native playback adapter |
 | `android` | Android/Android TV app and playback integration |
-| `mediamp` | Android Media3 Compose playback library |
 | `roku` | Native Roku client |
 | `.github` | Organization profile and shared GitHub metadata |
 
@@ -46,7 +45,6 @@ own repository. Commit and push inside the owning repo.
 | `video` | `npm run check` (typecheck, effect diagnostics, tests) |
 | `tauri-video-plugin` | `npm run check` and `cargo test` (Rust tests need a host media runtime, e.g. GStreamer on Linux) |
 | `android` | `bash scripts/prepare-core.sh host && ./gradlew --no-daemon :testDebugUnitTest :app:testDebugUnitTest`, then `scripts/prepare-core.sh android && ./gradlew --no-daemon :app:assembleDebug` for the APK (JDK 17, SDK Platform 36, Rust Android targets, cargo-ndk — all installed locally) |
-| `mediamp` | `./gradlew :mediamp-api:compileAndroidMain :mediamp-exoplayer:compileAndroidMain :mediamp-api:assembleUnitTest :mediamp-exoplayer:assembleUnitTest :mediamp-test:assembleUnitTest` (JDK 17, SDK Platform 35) |
 | `roku` | no local automated check; CI stages BrighterScript and runs `scripts/package.py` on the staging tree; device testing is coordinated with the owner |
 | `.github` | organization profile only |
 

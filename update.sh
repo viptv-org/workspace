@@ -13,7 +13,7 @@ else
     cd "$SCRIPT_DIR"
 fi
 
-REPOS="design backend web tv-web desktop core video tauri-video-plugin android mediamp roku .github"
+REPOS="design backend web tv-web desktop core video tauri-video-plugin android roku .github"
 failures=0
 
 update_one() {

@@ -19,7 +19,7 @@ else
 fi
 
 # Repositories in the canonical viptv-org layout.
-REPOS="design backend web tv-web desktop core video tauri-video-plugin android mediamp roku .github"
+REPOS="design backend web tv-web desktop core video tauri-video-plugin android roku .github"
 
 # Clone source. Defaults to https://github.com/viptv-org/<repo>.git. Derived
 # from this repository's own origin when that origin is a remote URL pointing

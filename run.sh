@@ -83,15 +83,6 @@ run_android() {
         in_repo android ./gradlew test
 }
 
-run_mediamp() {
-    in_repo mediamp ./gradlew \
-        :mediamp-api:compileAndroidMain \
-        :mediamp-exoplayer:compileAndroidMain \
-        :mediamp-api:assembleUnitTest \
-        :mediamp-exoplayer:assembleUnitTest \
-        :mediamp-test:assembleUnitTest
-}
-
 run_roku() {
     printf '==> [roku] no local check command.\n'
     printf '    CI stages BrighterScript 0.73.1 and runs scripts/package.py on the staging tree.\n'
@@ -104,7 +95,7 @@ run_github() {
 
 run_all() {
     failures=0
-    for target in design backend web tv-web desktop core video tauri-video-plugin android mediamp roku github; do
+    for target in design backend web tv-web desktop core video tauri-video-plugin android roku github; do
         if run_target "$target"; then
             printf '==> %s: OK\n' "$target"
         else
@@ -129,8 +120,7 @@ run_target() {
         core) run_core ;;
         video) run_video ;;
         tauri-video-plugin) run_tauri_video_plugin ;;
-        android) run_android ;;
-        mediamp) run_mediamp ;;
+        android) run_android ;;) run_mediamp ;;
         roku) run_roku ;;
         github) run_github ;;
         all) run_all ;;
@@ -144,7 +134,7 @@ run_target() {
 
 usage() {
     printf 'usage: ./run.sh <target>\n'
-    printf 'targets: design backend web tv-web desktop core video tauri-video-plugin android mediamp roku github all\n'
+    printf 'targets: design backend web tv-web desktop core video tauri-video-plugin android roku github all\n'
 }
 
 list() {
