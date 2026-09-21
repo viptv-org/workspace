@@ -120,7 +120,7 @@ run_target() {
         core) run_core ;;
         video) run_video ;;
         tauri-video-plugin) run_tauri_video_plugin ;;
-        android) run_android ;;) run_mediamp ;;
+        android) run_android ;;
         roku) run_roku ;;
         github) run_github ;;
         all) run_all ;;
@@ -147,7 +147,6 @@ list() {
     printf 'video              npm run check\n'
     printf 'tauri-video-plugin npm run check && cargo test\n'
     printf 'android            bash scripts/prepare-core.sh && ./gradlew test (provisioned machine only)\n'
-    printf 'mediamp            gradle compile + unit-test assembly tasks (JDK 17, SDK 35)\n'
     printf 'roku               no local check; CI packaging, see roku/README.md\n'
     printf 'github             organization profile only\n'
     printf 'all                run every target above\n'

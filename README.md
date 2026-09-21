@@ -8,7 +8,7 @@ wraps each repository's check commands.
 ## Quickstart
 
 1. Install the prerequisites (git, bash, Node LTS, Rust, Python 3 — plus
-   JDK 17 and the Android SDK only if you touch `android`/`mediamp`):
+   JDK 17 and the Android SDK only if you touch `android`):
    [docs/platform-deps.md](docs/platform-deps.md).
 2. Clone and set up:
 
