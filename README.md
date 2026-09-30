@@ -57,6 +57,8 @@ uncommitted changes or a diverged branch is reported, never reverted.
 |---|---|
 | `design` | Product specs, assets, interaction contract; start here for UX |
 | `backend` | Rust API, auth, catalog/media services, deployment packaging |
+| `playback-gateway` | Independent generic media execution and leases |
+| `workspace` | Bootstrap, portable agent skills and handoff coordination |
 | `web` | Account and admin web app |
 | `tv-web` | Shared React viewing client for web, Smart TVs (Tizen/Vizio), and desktop |
 | `desktop` | Native Tauri v2 desktop client for Linux, Windows, macOS |

@@ -1,6 +1,7 @@
 # Cloned organization repositories (created by ./setup.sh)
 /design/
 /backend/
+/playback-gateway/
 /web/
 /tv-web/
 /desktop/

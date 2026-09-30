@@ -43,6 +43,10 @@ run_backend() {
     in_repo backend cargo test --manifest-path server/Cargo.toml
 }
 
+run_playback_gateway() {
+    in_repo playback-gateway cargo test --locked --workspace
+}
+
 run_web() {
     npm_install_if_needed web &&
         in_repo web npm run build &&
@@ -95,7 +99,7 @@ run_github() {
 
 run_all() {
     failures=0
-    for target in design backend web tv-web desktop core video tauri-video-plugin android roku github; do
+    for target in design backend playback-gateway web tv-web desktop core video tauri-video-plugin android roku github; do
         if run_target "$target"; then
             printf '==> %s: OK\n' "$target"
         else
@@ -114,6 +118,7 @@ run_target() {
     case "$1" in
         design) run_design ;;
         backend) run_backend ;;
+        playback-gateway) run_playback_gateway ;;
         web) run_web ;;
         tv-web) run_tv_web ;;
         desktop) run_desktop ;;
@@ -134,12 +139,13 @@ run_target() {
 
 usage() {
     printf 'usage: ./run.sh <target>\n'
-    printf 'targets: design backend web tv-web desktop core video tauri-video-plugin android roku github all\n'
+    printf 'targets: design backend playback-gateway web tv-web desktop core video tauri-video-plugin android roku github all\n'
 }
 
 list() {
     printf 'design             python3 scripts/validate.py\n'
     printf 'backend            cargo test --manifest-path server/Cargo.toml\n'
+    printf 'playback-gateway   cargo test --locked --workspace\n'
     printf 'web                npm run build && npm run test\n'
     printf 'tv-web             npm run typecheck && npm run test\n'
     printf 'desktop            cargo test --manifest-path src-tauri/Cargo.toml\n'
