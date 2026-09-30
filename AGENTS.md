@@ -57,12 +57,13 @@ own repository. Commit and push inside the owning repo.
 | `video` | `npm run check` (typecheck, effect diagnostics, tests) |
 | `tauri-video-plugin` | `npm run check` and `cargo test` (Rust tests need a host media runtime, e.g. GStreamer on Linux) |
 | `android` | `bash scripts/prepare-core.sh host && ./gradlew --no-daemon :testDebugUnitTest :app:testDebugUnitTest`, then `scripts/prepare-core.sh android && ./gradlew --no-daemon :app:assembleDebug` for the APK (JDK 17, SDK Platform 36, Rust Android targets, cargo-ndk — all installed locally) |
-| `roku` | no local automated check; CI stages BrighterScript and runs `scripts/package.py` on the staging tree; device testing is coordinated with the owner |
+| `roku` | follow Roku README/scripts for runtime and contract fixtures, BrighterScript staging and package checks; device testing is coordinated with the owner |
 | `.github` | organization profile only |
 
-Machine-specific constraints live in each repo's own AGENTS.md. The host has
-32 GB RAM and 20 cores, so full local Gradle builds and parallel test runs are
-fine; read the repo's file for any remaining tool-specific notes.
+Machine-specific constraints live in each repo's own AGENTS.md. Follow the
+owner's resource limits; use one worker for expensive Gradle checks rather than
+inferring safe concurrency from host totals. Coordinate device/browser/build
+windows before starting costly or network-changing work.
 
 ## Local testing
 
