@@ -1,5 +1,14 @@
 # VIPTV organization workspace
 
+## Agent skills
+
+For issue work read `docs/agents/issue-tracker.md`; confirmed default triage
+labels are in `docs/agents/triage-labels.md`. For domain changes read
+`docs/agents/domain.md`. For resuming the v2 cutover read
+`docs/agents/handoff.md` and the design implementation ledger before coding.
+Install the pinned bundle additively with `scripts/install-agent-skills.sh`;
+existing user skills, configuration and AGENTS files take precedence.
+
 This repository **is** the working directory for the whole VIPTV organization.
 Clone it, run `./setup.sh`, and every org repository appears in this repo's
 root in the canonical layout. The tracked files of this repo (AGENTS.md,

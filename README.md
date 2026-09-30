@@ -33,6 +33,17 @@ wraps each repository's check commands.
 
 ## Keeping up to date
 
+The pinned engineering skill bundle is portable:
+
+```sh
+bash scripts/install-agent-skills.sh
+```
+
+It installs only missing skill folders into the workspace (the parent when
+this notes repo is nested beside `design`). Existing skills, lockfiles, agent
+configuration and AGENTS.md are preserved. See [agent handoff](docs/agents/handoff.md)
+for tracker, domain and paused-review pointers.
+
 ```sh
 ./update.sh
 ```

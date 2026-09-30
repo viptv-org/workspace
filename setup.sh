@@ -58,6 +58,7 @@ if [ "$failures" -gt 0 ]; then
     exit 1
 fi
 printf 'Workspace ready.\n'
+bash "$SCRIPT_DIR/scripts/install-agent-skills.sh"
 printf '  ./update.sh     fast-forward this repo and every clone\n'
 printf '  ./run.sh list   show each repository check command\n'
 printf '  ./run.sh all    run every repository check\n'
