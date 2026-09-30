@@ -1,5 +1,8 @@
 # Domain documentation
 
+Layout: single-context per owning repository, with existing design documents
+authoritative across the workspace.
+
 Use the existing design-owned vocabulary and decisions. Before changing domain
 behavior read `design/BACKEND_V2.md`, `design/IMPLEMENTATION_V2.md`, the target
 repository's `DESIGN_REF` and relevant `design/docs/adr/` decisions. Client
