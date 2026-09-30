@@ -1,5 +1,10 @@
 # Portable engineering handoff
 
+Resume from [the integration handoff map](https://github.com/viptv-org/workspace/issues/2).
+It links the owning web, gateway, Android and TV-web tickets and records the
+remaining decisions and acceptance. [Workspace PR](https://github.com/viptv-org/workspace/pull/1)
+packages these instructions and the portable bundle.
+
 Start with [the implementation ledger](https://github.com/viptv-org/design/blob/main/IMPLEMENTATION_V2.md)
 and the owning GitHub ticket. They distinguish implementation, actual evidence
 and remaining acceptance; a passing build is not deployment or device proof.
