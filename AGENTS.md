@@ -1,9 +1,18 @@
 # VIPTV organization workspace
 
+## Agent skills
+
+For issue work read `docs/agents/issue-tracker.md`; confirmed default triage
+labels are in `docs/agents/triage-labels.md`. For domain changes read
+`docs/agents/domain.md`. For resuming the v2 cutover read
+`docs/agents/handoff.md` and the design implementation ledger before coding.
+Install the pinned bundle additively with `scripts/install-agent-skills.sh`;
+existing user skills, configuration and AGENTS files take precedence.
+
 This repository **is** the working directory for the whole VIPTV organization.
 Clone it, run `./setup.sh`, and every org repository appears in this repo's
 root in the canonical layout. The tracked files of this repo (AGENTS.md,
-README.md, CONTRIBUTING.md, docs/, setup.sh, update.sh, run.sh) are the
+README.md, CONTRIBUTING.md, docs/, meta/, setup.sh, update.sh, run.sh) are the
 workspace notes: `./update.sh` fast-forwards the notes together with every
 clone. Cloned repositories are git-ignored here — each subdirectory is its
 own repository. Commit and push inside the owning repo.
@@ -12,6 +21,8 @@ own repository. Commit and push inside the owning repo.
 |---|---|
 | `design` | Product specs, assets, interaction contract; start here for UX |
 | `backend` | Rust API, auth, catalog/media services, deployment packaging |
+| `playback-gateway` | Independent generic ingestion, output jobs and viewer leases |
+| `workspace` | Organization bootstrap, portable skills and handoff coordination |
 | `web` | Account and admin web app (also the `backend` `dashboard` submodule) |
 | `tv-web` | Shared React viewing client for web, Smart TVs (Tizen/Vizio), and desktop |
 | `desktop` | Native Tauri v2 desktop client for Linux, Windows, macOS |
@@ -38,6 +49,7 @@ own repository. Commit and push inside the owning repo.
 |---|---|
 | `design` | `python3 scripts/validate.py` |
 | `backend` | `cargo test --manifest-path server/Cargo.toml`; `scripts/host-check.sh` is the read-only deployment preflight |
+| `playback-gateway` | `cargo test --locked --workspace`; real media/container fixtures are opt-in and separately scoped |
 | `web` | `npm run build && npm run test` (build = `tsc -b` + `vite build`) |
 | `tv-web` | `npm run typecheck && npm run test`; full validation adds `npm run build` (design/core pin checks + vite) and Playwright `npm run test:e2e` |
 | `desktop` | `cargo test --manifest-path src-tauri/Cargo.toml`; verify `npm run check` and desktop window launch |
@@ -45,12 +57,13 @@ own repository. Commit and push inside the owning repo.
 | `video` | `npm run check` (typecheck, effect diagnostics, tests) |
 | `tauri-video-plugin` | `npm run check` and `cargo test` (Rust tests need a host media runtime, e.g. GStreamer on Linux) |
 | `android` | `bash scripts/prepare-core.sh host && ./gradlew --no-daemon :testDebugUnitTest :app:testDebugUnitTest`, then `scripts/prepare-core.sh android && ./gradlew --no-daemon :app:assembleDebug` for the APK (JDK 17, SDK Platform 36, Rust Android targets, cargo-ndk — all installed locally) |
-| `roku` | no local automated check; CI stages BrighterScript and runs `scripts/package.py` on the staging tree; device testing is coordinated with the owner |
+| `roku` | follow Roku README/scripts for runtime and contract fixtures, BrighterScript staging and package checks; device testing is coordinated with the owner |
 | `.github` | organization profile only |
 
-Machine-specific constraints live in each repo's own AGENTS.md. The host has
-32 GB RAM and 20 cores, so full local Gradle builds and parallel test runs are
-fine; read the repo's file for any remaining tool-specific notes.
+Machine-specific constraints live in each repo's own AGENTS.md. Follow the
+owner's resource limits; use one worker for expensive Gradle checks rather than
+inferring safe concurrency from host totals. Coordinate device/browser/build
+windows before starting costly or network-changing work.
 
 ## Local testing
 
@@ -72,10 +85,11 @@ access rather than recreating it.
 
 Deployments go through Dokploy. **Every VIPTV Dokploy deploy so far failed
 while being reported as successful**, so never claim a change is live without
-checking. The proof is the served asset hash:
+checking. The proof is the asset hash served by the production origin (its
+address is in the private deployment notes):
 
 ```sh
-curl -sS https://viptv.syek.tech/ | grep -o 'assets/index-[A-Za-z0-9_-]*\.js'
+curl -sS "$PRODUCTION_ORIGIN/" | grep -o 'assets/index-[A-Za-z0-9_-]*\.js'
 ```
 
 Deployment credentials, runbooks, and production topology are private and

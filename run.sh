@@ -18,6 +18,18 @@ else
     cd "$SCRIPT_DIR"
 fi
 
+# Repositories that need extra access. When one is not cloned its checks are
+# skipped with a warning instead of failing.
+OPTIONAL_REPOS="playback-gateway"
+
+# Directory for a target name (the .github target is named github).
+target_dir() {
+    case "$1" in
+        github) printf '.github' ;;
+        *) printf '%s' "$1" ;;
+    esac
+}
+
 # Run a command inside one of the cloned repositories.
 in_repo() {
     repo=$1
@@ -41,6 +53,10 @@ run_design() {
 
 run_backend() {
     in_repo backend cargo test --manifest-path server/Cargo.toml
+}
+
+run_playback_gateway() {
+    in_repo playback-gateway cargo test --locked --workspace
 }
 
 run_web() {
@@ -95,7 +111,7 @@ run_github() {
 
 run_all() {
     failures=0
-    for target in design backend web tv-web desktop core video tauri-video-plugin android roku github; do
+    for target in design backend playback-gateway web tv-web desktop core video tauri-video-plugin android roku github; do
         if run_target "$target"; then
             printf '==> %s: OK\n' "$target"
         else
@@ -112,8 +128,23 @@ run_all() {
 
 run_target() {
     case "$1" in
+        all|roku|github) ;;
+        *)
+            dir=$(target_dir "$1")
+            case " $OPTIONAL_REPOS " in
+                *" $dir "*)
+                    if [ ! -d "$dir" ]; then
+                        printf '==> [%s] optional repository not cloned (access required); skipping\n' "$dir" >&2
+                        return 0
+                    fi
+                    ;;
+            esac
+            ;;
+    esac
+    case "$1" in
         design) run_design ;;
         backend) run_backend ;;
+        playback-gateway) run_playback_gateway ;;
         web) run_web ;;
         tv-web) run_tv_web ;;
         desktop) run_desktop ;;
@@ -134,12 +165,13 @@ run_target() {
 
 usage() {
     printf 'usage: ./run.sh <target>\n'
-    printf 'targets: design backend web tv-web desktop core video tauri-video-plugin android roku github all\n'
+    printf 'targets: design backend playback-gateway web tv-web desktop core video tauri-video-plugin android roku github all\n'
 }
 
 list() {
     printf 'design             python3 scripts/validate.py\n'
     printf 'backend            cargo test --manifest-path server/Cargo.toml\n'
+    printf 'playback-gateway   cargo test --locked --workspace (optional; skipped when not cloned)\n'
     printf 'web                npm run build && npm run test\n'
     printf 'tv-web             npm run typecheck && npm run test\n'
     printf 'desktop            cargo test --manifest-path src-tauri/Cargo.toml\n'

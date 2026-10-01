@@ -18,6 +18,9 @@ wraps each repository's check commands.
    ./setup.sh
    ```
 
+   `playback-gateway` needs separate access; without it setup, update and
+   run skip that repository with a warning instead of failing.
+
    On Windows, run the scripts from Git Bash (Git for Windows) or inside
    WSL2 — not cmd/PowerShell.
 3. Run a repository's checks:
@@ -33,6 +36,17 @@ wraps each repository's check commands.
 
 ## Keeping up to date
 
+The pinned engineering skill bundle is portable:
+
+```sh
+bash scripts/install-agent-skills.sh
+```
+
+It installs only missing skill folders into the workspace (the parent when
+this notes repo is nested beside `design`). Existing skills, lockfiles, agent
+configuration and AGENTS.md are preserved. See [agent handoff](docs/agents/handoff.md)
+for tracker, domain and paused-review pointers.
+
 ```sh
 ./update.sh
 ```
@@ -46,6 +60,8 @@ uncommitted changes or a diverged branch is reported, never reverted.
 |---|---|
 | `design` | Product specs, assets, interaction contract; start here for UX |
 | `backend` | Rust API, auth, catalog/media services, deployment packaging |
+| `playback-gateway` | Independent generic media execution and leases |
+| `workspace` | Bootstrap, portable agent skills and handoff coordination |
 | `web` | Account and admin web app |
 | `tv-web` | Shared React viewing client for web, Smart TVs (Tizen/Vizio), and desktop |
 | `desktop` | Native Tauri v2 desktop client for Linux, Windows, macOS |

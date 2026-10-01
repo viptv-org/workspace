@@ -13,14 +13,19 @@ else
     cd "$SCRIPT_DIR"
 fi
 
-REPOS="design backend web tv-web desktop core video tauri-video-plugin android roku .github"
+REPOS="design backend playback-gateway web tv-web desktop core video tauri-video-plugin android roku .github"
+# Repositories that need extra access; absent clones are expected.
+OPTIONAL_REPOS="playback-gateway"
 failures=0
 
 update_one() {
     label=$1
     dir=$2
     if [ ! -d "$dir/.git" ]; then
-        printf '==> %s: not cloned, skipping (run ./setup.sh)\n' "$label"
+        case " $OPTIONAL_REPOS " in
+            *" $dir "*) printf '==> %s: optional, not cloned (access required), skipping\n' "$label" ;;
+            *) printf '==> %s: not cloned, skipping (run ./setup.sh)\n' "$label" ;;
+        esac
         return 0
     fi
     printf '==> updating %s\n' "$label"

@@ -19,7 +19,17 @@ else
 fi
 
 # Repositories in the canonical viptv-org layout.
-REPOS="design backend web tv-web desktop core video tauri-video-plugin android roku .github"
+REPOS="design backend playback-gateway web tv-web desktop core video tauri-video-plugin android roku .github"
+# Repositories that need extra access. A failed clone is a warning, not an
+# error, so contributors without access still get a working workspace.
+OPTIONAL_REPOS="playback-gateway"
+
+is_optional() {
+    case " $OPTIONAL_REPOS " in
+        *" $1 "*) return 0 ;;
+    esac
+    return 1
+}
 
 # Clone source. Defaults to https://github.com/viptv-org/<repo>.git. Derived
 # from this repository's own origin when that origin is a remote URL pointing
@@ -40,24 +50,39 @@ fi
 printf '==> cloning from %s\n' "$ORG_REMOTE"
 
 failures=0
+skipped=0
 for repo in $REPOS; do
     if [ -e "$repo" ]; then
         printf '==> %s: already present, skipping\n' "$repo"
         continue
     fi
     printf '==> cloning %s\n' "$repo"
-    if ! git clone "${ORG_REMOTE}/${repo}.git" "$repo"; then
+    if is_optional "$repo"; then
+        # Never block on a credential prompt for an optional repository.
+        if ! GIT_TERMINAL_PROMPT=0 git clone "${ORG_REMOTE}/${repo}.git" "$repo"; then
+            printf 'warning: could not clone optional %s (access required); skipping\n' "$repo" >&2
+            skipped=$((skipped + 1))
+        fi
+    elif ! git clone "${ORG_REMOTE}/${repo}.git" "$repo"; then
         printf 'error: failed to clone %s\n' "$repo" >&2
         failures=$((failures + 1))
     fi
 done
+
+# Install the portable skill bundle even when a clone failed.
+printf '\n'
+bash "$SCRIPT_DIR/scripts/install-agent-skills.sh"
 
 printf '\n'
 if [ "$failures" -gt 0 ]; then
     printf 'setup finished with %d failure(s); fix the cause and re-run\n' "$failures" >&2
     exit 1
 fi
-printf 'Workspace ready.\n'
+if [ "$skipped" -gt 0 ]; then
+    printf 'Workspace ready (%d optional repository skipped).\n' "$skipped"
+else
+    printf 'Workspace ready.\n'
+fi
 printf '  ./update.sh     fast-forward this repo and every clone\n'
 printf '  ./run.sh list   show each repository check command\n'
 printf '  ./run.sh all    run every repository check\n'
