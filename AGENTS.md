@@ -12,7 +12,7 @@ existing user skills, configuration and AGENTS files take precedence.
 This repository **is** the working directory for the whole VIPTV organization.
 Clone it, run `./setup.sh`, and every org repository appears in this repo's
 root in the canonical layout. The tracked files of this repo (AGENTS.md,
-README.md, CONTRIBUTING.md, docs/, setup.sh, update.sh, run.sh) are the
+README.md, CONTRIBUTING.md, docs/, meta/, setup.sh, update.sh, run.sh) are the
 workspace notes: `./update.sh` fast-forwards the notes together with every
 clone. Cloned repositories are git-ignored here — each subdirectory is its
 own repository. Commit and push inside the owning repo.
@@ -85,10 +85,11 @@ access rather than recreating it.
 
 Deployments go through Dokploy. **Every VIPTV Dokploy deploy so far failed
 while being reported as successful**, so never claim a change is live without
-checking. The proof is the served asset hash:
+checking. The proof is the asset hash served by the production origin (its
+address is in the private deployment notes):
 
 ```sh
-curl -sS https://viptv.syek.tech/ | grep -o 'assets/index-[A-Za-z0-9_-]*\.js'
+curl -sS "$PRODUCTION_ORIGIN/" | grep -o 'assets/index-[A-Za-z0-9_-]*\.js'
 ```
 
 Deployment credentials, runbooks, and production topology are private and

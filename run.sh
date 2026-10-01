@@ -18,6 +18,18 @@ else
     cd "$SCRIPT_DIR"
 fi
 
+# Repositories that need extra access. When one is not cloned its checks are
+# skipped with a warning instead of failing.
+OPTIONAL_REPOS="playback-gateway"
+
+# Directory for a target name (the .github target is named github).
+target_dir() {
+    case "$1" in
+        github) printf '.github' ;;
+        *) printf '%s' "$1" ;;
+    esac
+}
+
 # Run a command inside one of the cloned repositories.
 in_repo() {
     repo=$1
@@ -116,6 +128,20 @@ run_all() {
 
 run_target() {
     case "$1" in
+        all|roku|github) ;;
+        *)
+            dir=$(target_dir "$1")
+            case " $OPTIONAL_REPOS " in
+                *" $dir "*)
+                    if [ ! -d "$dir" ]; then
+                        printf '==> [%s] optional repository not cloned (access required); skipping\n' "$dir" >&2
+                        return 0
+                    fi
+                    ;;
+            esac
+            ;;
+    esac
+    case "$1" in
         design) run_design ;;
         backend) run_backend ;;
         playback-gateway) run_playback_gateway ;;
@@ -145,7 +171,7 @@ usage() {
 list() {
     printf 'design             python3 scripts/validate.py\n'
     printf 'backend            cargo test --manifest-path server/Cargo.toml\n'
-    printf 'playback-gateway   cargo test --locked --workspace\n'
+    printf 'playback-gateway   cargo test --locked --workspace (optional; skipped when not cloned)\n'
     printf 'web                npm run build && npm run test\n'
     printf 'tv-web             npm run typecheck && npm run test\n'
     printf 'desktop            cargo test --manifest-path src-tauri/Cargo.toml\n'

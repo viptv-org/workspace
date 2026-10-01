@@ -18,6 +18,9 @@ wraps each repository's check commands.
    ./setup.sh
    ```
 
+   `playback-gateway` needs separate access; without it setup, update and
+   run skip that repository with a warning instead of failing.
+
    On Windows, run the scripts from Git Bash (Git for Windows) or inside
    WSL2 — not cmd/PowerShell.
 3. Run a repository's checks:
