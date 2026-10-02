@@ -123,3 +123,10 @@ owner-maintained; coordinate with the owner for device runs.
   consistently within a session.
 - Scripts in this repo are plain bash and safe under Git Bash on Windows;
   prefer Git Bash or WSL2 over cmd/PowerShell.
+
+## Subagents
+
+Use GPT-6.1 Sol (`gpt-6.1-sol`) with high reasoning (`high`) for all subagents,
+including implementation, testing, research and review. Set both values
+explicitly when dispatching. Restart retained agents using other settings before
+assigning further work.
