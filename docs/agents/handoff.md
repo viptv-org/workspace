@@ -4,7 +4,7 @@ Resume from [the integration handoff map](https://github.com/viptv-org/workspace
 It is the single live record of branch tips, owning tickets, remaining decisions
 and acceptance; this page does not duplicate it, so resolve current branch tips
 and ticket status there before resuming. The
-[implementation ledger](https://github.com/viptv-org/design/blob/main/IMPLEMENTATION_V2.md)
+[implementation ledger](https://github.com/viptv-org/design/blob/main/plans/backend-v2/IMPLEMENTATION_V2.md)
 separates implementation from actual evidence; a passing build is not deployment
 or device proof.
 

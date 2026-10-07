@@ -4,7 +4,7 @@ Research date: 2026-10-07. Status: recommendation, not an adopted product specif
 
 ## Recommendation
 
-Follow-on deliverable: [proposed implementation plan](https://github.com/viptv-org/design/blob/main/EPISODE_ANNOTATIONS_PLAN.md), including phased repo ownership, normalized reads, cache/worker budgets, interaction requirements and acceptance gates.
+Follow-on deliverable: [proposed implementation plan](https://github.com/viptv-org/design/blob/main/plans/episode-annotations/PLAN.md), including phased repo ownership, normalized reads, cache/worker budgets, interaction requirements and acceptance gates.
 
 Build a native VIPTV feature with replaceable backend data-source adapters. Start with anime timestamp lookup and filler labels, then general-TV timestamps after a representative catalog pilot. Keep automatic media analysis optional and asynchronous. Do not require a browser extension or a third-party streaming scraper to make this feature work.
 
