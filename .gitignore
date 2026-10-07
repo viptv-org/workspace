@@ -15,6 +15,7 @@
 
 # Private developer environment and tooling — never commit
 /.env
+/.local-device-testing.md
 /.local-https/
 /.deploy-rollback/
 /data/

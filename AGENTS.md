@@ -106,11 +106,16 @@ testing; repo `.env.example` files are templates only. Device values (Roku,
 Android, ADB) belong in the ignored root `.env`, never in docs, specs,
 commits, or issues.
 
-Android emulator values (`ANDROID_SDK_ROOT`, `ANDROID_PHONE_AVD`,
-`ANDROID_TV_AVD`) come from the ignored root `.env`. Use emulators for normal
-Android and Android TV work; do not configure wireless debugging unless a
-real-device test is explicitly requested. Roku device tooling is
-owner-maintained; coordinate with the owner for device runs.
+For Android TV UI, focus/navigation, APK installation or visual inspection on
+this VPS, read the ignored root `.local-device-testing.md` first and use its
+existing serve-avd emulator. It is shared with the owner's browser session;
+coordinate disruptive tests and preserve app data/sign-in. Use an explicit ADB
+serial for every command. Physical-TV testing requires an explicit request;
+the private note also contains that separate procedure.
+
+Android SDK and other emulator values come from the ignored root `.env`.
+Other machines require their own setup. Roku device tooling is owner-maintained;
+coordinate with the owner for device runs.
 
 ## Environment quirks
 
