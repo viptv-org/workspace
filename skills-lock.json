@@ -133,6 +133,11 @@
       "skillPath": "skills/misc/scaffold-exercises/SKILL.md",
       "computedHash": "354c91f6dbc9b058632f30594aacb4edc6d25012596585abb00402af8d7ec5e9"
     },
+    "serve-avd": {
+      "source": "../serve-avd/skills/serve-avd",
+      "sourceType": "local",
+      "computedHash": "cd8e0fe791e4a45b79b5e89677c5f412716db3d404436502167a43f4a5a66c3e"
+    },
     "setup-matt-pocock-skills": {
       "source": "mattpocock/skills",
       "sourceType": "github",
