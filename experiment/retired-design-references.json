@@ -1,0 +1,112 @@
+{
+  "workspace": [
+    "meta/github/DESIGN_REF"
+  ],
+  "design": [],
+  "core": [
+    "DESIGN_REF"
+  ],
+  "backend": [
+    "DESIGN_REF"
+  ],
+  "android": [
+    "DESIGN_REF",
+    "design-contract/ANDROID_DESIGN.md",
+    "design-contract/DESIGN.md",
+    "design-contract/DESIGN_SYNC.md",
+    "design-contract/TV_POLISH.md",
+    "design-contract/specs/behavior/android-tv-media-rows.md",
+    "design-contract/specs/behavior/episode-number-jump.md",
+    "design-contract/specs/behavior/home-addon-refresh.md",
+    "design-contract/specs/behavior/subtitle-mode.md",
+    "design-contract/specs/behavior/torrent-gateway-sources.md",
+    "design-contract/specs/behavior/torrent-native-android.md",
+    "design-contract/specs/behavior/torrent-runtime-v2.md",
+    "design-contract/specs/behavior/tv-my-list-posters.md",
+    "design-contract/specs/behavior/tv-ui-trial.md",
+    "design-contract/viptv-design-system/README.md",
+    "design-contract/viptv-design-system/components.md",
+    "design-contract/viptv-design-system/copy.md",
+    "design-contract/viptv-design-system/decisions.md",
+    "vendor/core/DESIGN_REF"
+  ],
+  "desktop": [],
+  "tv-web": [
+    "DESIGN_REF",
+    "design-contract/.github/pull_request_template.md",
+    "design-contract/CHANGELOG.md",
+    "design-contract/CONTEXT.md",
+    "design-contract/DESIGN.md",
+    "design-contract/README.md",
+    "design-contract/SPEC.md",
+    "design-contract/docs/README.md",
+    "design-contract/docs/adr/0001-design-owned-assets.md",
+    "design-contract/docs/adr/0002-preserve-rust-and-same-origin-web.md",
+    "design-contract/docs/adr/0003-shared-platform-matrix-and-playback-consolidation.md",
+    "design-contract/docs/architecture/REPOSITORIES.md",
+    "design-contract/docs/architecture/SHARED_CORE.md",
+    "design-contract/docs/archive/LOCAL_MODE.md",
+    "design-contract/docs/branding.md",
+    "design-contract/docs/platforms/ANDROID_DESIGN.md",
+    "design-contract/docs/platforms/ROKU_DESIGN.md",
+    "design-contract/docs/platforms/TV_IMPLEMENTATION.md",
+    "design-contract/docs/platforms/TV_POLISH.md",
+    "design-contract/docs/playback/BROWSER_MEDIA_PIPELINE.md",
+    "design-contract/docs/playback/BROWSER_PLAYBACK.md",
+    "design-contract/docs/playback/PLAYBACK_CAPABILITIES.md",
+    "design-contract/docs/playback/PLAYBACK_ERROR_COPY.md",
+    "design-contract/docs/process/ANDROID_DEVELOPMENT.md",
+    "design-contract/docs/process/BUILD_DELIVERY.md",
+    "design-contract/docs/process/DESIGN_SYNC.md",
+    "design-contract/docs/process/DEVELOPMENT.md",
+    "design-contract/docs/process/MIGRATION.md",
+    "design-contract/docs/process/TRACKING.md",
+    "design-contract/plans/PLATFORM_PLAN.md",
+    "design-contract/plans/README.md",
+    "design-contract/plans/backend-v2/ADMIN_V2.md",
+    "design-contract/plans/backend-v2/BACKEND_V2.md",
+    "design-contract/plans/backend-v2/IMPLEMENTATION_V2.md",
+    "design-contract/plans/episode-annotations/PLAN.md",
+    "design-contract/specs/behavior/android-tv-media-rows.md",
+    "design-contract/specs/behavior/episode-number-jump.md",
+    "design-contract/specs/behavior/home-addon-refresh.md",
+    "design-contract/specs/behavior/responsive-player-fit-fill.md",
+    "design-contract/specs/behavior/roku-ux-contract.md",
+    "design-contract/specs/behavior/stremio-import.md",
+    "design-contract/specs/behavior/torrent-gateway-sources.md",
+    "design-contract/specs/behavior/torrent-native-android.md",
+    "design-contract/specs/behavior/torrent-runtime-v2.md",
+    "design-contract/specs/behavior/tv-my-list-posters.md",
+    "design-contract/specs/behavior/tv-ui-trial.md",
+    "design-contract/specs/repos/README.md",
+    "design-contract/viptv-design-system/README.md",
+    "design-contract/viptv-design-system/components.md",
+    "design-contract/viptv-design-system/copy.md",
+    "design-contract/viptv-design-system/decisions.md"
+  ],
+  "web": [
+    "DESIGN_REF",
+    "design-contract/ADMIN_V2.md",
+    "design-contract/BACKEND_V2.md"
+  ],
+  "video": [
+    "DESIGN_REF"
+  ],
+  "tauri-video-plugin": [
+    "DESIGN_REF"
+  ],
+  "roku": [
+    "DESIGN_ASSETS.json",
+    "DESIGN_REF",
+    "design-contract/DESIGN_SYNC.md",
+    "design-contract/PLAYBACK_ERROR_COPY.md",
+    "design-contract/ROKU_DESIGN.md",
+    "design-contract/torrent-runtime-v2.md",
+    "design-contract/viptv-design-system/components.md",
+    "design-contract/viptv-design-system/copy.md",
+    "design-contract/viptv-design-system/decisions.md"
+  ],
+  "playback-gateway": [],
+  "metadata": [],
+  ".github": []
+}

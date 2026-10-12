@@ -71,7 +71,7 @@ done
 
 # Install the portable skill bundle even when a clone failed.
 printf '\n'
-bash "$SCRIPT_DIR/scripts/install-agent-skills.sh"
+
 
 printf '\n'
 if [ "$failures" -gt 0 ]; then

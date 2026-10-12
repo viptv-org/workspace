@@ -1,0 +1,86 @@
+[
+  {
+    "repo": "workspace",
+    "base": "bcb0ffb2b72a25c88a33d5254d551b99fb63245a",
+    "path": "/mnt/ALPH/code/viptv-org/.worktrees/kmp-v2/workspace",
+    "branch": "experiment/kmp-v2"
+  },
+  {
+    "repo": "design",
+    "base": "222163cae586c963444f55615bad4040f6e29384",
+    "path": "/mnt/ALPH/code/viptv-org/.worktrees/kmp-v2/design",
+    "branch": "experiment/kmp-v2"
+  },
+  {
+    "repo": "core",
+    "base": "6e4423dda0beef04b8bbe86a8a9e4c751b465931",
+    "path": "/mnt/ALPH/code/viptv-org/.worktrees/kmp-v2/core",
+    "branch": "experiment/kmp-v2"
+  },
+  {
+    "repo": "backend",
+    "base": "ab4d043508785f2039f4c1dc27046672e8308001",
+    "path": "/mnt/ALPH/code/viptv-org/.worktrees/kmp-v2/backend",
+    "branch": "experiment/kmp-v2"
+  },
+  {
+    "repo": "android",
+    "base": "c7d489faf46f22082528d6d04ac3c1c373a00fc5",
+    "path": "/mnt/ALPH/code/viptv-org/.worktrees/kmp-v2/android",
+    "branch": "experiment/kmp-v2"
+  },
+  {
+    "repo": "desktop",
+    "base": "188e24ee77c848e9437c173fcde73fd3d528d06b",
+    "path": "/mnt/ALPH/code/viptv-org/.worktrees/kmp-v2/desktop",
+    "branch": "experiment/kmp-v2"
+  },
+  {
+    "repo": "tv-web",
+    "base": "4b7eae0c67047018df41bd7fb1247bd8e1b9d688",
+    "path": "/mnt/ALPH/code/viptv-org/.worktrees/kmp-v2/tv-web",
+    "branch": "experiment/kmp-v2"
+  },
+  {
+    "repo": "web",
+    "base": "b392e6569a893a5584d817b900dbe5457e64604d",
+    "path": "/mnt/ALPH/code/viptv-org/.worktrees/kmp-v2/web",
+    "branch": "experiment/kmp-v2"
+  },
+  {
+    "repo": "video",
+    "base": "b39157181c06a4e8d5567b769010690dc1e27ebd",
+    "path": "/mnt/ALPH/code/viptv-org/.worktrees/kmp-v2/video",
+    "branch": "experiment/kmp-v2"
+  },
+  {
+    "repo": "tauri-video-plugin",
+    "base": "7a85ad46b5f1ece4ae7cc1e7afb928e3d2c4dad2",
+    "path": "/mnt/ALPH/code/viptv-org/.worktrees/kmp-v2/tauri-video-plugin",
+    "branch": "experiment/kmp-v2"
+  },
+  {
+    "repo": "roku",
+    "base": "bf48e7e91d73450f467751ec766113064d239a93",
+    "path": "/mnt/ALPH/code/viptv-org/.worktrees/kmp-v2/roku",
+    "branch": "experiment/kmp-v2"
+  },
+  {
+    "repo": "playback-gateway",
+    "base": "fc7b9b77ad34d274a3385d0bc31f4de84f4e0ef7",
+    "path": "/mnt/ALPH/code/viptv-org/.worktrees/kmp-v2/playback-gateway",
+    "branch": "experiment/kmp-v2"
+  },
+  {
+    "repo": "metadata",
+    "base": "bd10a5921150697be6abd5f3bc9284a47c5ef32f",
+    "path": "/mnt/ALPH/code/viptv-org/.worktrees/kmp-v2/metadata",
+    "branch": "experiment/kmp-v2"
+  },
+  {
+    "repo": ".github",
+    "base": "5088ffe07007fb1198a04d847e0b9684c8824c13",
+    "path": "/mnt/ALPH/code/viptv-org/.worktrees/kmp-v2/.github",
+    "branch": "experiment/kmp-v2"
+  }
+]
