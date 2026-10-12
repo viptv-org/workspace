@@ -41,9 +41,9 @@ Application flows include authentication and device linking; profiles/PINs; brow
 1. Isolated branches and new repo: created.
 2. Design import: complete; visual implementation and parity remain pending.
 3. Instruction/skill cleanup: initial pass complete; legacy references under review.
-4. Engine contracts: initial registry, query validation, identity evidence, SQLite isolation and bounded Home assembly implemented.
+4. Engine contracts: registry, query validation, identity evidence, SQLite isolation, bounded Home assembly, local watch history and profile PIN/lifecycle implemented; full integration contract pending.
 5. Backend: first v3 bootstrap/Home endpoints implemented and tested.
-6. KMP application: build and remote flow implementation in progress; no completion claim.
+6. KMP application: builds across desktop, browser and Android; local Stremio discovery/direct playback, history/resume and profile creation/edit/PIN work on the Android QA emulator. Remote flow and current-design parity remain in progress; no completion claim.
 7. Integrations, playback, current-board parity, performance and populated migration acceptance: pending.
 
 ## Evidence
