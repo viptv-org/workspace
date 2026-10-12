@@ -1,0 +1,29 @@
+{
+  "id": "org.viptv.fixture.flower",
+  "version": "1.0.0",
+  "name": "VIPTV Flower Fixture",
+  "description": "Public media fixture for isolated local playback testing",
+  "resources": [
+    "catalog",
+    "meta",
+    "stream"
+  ],
+  "types": [
+    "movie"
+  ],
+  "idPrefixes": [
+    "viptv-test-"
+  ],
+  "catalogs": [
+    {
+      "type": "movie",
+      "id": "sample",
+      "name": "Sample",
+      "extra": [
+        {
+          "name": "search"
+        }
+      ]
+    }
+  ]
+}

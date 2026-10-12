@@ -1,0 +1,10 @@
+{
+  "metas": [
+    {
+      "id": "viptv-test-flower",
+      "type": "movie",
+      "name": "Flower",
+      "description": "Public video fixture used to exercise local playback."
+    }
+  ]
+}
