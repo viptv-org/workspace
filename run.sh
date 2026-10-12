@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # VIPTV workspace task runner: wraps each repository's documented check
 # commands. Machine-specific constraints (heap sizes, worker counts, hosted
-# builds) are documented in each repository's own AGENTS.md.
+# builds) are documented in each repository's README.
 #
 # Usage:
 #   ./run.sh list        show available targets
@@ -102,7 +102,7 @@ run_android() {
 run_roku() {
     printf '==> [roku] no local check command.\n'
     printf '    CI stages BrighterScript 0.73.1 and runs scripts/package.py on the staging tree.\n'
-    printf '    Read roku/README.md and roku/AGENTS.md; device testing is coordinated with the owner.\n'
+    printf '    Roku build and test information is in roku/README.md.\n'
 }
 
 run_github() {
