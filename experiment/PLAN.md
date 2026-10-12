@@ -14,6 +14,8 @@ Existing experimental worktrees originate from the fetched main revisions in `re
 
 The design repository contains the 197 `current_design` boards from the supplied VIPTV kit. Screenshot IDs, exact HTML, fonts, images and archive hashes are retained. Earlier explorations are absent from the active design tree.
 
+The authoritative visual source is the `VIPTV-screens-1-current-TV.zip` through `VIPTV-screens-4-current-Simkl.zip` archives in the workspace root. The experimental `design/current` import is a byte-matching working copy of those ZIPs; older design-repository material is not a UI reference. The active execution order is exact KMP UI parity across desktop, Android phone/tablet/TV and browser, including native desktop window chrome, followed by logic work. Board-level captures and unresolved surfaces remain tracked in the app repository.
+
 Specific board geometry takes precedence over inconsistent general notes. Conversation architecture takes precedence over old Tauri, web-local-mode and direct Simkl-login assumptions in the kit. Provisional UI is listed individually in the application's `docs/DESIGN_GAPS.md`; the current-board coverage register has a separate status for each board.
 
 ## Engine and profiles
