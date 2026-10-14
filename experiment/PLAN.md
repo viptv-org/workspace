@@ -43,12 +43,20 @@ Application flows include authentication and device linking; profiles/PINs; brow
 1. Experimental branches and the new KMP app repository exist; main branches and history remain preserved.
 2. The 197 current boards are imported. KMP TV follows the provided layouts; complete board-by-board parity and physical performance acceptance remain unqualified.
 3. Native Rust/SQLite profiles, Stremio, native vsources, mappings, Live and local/remote playback are implemented. Broader provider/format/long-running qualification remains incomplete.
-4. Backend v3 aggregates, per-profile plugins/capabilities, Simkl OAuth 2.0 metadata/lists/tracking, unified library/continuation and scoped delivery are implemented. The current backend passed 413 checks; this does not certify all end-to-end flows.
+4. Backend v3 aggregates, per-profile plugins/capabilities, Simkl OAuth 2.0 metadata/lists/tracking, unified library/continuation and scoped delivery are implemented. The current backend passed 438 Live/SDK checks (10 ignored), including exact anime mapping/import identity, queued-auth family revocation and browser account-device management; this does not certify all end-to-end flows.
 5. KMP builds for Android, Web and Linux/Windows/macOS desktop. Normal TV device pairing passed a live adapter approval/restore/Home check. The next candidate remains uninstalled during the user's physical-TV testing.
 6. Android hardware 1080p60 with official FFmpeg AAC audio was measured at approximately 60 FPS without decoder drops. UI focus/animation performance, broader seek/subtitle/audio formats, desktop presentation and complete settings/dashboard acceptance remain open.
-7. Solid TV-web and Roku use shared host content APIs, automatic paging and provider caption contracts. Full TV-web/Roku design migration and physical decoding remain incomplete.
+7. Solid TV-web and Roku use shared host content APIs, automatic paging, provider caption contracts and host-advertised discovery/multiple-choice controls. TV-web passed 337 checks and three Chromium launcher fixtures; Roku passed 73 checks and compilation. Full TV-web/Roku design migration and physical decoding remain incomplete.
 8. The generic native Tauri video plugin is now `vynxc/tauri-plugin-video`; experimental cleanup retained all history and main. Old desktop/Android host branch trees are retired in favor of KMP; repositories, main branches, history and historical local files are retained.
 9. Local QA API, gateway and trusted canonical/LAN HTTPS routes run under enabled user services with automatic restart. Production deployment is not claimed.
+
+The KMP browser Devices surface now follows W3Account geometry with scoped
+browser/paired-family management and explicit single/all-device confirmation.
+Common-renderer/transport checks bring KMP to 90 passing desktop checks; QA/release,
+Wasm compilation and Linux distribution/native smoke passed. Phone preferences are
+wired to the real shared form. New confirmation/loading/phone states are tracked
+individually; full dashboard and real-browser/device acceptance remain unfinished.
+The running backend/gateway and physical TV are unchanged during manual testing.
 
 Current detailed evidence and unresolved UI are in the app's `docs/STATUS.md`,
 `docs/build-evidence.json`, `docs/DESIGN_GAPS.md` and design coverage register.
