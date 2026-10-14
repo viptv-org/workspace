@@ -2,7 +2,7 @@
 
 ## Destination
 
-One Rust/Crux engine runs inside native applications and on the server. One new KMP application covers Android phone/tablet, Android TV, Windows, Linux, macOS, browser viewing and the dashboard. Native targets have local and remote connections; browser, SolidTV and Roku are remote-only. KitePlayer is native-only; browser/SolidTV/Roku media is delivered by the playback gateway.
+One Rust/Crux engine runs inside native applications and on the server. One new KMP application covers Android phone/tablet, Android TV, Windows, Linux, macOS, browser viewing and the dashboard. Native targets have local and remote connections; browser, SolidTV and Roku are remote-only. Android uses Media3 with the official FFmpeg audio extension and hardware video. Desktop uses the pinned KitePlayer fork. Browser/SolidTV/Roku media uses the playback gateway.
 
 The new application is an implementation, not a UI prototype. The final target includes actual provider data, playback, persistence, administration and every applicable current-design state.
 
@@ -34,19 +34,24 @@ Acceptance targets: one initial control request plus at most one pending update 
 
 ## Playback and application
 
-KitePlayer qualification covers Android API 26+, desktop JVM on Linux/Windows/macOS, HTTP headers, VOD, live HLS/DASH/TS, audio/subtitles, seek, switching and cleanup. Local acquisition uses a host adapter. Full local transcoding is outside this experiment.
+Playback qualification covers Android API 26+ through Media3 and desktop JVM on Linux/Windows/macOS through KitePlayer, including HTTP headers, VOD, live HLS/DASH/TS, audio/subtitles, seek, switching and cleanup. Local acquisition uses a host adapter. Full local transcoding is outside this experiment.
 
 Application flows include authentication and device linking; profiles/PINs; browsing/search; guide; details/seasons/sources; native/web playback; lists/history; Simkl calendar/filters/tracking; settings; dashboard; desktop window/media features and supported TV control. Playback starts from an explicit action, and the next episode waits for the user.
 
-## Delivery status
+## Delivery status — 2026-10-14
 
-1. Isolated branches and new repo: created.
-2. Design import: complete; visual implementation and parity remain pending.
-3. Instruction/skill cleanup: initial pass complete; legacy references under review.
-4. Engine contracts: registry, query validation, identity evidence, SQLite isolation, bounded Home assembly, local watch history and profile PIN/lifecycle implemented; full integration contract pending.
-5. Backend: first v3 bootstrap/Home endpoints implemented and tested.
-6. KMP application: builds across desktop, browser and Android; local Stremio discovery/direct playback, history/resume and profile creation/edit/PIN work on the Android QA emulator. Remote flow and current-design parity remain in progress; no completion claim.
-7. Integrations, playback, current-board parity, performance and populated migration acceptance: pending.
+1. Experimental branches and the new KMP app repository exist; main branches and history remain preserved.
+2. The 197 current boards are imported. KMP TV follows the provided layouts; complete board-by-board parity and physical performance acceptance remain unqualified.
+3. Native Rust/SQLite profiles, Stremio, native vsources, mappings, Live and local/remote playback are implemented. Broader provider/format/long-running qualification remains incomplete.
+4. Backend v3 aggregates, per-profile plugins/capabilities, Simkl OAuth 2.0 metadata/lists/tracking, unified library/continuation and scoped delivery are implemented. The current backend passed 413 checks; this does not certify all end-to-end flows.
+5. KMP builds for Android, Web and Linux/Windows/macOS desktop. Normal TV device pairing passed a live adapter approval/restore/Home check. The next candidate remains uninstalled during the user's physical-TV testing.
+6. Android hardware 1080p60 with official FFmpeg AAC audio was measured at approximately 60 FPS without decoder drops. UI focus/animation performance, broader seek/subtitle/audio formats, desktop presentation and complete settings/dashboard acceptance remain open.
+7. Solid TV-web and Roku use shared host content APIs, automatic paging and provider caption contracts. Full TV-web/Roku design migration and physical decoding remain incomplete.
+8. The generic native Tauri video plugin is now `vynxc/tauri-plugin-video`; experimental cleanup retained all history and main. Old desktop/Android host branch trees are retired in favor of KMP; repositories, main branches, history and historical local files are retained.
+9. Local QA API, gateway and trusted canonical/LAN HTTPS routes run under enabled user services with automatic restart. Production deployment is not claimed.
+
+Current detailed evidence and unresolved UI are in the app's `docs/STATUS.md`,
+`docs/build-evidence.json`, `docs/DESIGN_GAPS.md` and design coverage register.
 
 ## Evidence
 
