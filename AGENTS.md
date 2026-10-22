@@ -131,7 +131,12 @@ coordinate with the owner for device runs.
 
 ## Subagents
 
-Use GPT-6.1 Sol (`gpt-6.1-sol`) with high reasoning (`high`) for all subagents,
-including implementation, testing, research and review. Set both values
-explicitly when dispatching. Restart retained agents using other settings before
-assigning further work.
+Use Claude models only (the Claude Code harness), with high reasoning (`high`):
+
+| Work | Model |
+|---|---|
+| Research, exploration, reading docs/code | Claude Sonnet 5.5 (`claude-sonnet-5-5`) |
+| Implementation, testing, review | Claude Opus 5.5 (`claude-opus-5-5`) |
+
+Set the model and reasoning explicitly when dispatching. Restart retained agents
+using other settings before assigning further work.

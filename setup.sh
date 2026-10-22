@@ -19,10 +19,10 @@ else
 fi
 
 # Repositories in the canonical viptv-org layout.
-REPOS="design backend playback-gateway web tv-web desktop core video tauri-video-plugin android roku .github"
+REPOS="design backend playback-gateway metadata web tv-web desktop core video tauri-video-plugin android roku .github"
 # Repositories that need extra access. A failed clone is a warning, not an
 # error, so contributors without access still get a working workspace.
-OPTIONAL_REPOS="playback-gateway"
+OPTIONAL_REPOS="playback-gateway metadata"
 
 is_optional() {
     case " $OPTIONAL_REPOS " in
