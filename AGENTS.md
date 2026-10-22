@@ -6,7 +6,8 @@ For issue work read `docs/agents/issue-tracker.md`; confirmed default triage
 labels are in `docs/agents/triage-labels.md`. All work is tracked as GitHub
 issues in the owning repo: one issue, one branch, one PR, merged by the agent
 with a merge commit. A bug found outside the current task becomes a new
-`bug` + `needs-triage` issue at once, never a fix on the current branch. For domain changes read
+`bug` + `needs-triage` issue at once, never a fix on the current branch.
+The owner files work with `/intake` and runs it with `/work`. For domain changes read
 `docs/agents/domain.md`. For resuming the v2 cutover read
 `docs/agents/handoff.md` and the design implementation ledger before coding.
 Install the pinned bundle additively with `scripts/install-agent-skills.sh`;

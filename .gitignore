@@ -22,6 +22,7 @@
 /data/
 /.playwright/
 /.playwright-cli/
+/.worktrees/
 
 # Build artifacts (inside cloned repositories)
 /node_modules/
