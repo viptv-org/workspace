@@ -3,7 +3,10 @@
 ## Agent skills
 
 For issue work read `docs/agents/issue-tracker.md`; confirmed default triage
-labels are in `docs/agents/triage-labels.md`. For domain changes read
+labels are in `docs/agents/triage-labels.md`. All work is tracked as GitHub
+issues in the owning repo: one issue, one branch, one PR, merged by the agent
+with a merge commit. A bug found outside the current task becomes a new
+`bug` + `needs-triage` issue at once, never a fix on the current branch. For domain changes read
 `docs/agents/domain.md`. For resuming the v2 cutover read
 `docs/agents/handoff.md` and the design implementation ledger before coding.
 Install the pinned bundle additively with `scripts/install-agent-skills.sh`;
@@ -41,7 +44,7 @@ own repository. Commit and push inside the owning repo.
 3. Make the change in the **owning** repo. Update consumers only when the
    contract changes.
 4. Run the repo's documented checks (`./run.sh <repo>` wraps them), then
-   commit and push its branch.
+   commit, push the issue's branch and open its PR (`docs/agents/issue-tracker.md`).
 
 ## Per-repo check commands
 

@@ -6,3 +6,4 @@ Research is grouped by feature. It records evidence and unresolved questions; th
 - [KMP: bringing the full avatar catalog into the Kotlin Multiplatform app](kmp-avatar-catalog.md)
 - [serve-avd: mobile preview customization](serve-avd.md)
 - [Source autoplay ("Best match"): when to start, ranking, dub/language, device decode, fallback, per-series memory](source-autoplay.md)
+- [Agent work tracking: GitHub Issues + one org Project, one branch and one PR per fix](agent-issue-workflow.md)
