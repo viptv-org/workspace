@@ -62,9 +62,10 @@ gh issue edit <n> -R viptv-org/<repo> --add-assignee @me
 `fix/142-undecodable-autoplay`. Parallel agents each use their own worktree
 (`--worktree ../wt-<repo>-<n>`); never put two issues in one checkout.
 
-**Work.** `/implement` (with `/tdd`), run the repo's checks from `AGENTS.md`,
-commit with `Refs #<n>` in the message, then `/code-review` against
-`origin/main`.
+**Work.** `/implement` (with `/tdd`). Commit continuously: after each green
+cycle or logical step, with `Refs #<n>` in each message, and push the branch
+regularly so an interruption never loses work. Run the repo's checks from
+`AGENTS.md`, then `/code-review` against `origin/main`.
 
 **Open the PR.** Body from the `/pr` template, last line
 `Closes viptv-org/<repo>#<n>`. Only the PR carries the closing keyword.
