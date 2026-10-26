@@ -76,8 +76,11 @@ the subagent's only context; give it:
   2. Run every Gradle or cargo build/test as
      `flock /tmp/viptv-heavy-build.lock <command>` with Gradle
      `--max-workers=1`, so parallel agents take turns on heavy builds.
-  3. Commit with `Refs #<n>` in each message, then run the `code-review`
-     skill against `origin/main` and fix what it finds.
+  3. Commit continuously: after each green TDD cycle or logical step, with
+     `Refs #<n>` in each message, and push the branch regularly so an
+     interruption (rate limit, crash) never loses work. When the work is
+     done, run the `code-review` skill against `origin/main` and fix what
+     it finds.
   4. Push the branch and open the PR: body from `.agents/skills/pr/SKILL.md`,
      last line `Closes viptv-org/<repo>#<n>`. It does not merge.
   5. Anything unrelated it finds becomes a new `bug` + `needs-triage` issue
