@@ -24,3 +24,5 @@ git tag -a $tag -m "Green batch: desktopTest passed at $rev" && git push -q orig
 cd $root && export RUSTUP_TOOLCHAIN=1.98
 scripts/agents/heavy.sh bash .kmp-dev/kmp.sh build apk > /tmp/batch-gate-apk.log 2>&1 || { echo "APK build failed"; exit 3; }
 flock /tmp/viptv-emulator.lock bash .kmp-dev/kmp.sh install-apk emulator-5580 > /tmp/batch-gate-install.log 2>&1 && echo "TV installed $(readlink ~/.local/state/viptv-kmp/apk/latest.apk)"
+# Self-update feed (app#64): devices pick up green builds from the dev server.
+bash .kmp-dev/kmp.sh publish-update > /tmp/batch-gate-publish.log 2>&1 && echo "Published update feed: $(tail -1 /tmp/batch-gate-publish.log)" || echo "Publish failed: see /tmp/batch-gate-publish.log"
