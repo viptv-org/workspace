@@ -75,3 +75,12 @@ Then:
   dev instance's address and controls are in the ignored `.kmp-dev/`
   files;
 - if the owner's account is on the device, skip that evidence and say so.
+
+## Backend builds
+
+Build each backend worktree into its own target directory:
+`CARGO_TARGET_DIR=/srv/fast/rust-target-backend-<issue>`. The shared
+`~/.cargo/config.toml` target resolves to the same test-binary paths for
+every worktree, so parallel agents overwrote each other's binaries
+(found 2026-10-27, backend#20). The orchestrator deletes the directory after
+merge.
