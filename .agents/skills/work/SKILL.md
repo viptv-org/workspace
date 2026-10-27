@@ -110,7 +110,9 @@ When a subagent reports:
 2. **Sync only on overlap.** If `gh pr view <pr> --json mergeable` is not
    `MERGEABLE`, or main has moved *in the files it touches*: in the
    worktree, `git merge origin/main`, resolve conflicts with the
-   `resolving-merge-conflicts` skill, rerun the affected tests, push. A PR
+   `resolving-merge-conflicts` skill, rerun the affected tests (for `app`, also
+   `:composeApp:compileAndroidMain` and `:composeApp:compileKotlinWasmJs`),
+   push. A PR
    whose files main didn't touch merges without a rerun.
 3. **Merge.** `gh pr merge <pr> -R viptv-org/<repo> --merge --delete-branch`
    (`design` and `backend` allow squash only: `--squash`). If the large-diff

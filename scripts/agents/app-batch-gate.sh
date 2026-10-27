@@ -19,10 +19,13 @@ for p in glob.glob(os.environ['APP']+'/composeApp/build/test-results/desktopTest
 print(f"tests={t} failed={f} {fl}")
 PY
 [ $code = 0 ] || { echo "RED $rev"; exit 1; }
+cd $root && export RUSTUP_TOOLCHAIN=1.98
+scripts/agents/heavy.sh bash .kmp-dev/kmp.sh build apk > /tmp/batch-gate-apk.log 2>&1 || { echo "RED $rev: APK build failed (see /tmp/batch-gate-apk.log)"; exit 3; }
+# Tag only once the suite AND the release APK pass.
+cd $app
 n=$(( $(git tag -l "good/$(date -u +%F)-*" | wc -l) + 1 )); tag=good/$(date -u +%F)-$n
 git tag -a $tag -m "Green batch: desktopTest passed at $rev" && git push -q origin $tag && echo "GREEN $rev tagged $tag"
-cd $root && export RUSTUP_TOOLCHAIN=1.98
-scripts/agents/heavy.sh bash .kmp-dev/kmp.sh build apk > /tmp/batch-gate-apk.log 2>&1 || { echo "APK build failed"; exit 3; }
+cd $root
 flock /tmp/viptv-emulator.lock bash .kmp-dev/kmp.sh install-apk emulator-5580 > /tmp/batch-gate-install.log 2>&1 && echo "TV installed $(readlink ~/.local/state/viptv-kmp/apk/latest.apk)"
 # Self-update feed (app#64): devices pick up green builds from the dev server.
 bash .kmp-dev/kmp.sh publish-update > /tmp/batch-gate-publish.log 2>&1 && echo "Published update feed: $(tail -1 /tmp/batch-gate-publish.log)" || echo "Publish failed: see /tmp/batch-gate-publish.log"
