@@ -76,6 +76,13 @@ the subagent's only context; give it:
   2. Run every Gradle or cargo build/test as
      `flock /tmp/viptv-heavy-build.lock <command>` with Gradle
      `--max-workers=1`, so parallel agents take turns on heavy builds.
+     That lock is the run's bottleneck, so the testing budget is: targeted
+     tests while iterating, and the **full suite exactly once**, right
+     before the PR, after `git merge origin/main`. A known flaky test is
+     rerun alone, never the whole suite. Gradle test runs keep the daemon
+     (`-Dorg.gradle.daemon.idletimeout=900000`, no `--no-daemon`). Release
+     APKs only when the issue changes `androidApp/` or the build; otherwise
+     `-Pviptv.abis=x86_64` debug builds.
   3. Commit continuously: after each green TDD cycle or logical step, with
      `Refs #<n>` in each message, and push the branch regularly so an
      interruption (rate limit, crash) never loses work. When the work is
@@ -92,26 +99,46 @@ the subagent's only context; give it:
 - its final report: PR URL, each check command with its pass/fail result,
   issues it filed, and anything it is unsure of.
 
-## 5. Merge, one PR at a time
+## 5. Merge in batches, verify main once per batch
 
 When a subagent reports:
 
 1. **Gate.** `gh pr diff` contains only this issue's change, the body ends
-   with the `Closes` line, and the report shows the repo's checks passing.
-   On a gap, send the subagent back with the specific fix (SendMessage).
-2. **Sync.** If `gh pr view <pr> --json mergeable` is not `MERGEABLE`, or
-   main has moved in the files it touches: in the worktree,
-   `git merge origin/main`, resolve conflicts with the
-   `resolving-merge-conflicts` skill, rerun the checks, push.
-3. **Merge.** `gh pr merge <pr> -R viptv-org/<repo> --merge --delete-branch`,
-   then `gh issue view <n> -R viptv-org/<repo> --json state` reads `CLOSED`.
-4. **Clean up.** `git -C <repo> worktree remove <worktree>`,
+   with the `Closes` line, and the report shows the repo's checks passing
+   (the agent's single full run is the gate for its change). On a gap, send
+   the subagent back with the specific fix (SendMessage).
+2. **Sync only on overlap.** If `gh pr view <pr> --json mergeable` is not
+   `MERGEABLE`, or main has moved *in the files it touches*: in the
+   worktree, `git merge origin/main`, resolve conflicts with the
+   `resolving-merge-conflicts` skill, rerun the affected tests, push. A PR
+   whose files main didn't touch merges without a rerun.
+3. **Merge.** `gh pr merge <pr> -R viptv-org/<repo> --merge --delete-branch`
+   (`design` and `backend` allow squash only: `--squash`). If the large-diff
+   GraphQL merge fails, use
+   `gh api -X PUT repos/viptv-org/<repo>/pulls/<pr>/merge -f merge_method=merge -f sha=<head>`.
+   Then `gh issue view <n> -R viptv-org/<repo> --json state` reads `CLOSED`.
+4. **Clean up.** `git -C <repo> worktree remove --force <worktree>` (app
+   worktrees contain a submodule) once `git status` is clean,
    `git -C <repo> branch -D <branch>`, and `git -C <repo> pull --ff-only`
-   when the main clone is on a clean `main`. Then run any post-merge steps
-   your local memory notes give for that repo.
+   plus `git submodule update --init` when the main clone is on a clean
+   `main`.
 5. **Refill.** Back to step 1: the merge may have unblocked issues.
 
-Merged is not deployed. Deployment stays a separate, owner-approved step.
+**Batch gate.** Merge ready PRs as they come; don't verify each one on
+main. Once per batch (every few merges, or about hourly while merges
+land), on the repo's `main`:
+
+- run the full suite once (and the APK build for `app`);
+- **green**: tag it `good/<YYYY-MM-DD>-<n>` and push the tag, then run the
+  post-merge steps from your local memory notes for that repo (device
+  installs, update-feed publishing). Only tagged green builds reach
+  devices;
+- **red**: find the culprit PR from the batch, revert its merge commit on
+  main (`git revert -m 1`), reopen its issue with the failure, and rerun.
+
+There's no `edge` branch: PRs target `main` so closing keywords keep
+working. Merged is not deployed. Deployment stays a separate,
+owner-approved step, and future releases come from `good/*` tags.
 
 ## 6. Finish
 
