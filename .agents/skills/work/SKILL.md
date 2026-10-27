@@ -73,10 +73,10 @@ on, and any verification exception. The brief gives it:
 - the job, in order:
   1. Read the issue and comments, and `.agents/skills/implement/SKILL.md`.
      Implement test-first with the `tdd` skill.
-  2. Run every Gradle or cargo build/test as
-     `flock /tmp/viptv-heavy-build.lock <command>` with Gradle
-     `--max-workers=1`, so parallel agents take turns on heavy builds.
-     That lock is the run's bottleneck, so the testing budget is: targeted
+  2. Run every Gradle or cargo build/test through
+     `scripts/agents/heavy.sh <command>` with Gradle `--max-workers=1`:
+     at most two heavy builds run at once (owner, 2026-10-27).
+     Those slots are the run's bottleneck, so the testing budget is: targeted
      tests while iterating, and the **full suite exactly once**, right
      before the PR, after `git merge origin/main`. A known flaky test is
      rerun alone, never the whole suite. Gradle test runs keep the daemon
