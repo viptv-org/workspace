@@ -43,11 +43,13 @@ device evidence, issues you filed, and anything you're unsure of.
 
 ## Testing budget
 
-The single heavy-build lock is the bottleneck.
+The shared build slots are the bottleneck.
 
-- Run every Gradle or cargo build/test as
-  `flock /tmp/viptv-heavy-build.lock <command>`, with Gradle
-  `--max-workers=1`.
+- Run every Gradle or cargo build/test through
+  `<workspace>/scripts/agents/heavy.sh <command>` (absolute path, since you run in a worktree), with
+  Gradle `--max-workers=1`. It runs the command in one of two build slots
+  (`VIPTV_HEAVY_SLOTS`, default 2), so at most two heavy builds run at once
+  across all agents.
 - While iterating, run targeted tests only (`--tests '<YourTest*>'`,
   `cargo test <filter>`), plus whatever proves the red step.
 - Run the full suite **exactly once**, right before the PR, after merging
