@@ -23,6 +23,7 @@ Read after `work-brief.md` for issues in `viptv-org/app`.
 ## Checks
 
 - `:composeApp:desktopTest`, the main gate.
+- `:composeApp:compileAndroidMain` and `:composeApp:compileKotlinWasmJs`, **always**. `commonMain` code also compiles for Android and the web, and the desktop tests don't catch platform-only APIs (app#88: a desktop-only `DialogProperties` argument broke Android).
 - `:composeApp:testAndroidHostTest`, the Robolectric Android tests, when
   you touch `androidMain`.
 - `:androidApp:assembleDebug`, only when you change `androidApp/` or
