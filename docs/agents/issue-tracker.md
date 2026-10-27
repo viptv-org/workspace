@@ -64,8 +64,10 @@ gh issue edit <n> -R viptv-org/<repo> --add-assignee @me
 
 **Work.** `/implement` (with `/tdd`). Commit continuously: after each green
 cycle or logical step, with `Refs #<n>` in each message, and push the branch
-regularly so an interruption never loses work. Run the repo's checks from
-`AGENTS.md`, then `/code-review` against `origin/main`.
+regularly so an interruption never loses work. Run targeted tests while
+iterating, then `/code-review` against `origin/main`, then the repo's full
+checks from `AGENTS.md` **once**, after merging `origin/main`, right before
+the PR. Rerun a known flaky test alone, never the whole suite.
 
 **Open the PR.** Body from the `/pr` template, last line
 `Closes viptv-org/<repo>#<n>`. Only the PR carries the closing keyword.
@@ -83,9 +85,16 @@ gh pr merge <pr> --merge --delete-branch
 gh issue view <n> --json state --jq .state   # CLOSED
 ```
 
+`design` and `backend` allow squash merges only (`--squash`).
+
 Closing keywords only fire on PRs into the default branch, so no integration
-branches without the owner's approval. Merged is not deployed: deployment
-still needs separate approval and the served-hash check in `AGENTS.md`.
+branches without the owner's approval (the owner chose no `edge` branch on
+2026-10-27). Instead, `main` is verified in batches: after a few merges,
+the full suite and build run once on `main`. A green build is tagged
+`good/<YYYY-MM-DD>-<n>` and only tagged builds reach devices and the update
+feed. A red build is fixed by reverting the culprit PR's merge. Merged is
+not deployed: deployment still needs separate approval and the served-hash
+check in `AGENTS.md`.
 
 ## When a skill says "publish to the issue tracker"
 
