@@ -50,6 +50,12 @@ The shared build slots are the bottleneck.
   Gradle `--max-workers=1`. It runs the command in one of two build slots
   (`VIPTV_HEAVY_SLOTS`, default 2), so at most two heavy builds run at once
   across all agents.
+- Don't poll. Every tool call re-sends your whole context, and the provider's
+  prompt cache expires within minutes, so a `sleep N; tail log` call repeated
+  while a build waits for a slot pays for the full context each time (found
+  2026-10-28: polling agents drained the model credit). Run a build in the
+  foreground with your tool's longest timeout, or wait for a background one
+  inside a single call (`while kill -0 $PID; do sleep 30; done`).
 - While iterating, run targeted tests only (`--tests '<YourTest*>'`,
   `cargo test <filter>`), plus whatever proves the red step.
 - Run the full suite **exactly once**, right before the PR, after merging
