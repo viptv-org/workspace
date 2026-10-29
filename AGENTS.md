@@ -28,7 +28,7 @@ are archived clients: don't change them or keep their docs in sync.
 |---|---|
 | `app` | `./gradlew :composeApp:desktopTest :composeApp:compileAndroidMain :composeApp:compileKotlinWasmJs` (`--max-workers=1`) |
 | `backend` | `cargo test --manifest-path server/Cargo.toml` and `cargo test --manifest-path server/Cargo.toml --features live-runtime --no-run`; `python3 scripts/sync-engine.py check` |
-| `core` | `cargo test --workspace --all-features`; regenerate bindings with `cargo run -p viptv-typegen` |
+| `core` | `cargo test --workspace --all-features`; regenerate bindings with `cargo run -p viptv-typegen` and `cargo run -p viptv-typegen --bin engine` |
 | `design` | `python3 scripts/validate.py` |
 | `playback-gateway` | `cargo test --locked --workspace` |
 
