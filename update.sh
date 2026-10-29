@@ -13,9 +13,9 @@ else
     cd "$SCRIPT_DIR"
 fi
 
-REPOS="design backend playback-gateway metadata web tv-web desktop core video tauri-video-plugin android roku .github"
+REPOS="app design backend playback-gateway metadata web tv-web desktop core video tauri-video-plugin android roku .github"
 # Repositories that need extra access; absent clones are expected.
-OPTIONAL_REPOS="playback-gateway metadata"
+OPTIONAL_REPOS="app playback-gateway metadata"
 failures=0
 
 update_one() {

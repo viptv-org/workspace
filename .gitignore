@@ -1,4 +1,5 @@
 # Cloned organization repositories (created by ./setup.sh)
+/app/
 /design/
 /backend/
 /playback-gateway/
