@@ -52,7 +52,7 @@ own repository. Commit and push inside the owning repo.
 | Repo | Checks |
 |---|---|
 | `design` | `python3 scripts/validate.py` |
-| `backend` | `cargo test --manifest-path server/Cargo.toml`; `scripts/host-check.sh` is the read-only deployment preflight |
+| `backend` | `cargo test --manifest-path server/Cargo.toml`, plus `cargo test --manifest-path server/Cargo.toml --features live-runtime --no-run` so feature-gated tests compile; `scripts/host-check.sh` is the read-only deployment preflight |
 | `playback-gateway` | `cargo test --locked --workspace`; real media/container fixtures are opt-in and separately scoped |
 | `web` | `npm run build && npm run test` (build = `tsc -b` + `vite build`) |
 | `tv-web` | `npm run typecheck && npm run test`; full validation adds `npm run build` (design/core pin checks + vite) and Playwright `npm run test:e2e` |

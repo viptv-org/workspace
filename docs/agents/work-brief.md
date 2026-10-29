@@ -90,3 +90,8 @@ Build each backend worktree into its own target directory:
 every worktree, so parallel agents overwrote each other's binaries
 (found 2026-10-27, backend#20). The orchestrator deletes the directory after
 merge.
+
+The once-before-PR full check also compiles the feature-gated tests:
+`cargo test --manifest-path server/Cargo.toml --features live-runtime --no-run`.
+Default-features runs never build them, so four `live-runtime` fixtures
+rotted unnoticed until backend#62.

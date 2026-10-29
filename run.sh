@@ -52,7 +52,8 @@ run_design() {
 }
 
 run_backend() {
-    in_repo backend cargo test --manifest-path server/Cargo.toml
+    in_repo backend cargo test --manifest-path server/Cargo.toml &&
+        in_repo backend cargo test --manifest-path server/Cargo.toml --features live-runtime --no-run
 }
 
 run_playback_gateway() {
