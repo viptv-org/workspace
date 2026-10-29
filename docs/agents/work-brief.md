@@ -18,6 +18,23 @@ repo-specific notes.
   (`--label bug --label needs-triage`, see "Found a bug?" in
   `issue-tracker.md`), never a change on your branch.
 
+## Edit-only mode and edge (owner, 2026-10-29)
+
+While the orchestrator's message says edit-only mode is on, this replaces
+the build and test steps below:
+
+- Don't build, compile or run tests: no Gradle, cargo, heavy.sh, emulator or
+  browser runs. Write the tests the issue asks for, but don't run them. The
+  orchestrator's batch gate compiles and runs the full suite after merging.
+- Nothing checks your work before it merges, so re-read every changed file:
+  imports, types, call sites, every exhaustive `when`/`match`, and other
+  users of anything you rename.
+- `app` and `backend` branches are based on `edge`: compare and merge against
+  `origin/edge`, and open the PR with `--base edge`. `design`, `core` and
+  `workspace` stay on `main`.
+- The PR body says it's unbuilt and untested, and still ends
+  `Closes viptv-org/<repo>#<n>`. The issue closes when `edge` is promoted.
+
 ## Job order
 
 1. Read the issue with comments (`gh issue view <n> -R viptv-org/<repo>

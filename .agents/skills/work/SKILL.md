@@ -126,22 +126,34 @@ When a subagent reports:
    `main`.
 5. **Refill.** Back to step 1: the merge may have unblocked issues.
 
-**Batch gate.** Merge ready PRs as they come; don't verify each one on
-main. Once per batch (every few merges, or about hourly while merges
-land), on the repo's `main`:
+**Edge and edit-only mode (owner, 2026-10-29).** `app` and `backend` have an
+`edge` branch. `claim.sh` bases their issue branches on it, PRs target it, and
+agents work edit-only: no builds and no test runs. Review the diff against the
+issue, then merge into `edge` right away; steps 1–2 above apply to the diff,
+not to check results. `main` only moves by promotion from a green gate, so it
+always builds. `design`, `core` and `workspace` keep targeting `main`.
+Closing keywords only fire on the default branch: an issue merged into `edge`
+stays open until its PR is promoted.
 
-- run the full suite once (and the APK build for `app`);
-- **green**: tag it `good/<YYYY-MM-DD>-<n>` and push the tag (for `app`,
-  `scripts/agents/app-batch-gate.sh` does the suite, tag and device steps), then run the
-  post-merge steps from your local memory notes for that repo (device
-  installs, update-feed publishing). Only tagged green builds reach
-  devices;
-- **red**: find the culprit PR from the batch, revert its merge commit on
-  main (`git revert -m 1`), reopen its issue with the failure, and rerun.
+**Batch gate.** Once per batch (every few merges, or about hourly while
+merges land), on `edge`:
 
-There's no `edge` branch: PRs target `main` so closing keywords keep
-working. Merged is not deployed. Deployment stays a separate,
-owner-approved step, and future releases come from `good/*` tags.
+- `app`: `scripts/agents/app-batch-gate.sh` runs the full suite, the web
+  compile and the release APK. `backend`: `scripts/agents/backend-batch-gate.sh`
+  runs the engine sync check, the full suite and the `live-runtime` compile,
+  in its own worktree;
+- **green**: the script tags `good/<YYYY-MM-DD>-<n>` (`app`) and runs
+  `scripts/agents/promote.sh`, which fast-forwards `main` to the tested commit
+  and closes the issues the promoted PRs name. Then the post-merge steps from
+  your local memory notes run (device installs, update-feed publishing, the
+  dev backend rebuild from `main`). Only promoted green builds reach devices;
+- **red**: find the culprit from the compile error or the failing test, and
+  dispatch one fix agent that *may* build (heavy.sh) to repair `edge`, or
+  revert the culprit's merge on `edge` (`git revert -m 1`) and reopen its
+  issue. Never push a fix straight to `main`.
+
+Merged is not deployed. Deployment stays a separate, owner-approved step,
+and future releases come from `good/*` tags.
 
 ## 6. Finish
 
