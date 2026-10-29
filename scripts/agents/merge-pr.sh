@@ -9,7 +9,8 @@ method=merge; case $repo in backend|design) method=squash ;; esac
 merged=$(gh api -X PUT "repos/viptv-org/$repo/pulls/$pr/merge" -f merge_method=$method -f sha="$head" --jq .merged 2>&1) || true
 [ "$merged" = true ] || { echo "NOT merged $repo#$pr: $merged" >&2; exit 1; }
 echo "merged $repo#$pr ($method)"
-cd "$root/$repo"
+repo_dir=$root/$repo; [ "$repo" = workspace ] && repo_dir=$root
+cd "$repo_dir"
 git push -q origin --delete "$branch" 2>/dev/null || true
 wt=$(git worktree list --porcelain | awk -v b="refs/heads/$branch" '/^worktree /{w=$2} $0=="branch " b {print w}')
 if [ -n "$wt" ]; then

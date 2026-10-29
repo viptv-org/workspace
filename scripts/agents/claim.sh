@@ -6,8 +6,10 @@ repo=$1 n=$2 branch=$3
 root=$(cd "$(dirname "$0")/../.." && pwd)
 # Backend tests break inside the workspace (Zeron port probes), so it lives in /tmp.
 if [ "$repo" = backend ]; then wt=/tmp/viptv-wt/backend-$n/backend; mkdir -p "/tmp/viptv-wt/backend-$n"
+elif [ "$repo" = workspace ]; then wt=$root/.worktrees/workspace-$n
 else wt=$root/.worktrees/$repo-$n/$repo; fi
-cd "$root/$repo"
+repo_dir=$root/$repo; [ "$repo" = workspace ] && repo_dir=$root
+cd "$repo_dir"
 git fetch -q origin
 # app and backend take unbuilt merges on edge; the batch gate promotes green edge to main.
 base=main; case $repo in app|backend) base=edge ;; esac
