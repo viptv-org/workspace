@@ -99,10 +99,14 @@ merges land), on `edge`:
   and closes the issues the promoted PRs name. Then the post-merge steps from
   your local memory notes run (device installs, update-feed publishing, the
   dev backend rebuild from `main`). Only promoted green builds reach devices;
-- **red**: find the culprit from the compile error or the failing test, and
-  dispatch one fix agent that *may* build (heavy.sh) to repair `edge`, or
-  revert the culprit's merge on `edge` (`git revert -m 1`) and reopen its
-  issue. Never push a fix straight to `main`.
+- **red**: find the culprit PR from the compile error or failing test and
+  send the gate's failure output (the failing test, its assertion and stack,
+  or the compile error) back to that issue's agent: the same chat if it
+  still exists, otherwise a new agent on the same issue. It stays edit-only:
+  it reads the failure and the code, fixes `edge` with a follow-up PR that
+  refers to the issue, and the gate reruns. Revert the culprit's merge on
+  `edge` (`git revert -m 1`) only if the fix would take long. Never push a fix
+  straight to `main`.
 
 Merged is not deployed. Deployment stays a separate, owner-approved step,
 and future releases come from `good/*` tags.
