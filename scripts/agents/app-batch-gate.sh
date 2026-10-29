@@ -11,6 +11,7 @@ cd $app && git fetch -q origin && git checkout -q "$branch" && git pull -q --ff-
 sha=$(git rev-parse HEAD); rev=${sha:0:7}
 export RUSTUP_TOOLCHAIN=1.98.0 JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64 LC_ALL=C VIPTV_PLAYBACK_GATEWAY=$root/playback-gateway
 echo "gate $branch $rev: desktopTest + compileKotlinWasmJs"
+rm -rf composeApp/build/test-results/desktopTest
 "$root/scripts/agents/heavy.sh" ./gradlew --max-workers=1 -Dorg.gradle.daemon.idletimeout=900000 :composeApp:desktopTest :composeApp:compileKotlinWasmJs > /tmp/batch-gate-test.log 2>&1
 code=$?
 APP=$app python3 - <<'PY'
@@ -21,6 +22,7 @@ for p in glob.glob(os.environ['APP']+'/composeApp/build/test-results/desktopTest
     if n:fl.append(r.get('name'))
 print(f"tests={t} failed={f} {fl}")
 PY
+grep -E "^e: " /tmp/batch-gate-test.log | sort -u | head -20
 [ $code = 0 ] || { echo "RED $rev: desktopTest or web compile failed (see /tmp/batch-gate-test.log)"; exit 1; }
 cd $root && export RUSTUP_TOOLCHAIN=1.98
 scripts/agents/heavy.sh bash .kmp-dev/kmp.sh build apk > /tmp/batch-gate-apk.log 2>&1 || { echo "RED $rev: APK build failed (see /tmp/batch-gate-apk.log)"; exit 3; }
