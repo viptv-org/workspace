@@ -19,10 +19,10 @@ else
 fi
 
 # Repositories in the canonical viptv-org layout.
-REPOS="design backend playback-gateway metadata web tv-web desktop core video tauri-video-plugin android roku .github"
+REPOS="app design backend playback-gateway metadata web tv-web desktop core video tauri-video-plugin android roku .github"
 # Repositories that need extra access. A failed clone is a warning, not an
 # error, so contributors without access still get a working workspace.
-OPTIONAL_REPOS="playback-gateway metadata"
+OPTIONAL_REPOS="app playback-gateway metadata"
 
 is_optional() {
     case " $OPTIONAL_REPOS " in
@@ -68,6 +68,12 @@ for repo in $REPOS; do
         failures=$((failures + 1))
     fi
 done
+
+# The app's engine is a submodule. A clone without it cannot run the app checks.
+if [ -d app/.git ]; then
+    printf '==> app: initialising native/core submodule\n'
+    git -C app submodule update --init native/core
+fi
 
 # Install the portable skill bundle even when a clone failed.
 printf '\n'

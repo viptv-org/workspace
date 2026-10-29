@@ -42,6 +42,11 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
   bindings; Android targets plus cargo-ndk 4.1.2 and NDK 27.2 for `android`.
 - Android work: JDK 17 (`openjdk-17-jdk`), Android cmdline-tools with SDK
   Platform 35/36.
+- `app` desktop builds assemble a native mpv runtime from the installed
+  library and CLI (`sudo apt-get install -y libmpv2 patchelf mpv`), and need
+  JDK 21 (`openjdk-21-jdk`). Android builds use Rust `1.98` with the
+  `aarch64-linux-android`, `armv7-linux-androideabi` and `x86_64-linux-android`
+  targets; desktop builds use `1.98.0`.
 - `tauri-video-plugin` native media tests: install GStreamer dev/runtime
   packages (for example `libgstreamer1.0-dev gstreamer1.0-plugins-base`).
 
@@ -49,6 +54,7 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 | Repo | Toolchain |
 |---|---|
+| `app` | JDK 21; Rust `1.98.0` (desktop) and `1.98` (Android targets); Android SDK + NDK; `libmpv2` + `patchelf` + `mpv` for desktop |
 | `design` | python3 |
 | `backend` | Rust (cargo); Docker only for packaging/preflight |
 | `web` | Node |
