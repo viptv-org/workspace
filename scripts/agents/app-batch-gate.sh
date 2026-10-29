@@ -31,6 +31,6 @@ git tag -a $tag -m "Green batch: desktopTest, web compile and APK passed at $rev
 "$root/scripts/agents/promote.sh" app "$sha" "$tag" || echo "Promote failed: main not moved"
 git checkout -q main && git pull -q --ff-only
 cd $root
-flock /tmp/viptv-emulator.lock bash .kmp-dev/kmp.sh install-apk emulator-5580 > /tmp/batch-gate-install.log 2>&1 && echo "TV installed $(readlink ~/.local/state/viptv-kmp/apk/latest.apk)"
+flock /tmp/viptv-emulator.lock bash .kmp-dev/kmp.sh install-apk emulator-5580 > /tmp/batch-gate-install.log 2>&1 && echo "TV installed $(readlink ~/.local/state/viptv-kmp/apk/latest.apk)" || echo "TV install failed: $(tail -1 /tmp/batch-gate-install.log) (systemctl --user is-active serve-avd-emulator.service)"
 # Self-update feed (app#64): devices pick up green builds from the dev server.
 bash .kmp-dev/kmp.sh publish-update > /tmp/batch-gate-publish.log 2>&1 && echo "Published update feed: $(tail -1 /tmp/batch-gate-publish.log)" || echo "Publish failed: see /tmp/batch-gate-publish.log"
