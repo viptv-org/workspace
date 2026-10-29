@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 # Run a heavy Gradle/cargo command in one of VIPTV_HEAVY_SLOTS lock slots
-# (default 2). Slot 1 is /tmp/viptv-heavy-build.lock, so plain
+# (default 3). Slot 1 is /tmp/viptv-heavy-build.lock, so plain
 # `flock /tmp/viptv-heavy-build.lock …` callers still take a slot.
 # Usage: scripts/agents/heavy.sh ./gradlew --max-workers=1 :composeApp:desktopTest
 set -u
-slots=${VIPTV_HEAVY_SLOTS:-2}
+slots=${VIPTV_HEAVY_SLOTS:-3}
 [ $# -gt 0 ] || { echo "usage: $0 <command> [args...]" >&2; exit 2; }
 while :; do
     for i in $(seq 1 "$slots"); do

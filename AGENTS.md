@@ -67,7 +67,7 @@ own repository. Commit and push inside the owning repo.
 Machine-specific constraints live in each repo's own AGENTS.md. Follow the
 owner's resource limits; use one worker (`--max-workers=1`) for expensive Gradle
 checks rather than inferring safe concurrency from host totals. Parallel agents
-share two heavy-build slots through `scripts/agents/heavy.sh` (owner, 2026-10-27). Coordinate device/browser/build
+share three heavy-build slots through `scripts/agents/heavy.sh` (owner, 2026-10-29; two before). Coordinate device/browser/build
 windows before starting costly or network-changing work.
 
 ## Local testing

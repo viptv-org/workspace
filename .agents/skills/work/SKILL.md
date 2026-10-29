@@ -75,7 +75,7 @@ on, and any verification exception. The brief gives it:
      Implement test-first with the `tdd` skill.
   2. Run every Gradle or cargo build/test through
      `scripts/agents/heavy.sh <command>` with Gradle `--max-workers=1`:
-     at most two heavy builds run at once (owner, 2026-10-27).
+     at most three heavy builds run at once (owner, 2026-10-29).
      Those slots are the run's bottleneck, so the testing budget is: targeted
      tests while iterating, and the **full suite exactly once**, right
      before the PR, after `git merge origin/main`. A known flaky test is

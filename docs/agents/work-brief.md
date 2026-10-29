@@ -47,8 +47,8 @@ The shared build slots are the bottleneck.
 
 - Run every Gradle or cargo build/test through
   `<workspace>/scripts/agents/heavy.sh <command>` (absolute path, since you run in a worktree), with
-  Gradle `--max-workers=1`. It runs the command in one of two build slots
-  (`VIPTV_HEAVY_SLOTS`, default 2), so at most two heavy builds run at once
+  Gradle `--max-workers=1`. It runs the command in one of three build slots
+  (`VIPTV_HEAVY_SLOTS`, default 3), so at most three heavy builds run at once
   across all agents.
 - Don't poll. Every tool call re-sends your whole context, and the provider's
   prompt cache expires within minutes, so a `sleep N; tail log` call repeated
