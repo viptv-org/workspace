@@ -1,147 +1,82 @@
 # VIPTV organization workspace
 
-## Agent skills
+This repository is the working directory for the VIPTV organization. `./setup.sh`
+clones every org repository into this root; `./update.sh` fast-forwards them and
+these notes. Each subdirectory is its own git repository: commit and push inside
+the repo that owns the change. This repo's own files (AGENTS.md, docs/, scripts/,
+setup.sh, update.sh, run.sh) are the shared notes and tooling.
 
-For issue work read `docs/agents/issue-tracker.md`; confirmed default triage
-labels are in `docs/agents/triage-labels.md`. All work is tracked as GitHub
-issues in the owning repo: one issue, one branch, one PR, merged by the agent
-with a merge commit. A bug found outside the current task becomes a new
-`bug` + `needs-triage` issue at once, never a fix on the current branch.
-The owner files work with `/intake` and runs it with `/work`. For domain changes read
-`docs/agents/domain.md`. For resuming the v2 cutover read
-`docs/agents/handoff.md` and the design implementation ledger before coding.
-Install the pinned bundle additively with `scripts/install-agent-skills.sh`;
-existing user skills, configuration and AGENTS files take precedence.
-
-This repository **is** the working directory for the whole VIPTV organization.
-Clone it, run `./setup.sh`, and every org repository appears in this repo's
-root in the canonical layout. The tracked files of this repo (AGENTS.md,
-README.md, CONTRIBUTING.md, SPEC.md, docs/, meta/, setup.sh, update.sh, run.sh) are the
-workspace notes: `./update.sh` fast-forwards the notes together with every
-clone. Cloned repositories are git-ignored here — each subdirectory is its
-own repository. Commit and push inside the owning repo.
+## Repositories
 
 | Repo | Owns |
 |---|---|
-| `design` | Product specs, assets, interaction contract; start here for UX |
-| `backend` | Rust API, auth, catalog/media services, deployment packaging |
-| `playback-gateway` | Independent generic ingestion, output jobs and viewer leases |
-| `workspace` | Organization bootstrap, portable skills and handoff coordination |
-| `web` | Account and admin web app (also the `backend` `dashboard` submodule) |
-| `tv-web` | Shared React viewing client for web, Smart TVs (Tizen/Vizio), and desktop |
-| `desktop` | Native Tauri v2 desktop client for Linux, Windows, macOS |
-| `core` | Shared Crux Rust state, normalization, generated bindings |
-| `video` | React/web/Tizen/Vizio video controller |
-| `tauri-video-plugin` | Tauri native playback adapter |
-| `android` | Android/Android TV app and playback integration |
-| `roku` | Native Roku client |
-| `.github` | Organization profile and shared GitHub metadata |
+| `app` | The only client: Kotlin Compose Multiplatform for Android, Android TV, desktop and web |
+| `backend` | Rust API, auth, catalog, continuation, image proxy; serves the web app |
+| `core` | Shared Rust engine and its generated wire types; vendored into `backend`, a submodule of `app` |
+| `design` | Product specs, copy and the design system; read it before changing UX |
+| `playback-gateway` | Ingestion, output jobs and viewer leases |
+| `workspace` | This repo: setup, agent tooling, these notes |
 
-## Start here
+`tv-web`, `web`, `desktop`, `video`, `tauri-video-plugin`, `android` and `roku`
+are archived clients: don't change them or keep their docs in sync.
 
-1. `./setup.sh` on first use to clone all repositories into this root.
-2. Read the target repo's `AGENTS.md` and README. Product behavior starts in
-   `design`; read its pinned `DESIGN_REF` before implementing anything.
-3. Make the change in the **owning** repo. Update consumers only when the
-   contract changes.
-4. Run the repo's documented checks (`./run.sh <repo>` wraps them), then
-   commit, push the issue's branch and open its PR (`docs/agents/issue-tracker.md`).
+## Checks
 
-## Per-repo check commands
+`./run.sh <repo>` wraps these. Under `/work` they run in the batch gate, not per PR.
 
 | Repo | Checks |
 |---|---|
+| `app` | `./gradlew :composeApp:desktopTest :composeApp:compileAndroidMain :composeApp:compileKotlinWasmJs` (`--max-workers=1`) |
+| `backend` | `cargo test --manifest-path server/Cargo.toml` and `cargo test --manifest-path server/Cargo.toml --features live-runtime --no-run`; `python3 scripts/sync-engine.py check` |
+| `core` | `cargo test --workspace --all-features`; regenerate bindings with `cargo run -p viptv-typegen` |
 | `design` | `python3 scripts/validate.py` |
-| `backend` | `cargo test --manifest-path server/Cargo.toml`, plus `cargo test --manifest-path server/Cargo.toml --features live-runtime --no-run` so feature-gated tests compile; `scripts/host-check.sh` is the read-only deployment preflight |
-| `playback-gateway` | `cargo test --locked --workspace`; real media/container fixtures are opt-in and separately scoped |
-| `web` | `npm run build && npm run test` (build = `tsc -b` + `vite build`) |
-| `tv-web` | `npm run typecheck && npm run test`; full validation adds `npm run build` (design/core pin checks + vite) and Playwright `npm run test:e2e` |
-| `desktop` | `cargo test --manifest-path src-tauri/Cargo.toml`; verify `npm run check` and desktop window launch |
-| `core` | `cargo test`; regenerate bindings with `cargo run -p viptv-typegen`, `scripts/build-native-bindings.sh`, `scripts/build-wasm.sh` |
-| `video` | `npm run check` (typecheck, effect diagnostics, tests) |
-| `tauri-video-plugin` | `npm run check` and `cargo test` (Rust tests need a host media runtime, e.g. GStreamer on Linux) |
-| `android` | `bash scripts/prepare-core.sh host && ./gradlew --no-daemon :testDebugUnitTest :app:testDebugUnitTest`, then `scripts/prepare-core.sh android && ./gradlew --no-daemon :app:assembleDebug` for the APK (JDK 17, SDK Platform 36, Rust Android targets, cargo-ndk — all installed locally) |
-| `roku` | follow Roku README/scripts for runtime and contract fixtures, BrighterScript staging and package checks; device testing is coordinated with the owner |
-| `.github` | organization profile only |
+| `playback-gateway` | `cargo test --locked --workspace` |
 
-Machine-specific constraints live in each repo's own AGENTS.md. Follow the
-owner's resource limits; use one worker (`--max-workers=1`) for expensive Gradle
-checks rather than inferring safe concurrency from host totals. Parallel agents
-share three heavy-build slots through `scripts/agents/heavy.sh` (owner, 2026-10-29; two before). Coordinate device/browser/build
-windows before starting costly or network-changing work.
+Heavy builds go through `scripts/agents/heavy.sh`, which shares three build slots
+across every agent on this machine. Each repo's own AGENTS.md has its toolchain
+and test gotchas.
 
-## Local testing
+## Issues and /work
 
-Use the local HTTPS environment, not plain HTTP — the viewing client requires
-HTTPS and the backend pins a single browser origin (`VIPTV_AUTH_ORIGIN`), so
-plain-HTTP testing is not representative:
+Every change is a GitHub issue in the owning repo: one issue, one branch, one PR.
+`docs/agents/issue-tracker.md` is the lifecycle and `docs/agents/triage-labels.md`
+the labels. A bug found outside the current task becomes a new `bug` +
+`needs-triage` issue, never a fix on the current branch.
 
-```sh
-./.local-https/up.sh setup && ./.local-https/up.sh start
-./.local-https/up.sh stop
-```
+`/work` (`.agents/skills/work/SKILL.md`) runs the queue. In `app` and `backend`,
+PRs merge unbuilt into `edge`; the batch gate tests `edge` and promotes green
+commits to `main`, so `main` always builds. Subagents read
+`docs/agents/work-brief.md`.
 
-`.local-https/` is private, untracked tooling maintained by the owner: trusted
-loopback TLS, the real backend, and the built front-ends. It is git-ignored
-here and never committed because it contains certificates; ask the owner for
-access rather than recreating it.
+## Comments and docs
 
-## Deployment
+- No comments by default. Names and structure carry the meaning.
+- The one exception: a trap a reader can't see and would break, in one line
+  (for example "Coil must be configured before the first image load").
+- Never explain, justify or narrate code, and never write history: no issue or
+  PR numbers, dates, owner quotes, or "used to / instead of / changed from /
+  now". That belongs in commit messages and PRs.
+- Docs describe current behaviour and how to work with it, in as few words as
+  will do. Delete a doc instead of letting it go stale.
+- Screenshots and renders go in the PR body, not in the repository.
 
-Deployments go through Dokploy. **Every VIPTV Dokploy deploy so far failed
-while being reported as successful**, so never claim a change is live without
-checking. The proof is the asset hash served by the production origin (its
-address is in the private deployment notes):
+## Safety
 
-```sh
-curl -sS "$PRODUCTION_ORIGIN/" | grep -o 'assets/index-[A-Za-z0-9_-]*\.js'
-```
+- Never commit secrets: passwords, keys, tokens, private hosts, certificates,
+  `.env` contents or provider URLs. Device values live in the ignored root `.env`.
+- Deploys go through Dokploy and are owner-approved. Dokploy has reported failed
+  deploys as successful, so prove a deploy by the asset hash the production
+  origin serves (address in the private deployment notes). Never run
+  `docker compose down -v` against production: it deletes the database.
+- Local testing uses the private HTTPS environment (`./.local-https/up.sh setup`,
+  `start`, `stop`); plain HTTP isn't representative. Ask the owner for access.
+- Emulators: read the ignored `.local-device-testing.md` first, pass an explicit
+  ADB serial, and never uninstall the app, clear its data or sign out. Physical
+  TVs only on explicit request.
 
-Deployment credentials, runbooks, and production topology are private and
-live outside git (this repo ignores those paths by design). Read the private
-deployment notes before any deploy and get access from the owner. Never run
-`docker compose down -v` against production; it deletes the database volume.
+## Environment
 
-## Secrets and device access
-
-Never commit secrets into any tracked file: no passwords, API keys, tokens,
-private addresses, certificates, `.env` contents, or provider URLs. Root
-`.env` files are private developer environments for local scripts and device
-testing; repo `.env.example` files are templates only. Device values (Roku,
-Android, ADB) belong in the ignored root `.env`, never in docs, specs,
-commits, or issues.
-
-For Android TV UI, focus/navigation, APK installation or visual inspection on
-this VPS, read the ignored root `.local-device-testing.md` first and use its
-existing serve-avd emulator. It is shared with the owner's browser session;
-coordinate disruptive tests and preserve app data/sign-in. Use an explicit ADB
-serial for every command. Physical-TV testing requires an explicit request;
-the private note also contains that separate procedure.
-
-Android SDK and other emulator values come from the ignored root `.env`.
-Other machines require their own setup. Roku device tooling is owner-maintained;
-coordinate with the owner for device runs.
-
-## Environment quirks
-
-- The owner's interactive shell is **fish**: no heredocs, and `$?` is
-  `$status`. Write helper scripts to a file and run them with `bash`.
-- Shell output capture through the owner's editor terminal is unreliable.
-  Redirect noisy command output to a temp file and read the file back.
-- Docker requires `sudo` on the owner's host; passwordless sudo is available.
-- Repos may be checked out through a symlinked path; use one path form
-  consistently within a session.
-- Scripts in this repo are plain bash and safe under Git Bash on Windows;
-  prefer Git Bash or WSL2 over cmd/PowerShell.
-
-## Subagents
-
-Use Claude models only (the Claude Code harness), with high reasoning (`high`):
-
-| Work | Model |
-|---|---|
-| Research, exploration, reading docs/code | Claude Sonnet 5.5 (`claude-sonnet-5-5`) |
-| Implementation, testing, review | Claude Opus 5.5 (`claude-opus-5-5`) |
-
-Set the model and reasoning explicitly when dispatching. Restart retained agents
-using other settings before assigning further work.
+- The owner's shell is fish: write helper scripts to a file and run them with
+  bash. Redirect noisy output to a file and read it back.
+- Docker needs `sudo` (passwordless).
+- Scripts here are plain bash; on Windows use Git Bash or WSL2.

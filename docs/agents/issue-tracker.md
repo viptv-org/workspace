@@ -77,24 +77,13 @@ git push -u origin <kind>/<n>-<slug>
 gh pr create --base main --title "<imperative summary>" --body-file /tmp/pr.md
 ```
 
-**Merge.** Agents may merge their own reviewed PRs with a merge commit once
-the checks pass, then confirm the issue closed:
-
-```bash
-gh pr merge <pr> --merge --delete-branch
-gh issue view <n> --json state --jq .state   # CLOSED
-```
-
-`design` and `backend` allow squash merges only (`--squash`).
-
-Closing keywords only fire on PRs into the default branch, so no integration
-branches without the owner's approval (the owner chose no `edge` branch on
-2026-10-27). Instead, `main` is verified in batches: after a few merges,
-the full suite and build run once on `main`. A green build is tagged
-`good/<YYYY-MM-DD>-<n>` and only tagged builds reach devices and the update
-feed. A red build is fixed by reverting the culprit PR's merge. Merged is
-not deployed: deployment still needs separate approval and the served-hash
-check in `AGENTS.md`.
+**Merge.** In `app` and `backend`, PRs target `edge` and merge unbuilt; the
+batch gate tests `edge` and `scripts/agents/promote.sh` fast-forwards green
+commits to `main`, tags them `good/<YYYY-MM-DD>-<n>` (app) and closes their
+issues. Other repos merge into `main`. Merge with a merge commit; `design` and
+`backend` allow squash only (`--squash`). Only promoted builds reach devices
+and the update feed. Merged is not deployed: deployment needs separate approval
+and the served-hash check in `AGENTS.md`.
 
 ## When a skill says "publish to the issue tracker"
 

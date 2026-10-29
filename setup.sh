@@ -84,5 +84,5 @@ else
     printf 'Workspace ready.\n'
 fi
 printf '  ./update.sh     fast-forward this repo and every clone\n'
-printf '  ./run.sh list   show each repository check command\n'
+printf '  ./run.sh app    run one repository check\n'
 printf '  ./run.sh all    run every repository check\n'

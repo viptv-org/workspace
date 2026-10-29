@@ -61,79 +61,31 @@ inside the workspace and breaks backend tests.
 
 ## 4. Dispatch one subagent per issue
 
-Agent tool, `model: opus`, `effort: high`, in the background. The brief is
-the subagent's only context. Tell it to read `docs/agents/work-brief.md`
-first (the rules below, the testing budget and device safety), plus
-`docs/agents/work-brief-app.md` for `app`. Add what's specific to this
-issue: which in-flight issues touch nearby files, which merged PRs to build
-on, and any verification exception. The brief gives it:
+Background agent, one per issue. Its brief is `docs/agents/work-brief.md` plus
+your message: the issue, the worktree and branch, which in-flight issues touch
+nearby files, and which merged PRs to build on. Agents work edit-only (no builds
+or test runs) unless you say otherwise, and send you a final report.
 
-- the issue URL, the worktree path, the branch, and the repo's checks
-  (`AGENTS.md` per-repo table) plus any worktree bootstrap from step 3
-- the job, in order:
-  1. Read the issue and comments, and `.agents/skills/implement/SKILL.md`.
-     Implement test-first with the `tdd` skill.
-  2. Run every Gradle or cargo build/test through
-     `scripts/agents/heavy.sh <command>` with Gradle `--max-workers=1`:
-     at most three heavy builds run at once (owner, 2026-10-29).
-     Those slots are the run's bottleneck, so the testing budget is: targeted
-     tests while iterating, and the **full suite exactly once**, right
-     before the PR, after `git merge origin/main`. A known flaky test is
-     rerun alone, never the whole suite. Gradle test runs keep the daemon
-     (`-Dorg.gradle.daemon.idletimeout=900000`, no `--no-daemon`). Release
-     APKs only when the issue changes `androidApp/` or the build; otherwise
-     `-Pviptv.abis=x86_64` debug builds.
-  3. Commit continuously: after each green TDD cycle or logical step, with
-     `Refs #<n>` in each message, and push the branch regularly so an
-     interruption (rate limit, crash) never loses work. When the work is
-     done, run the `code-review` skill against `origin/main` and fix what
-     it finds.
-  4. Push the branch and open the PR: body from `.agents/skills/pr/SKILL.md`,
-     last line `Closes viptv-org/<repo>#<n>`. It does not merge.
-  5. Anything unrelated it finds becomes a new `bug` + `needs-triage` issue
-     (`docs/agents/issue-tracker.md`, "Found a bug?"), never a change on
-     this branch.
-  6. If it cannot finish (needs a device, a decision, or credentials), it
-     comments why on the issue, swaps `ready-for-agent` for
-     `ready-for-human`, removes the assignee, and stops.
-- its final report: PR URL, each check command with its pass/fail result,
-  issues it filed, and anything it is unsure of.
-
-## 5. Merge in batches, verify main once per batch
+## 5. Merge as reports arrive, gate in batches
 
 When a subagent reports:
 
-1. **Gate.** `gh pr diff` contains only this issue's change, the body ends
-   with the `Closes` line, and the report shows the repo's checks passing
-   (the agent's single full run is the gate for its change). On a gap, send
-   the subagent back with the specific fix (SendMessage).
-2. **Sync only on overlap.** If `gh pr view <pr> --json mergeable` is not
-   `MERGEABLE`, or main has moved *in the files it touches*: in the
-   worktree, `git merge origin/main`, resolve conflicts with the
-   `resolving-merge-conflicts` skill, rerun the affected tests (for `app`, also
-   `:composeApp:compileAndroidMain` and `:composeApp:compileKotlinWasmJs`),
-   push. A PR
-   whose files main didn't touch merges without a rerun.
-3. **Merge.** `gh pr merge <pr> -R viptv-org/<repo> --merge --delete-branch`
-   (`design` and `backend` allow squash only: `--squash`). If the large-diff
-   GraphQL merge fails, use
+1. **Review.** `gh pr diff` contains only this issue's change, matches the
+   issue, and the body ends with the `Closes` line. On a gap, send the agent
+   back with the specific fix.
+2. **Merge.** In `app` and `backend` the PR targets `edge`; elsewhere `main`.
+   If it isn't `MERGEABLE`, have the agent merge its base branch and resolve
+   the conflicts first. `gh pr merge <pr> -R viptv-org/<repo> --merge --delete-branch`
+   (`design` and `backend` are squash-only: `--squash`). If the GraphQL merge
+   fails on a large diff, use
    `gh api -X PUT repos/viptv-org/<repo>/pulls/<pr>/merge -f merge_method=merge -f sha=<head>`.
-   Then `gh issue view <n> -R viptv-org/<repo> --json state` reads `CLOSED`.
-4. **Clean up.** `git -C <repo> worktree remove --force <worktree>` (app
-   worktrees contain a submodule) once `git status` is clean,
-   `git -C <repo> branch -D <branch>`, and `git -C <repo> pull --ff-only`
-   plus `git submodule update --init` when the main clone is on a clean
-   `main`.
-5. **Refill.** Back to step 1: the merge may have unblocked issues.
+3. **Clean up.** `git -C <repo> worktree remove --force <worktree>` and
+   `git -C <repo> branch -D <branch>`.
+4. **Refill.** Back to step 1: the merge may have unblocked issues.
 
-**Edge and edit-only mode (owner, 2026-10-29).** `app` and `backend` have an
-`edge` branch. `claim.sh` bases their issue branches on it, PRs target it, and
-agents work edit-only: no builds and no test runs. Review the diff against the
-issue, then merge into `edge` right away; steps 1–2 above apply to the diff,
-not to check results. `main` only moves by promotion from a green gate, so it
-always builds. `design`, `core` and `workspace` keep targeting `main`.
-Closing keywords only fire on the default branch: an issue merged into `edge`
-stays open until its PR is promoted.
+`main` in `app` and `backend` only moves by promotion from a green gate, so it
+always builds. Closing keywords only fire on the default branch: an issue
+merged into `edge` stays open until its PR is promoted.
 
 **Batch gate.** Once per batch (every few merges, or about hourly while
 merges land), on `edge`:

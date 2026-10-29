@@ -1,114 +1,66 @@
 # /work subagent brief
 
-Every `/work` implementation subagent reads this file first. It is part of
-the brief; the orchestrator's message adds the issue, worktree, branch and
-repo-specific notes.
+Read this first. The orchestrator's message adds the issue, worktree and branch.
+Also read the workspace `AGENTS.md` and the target repo's `AGENTS.md`.
 
-## Scope and safety
+## Rules
 
-- Work only in your worktree. Never touch the main clones under the
-  workspace root or another agent's worktree; several agents run at once.
-- Read the workspace `AGENTS.md`. The owner's shell is fish: write helper
-  scripts to a file and run them with bash, and redirect noisy output to a
-  temp file and read it back.
-- Skills live in `.agents/skills/` (implement, tdd, diagnosing-bugs,
-  code-review, pr, resolving-merge-conflicts, playwright-cli, serve-avd).
-  The issue lifecycle is `docs/agents/issue-tracker.md`.
-- Anything unrelated you find becomes a new issue
-  (`--label bug --label needs-triage`, see "Found a bug?" in
-  `issue-tracker.md`), never a change on your branch.
+- Work only in your worktree. Several agents run at once; never touch the main
+  clones or another agent's worktree.
+- Anything unrelated you find becomes a new issue (`bug` + `needs-triage`,
+  `docs/agents/issue-tracker.md`), never a change on your branch.
+- Follow the comment and doc rules in the workspace `AGENTS.md`: no comments
+  by default, no history, no screenshots committed.
 
-## Edit-only mode and edge (owner, 2026-10-29)
+## Edit-only mode
 
-While the orchestrator's message says edit-only mode is on, this replaces
-the build and test steps below:
+Unless the orchestrator says otherwise:
 
 - Don't build, compile or run tests: no Gradle, cargo, heavy.sh, emulator or
-  browser runs. Write the tests the issue asks for, but don't run them. The
-  orchestrator's batch gate compiles and runs the full suite after merging.
+  browser. The orchestrator's batch gate builds and tests after merging.
+- Write the tests the issue asks for, but don't run them.
 - Nothing checks your work before it merges, so re-read every changed file:
-  imports, types, call sites, every exhaustive `when`/`match`, and other
-  users of anything you rename.
-- `app` and `backend` branches are based on `edge`: compare and merge against
-  `origin/edge`, and open the PR with `--base edge`. `design`, `core` and
-  `workspace` stay on `main`.
-- The PR body says it's unbuilt and untested, and still ends
-  `Closes viptv-org/<repo>#<n>`. The issue closes when `edge` is promoted.
+  imports, types, call sites, every exhaustive `when`/`match`, and other users
+  of anything you rename.
+- In `app` and `backend` your branch is based on `edge`: compare and merge
+  against `origin/edge` and open the PR with `--base edge`. Other repos target
+  `main`.
 
 ## Job order
 
-1. Read the issue with comments (`gh issue view <n> -R viptv-org/<repo>
-   --comments`) and `.agents/skills/implement/SKILL.md`. Reproduce or
-   confirm the cause first where the issue asks, then implement test-first
-   with the `tdd` skill.
-2. **Commit continuously:** after each green cycle or logical step, with
-   `Refs #<n>` in each message and the commit attribution line, and push
-   the branch regularly so an interruption never loses work.
-3. Run the `code-review` skill against `origin/main` and fix what it finds.
-4. `git merge origin/main`, then run the repo's **full checks once**
-   (testing budget below).
-5. Push and open the PR with a body following `.agents/skills/pr/SKILL.md`.
-   The very last line is `Closes viptv-org/<repo>#<n>`. Don't merge: the
-   orchestrator does.
-6. If you can't finish (you need a device decision, credentials or an
-   owner choice), comment why on the issue, swap `ready-for-agent` for
-   `ready-for-human`, remove the assignee, and stop. Missing device
-   evidence alone isn't a reason: open the PR and say what's outstanding.
+1. Read the issue with comments: `gh issue view <n> -R viptv-org/<repo> --comments`.
+2. Make the change. Commit after each logical step with `Refs #<n>` and the
+   attribution line, and push often.
+3. Review your own diff against the base branch and fix what you find.
+4. Open the PR with a body following `.agents/skills/pr/SKILL.md`. Say it's
+   unbuilt and untested. The last line is `Closes viptv-org/<repo>#<n>`. Don't merge.
+5. If you can't finish (a device, credentials or an owner decision), comment
+   why on the issue, swap `ready-for-agent` for `ready-for-human`, remove the
+   assignee, and stop.
+6. Send your final report to the orchestrator: the PR URL, issues you filed,
+   anything you're unsure of.
 
-Final report: the PR URL, each check command with pass/fail and counts,
-device evidence, issues you filed, and anything you're unsure of.
+## When you're allowed to build
 
-## Testing budget
+Fix agents repairing a red gate, and anyone the orchestrator explicitly asks to
+build:
 
-The shared build slots are the bottleneck.
-
-- Run every Gradle or cargo build/test through
-  `<workspace>/scripts/agents/heavy.sh <command>` (absolute path, since you run in a worktree), with
-  Gradle `--max-workers=1`. It runs the command in one of three build slots
-  (`VIPTV_HEAVY_SLOTS`, default 3), so at most three heavy builds run at once
-  across all agents.
-- Don't poll. Every tool call re-sends your whole context, and the provider's
-  prompt cache expires within minutes, so a `sleep N; tail log` call repeated
-  while a build waits for a slot pays for the full context each time (found
-  2026-10-28: polling agents drained the model credit). Run a build in the
-  foreground with your tool's longest timeout, or wait for a background one
-  inside a single call (`while kill -0 $PID; do sleep 30; done`).
-- While iterating, run targeted tests only (`--tests '<YourTest*>'`,
-  `cargo test <filter>`), plus whatever proves the red step.
-- Run the full suite **exactly once**, right before the PR, after merging
-  `origin/main`. Rerun a known flaky test alone, never the whole suite.
-- Gradle test runs keep the daemon: no `--no-daemon`, and add
-  `-Dorg.gradle.daemon.idletimeout=900000`.
-- Build release APKs only when your issue changes `androidApp/` or the
-  build. Otherwise use `-Pviptv.abis=x86_64` debug builds.
+- Run every Gradle or cargo command through
+  `<workspace>/scripts/agents/heavy.sh <command>`, with Gradle
+  `--max-workers=1 -Dorg.gradle.daemon.idletimeout=900000`.
+- Backend builds use `CARGO_TARGET_DIR=/srv/fast/rust-target-backend-<issue>`.
+- Don't poll a build with repeated tool calls: each call re-sends your whole
+  context. Run it in the foreground, or wait inside one call
+  (`while kill -0 $PID; do sleep 30; done`).
+- Run targeted tests while iterating and the full checks once at the end.
 
 ## Devices
 
-Most app issues verify with desktop tests and desktop/web screenshots only.
-Use an emulator only when your issue's Verification section allows it.
-Then:
+Only when the issue's verification section allows it:
 
-- read the ignored `.local-device-testing.md` first and pass an explicit
-  `-s <serial>` to every adb command;
-- run the whole device session as one script under
-  `flock /tmp/viptv-emulator.lock`;
-- install with `adb install -r` only. Never uninstall the app, clear its
-  data, or sign out or switch the owner's profile;
-- use the dev instance's QA profile, never the owner's own profile. The
-  dev instance's address and controls are in the ignored `.kmp-dev/`
-  files;
-- if the owner's account is on the device, skip that evidence and say so.
-
-## Backend builds
-
-Build each backend worktree into its own target directory:
-`CARGO_TARGET_DIR=/srv/fast/rust-target-backend-<issue>`. The shared
-`~/.cargo/config.toml` target resolves to the same test-binary paths for
-every worktree, so parallel agents overwrote each other's binaries
-(found 2026-10-27, backend#20). The orchestrator deletes the directory after
-merge.
-
-The once-before-PR full check also compiles the feature-gated tests:
-`cargo test --manifest-path server/Cargo.toml --features live-runtime --no-run`.
-Default-features runs never build them, so four `live-runtime` fixtures
-rotted unnoticed until backend#62.
+- read the ignored `.local-device-testing.md` first and pass `-s <serial>` to
+  every adb command;
+- run the whole session as one script under `flock /tmp/viptv-emulator.lock`;
+- install with `adb install -r` only; never uninstall, clear data, sign out or
+  switch the owner's profile;
+- use the dev instance's QA profile (controls in the ignored `.kmp-dev/`).
