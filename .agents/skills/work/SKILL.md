@@ -75,7 +75,9 @@ When a subagent reports:
    back with the specific fix.
 2. **Merge.** In `app` and `backend` the PR targets `edge`; elsewhere `main`.
    If it isn't `MERGEABLE`, have the agent merge its base branch and resolve
-   the conflicts first. `gh pr merge <pr> -R viptv-org/<repo> --merge --delete-branch`
+   the conflicts first. Merge with `scripts/agents/merge-pr.sh <repo> <pr>`: it
+   merges with the repo's method and removes the worktree and branches only
+   after GitHub confirms the merge. `gh pr merge <pr> -R viptv-org/<repo> --merge --delete-branch`
    (`design` and `backend` are squash-only: `--squash`). If the GraphQL merge
    fails on a large diff, use
    `gh api -X PUT repos/viptv-org/<repo>/pulls/<pr>/merge -f merge_method=merge -f sha=<head>`.
