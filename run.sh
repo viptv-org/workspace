@@ -10,9 +10,10 @@ in_repo() {
 }
 
 run_app() {
-    JAVA_HOME=${JAVA_HOME:-/usr/lib/jvm/java-21-openjdk-amd64} LC_ALL=C \
-    VIPTV_PLAYBACK_GATEWAY=$PWD/playback-gateway RUSTUP_TOOLCHAIN=${RUSTUP_TOOLCHAIN:-1.98.0} \
-        in_repo app ./gradlew --max-workers=1 :composeApp:desktopTest :composeApp:compileAndroidMain :composeApp:compileKotlinWasmJs
+    env_args=(env "JAVA_HOME=${JAVA_HOME:-/usr/lib/jvm/java-21-openjdk-amd64}" LC_ALL=C "RUSTUP_TOOLCHAIN=${RUSTUP_TOOLCHAIN:-1.98.0}")
+    # A path that does not exist would override the app's own parent walk.
+    [ -d playback-gateway ] && env_args+=("VIPTV_PLAYBACK_GATEWAY=$PWD/playback-gateway")
+    in_repo app "${env_args[@]}" ./gradlew --max-workers=1 :composeApp:desktopTest :composeApp:compileAndroidMain :composeApp:compileKotlinWasmJs
 }
 
 run_backend() {
