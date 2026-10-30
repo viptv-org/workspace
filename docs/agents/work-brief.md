@@ -6,7 +6,10 @@ Also read the workspace `AGENTS.md` and the target repo's `AGENTS.md`.
 ## Rules
 
 - Work only in your worktree. Several agents run at once; never touch the main
-  clones or another agent's worktree.
+  clones or another agent's worktree. Never delete, re-clone or re-init
+  anything outside your worktree; if git looks broken, stop and report.
+- Push your branch after every commit, so the work survives if the machine
+  loses your worktree.
 - Anything unrelated you find becomes a new issue (`bug` + `needs-triage`,
   `docs/agents/issue-tracker.md`), never a change on your branch.
 - Follow the comment and doc rules in the workspace `AGENTS.md`: no comments
