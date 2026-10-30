@@ -15,10 +15,15 @@ repo_dir=$root/$repo; [ "$repo" = workspace ] && repo_dir=$root
 cd "$repo_dir"
 git push -q origin --delete "$branch" 2>/dev/null || true
 wt=$(git worktree list --porcelain | awk -v b="refs/heads/$branch" '/^worktree /{w=$2} $0=="branch " b {print w}')
-if [ -n "$wt" ]; then
-    timeout 110 git worktree remove --force "$wt" || true
-    case $wt in */"$repo") rm -rf "$(dirname "$wt")" ;; esac
-fi
+case $wt in
+    "$root"/.worktrees/?*/"$repo"|/tmp/viptv-wt/?*/"$repo")
+        timeout 110 git worktree remove --force "$wt" || true
+        rm -rf -- "$(dirname "$wt")" ;;
+    "$root"/.worktrees/?*)
+        timeout 110 git worktree remove --force "$wt" || true ;;
+    "") ;;
+    *) echo "left $wt alone: not an agent worktree" >&2; wt= ;;
+esac
 git branch -D "$branch" >/dev/null 2>&1 || true
 git worktree prune
 echo "cleaned ${wt:-no worktree} and $branch"
