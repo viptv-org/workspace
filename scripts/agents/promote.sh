@@ -18,8 +18,9 @@ prs=$(git log --format=%s "$old..$sha" | sed -nE 's/^Merge pull request #([0-9]+
 for pr in $prs; do
     view=$(gh pr view "$pr" -R "viptv-org/$repo" --json body,headRefName 2>/dev/null) || continue
     issues=$(jq -r .body <<<"$view" | grep -oiE "(close[sd]?|fix(e[sd])?|resolve[sd]?):? (viptv-org/$repo)?#[0-9]+" | grep -oE '[0-9]+$' | sort -u || true)
-    # /work branches are <type>/<issue>-<slug>; use that when the body names no issue.
-    [ -n "$issues" ] || issues=$(jq -r .headRefName <<<"$view" | sed -nE 's#^[a-z]+/([0-9]+)-.*#\1#p')
+    # /work branches are <type>/<issue>-<slug>; use that when the body names no issue, unless it only Refs one.
+    [ -n "$issues" ] || jq -r .body <<<"$view" | grep -qiE "\brefs:? (viptv-org/$repo)?#[0-9]+" ||
+        issues=$(jq -r .headRefName <<<"$view" | sed -nE 's#^[a-z]+/([0-9]+)-.*#\1#p')
     printf '%s\n' $issues |
         while read -r n; do
             [ -n "$n" ] || continue
