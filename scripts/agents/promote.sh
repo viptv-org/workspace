@@ -16,9 +16,13 @@ echo "promoted $repo main ${old:0:7} -> ${sha:0:7}"
 # PR numbers: "Merge pull request #N" (merge commits) or "... (#N)" (squash).
 prs=$(git log --format=%s "$old..$sha" | sed -nE 's/^Merge pull request #([0-9]+).*/\1/p; s/.*\(#([0-9]+)\)$/\1/p' | sort -un)
 for pr in $prs; do
-    gh pr view "$pr" -R "viptv-org/$repo" --json body --jq .body 2>/dev/null |
-        grep -oiE "(close[sd]?|fix(e[sd])?|resolve[sd]?) viptv-org/$repo#[0-9]+" | grep -oE '[0-9]+$' | sort -u |
+    view=$(gh pr view "$pr" -R "viptv-org/$repo" --json body,headRefName 2>/dev/null) || continue
+    issues=$(jq -r .body <<<"$view" | grep -oiE "(close[sd]?|fix(e[sd])?|resolve[sd]?):? (viptv-org/$repo)?#[0-9]+" | grep -oE '[0-9]+$' | sort -u || true)
+    # /work branches are <type>/<issue>-<slug>; use that when the body names no issue.
+    [ -n "$issues" ] || issues=$(jq -r .headRefName <<<"$view" | sed -nE 's#^[a-z]+/([0-9]+)-.*#\1#p')
+    printf '%s\n' $issues |
         while read -r n; do
+            [ -n "$n" ] || continue
             [ "$(gh issue view "$n" -R "viptv-org/$repo" --json state --jq .state)" = OPEN ] || continue
             gh issue close "$n" -R "viptv-org/$repo" --comment "Promoted to main in ${sha:0:7}${tag:+ ($tag)} via #$pr." >/dev/null && echo "closed $repo#$n (PR #$pr)"
         done || true   # a PR with no closing line must not stop the rest
