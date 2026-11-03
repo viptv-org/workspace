@@ -17,6 +17,8 @@ Also read the workspace `AGENTS.md` and the target repo's `AGENTS.md`.
 - The machine is shared. Run every ad hoc script or helper as
   `timeout 120 prlimit --as=4000000000 <command>`, and never leave one running
   in the background: one runaway loop can starve every agent and gate.
+  Browsers and JVMs reserve large address space and crash under `--as`; give
+  them `timeout` only.
 
 ## Edit-only mode
 
