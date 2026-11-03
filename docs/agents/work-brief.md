@@ -14,6 +14,9 @@ Also read the workspace `AGENTS.md` and the target repo's `AGENTS.md`.
   `docs/agents/issue-tracker.md`), never a change on your branch.
 - Follow the comment and doc rules in the workspace `AGENTS.md`: no comments
   by default, no history, no screenshots committed.
+- The machine is shared. Run every ad hoc script or helper as
+  `timeout 120 prlimit --as=4000000000 <command>`, and never leave one running
+  in the background: one runaway loop can starve every agent and gate.
 
 ## Edit-only mode
 
