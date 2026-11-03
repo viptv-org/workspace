@@ -1,0 +1,89 @@
+name: Public runner specs
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - .github/workflows/runner-specs.yml
+
+permissions:
+  contents: read
+
+concurrency:
+  group: runner-specs-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  probe:
+    if: github.event.repository.private == false
+    name: ${{ matrix.runner }}
+    runs-on: ${{ matrix.runner }}
+    timeout-minutes: 5
+    strategy:
+      fail-fast: false
+      matrix:
+        runner:
+          - ubuntu-24.04
+          - ubuntu-24.04-arm
+          - ubuntu-slim
+          - windows-2025
+          - windows-11-arm
+          - macos-15
+          - macos-15-intel
+    env:
+      PROBE_LABEL: ${{ matrix.runner }}
+    steps:
+      - name: Inspect Linux or macOS
+        if: runner.os != 'Windows'
+        shell: bash
+        run: |
+          set -euo pipefail
+          {
+            printf '### %s\n\n| Field | Value |\n| --- | --- |\n' "$PROBE_LABEL"
+            printf '| Architecture | %s |\n' "$(uname -m)"
+            printf '| Image | %s / %s |\n' "${ImageOS:-not exposed}" "${ImageVersion:-not exposed}"
+            if [[ "$RUNNER_OS" == Linux ]]; then
+              printf '| OS | %s |\n' "$(. /etc/os-release; printf '%s' "$PRETTY_NAME")"
+              printf '| Logical CPUs | %s |\n' "$(getconf _NPROCESSORS_ONLN)"
+              model=$(awk -F: '/model name/ {sub(/^[[:space:]]+/, "", $2); print $2; exit}' /proc/cpuinfo)
+              printf '| CPU model | %s |\n' "${model:-not exposed}"
+              awk '/MemTotal/ {printf "| OS RAM | %.2f GiB |\n", $2 / 1048576}' /proc/meminfo
+              for limit in cpu.max memory.max cpuset.cpus.effective; do
+                if [[ -r "/sys/fs/cgroup/$limit" ]]; then
+                  printf '| Cgroup %s | %s |\n' "$limit" "$(cat "/sys/fs/cgroup/$limit")"
+                fi
+              done
+            else
+              printf '| OS | macOS %s |\n' "$(sw_vers -productVersion)"
+              printf '| Logical CPUs | %s |\n' "$(sysctl -n hw.logicalcpu)"
+              printf '| CPU model | %s |\n' "$(sysctl -n machdep.cpu.brand_string)"
+              sysctl -n hw.memsize | awk '{printf "| OS RAM | %.2f GiB |\n", $1 / 1073741824}'
+            fi
+            df -Pk "$GITHUB_WORKSPACE" | awk 'NR == 2 {printf "| Workspace disk total | %.2f GiB |\n| Workspace disk free | %.2f GiB |\n", $2 / 1048576, $4 / 1048576}'
+            printf '\nObserved disk space may exceed GitHub\047s documented allocation. On containers, use cgroup limits rather than host CPU/RAM totals.\n'
+          } | tee -a "$GITHUB_STEP_SUMMARY"
+
+      - name: Inspect Windows
+        if: runner.os == 'Windows'
+        shell: pwsh
+        run: |
+          $system = Get-CimInstance Win32_ComputerSystem
+          $os = Get-CimInstance Win32_OperatingSystem
+          $cpu = (Get-CimInstance Win32_Processor).Name -join '; '
+          $disk = [System.IO.DriveInfo]::new([System.IO.Path]::GetPathRoot($env:GITHUB_WORKSPACE))
+          @(
+            "### $env:PROBE_LABEL"
+            ''
+            '| Field | Value |'
+            '| --- | --- |'
+            "| Architecture | $env:RUNNER_ARCH |"
+            "| Image | $env:ImageOS / $env:ImageVersion |"
+            "| OS | $($os.Caption) $($os.Version) |"
+            "| Logical CPUs | $($system.NumberOfLogicalProcessors) |"
+            "| CPU model | $cpu |"
+            "| OS RAM | $([Math]::Round($system.TotalPhysicalMemory / 1GB, 2)) GiB |"
+            "| Workspace disk total | $([Math]::Round($disk.TotalSize / 1GB, 2)) GiB |"
+            "| Workspace disk free | $([Math]::Round($disk.AvailableFreeSpace / 1GB, 2)) GiB |"
+            ''
+            "Observed disk space may exceed GitHub's documented allocation."
+          ) | Tee-Object -FilePath $env:GITHUB_STEP_SUMMARY -Append
