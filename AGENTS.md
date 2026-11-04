@@ -22,7 +22,8 @@ are archived clients: don't change them or keep their docs in sync.
 
 ## Checks
 
-`./run.sh <repo>` wraps these. Under `/work` they run in the batch gate, not per PR.
+`./run.sh <repo>` wraps these. Under `/work` agents run targeted tests, each PR's
+GitHub Actions check runs the full suite, and the batch gate reruns it on `edge`.
 
 | Repo | Checks |
 |---|---|
@@ -43,8 +44,9 @@ Every change is a GitHub issue in the owning repo: one issue, one branch, one PR
 the labels. A bug found outside the current task becomes a new `bug` +
 `needs-triage` issue, never a fix on the current branch.
 
-`/work` (`.agents/skills/work/SKILL.md`) runs the queue. In `app` and `backend`,
-PRs merge unbuilt into `edge`; the batch gate tests `edge` and promotes green
+`/work` (`.agents/skills/work/SKILL.md`) runs the queue, covering every
+maintainer's issues. In `app` and `backend`, PRs merge into `edge` once their
+GitHub Actions check is green; the batch gate tests `edge` and promotes green
 commits to `main`, so `main` always builds. Subagents read
 `docs/agents/work-brief.md`.
 
