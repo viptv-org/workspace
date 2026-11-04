@@ -2,7 +2,8 @@
 # Prune stale per-issue cargo target dirs under the shared build cache and the
 # shared incremental cache when the disk is over the threshold. Source this file
 # and call prune_targets, or run it directly. A dir is removed only when no live
-# git worktree owns it and no process has it open.
+# git worktree owns it and no process has it open; rust-target-*-gate caches are
+# always kept because the gate worktree lives in /tmp and clears on reboot.
 #
 # Overrides for tests and alternate layouts:
 #   PRUNE_TARGET_ROOT        build cache root (default /srv/fast)
@@ -36,10 +37,6 @@ prune_targets() {
             [ "$wt" = "$top" ] && continue
             local base n a
             base=$(basename "$(dirname "$wt")")
-            if [ "$repo" = backend ] && [ "$base" = gate-backend ]; then
-                protected[rust-target-backend-gate]=1
-                continue
-            fi
             n=${base#"$repo-"}
             if [ "$n" != "$base" ] && [[ "$n" =~ ^[0-9]+$ ]]; then
                 for a in ${aliases[$repo]}; do
@@ -67,6 +64,7 @@ prune_targets() {
         [ -e "$dir" ] || continue
         [ -d "$dir" ] || continue
         name=$(basename "$dir")
+        case "$name" in *-gate) continue ;; esac
         [ -n "${protected[$name]:-}" ] && continue
         if in_use "$dir"; then
             echo "prune: keep $name (in use)"
