@@ -77,8 +77,8 @@ git push -u origin <kind>/<n>-<slug>
 gh pr create --base main --title "<imperative summary>" --body-file /tmp/pr.md
 ```
 
-**Merge.** In `app` and `backend`, PRs target `edge` and merge unbuilt; the
-batch gate tests `edge` and `scripts/agents/promote.sh` fast-forwards green
+**Merge.** In `app` and `backend`, PRs target `edge` and merge once their
+GitHub Actions check is green; the batch gate tests `edge` and `scripts/agents/promote.sh` fast-forwards green
 commits to `main`, tags them `good/<YYYY-MM-DD>-<n>` (app) and closes their
 issues. Other repos merge into `main`. Merge with a merge commit; `design` and
 `backend` allow squash only (`--squash`). Only promoted builds reach devices

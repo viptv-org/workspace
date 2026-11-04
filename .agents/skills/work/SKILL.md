@@ -13,7 +13,30 @@ refill until the frontier is empty. You do not write feature code yourself.
 the owning repo's `AGENTS.md`/README before dispatching work in that repo.
 
 Arguments narrow the run: issue refs (`app#12`), a repo name, or a
-concurrency (`3 at a time`). Default: every repo, 3 issues in flight.
+concurrency (`3 at a time`). Default: every repo, up to 5 issues in flight.
+
+## Operating rules
+
+- **Decide, don't ask.** The owner answers slowly. Make the call yourself
+  (the recommended or safer option) and report it afterwards. Only
+  production deploys and irreversible production data need approval.
+- **Every maintainer's issues.** Work issues from everyone in
+  `docs/agents/maintainers.txt` alike. Skip only an issue another maintainer
+  has claimed (assigned, with a claim comment or linked branch), and
+  `ready-for-human` items.
+- **Check the queue every 30 minutes** while running: triage `needs-triage`
+  issues (clear and agent-doable → `ready-for-agent`), dispatch every
+  unclaimed ready issue, restart agents that errored, and make sure every
+  approved PR is waiting to merge.
+- **Never idle.** An empty frontier is not the end. When fewer than 3 agents
+  are working and nothing is dispatchable, launch an audit agent on an area
+  not audited recently. It reads the code against the `design` specs, files
+  at most 10 issues (`bug` + `needs-triage`, one per class), and changes no
+  code.
+- **Fix classes, not instances.** When a bug can recur (padding, missing
+  retry, a completion rule), the brief asks for one shared fix and a test
+  that covers every place it applies, never another sweep.
+- **Report briefly** to the owner after each merge, gate or decision.
 
 ## Preflight
 
@@ -63,17 +86,24 @@ inside the workspace and breaks backend tests.
 
 Background agent, one per issue. Its brief is `docs/agents/work-brief.md` plus
 your message: the issue, the worktree and branch, which in-flight issues touch
-nearby files, and which merged PRs to build on. Agents work edit-only (no builds
-or test runs) unless you say otherwise, and send you a final report.
+nearby files, which merged PRs to build on, and any decision you made for it.
+Issues that touch the same code go to one agent, done in order, one branch and
+PR each. Agents run targeted tests, push, and report with CI pending.
 
 ## 5. Merge as reports arrive, gate in batches
 
 When a subagent reports:
 
 1. **Review.** `gh pr diff` contains only this issue's change, matches the
-   issue, and the body ends with the `Closes` line. On a gap, send the agent
-   back with the specific fix.
-2. **Merge.** In `app` and `backend` the PR targets `edge`; elsewhere `main`.
+   issue, follows the comment rules, and the body ends with the `Closes`
+   line. For a UI change, look at the agent's renders yourself before
+   merging and show them to the owner when they asked for the change. On a
+   gap, send the agent back with the specific fix; batch small nits into a
+   follow-up PR instead of holding the merge.
+2. **Merge.** Wait for the PR's GitHub Actions check to go green, then merge;
+   if it goes red, send the failure to the agent. `playback-gateway` has no
+   CI: merge on the agent's full-suite evidence. In `app` and `backend` the
+   PR targets `edge`; elsewhere `main`.
    If it isn't `MERGEABLE`, have the agent merge its base branch and resolve
    the conflicts first. Merge with `scripts/agents/merge-pr.sh <repo> <pr>`: it
    merges with the repo's method and removes the worktree and branches only
@@ -89,8 +119,8 @@ When a subagent reports:
 always builds. Closing keywords only fire on the default branch: an issue
 merged into `edge` stays open until its PR is promoted.
 
-**Batch gate.** Once per batch (every few merges, or about hourly while
-merges land), on `edge`:
+**Batch gate.** Once per batch, as soon as the PRs merging together have
+landed (about every 30–60 minutes while merges land), on `edge`:
 
 - `app`: `scripts/agents/app-batch-gate.sh` runs the full suite, the web
   compile and the release APK. `backend`: `scripts/agents/backend-batch-gate.sh`
@@ -98,9 +128,11 @@ merges land), on `edge`:
   in its own worktree;
 - **green**: the script tags `good/<YYYY-MM-DD>-<n>` (`app`) and runs
   `scripts/agents/promote.sh`, which fast-forwards `main` to the tested commit
-  and closes the issues the promoted PRs name. Then the post-merge steps from
-  your local memory notes run (device installs, update-feed publishing, the
-  dev backend rebuild from `main`). Only promoted green builds reach devices;
+  and closes the issues the promoted PRs name. Then, without asking: for
+  `app`, install the APK on the TV emulator and rebuild the web app from
+  `main`; for `backend`, back up the dev database, rebuild and restart the
+  dev backend from `main`, and check its health. The commands live in the
+  ignored `.kmp-dev/`. Only promoted green builds reach devices;
 - **red**: find the culprit PR from the compile error or failing test and
   send the gate's failure output (the failing test, its assertion and stack,
   or the compile error) back to that issue's agent: the same chat if it
