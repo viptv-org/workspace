@@ -14,7 +14,12 @@ cd "$repo_dir"
 git fetch -q origin
 # app and backend take unbuilt merges on edge; the batch gate promotes green edge to main.
 base=main; case $repo in app|backend) base=edge ;; esac
-gh issue develop "$n" -R "viptv-org/$repo" --name "$branch" --base "$base" --checkout --worktree "$wt" >/dev/null
+if ! gh issue develop "$n" -R "viptv-org/$repo" --name "$branch" --base "$base" --checkout --worktree "$wt" >/dev/null; then
+    echo "gh issue develop failed for $repo#$n; falling back to git worktree + push" >&2
+    mkdir -p -- "$(dirname "$wt")"
+    git worktree add -q -b "$branch" "$wt" "origin/$base" || { echo "fallback worktree add failed" >&2; exit 1; }
+    git -C "$wt" push -q -u origin "$branch" || { echo "fallback push failed" >&2; exit 1; }
+fi
 gh issue edit "$n" -R "viptv-org/$repo" --add-assignee @me >/dev/null
 gh issue comment "$n" -R "viptv-org/$repo" --body "Claimed by /work; branch $branch." >/dev/null
 if [ "$repo" = app ]; then

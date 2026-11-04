@@ -11,6 +11,7 @@ app=$ORG_ROOT/app
 branch=${GATE_BRANCH:-edge}
 cd $app && git fetch -q origin && git checkout -q "$branch" && git pull -q --ff-only && git submodule update -q --init native/core || exit 2
 sha=$(git rev-parse HEAD); rev=${sha:0:7}
+"$WS_ROOT/scripts/agents/lib/prune-targets.sh" || true
 export RUSTUP_TOOLCHAIN=1.98.0 JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64 LC_ALL=C VIPTV_PLAYBACK_GATEWAY=$ORG_ROOT/playback-gateway
 echo "gate $branch $rev: desktopTest + compileKotlinWasmJs"
 rm -rf composeApp/build/test-results/desktopTest

@@ -27,7 +27,5 @@ case $wt in
 esac
 git branch -D "$branch" >/dev/null 2>&1 || true
 git worktree prune
-issue=$(sed -nE 's#^[^/]+/([0-9]+)-.*#\1#p' <<<"$branch")
-target=/srv/fast/rust-target-$repo-$issue
-if [ -n "$issue" ] && [ -d "$target" ]; then rm -rf -- "$target"; echo "removed $target"; fi
+"$WS_ROOT/scripts/agents/lib/prune-targets.sh" || true
 echo "cleaned ${wt:-no worktree} and $branch"
