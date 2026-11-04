@@ -5,14 +5,16 @@
 # promoted PRs' issues), then the private post-merge steps (TV emulator install
 # and the update feed via the ignored .kmp-dev tooling). Red -> main is untouched.
 set -o pipefail
-root=$(cd "$(dirname "$0")/../.." && pwd); app=$root/app
+here=$(CDPATH='' cd -- "$(dirname -- "$0")" && pwd)
+. "$here/lib/root.sh"
+app=$ORG_ROOT/app
 branch=${GATE_BRANCH:-edge}
 cd $app && git fetch -q origin && git checkout -q "$branch" && git pull -q --ff-only && git submodule update -q --init native/core || exit 2
 sha=$(git rev-parse HEAD); rev=${sha:0:7}
-export RUSTUP_TOOLCHAIN=1.98.0 JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64 LC_ALL=C VIPTV_PLAYBACK_GATEWAY=$root/playback-gateway
+export RUSTUP_TOOLCHAIN=1.98.0 JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64 LC_ALL=C VIPTV_PLAYBACK_GATEWAY=$ORG_ROOT/playback-gateway
 echo "gate $branch $rev: desktopTest + compileKotlinWasmJs"
 rm -rf composeApp/build/test-results/desktopTest
-"$root/scripts/agents/heavy.sh" ./gradlew --max-workers=1 -Dorg.gradle.daemon.idletimeout=900000 :composeApp:desktopTest :composeApp:compileKotlinWasmJs > /tmp/batch-gate-test.log 2>&1
+"$WS_ROOT/scripts/agents/heavy.sh" ./gradlew --max-workers=1 -Dorg.gradle.daemon.idletimeout=900000 :composeApp:desktopTest :composeApp:compileKotlinWasmJs > /tmp/batch-gate-test.log 2>&1
 code=$?
 APP=$app python3 - <<'PY'
 import glob,os,xml.etree.ElementTree as E
@@ -24,15 +26,15 @@ print(f"tests={t} failed={f} {fl}")
 PY
 grep -E "^e: " /tmp/batch-gate-test.log | sort -u | head -20
 [ $code = 0 ] || { echo "RED $rev: desktopTest or web compile failed (see /tmp/batch-gate-test.log)"; exit 1; }
-cd $root && export RUSTUP_TOOLCHAIN=1.98
+cd $WS_ROOT && export RUSTUP_TOOLCHAIN=1.98
 scripts/agents/heavy.sh bash .kmp-dev/kmp.sh build apk > /tmp/batch-gate-apk.log 2>&1 || { echo "RED $rev: APK build failed (see /tmp/batch-gate-apk.log)"; exit 3; }
 # Tag and promote only once the suite, the web compile AND the release APK pass.
 cd $app
 n=$(( $(git tag -l "good/$(date -u +%F)-*" | wc -l) + 1 )); tag=good/$(date -u +%F)-$n
 git tag -a $tag -m "Green batch: desktopTest, web compile and APK passed at $rev" "$sha" && git push -q origin $tag && echo "GREEN $rev tagged $tag"
-"$root/scripts/agents/promote.sh" app "$sha" "$tag" || echo "Promote failed: main not moved"
+"$WS_ROOT/scripts/agents/promote.sh" app "$sha" "$tag" || echo "Promote failed: main not moved"
 git checkout -q main && git pull -q --ff-only
-cd $root
+cd $WS_ROOT
 # A daemon started under flock inherits the lock fd and holds it forever.
 "$HOME/.local/android-sdk/platform-tools/adb" start-server >/dev/null 2>&1
 flock /tmp/viptv-emulator.lock bash .kmp-dev/kmp.sh install-apk emulator-5580 > /tmp/batch-gate-install.log 2>&1 && echo "TV installed $(readlink ~/.local/state/viptv-kmp/apk/latest.apk)" || echo "TV install failed: $(tail -1 /tmp/batch-gate-install.log) (systemctl --user is-active serve-avd-emulator.service)"

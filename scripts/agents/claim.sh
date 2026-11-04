@@ -3,12 +3,13 @@
 # Usage: scripts/agents/claim.sh <repo> <issue> <kind>/<issue>-<slug>
 set -euo pipefail
 repo=$1 n=$2 branch=$3
-root=$(cd "$(dirname "$0")/../.." && pwd)
+here=$(CDPATH='' cd -- "$(dirname -- "$0")" && pwd)
+. "$here/lib/root.sh"
 # Backend tests break inside the workspace (Zeron port probes), so it lives in /tmp.
 if [ "$repo" = backend ]; then wt=/tmp/viptv-wt/backend-$n/backend; mkdir -p "/tmp/viptv-wt/backend-$n"
-elif [ "$repo" = workspace ]; then wt=$root/.worktrees/workspace-$n
-else wt=$root/.worktrees/$repo-$n/$repo; fi
-repo_dir=$root/$repo; [ "$repo" = workspace ] && repo_dir=$root
+elif [ "$repo" = workspace ]; then wt=$ORG_ROOT/.worktrees/workspace-$n/workspace
+else wt=$ORG_ROOT/.worktrees/$repo-$n/$repo; fi
+repo_dir=$ORG_ROOT/$repo; [ "$repo" = workspace ] && repo_dir=$WS_ROOT
 cd "$repo_dir"
 git fetch -q origin
 # app and backend take unbuilt merges on edge; the batch gate promotes green edge to main.
