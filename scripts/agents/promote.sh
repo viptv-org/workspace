@@ -5,8 +5,9 @@
 # Usage: scripts/agents/promote.sh <repo> <tested-sha> [<tag>]
 set -euo pipefail
 repo=$1 sha=$2 tag=${3:-}
-root=$(cd "$(dirname "$0")/../.." && pwd)
-cd "$root/$repo"
+here=$(CDPATH='' cd -- "$(dirname -- "$0")" && pwd)
+. "$here/lib/root.sh"
+cd "$ORG_ROOT/$repo"
 git fetch -q origin
 old=$(git rev-parse origin/main)
 git merge-base --is-ancestor "$old" "$sha" || { echo "main ($old) is not an ancestor of $sha; refusing" >&2; exit 1; }

@@ -5,8 +5,9 @@
 # branch, and is trusted: written by a maintainer, or its ready-for-agent
 # label was applied by one (docs/agents/maintainers.txt).
 set -euo pipefail
-here=$(cd "$(dirname "$0")/../.." && pwd)
-mapfile -t trusted < <(grep -v '^\s*\(#\|$\)' "$here/docs/agents/maintainers.txt")
+here=$(CDPATH='' cd -- "$(dirname -- "$0")" && pwd)
+. "$here/lib/root.sh"
+mapfile -t trusted < <(grep -v '^\s*\(#\|$\)' "$WS_ROOT/docs/agents/maintainers.txt")
 is_trusted() { local who; for who in "${trusted[@]}"; do [ "${1,,}" = "${who,,}" ] && return 0; done; return 1; }
 filter=(--owner viptv-org); [ $# -gt 0 ] && filter=(--repo "viptv-org/$1")
 gh search issues "${filter[@]}" --state open --label ready-for-agent --limit 200 \
