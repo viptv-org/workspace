@@ -12,6 +12,7 @@ cd "$ORG_ROOT/backend" && git fetch -q origin || exit 2
 if [ -d "$wt" ]; then git -C "$wt" checkout -q --detach "origin/$branch" || exit 2
 else mkdir -p "$(dirname "$wt")" && git worktree add -q --detach "$wt" "origin/$branch" || exit 2; fi
 cd "$wt"; sha=$(git rev-parse HEAD); rev=${sha:0:7}
+"$WS_ROOT/scripts/agents/lib/prune-targets.sh" || true
 export RUSTUP_TOOLCHAIN=1.98 CARGO_TARGET_DIR=/srv/fast/rust-target-backend-gate
 echo "gate backend $branch $rev: cargo test + live-runtime tests + engine sync check"
 python3 scripts/sync-engine.py check > /tmp/backend-gate-sync.log 2>&1 || { echo "RED $rev: engine snapshot check failed (see /tmp/backend-gate-sync.log)"; exit 1; }
