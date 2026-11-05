@@ -43,6 +43,32 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
   `aarch64-linux-android`, `armv7-linux-androideabi` and `x86_64-linux-android`
   targets; desktop builds use `1.98.0`.
 
+### When the desktop runtime packages are absent
+
+Some Linux hosts have the `libdbus-1` runtime but not `libdbus-1-dev`, and no
+`libmpv2`/`patchelf`/`mpv`. Desktop tests still run there with two adjustments.
+
+The engine build (`libdbus-sys`) needs a pkg-config entry for `dbus-1`. If a
+user-local shim exists at `~/.local/pkgconfig/dbus-1.pc`, point pkg-config at
+it:
+
+```sh
+PKG_CONFIG_PATH=$HOME/.local/pkgconfig ./gradlew --max-workers=1 :composeApp:desktopTest
+```
+
+Without the mpv packages, drop the two native-runtime tasks so the graph reaches
+the tests:
+
+```sh
+PKG_CONFIG_PATH=$HOME/.local/pkgconfig ./gradlew --max-workers=1 :composeApp:desktopTest \
+  -x :composeApp:buildDesktopMpv -x :composeApp:buildDesktopTorrent
+```
+
+The mpv-backed tests (`MpvNativeTest`, `MpvGlNativeTest`) then do not run
+locally. `app/.github/workflows/app-checks.yml` installs `libdbus-1-dev`,
+`libmpv-dev`, `mpv` and `patchelf` and is the authority for the desktop suite,
+so a local failure in those classes on such a host is not a regression.
+
 ## What each repository needs
 
 | Repo | Toolchain |

@@ -33,6 +33,9 @@ GitHub Actions check runs the full suite, and the batch gate reruns it on `edge`
 | `design` | `python3 scripts/validate.py` |
 | `playback-gateway` | `cargo test --locked --workspace` |
 
+Without `libmpv2`/`patchelf`/`mpv` or `libdbus-1-dev`, `docs/platform-deps.md`
+has the `PKG_CONFIG_PATH` and `-x` recipe for `app` desktop tests.
+
 Heavy builds go through `scripts/agents/heavy.sh`, which shares three build slots
 across every agent on this machine. Each repo's own AGENTS.md has its toolchain
 and test gotchas.
