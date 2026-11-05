@@ -88,6 +88,11 @@ The mpv-backed tests (`MpvNativeTest`, `MpvGlNativeTest`) then do not run
 locally, so a local failure in those classes on such a host is not a
 regression. A host without `libGL.so.1` accepts a stub library on
 `LD_LIBRARY_PATH` for the tests that never open a GL context.
+Point at it and force Skiko's software renderer before running the tests:
+
+```sh
+export SKIKO_RENDER_API=SOFTWARE LD_LIBRARY_PATH=$HOME/.local/lib/skiko-stub
+```
 
 `app/.github/workflows/app-checks.yml` is the authority for the desktop suite:
 its `native-prep` job installs `libdbus-1-dev` and Go `1.25.11`, and its
