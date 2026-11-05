@@ -10,6 +10,9 @@ if [ "$repo" = backend ]; then wt=/tmp/viptv-wt/backend-$n/backend; mkdir -p "/t
 elif [ "$repo" = workspace ]; then wt=$ORG_ROOT/.worktrees/workspace-$n/workspace
 else wt=$ORG_ROOT/.worktrees/$repo-$n/$repo; fi
 repo_dir=$ORG_ROOT/$repo; [ "$repo" = workspace ] && repo_dir=$WS_ROOT
+me=$(gh api user -q .login)
+others=$(gh issue view "$n" -R "viptv-org/$repo" --json assignees -q "[.assignees[].login | select(. != \"$me\")] | join(\",\")")
+[ -z "$others" ] || { echo "$repo#$n is already claimed by $others; not claiming" >&2; exit 3; }
 cd "$repo_dir"
 git fetch -q origin
 # app and backend take unbuilt merges on edge; the batch gate promotes green edge to main.
