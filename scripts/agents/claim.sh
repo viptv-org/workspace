@@ -13,6 +13,7 @@ repo_dir=$ORG_ROOT/$repo; [ "$repo" = workspace ] && repo_dir=$WS_ROOT
 me=$(gh api user -q .login)
 others=$(gh issue view "$n" -R "viptv-org/$repo" --json assignees -q "[.assignees[].login | select(. != \"$me\")] | join(\",\")")
 [ -z "$others" ] || { echo "$repo#$n is already claimed by $others; not claiming" >&2; exit 3; }
+[ ! -e "$wt/.git" ] || { echo "$repo#$n already has a worktree at $wt ($(git -C "$wt" branch --show-current)); not claiming" >&2; exit 3; }
 cd "$repo_dir"
 git fetch -q origin
 # app and backend take unbuilt merges on edge; the batch gate promotes green edge to main.
