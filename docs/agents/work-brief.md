@@ -11,6 +11,8 @@ Also read the workspace `AGENTS.md` and the target repo's `AGENTS.md`.
   worktree: the batch gates build from the main clones. Never delete, re-clone
   or re-init anything outside your worktree; if git looks broken, stop and
   report.
+- If `claim.sh` refuses an issue, it belongs to someone else: stop and report;
+  never work in the worktree it names.
 - Once your PR merges, the orchestrator removes your worktree. Never keep your
   shell inside a worktree whose PR is merging: run commands as
   `cd <path> && ...`, claim a fresh worktree for the next issue, and never
