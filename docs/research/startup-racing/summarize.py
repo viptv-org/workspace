@@ -109,7 +109,29 @@ faster_second = [row for row in rows if row['s0'] is not None and row['s1'] is n
 slower_second = [row for row in rows if row['s0'] is not None and row['s1'] is not None and row['s1'] >= row['s0']]
 probes = [probe for row in rows for probe in row['http_probes']]
 
+single_phases = {'admission': [], 'prebuffer': [], 'player': []}
+race_phases = {'admission': [], 'prebuffer': [], 'player': []}
+for identifier in identifiers:
+    record = bandwidth[identifier]
+    head = next((single for single in record['singles'] if single['slot'] == 0 and single['ttff_s'] is not None), None)
+    if head:
+        single_phases['admission'].append(head['admission_s'])
+        single_phases['prebuffer'].append(head.get('prebuffer_s') or 0)
+        single_phases['player'].append(head['ttff_s'] - head['admission_s'] - (head.get('prebuffer_s') or 0))
+    races_for_phases = record.get('races') or []
+    if races_for_phases and races_for_phases[0].get('winner') is not None:
+        winner = races_for_phases[0]['flows'][races_for_phases[0]['winner']]
+        race_phases['admission'].append(winner['admission_s'])
+        race_phases['prebuffer'].append(winner.get('prebuffer_s') or 0)
+        race_phases['player'].append(winner['ttff_s'] - winner['admission_s'] - (winner.get('prebuffer_s') or 0))
+
 summary = {
+    'single_admission_median': median(single_phases['admission']),
+    'single_prebuffer_median': median(single_phases['prebuffer']),
+    'single_player_median': median(single_phases['player']),
+    'race_admission_median': median(race_phases['admission']),
+    'race_prebuffer_median': median(race_phases['prebuffer']),
+    'race_player_median': median(race_phases['player']),
     'titles': len(rows),
     'resolve_median': median(column('resolve_s')), 'resolve_p90': p90(column('resolve_s')),
     'single_median': median(column('single')), 'single_p90': p90(column('single')),

@@ -1,5 +1,11 @@
 {
  "summary": {
+  "single_admission_median": 0.06,
+  "single_prebuffer_median": 0.583,
+  "single_player_median": 2.717,
+  "race_admission_median": 0.061,
+  "race_prebuffer_median": 0.516,
+  "race_player_median": 2.014,
   "titles": 30,
   "resolve_median": 0.202,
   "resolve_p90": 0.235,
