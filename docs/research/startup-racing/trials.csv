@@ -1,0 +1,901 @@
+trial_run,title,title_id,kind,resolve_s,rows,strategy,row_slot,delivery,provider,height,winner,admission_s,prebuffer_s,ttff_s,bytes,sockets,error,reason
+main,The Shawshank Redemption,tt0111161,movie,0.193,124,single,1,torrent,Torrentio,1080,,0.061,0.352,2.661,5537538,176,,frame
+main,The Shawshank Redemption,tt0111161,movie,0.193,124,single,0,torrent,Torrentio,1080,,0.061,0.313,2.371,9067254,184,,frame
+main,The Shawshank Redemption,tt0111161,movie,0.193,124,single,0,torrent,Torrentio,1080,,0.06,0.46,7.105,11262105,178,,frame
+main,The Shawshank Redemption,tt0111161,movie,0.193,124,single,2,torrent,Torrentio,1080,,0.061,0.406,1.422,14550318,137,,frame
+main,The Shawshank Redemption,tt0111161,movie,0.193,124,single,1,torrent,Torrentio,1080,,0.06,0.556,6.245,12432138,179,,frame
+main,The Shawshank Redemption,tt0111161,movie,0.193,124,race,,torrent+torrent,,,0,,,2.862,19738195,354,,
+main,The Shawshank Redemption,tt0111161,movie,0.193,124,race,,torrent+torrent,,,1,,,2.847,23127266,353,,
+main,The Shawshank Redemption,tt0111161,movie,0.193,124,http_single,0,direct,HTTP add-on,1080,,0,,12.344,16810518,3,,frame
+main,The Shawshank Redemption,tt0111161,movie,0.193,124,http_single,1,direct,HTTP add-on,1080,,0,,10.361,9555478,3,,frame
+main,The Shawshank Redemption,tt0111161,movie,0.193,124,http_race,,direct+direct,HTTP add-on,,0,,,10.033,6810936,5,,
+main,The Shawshank Redemption,tt0111161,movie,0.193,124,http_race,,direct+direct,HTTP add-on,,0,,,8.124,5802410,5,,
+main,The Shawshank Redemption,tt0111161,movie,0.193,124,http_probe,,direct,HTTP add-on,1080,,,,5.627,,,,first byte
+main,The Shawshank Redemption,tt0111161,movie,0.193,124,http_probe,,direct,HTTP add-on,1080,,,,3.354,,,,first byte
+main,The Shawshank Redemption,tt0111161,movie,0.193,124,http_probe,,direct,HTTP add-on,1080,,,,3.627,,,,first byte
+main,The Shawshank Redemption,tt0111161,movie,0.193,124,http_probe,,direct,HTTP add-on,1080,,,,11.443,,,,first byte
+main,The Shawshank Redemption,tt0111161,movie,0.193,124,http_probe,,direct,HTTP add-on,1080,,,,1.761,,,http 404,first byte
+main,The Shawshank Redemption,tt0111161,movie,0.193,124,http_probe,,direct,HTTP add-on,1080,,,,0.583,,,,first byte
+bw,The Shawshank Redemption,tt0111161,movie,0.149,124,single,0,torrent,Torrentio,1080,,0.062,0.352,1.587,1616156,195,,frame
+bw,The Shawshank Redemption,tt0111161,movie,0.149,124,single,1,torrent,Torrentio,1080,,0.059,0.402,6.325,19881544,188,,frame
+bw,The Shawshank Redemption,tt0111161,movie,0.149,124,race,,torrent+torrent,,,0,,,1.358,15201108,376,,
+bw,The Shawshank Redemption,tt0111161,movie,0.149,124,http_single,0,direct,HTTP add-on,1080,,0,,8.975,9738265,3,,frame
+bw,The Shawshank Redemption,tt0111161,movie,0.149,124,http_single,1,direct,HTTP add-on,1080,,0,,11.49,5228048,3,,frame
+bw,The Shawshank Redemption,tt0111161,movie,0.149,124,http_race,,direct+direct,HTTP add-on,,1,,,16.081,7429077,5,,
+bw,The Shawshank Redemption,tt0111161,movie,0.149,124,http_race,,direct+direct,HTTP add-on,,1,,,9.559,6563506,5,,
+bw,The Shawshank Redemption,tt0111161,movie,0.149,124,http_probe,,direct,HTTP add-on,1080,,,,2.629,,,,first byte
+bw,The Shawshank Redemption,tt0111161,movie,0.149,124,http_probe,,direct,HTTP add-on,1080,,,,3.025,,,,first byte
+bw,The Shawshank Redemption,tt0111161,movie,0.149,124,http_probe,,direct,HTTP add-on,1080,,,,5.519,,,,first byte
+bw,The Shawshank Redemption,tt0111161,movie,0.149,124,http_probe,,direct,HTTP add-on,1080,,,,0.24,,,http 302,first byte
+bw,The Shawshank Redemption,tt0111161,movie,0.149,124,http_probe,,direct,HTTP add-on,1080,,,,1.386,,,http 404,first byte
+bw,The Shawshank Redemption,tt0111161,movie,0.149,124,http_probe,,direct,HTTP add-on,1080,,,,0.506,,,,first byte
+main,The Godfather,tt0068646,movie,0.223,123,single,1,torrent,Torrentio,1080,,0.062,0.604,5.705,17320028,143,,frame
+main,The Godfather,tt0068646,movie,0.223,123,single,1,torrent,Torrentio,1080,,0.059,0.611,2.943,18755511,145,,frame
+main,The Godfather,tt0068646,movie,0.223,123,single,2,torrent,Torrentio,1080,,0.061,0.604,4.296,13920328,193,,frame
+main,The Godfather,tt0068646,movie,0.223,123,single,0,torrent,Torrentio,1080,,0.06,6.69,9.969,13761158,51,,frame
+main,The Godfather,tt0068646,movie,0.223,123,single,0,torrent,Torrentio,1080,,0.06,0.453,5.311,15349512,191,,frame
+main,The Godfather,tt0068646,movie,0.223,123,race,,torrent+torrent,,,0,,,2.792,39622818,334,,
+main,The Godfather,tt0068646,movie,0.223,123,race,,torrent+torrent,,,0,,,3.045,30995592,335,,
+main,The Godfather,tt0068646,movie,0.223,123,http_single,0,direct,HTTP add-on,1080,,0,,1.633,553652,4,,frame
+main,The Godfather,tt0068646,movie,0.223,123,http_single,1,direct,HTTP add-on,1080,,0,,6.334,3821725,4,,frame
+main,The Godfather,tt0068646,movie,0.223,123,http_race,,direct+direct,HTTP add-on,,0,,,1.373,668135,5,,
+main,The Godfather,tt0068646,movie,0.223,123,http_race,,direct+direct,HTTP add-on,,0,,,1.589,2102022,5,,
+main,The Godfather,tt0068646,movie,0.223,123,http_probe,,direct,HTTP add-on,1080,,,,0.561,,,,first byte
+main,The Godfather,tt0068646,movie,0.223,123,http_probe,,direct,HTTP add-on,1080,,,,2.105,,,,first byte
+main,The Godfather,tt0068646,movie,0.223,123,http_probe,,direct,HTTP add-on,1080,,,,1.901,,,,first byte
+main,The Godfather,tt0068646,movie,0.223,123,http_probe,,direct,HTTP add-on,1080,,,,0.497,,,,first byte
+main,The Godfather,tt0068646,movie,0.223,123,http_probe,,direct,HTTP add-on,1080,,,,0.607,,,,first byte
+main,The Godfather,tt0068646,movie,0.223,123,http_probe,,direct,HTTP add-on,1080,,,,0.942,,,,first byte
+bw,The Godfather,tt0068646,movie,0.133,123,single,1,torrent,Torrentio,1080,,0.06,0.607,12.754,23613802,136,,frame
+bw,The Godfather,tt0068646,movie,0.133,123,single,0,torrent,Torrentio,1080,,0.061,0.47,3.417,7593651,194,,frame
+bw,The Godfather,tt0068646,movie,0.133,123,race,,torrent+torrent,,,0,,,3.093,26814401,328,,
+bw,The Godfather,tt0068646,movie,0.133,123,http_single,0,direct,HTTP add-on,1080,,0,,1.516,2011412,4,,frame
+bw,The Godfather,tt0068646,movie,0.133,123,http_single,1,direct,HTTP add-on,1080,,0,,9.595,5178858,4,,frame
+bw,The Godfather,tt0068646,movie,0.133,123,http_race,,direct+direct,HTTP add-on,,0,,,1.317,2117508,5,,
+bw,The Godfather,tt0068646,movie,0.133,123,http_race,,direct+direct,HTTP add-on,,0,,,1.532,1846218,5,,
+bw,The Godfather,tt0068646,movie,0.133,123,http_probe,,direct,HTTP add-on,1080,,,,0.508,,,,first byte
+bw,The Godfather,tt0068646,movie,0.133,123,http_probe,,direct,HTTP add-on,1080,,,,2.038,,,,first byte
+bw,The Godfather,tt0068646,movie,0.133,123,http_probe,,direct,HTTP add-on,1080,,,,3.612,,,,first byte
+bw,The Godfather,tt0068646,movie,0.133,123,http_probe,,direct,HTTP add-on,1080,,,,0.467,,,,first byte
+bw,The Godfather,tt0068646,movie,0.133,123,http_probe,,direct,HTTP add-on,1080,,,,0.728,,,,first byte
+bw,The Godfather,tt0068646,movie,0.133,123,http_probe,,direct,HTTP add-on,1080,,,,0.472,,,,first byte
+main,The Dark Knight,tt0468569,movie,0.218,114,single,1,torrent,Torrentio,1080,,0.06,1.006,4.442,14549786,59,,frame
+main,The Dark Knight,tt0468569,movie,0.218,114,single,0,torrent,Torrentio,1080,,0.062,0.504,1.85,9310764,188,,frame
+main,The Dark Knight,tt0468569,movie,0.218,114,single,1,torrent,Torrentio,1080,,0.059,1.157,4.931,15008532,57,,frame
+main,The Dark Knight,tt0468569,movie,0.218,114,single,2,torrent,Torrentio,1080,,0.059,0.555,2.692,5457097,147,,frame
+main,The Dark Knight,tt0468569,movie,0.218,114,single,0,torrent,Torrentio,1080,,0.061,0.664,1.608,1593192,191,,frame
+main,The Dark Knight,tt0468569,movie,0.218,114,race,,torrent+torrent,,,0,,,0.838,1343448,190,,
+main,The Dark Knight,tt0468569,movie,0.218,114,race,,torrent+torrent,,,0,,,1.452,5583152,238,,
+main,The Dark Knight,tt0468569,movie,0.218,114,http_single,0,direct,HTTP add-on,1080,,0,,,1253161,1,,error
+main,The Dark Knight,tt0468569,movie,0.218,114,http_single,1,direct,HTTP add-on,1080,,0,,1.535,359396,4,,frame
+main,The Dark Knight,tt0468569,movie,0.218,114,http_race,,direct+direct,HTTP add-on,,1,,,1.538,2134941,5,,
+main,The Dark Knight,tt0468569,movie,0.218,114,http_race,,direct+direct,HTTP add-on,,1,,,1.467,2401921,5,,
+main,The Dark Knight,tt0468569,movie,0.218,114,http_probe,,direct,HTTP add-on,1080,,,,0.219,,,http 302,first byte
+main,The Dark Knight,tt0468569,movie,0.218,114,http_probe,,direct,HTTP add-on,1080,,,,0.252,,,http 302,first byte
+main,The Dark Knight,tt0468569,movie,0.218,114,http_probe,,direct,HTTP add-on,1080,,,,0.256,,,http 302,first byte
+main,The Dark Knight,tt0468569,movie,0.218,114,http_probe,,direct,HTTP add-on,1080,,,,10.506,,,,first byte
+main,The Dark Knight,tt0468569,movie,0.218,114,http_probe,,direct,HTTP add-on,1080,,,,2.793,,,http 404,first byte
+main,The Dark Knight,tt0468569,movie,0.218,114,http_probe,,direct,HTTP add-on,1080,,,,0.791,,,,first byte
+bw,The Dark Knight,tt0468569,movie,0.203,114,single,1,torrent,Torrentio,1080,,0.061,1.106,3.48,5586767,57,,frame
+bw,The Dark Knight,tt0468569,movie,0.203,114,single,0,torrent,Torrentio,1080,,0.06,0.504,1.817,12867996,195,,frame
+bw,The Dark Knight,tt0468569,movie,0.203,114,race,,torrent+torrent,,,0,,,2.146,13923202,253,,
+bw,The Dark Knight,tt0468569,movie,0.203,114,http_single,0,direct,HTTP add-on,1080,,0,,13.458,14847540,3,,frame
+bw,The Dark Knight,tt0468569,movie,0.203,114,http_single,1,direct,HTTP add-on,1080,,0,,13.592,6383980,3,,frame
+bw,The Dark Knight,tt0468569,movie,0.203,114,http_race,,direct+direct,HTTP add-on,,1,,,8.707,15869162,5,,
+bw,The Dark Knight,tt0468569,movie,0.203,114,http_race,,direct+direct,HTTP add-on,,0,,,8.509,6712464,5,,
+bw,The Dark Knight,tt0468569,movie,0.203,114,http_probe,,direct,HTTP add-on,1080,,,,6.429,,,,first byte
+bw,The Dark Knight,tt0468569,movie,0.203,114,http_probe,,direct,HTTP add-on,1080,,,,6.571,,,,first byte
+bw,The Dark Knight,tt0468569,movie,0.203,114,http_probe,,direct,HTTP add-on,1080,,,,5.959,,,,first byte
+bw,The Dark Knight,tt0468569,movie,0.203,114,http_probe,,direct,HTTP add-on,1080,,,,4.968,,,,first byte
+bw,The Dark Knight,tt0468569,movie,0.203,114,http_probe,,direct,HTTP add-on,1080,,,,2.802,,,http 404,first byte
+bw,The Dark Knight,tt0468569,movie,0.203,114,http_probe,,direct,HTTP add-on,1080,,,,0.473,,,,first byte
+main,The Godfather Part II,tt0071562,movie,0.226,105,single,0,torrent,Torrentio,1080,,0.062,0.464,7.856,17765583,200,,frame
+main,The Godfather Part II,tt0071562,movie,0.226,105,single,1,torrent,Torrentio,1080,,0.059,0.453,2.296,5439585,194,,frame
+main,The Godfather Part II,tt0071562,movie,0.226,105,single,1,torrent,Torrentio,1080,,0.06,4.225,6.751,7952933,56,,frame
+main,The Godfather Part II,tt0071562,movie,0.226,105,single,2,torrent,Torrentio,1080,,0.061,0.603,6.889,80464749,197,,frame
+main,The Godfather Part II,tt0071562,movie,0.226,105,single,0,torrent,Torrentio,1080,,0.061,0.553,8.935,26897285,193,,frame
+main,The Godfather Part II,tt0071562,movie,0.226,105,race,,torrent+torrent,,,1,,,8.219,13113275,106,,
+main,The Godfather Part II,tt0071562,movie,0.226,105,race,,torrent+torrent,,,1,,,2.64,19741714,376,,
+main,The Godfather Part II,tt0071562,movie,0.226,105,http_single,0,direct,HTTP add-on,1080,,0,,1.873,8436183,4,,frame
+main,The Godfather Part II,tt0071562,movie,0.226,105,http_single,1,direct,HTTP add-on,1080,,0,,9.859,7898173,4,,frame
+main,The Godfather Part II,tt0071562,movie,0.226,105,http_race,,direct+direct,HTTP add-on,,0,,,1.714,1394536,5,,
+main,The Godfather Part II,tt0071562,movie,0.226,105,http_race,,direct+direct,HTTP add-on,,0,,,1.592,2486602,5,,
+main,The Godfather Part II,tt0071562,movie,0.226,105,http_probe,,direct,HTTP add-on,1080,,,,0.616,,,,first byte
+main,The Godfather Part II,tt0071562,movie,0.226,105,http_probe,,direct,HTTP add-on,1080,,,,2.02,,,,first byte
+main,The Godfather Part II,tt0071562,movie,0.226,105,http_probe,,direct,HTTP add-on,1080,,,,1.909,,,,first byte
+main,The Godfather Part II,tt0071562,movie,0.226,105,http_probe,,direct,HTTP add-on,1080,,,,3.643,,,,first byte
+main,The Godfather Part II,tt0071562,movie,0.226,105,http_probe,,direct,HTTP add-on,1080,,,,2.755,,,,first byte
+main,The Godfather Part II,tt0071562,movie,0.226,105,http_probe,,direct,HTTP add-on,1080,,,,0.598,,,,first byte
+bw,The Godfather Part II,tt0071562,movie,0.106,105,single,1,torrent,Torrentio,1080,,0.061,0.46,3.143,6986064,190,,frame
+bw,The Godfather Part II,tt0071562,movie,0.106,105,single,0,torrent,Torrentio,1080,,0.06,0.603,6.812,25413709,192,,frame
+bw,The Godfather Part II,tt0071562,movie,0.106,105,race,,torrent+torrent,,,0,,,4.318,40273252,384,,
+bw,The Godfather Part II,tt0071562,movie,0.106,105,http_single,0,direct,HTTP add-on,1080,,0,,1.439,2635812,4,,frame
+bw,The Godfather Part II,tt0071562,movie,0.106,105,http_single,1,direct,HTTP add-on,1080,,0,,6.401,3713948,4,,frame
+bw,The Godfather Part II,tt0071562,movie,0.106,105,http_race,,direct+direct,HTTP add-on,,0,,,1.479,2555246,5,,
+bw,The Godfather Part II,tt0071562,movie,0.106,105,http_race,,direct+direct,HTTP add-on,,0,,,1.501,440047,5,,
+bw,The Godfather Part II,tt0071562,movie,0.106,105,http_probe,,direct,HTTP add-on,1080,,,,0.465,,,,first byte
+bw,The Godfather Part II,tt0071562,movie,0.106,105,http_probe,,direct,HTTP add-on,1080,,,,2.808,,,,first byte
+bw,The Godfather Part II,tt0071562,movie,0.106,105,http_probe,,direct,HTTP add-on,1080,,,,1.864,,,,first byte
+bw,The Godfather Part II,tt0071562,movie,0.106,105,http_probe,,direct,HTTP add-on,1080,,,,1.909,,,,first byte
+bw,The Godfather Part II,tt0071562,movie,0.106,105,http_probe,,direct,HTTP add-on,1080,,,,1.887,,,,first byte
+bw,The Godfather Part II,tt0071562,movie,0.106,105,http_probe,,direct,HTTP add-on,1080,,,,0.463,,,,first byte
+main,Schindler's List,tt0108052,movie,0.229,80,single,1,torrent,Torrentio,1080,,0.061,0.453,2.675,13815644,101,,frame
+main,Schindler's List,tt0108052,movie,0.229,80,single,2,torrent,Torrentio,1080,,0.061,4.278,9.441,18390020,57,,frame
+main,Schindler's List,tt0108052,movie,0.229,80,single,0,torrent,Torrentio,1080,,0.061,0.403,3.804,9686749,192,,frame
+main,Schindler's List,tt0108052,movie,0.229,80,single,1,torrent,Torrentio,1080,,0.06,0.453,3.688,14868231,101,,frame
+main,Schindler's List,tt0108052,movie,0.229,80,single,0,torrent,Torrentio,1080,,0.062,0.454,4.047,10211902,189,,frame
+main,Schindler's List,tt0108052,movie,0.229,80,race,,torrent+torrent,,,1,,,3.48,30563662,292,,
+main,Schindler's List,tt0108052,movie,0.229,80,race,,torrent+torrent,,,1,,,3.263,36454060,283,,
+main,Schindler's List,tt0108052,movie,0.229,80,http_single,0,direct,HTTP add-on,1080,,0,,,10212298,3,,timeout
+main,Schindler's List,tt0108052,movie,0.229,80,http_single,1,direct,HTTP add-on,1080,,0,,1.616,447519,4,,frame
+main,Schindler's List,tt0108052,movie,0.229,80,http_race,,direct+direct,HTTP add-on,,1,,,1.516,2511268,5,,
+main,Schindler's List,tt0108052,movie,0.229,80,http_race,,direct+direct,HTTP add-on,,1,,,1.481,2122264,5,,
+main,Schindler's List,tt0108052,movie,0.229,80,http_probe,,direct,HTTP add-on,1080,,,,0.258,,,http 302,first byte
+main,Schindler's List,tt0108052,movie,0.229,80,http_probe,,direct,HTTP add-on,1080,,,,0.304,,,http 302,first byte
+main,Schindler's List,tt0108052,movie,0.229,80,http_probe,,direct,HTTP add-on,1080,,,,0.298,,,http 302,first byte
+main,Schindler's List,tt0108052,movie,0.229,80,http_probe,,direct,HTTP add-on,1080,,,,8.599,,,,first byte
+main,Schindler's List,tt0108052,movie,0.229,80,http_probe,,direct,HTTP add-on,1080,,,,2.698,,,http 404,first byte
+main,Schindler's List,tt0108052,movie,0.229,80,http_probe,,direct,HTTP add-on,1080,,,,0.842,,,,first byte
+bw,Schindler's List,tt0108052,movie,0.162,80,single,1,torrent,Torrentio,1080,,0.06,3.872,21.024,27236745,100,,frame
+bw,Schindler's List,tt0108052,movie,0.162,80,single,0,torrent,Torrentio,1080,,0.06,4.378,9.255,35662805,189,,frame
+bw,Schindler's List,tt0108052,movie,0.162,80,race,,torrent+torrent,,,0,,,10.737,25623796,290,,
+bw,Schindler's List,tt0108052,movie,0.162,80,http_single,0,direct,HTTP add-on,1080,,0,,12.671,5314978,3,,frame
+bw,Schindler's List,tt0108052,movie,0.162,80,http_single,1,direct,HTTP add-on,1080,,0,,11.87,5661101,3,,frame
+bw,Schindler's List,tt0108052,movie,0.162,80,http_race,,direct+direct,HTTP add-on,,1,,,8.309,8454304,5,,
+bw,Schindler's List,tt0108052,movie,0.162,80,http_race,,direct+direct,HTTP add-on,,0,,,7.981,6207066,5,,
+bw,Schindler's List,tt0108052,movie,0.162,80,http_probe,,direct,HTTP add-on,1080,,,,11.803,,,,first byte
+bw,Schindler's List,tt0108052,movie,0.162,80,http_probe,,direct,HTTP add-on,1080,,,,0.285,,,http 302,first byte
+bw,Schindler's List,tt0108052,movie,0.162,80,http_probe,,direct,HTTP add-on,1080,,,,11.553,,,,first byte
+bw,Schindler's List,tt0108052,movie,0.162,80,http_probe,,direct,HTTP add-on,1080,,,,0.222,,,http 302,first byte
+bw,Schindler's List,tt0108052,movie,0.162,80,http_probe,,direct,HTTP add-on,1080,,,,2.881,,,http 404,first byte
+bw,Schindler's List,tt0108052,movie,0.162,80,http_probe,,direct,HTTP add-on,1080,,,,0.534,,,,first byte
+main,The Lord of the Rings: The Return of the King,tt0167260,movie,0.235,126,single,0,torrent,Torrentio,1080,,0.061,0.906,3.864,26563813,189,,frame
+main,The Lord of the Rings: The Return of the King,tt0167260,movie,0.235,126,single,0,torrent,Torrentio,1080,,0.059,0.453,7.306,16303672,186,,frame
+main,The Lord of the Rings: The Return of the King,tt0167260,movie,0.235,126,single,1,torrent,Torrentio,1080,,0.059,5.192,7.467,9764408,58,,frame
+main,The Lord of the Rings: The Return of the King,tt0167260,movie,0.235,126,single,1,torrent,Torrentio,1080,,0.06,2.066,5.089,6301687,185,,frame
+main,The Lord of the Rings: The Return of the King,tt0167260,movie,0.235,126,single,2,torrent,Torrentio,1080,,0.06,2.114,5.756,5081334,56,,frame
+main,The Lord of the Rings: The Return of the King,tt0167260,movie,0.235,126,race,,torrent+torrent,,,1,,,2.377,87842773,373,,
+main,The Lord of the Rings: The Return of the King,tt0167260,movie,0.235,126,race,,torrent+torrent,,,1,,,16.048,22104490,117,,
+main,The Lord of the Rings: The Return of the King,tt0167260,movie,0.235,126,http_single,0,direct,HTTP add-on,1080,,0,,1.759,14761734,4,,frame
+main,The Lord of the Rings: The Return of the King,tt0167260,movie,0.235,126,http_single,1,direct,HTTP add-on,1080,,0,,1.771,2190134,4,,frame
+main,The Lord of the Rings: The Return of the King,tt0167260,movie,0.235,126,http_race,,direct+direct,HTTP add-on,,1,,,1.591,2316062,8,,
+main,The Lord of the Rings: The Return of the King,tt0167260,movie,0.235,126,http_race,,direct+direct,HTTP add-on,,1,,,1.458,51405663,8,,
+main,The Lord of the Rings: The Return of the King,tt0167260,movie,0.235,126,http_probe,,direct,HTTP add-on,1080,,,,0.689,,,,first byte
+main,The Lord of the Rings: The Return of the King,tt0167260,movie,0.235,126,http_probe,,direct,HTTP add-on,1080,,,,0.929,,,,first byte
+main,The Lord of the Rings: The Return of the King,tt0167260,movie,0.235,126,http_probe,,direct,HTTP add-on,1080,,,,0.202,,,http 302,first byte
+main,The Lord of the Rings: The Return of the King,tt0167260,movie,0.235,126,http_probe,,direct,HTTP add-on,1080,,,,0.204,,,http 302,first byte
+main,The Lord of the Rings: The Return of the King,tt0167260,movie,0.235,126,http_probe,,direct,HTTP add-on,1080,,,,0.235,,,http 302,first byte
+main,The Lord of the Rings: The Return of the King,tt0167260,movie,0.235,126,http_probe,,direct,HTTP add-on,1080,,,,10.498,,,http 302,first byte
+bw,The Lord of the Rings: The Return of the King,tt0167260,movie,0.171,126,single,0,torrent,Torrentio,1080,,0.06,0.654,3.486,12983114,198,,frame
+bw,The Lord of the Rings: The Return of the King,tt0167260,movie,0.171,126,single,1,torrent,Torrentio,1080,,0.061,0.352,4.274,24900407,192,,frame
+bw,The Lord of the Rings: The Return of the King,tt0167260,movie,0.171,126,race,,torrent+torrent,,,0,,,3.164,21375479,384,,
+bw,The Lord of the Rings: The Return of the King,tt0167260,movie,0.171,126,http_single,0,direct,HTTP add-on,1080,,0,,1.639,10009355,4,,frame
+bw,The Lord of the Rings: The Return of the King,tt0167260,movie,0.171,126,http_single,1,direct,HTTP add-on,1080,,0,,1.466,2835353,4,,frame
+bw,The Lord of the Rings: The Return of the King,tt0167260,movie,0.171,126,http_race,,direct+direct,HTTP add-on,,0,,,1.514,1903193,8,,
+bw,The Lord of the Rings: The Return of the King,tt0167260,movie,0.171,126,http_race,,direct+direct,HTTP add-on,,0,,,1.55,4144976,8,,
+bw,The Lord of the Rings: The Return of the King,tt0167260,movie,0.171,126,http_probe,,direct,HTTP add-on,1080,,,,0.55,,,,first byte
+bw,The Lord of the Rings: The Return of the King,tt0167260,movie,0.171,126,http_probe,,direct,HTTP add-on,1080,,,,0.417,,,,first byte
+bw,The Lord of the Rings: The Return of the King,tt0167260,movie,0.171,126,http_probe,,direct,HTTP add-on,1080,,,,8.448,,,,first byte
+bw,The Lord of the Rings: The Return of the King,tt0167260,movie,0.171,126,http_probe,,direct,HTTP add-on,1080,,,,6.829,,,,first byte
+bw,The Lord of the Rings: The Return of the King,tt0167260,movie,0.171,126,http_probe,,direct,HTTP add-on,1080,,,,6.659,,,,first byte
+bw,The Lord of the Rings: The Return of the King,tt0167260,movie,0.171,126,http_probe,,direct,HTTP add-on,1080,,,,0.728,,,http 502,first byte
+main,Pulp Fiction,tt0110912,movie,0.148,109,single,1,torrent,Torrentio,1080,,0.06,6.907,7.865,817079,57,,frame
+main,Pulp Fiction,tt0110912,movie,0.148,109,single,1,torrent,Torrentio,1080,,0.066,0.403,0.836,5255724,186,,frame
+main,Pulp Fiction,tt0110912,movie,0.148,109,single,0,torrent,Torrentio,1080,,0.059,0.454,7.138,19941704,187,,frame
+main,Pulp Fiction,tt0110912,movie,0.148,109,single,0,torrent,Torrentio,1080,,0.06,3.171,10.661,10515420,181,,frame
+main,Pulp Fiction,tt0110912,movie,0.148,109,single,2,torrent,Torrentio,1080,,0.06,0.906,4.538,3914339,57,,frame
+main,Pulp Fiction,tt0110912,movie,0.148,109,race,,torrent+torrent,,,1,,,7.057,26811324,114,,
+main,Pulp Fiction,tt0110912,movie,0.148,109,race,,torrent+torrent,,,1,,,4.229,9360254,361,,
+main,Pulp Fiction,tt0110912,movie,0.148,109,http_single,0,direct,HTTP add-on,1080,,0,,11.862,14694088,3,,frame
+main,Pulp Fiction,tt0110912,movie,0.148,109,http_single,1,direct,HTTP add-on,1080,,0,,11.454,7254774,3,,frame
+main,Pulp Fiction,tt0110912,movie,0.148,109,http_race,,direct+direct,HTTP add-on,,0,,,10.752,6148227,4,,
+main,Pulp Fiction,tt0110912,movie,0.148,109,http_race,,direct+direct,HTTP add-on,,0,,,9.728,8062954,6,,
+main,Pulp Fiction,tt0110912,movie,0.148,109,http_probe,,direct,HTTP add-on,1080,,,,6.891,,,,first byte
+main,Pulp Fiction,tt0110912,movie,0.148,109,http_probe,,direct,HTTP add-on,1080,,,,6.561,,,,first byte
+main,Pulp Fiction,tt0110912,movie,0.148,109,http_probe,,direct,HTTP add-on,1080,,,,8.378,,,,first byte
+main,Pulp Fiction,tt0110912,movie,0.148,109,http_probe,,direct,HTTP add-on,1080,,,,0.452,,,http 502,first byte
+main,Pulp Fiction,tt0110912,movie,0.148,109,http_probe,,direct,HTTP add-on,1080,,,,2.934,,,http 404,first byte
+main,Pulp Fiction,tt0110912,movie,0.148,109,http_probe,,direct,HTTP add-on,1080,,,,0.745,,,,first byte
+bw,Pulp Fiction,tt0110912,movie,0.171,109,single,1,torrent,Torrentio,1080,,0.061,0.403,0.854,984391,187,,frame
+bw,Pulp Fiction,tt0110912,movie,0.171,109,single,0,torrent,Torrentio,1080,,0.059,0.453,2.235,14157079,191,,frame
+bw,Pulp Fiction,tt0110912,movie,0.171,109,race,,torrent+torrent,,,1,,,1.019,14010163,382,,
+bw,Pulp Fiction,tt0110912,movie,0.171,109,http_single,0,direct,HTTP add-on,1080,,0,,8.868,10030065,3,,frame
+bw,Pulp Fiction,tt0110912,movie,0.171,109,http_single,1,direct,HTTP add-on,1080,,0,,11.994,5202369,3,,frame
+bw,Pulp Fiction,tt0110912,movie,0.171,109,http_race,,direct+direct,HTTP add-on,,1,,,7.422,4026516,5,,
+bw,Pulp Fiction,tt0110912,movie,0.171,109,http_race,,direct+direct,HTTP add-on,,0,,,8.73,4913992,6,,
+bw,Pulp Fiction,tt0110912,movie,0.171,109,http_probe,,direct,HTTP add-on,1080,,,,4.406,,,,first byte
+bw,Pulp Fiction,tt0110912,movie,0.171,109,http_probe,,direct,HTTP add-on,1080,,,,5.641,,,,first byte
+bw,Pulp Fiction,tt0110912,movie,0.171,109,http_probe,,direct,HTTP add-on,1080,,,,6.004,,,,first byte
+bw,Pulp Fiction,tt0110912,movie,0.171,109,http_probe,,direct,HTTP add-on,1080,,,,0.25,,,http 302,first byte
+bw,Pulp Fiction,tt0110912,movie,0.171,109,http_probe,,direct,HTTP add-on,1080,,,,2.377,,,http 404,first byte
+bw,Pulp Fiction,tt0110912,movie,0.171,109,http_probe,,direct,HTTP add-on,1080,,,,0.486,,,,first byte
+main,The Lord of the Rings: The Fellowship of the Ring,tt0120737,movie,0.185,118,single,2,torrent,Torrentio,1080,,0.061,1.509,3.312,1976816,49,,frame
+main,The Lord of the Rings: The Fellowship of the Ring,tt0120737,movie,0.185,118,single,0,torrent,Torrentio,1080,,0.06,0.402,7.508,17463048,185,,frame
+main,The Lord of the Rings: The Fellowship of the Ring,tt0120737,movie,0.185,118,single,1,torrent,Torrentio,1080,,0.061,4.829,5.228,0,58,,frame
+main,The Lord of the Rings: The Fellowship of the Ring,tt0120737,movie,0.185,118,single,0,torrent,Torrentio,1080,,0.061,5.333,10.134,22687734,58,,frame
+main,The Lord of the Rings: The Fellowship of the Ring,tt0120737,movie,0.185,118,single,1,torrent,Torrentio,1080,,0.061,0.358,0.771,7154495,189,,frame
+main,The Lord of the Rings: The Fellowship of the Ring,tt0120737,movie,0.185,118,race,,torrent+torrent,,,1,,,0.785,8921649,379,,
+main,The Lord of the Rings: The Fellowship of the Ring,tt0120737,movie,0.185,118,race,,torrent+torrent,,,1,,,0.783,8839834,377,,
+main,The Lord of the Rings: The Fellowship of the Ring,tt0120737,movie,0.185,118,http_single,0,direct,HTTP add-on,1080,,0,,14.036,43169049,3,,frame
+main,The Lord of the Rings: The Fellowship of the Ring,tt0120737,movie,0.185,118,http_single,1,direct,HTTP add-on,1080,,0,,10.043,6428601,3,,frame
+main,The Lord of the Rings: The Fellowship of the Ring,tt0120737,movie,0.185,118,http_race,,direct+direct,HTTP add-on,,1,,,8.509,7251084,5,,
+main,The Lord of the Rings: The Fellowship of the Ring,tt0120737,movie,0.185,118,http_race,,direct+direct,HTTP add-on,,0,,,7.018,6069054,5,,
+main,The Lord of the Rings: The Fellowship of the Ring,tt0120737,movie,0.185,118,http_probe,,direct,HTTP add-on,1080,,,,5.523,,,,first byte
+main,The Lord of the Rings: The Fellowship of the Ring,tt0120737,movie,0.185,118,http_probe,,direct,HTTP add-on,1080,,,,5.643,,,,first byte
+main,The Lord of the Rings: The Fellowship of the Ring,tt0120737,movie,0.185,118,http_probe,,direct,HTTP add-on,1080,,,,7.89,,,,first byte
+main,The Lord of the Rings: The Fellowship of the Ring,tt0120737,movie,0.185,118,http_probe,,direct,HTTP add-on,1080,,,,6.551,,,,first byte
+main,The Lord of the Rings: The Fellowship of the Ring,tt0120737,movie,0.185,118,http_probe,,direct,HTTP add-on,1080,,,,1.803,,,http 404,first byte
+main,The Lord of the Rings: The Fellowship of the Ring,tt0120737,movie,0.185,118,http_probe,,direct,HTTP add-on,1080,,,,0.666,,,,first byte
+bw,The Lord of the Rings: The Fellowship of the Ring,tt0120737,movie,0.442,118,single,0,torrent,Torrentio,1080,,0.066,0.457,3.814,22497568,197,,frame
+bw,The Lord of the Rings: The Fellowship of the Ring,tt0120737,movie,0.442,118,single,1,torrent,Torrentio,1080,,0.076,0.505,1.501,1301330,185,,frame
+bw,The Lord of the Rings: The Fellowship of the Ring,tt0120737,movie,0.442,118,race,,torrent+torrent,,,1,,,1.246,666596,371,,
+bw,The Lord of the Rings: The Fellowship of the Ring,tt0120737,movie,0.442,118,http_single,0,direct,HTTP add-on,1080,,0,,11.724,5252006,3,,frame
+bw,The Lord of the Rings: The Fellowship of the Ring,tt0120737,movie,0.442,118,http_single,1,direct,HTTP add-on,1080,,0,,,6548237,3,,timeout
+bw,The Lord of the Rings: The Fellowship of the Ring,tt0120737,movie,0.442,118,http_race,,direct+direct,HTTP add-on,,0,,,10.045,17536188,6,,
+bw,The Lord of the Rings: The Fellowship of the Ring,tt0120737,movie,0.442,118,http_race,,direct+direct,HTTP add-on,,1,,,8.712,3038086,6,,
+bw,The Lord of the Rings: The Fellowship of the Ring,tt0120737,movie,0.442,118,http_probe,,direct,HTTP add-on,1080,,,,4.742,,,,first byte
+bw,The Lord of the Rings: The Fellowship of the Ring,tt0120737,movie,0.442,118,http_probe,,direct,HTTP add-on,1080,,,,5.962,,,,first byte
+bw,The Lord of the Rings: The Fellowship of the Ring,tt0120737,movie,0.442,118,http_probe,,direct,HTTP add-on,1080,,,,5.469,,,,first byte
+bw,The Lord of the Rings: The Fellowship of the Ring,tt0120737,movie,0.442,118,http_probe,,direct,HTTP add-on,1080,,,,5.28,,,http 302,first byte
+bw,The Lord of the Rings: The Fellowship of the Ring,tt0120737,movie,0.442,118,http_probe,,direct,HTTP add-on,1080,,,,1.309,,,http 404,first byte
+bw,The Lord of the Rings: The Fellowship of the Ring,tt0120737,movie,0.442,118,http_probe,,direct,HTTP add-on,1080,,,,0.482,,,,first byte
+main,Forrest Gump,tt0109830,movie,0.201,96,single,1,torrent,Torrentio,1080,,0.061,1.911,4.76,13545313,63,,frame
+main,Forrest Gump,tt0109830,movie,0.201,96,single,0,torrent,Torrentio,1080,,0.06,3.376,12.543,14775956,176,,frame
+main,Forrest Gump,tt0109830,movie,0.201,96,single,2,torrent,Torrentio,1080,,0.06,8.762,10.076,2260404,54,,frame
+main,Forrest Gump,tt0109830,movie,0.201,96,single,1,torrent,Torrentio,1080,,0.063,7.747,17.183,14976466,52,,frame
+main,Forrest Gump,tt0109830,movie,0.201,96,single,0,torrent,Torrentio,1080,,0.06,7.455,19.461,19925815,55,,frame
+main,Forrest Gump,tt0109830,movie,0.201,96,race,,torrent+torrent,,,0,,,18.762,33735420,113,,
+main,Forrest Gump,tt0109830,movie,0.201,96,race,,torrent+torrent,,,1,,,16.607,25421860,78,,
+main,Forrest Gump,tt0109830,movie,0.201,96,http_single,0,direct,HTTP add-on,1080,,0,,12.564,12263402,3,,frame
+main,Forrest Gump,tt0109830,movie,0.201,96,http_single,1,direct,HTTP add-on,1080,,0,,13.49,6839264,3,,frame
+main,Forrest Gump,tt0109830,movie,0.201,96,http_race,,direct+direct,HTTP add-on,,1,,,8.49,7073608,5,,
+main,Forrest Gump,tt0109830,movie,0.201,96,http_race,,direct+direct,HTTP add-on,,1,,,11.159,7221931,6,,
+main,Forrest Gump,tt0109830,movie,0.201,96,http_probe,,direct,HTTP add-on,1080,,,,11.204,,,,first byte
+main,Forrest Gump,tt0109830,movie,0.201,96,http_probe,,direct,HTTP add-on,1080,,,,7.621,,,,first byte
+main,Forrest Gump,tt0109830,movie,0.201,96,http_probe,,direct,HTTP add-on,1080,,,,6.365,,,,first byte
+main,Forrest Gump,tt0109830,movie,0.201,96,http_probe,,direct,HTTP add-on,1080,,,,10.554,,,http 302,first byte
+main,Forrest Gump,tt0109830,movie,0.201,96,http_probe,,direct,HTTP add-on,1080,,,,2.942,,,http 404,first byte
+main,Forrest Gump,tt0109830,movie,0.201,96,http_probe,,direct,HTTP add-on,1080,,,,0.91,,,,first byte
+bw,Forrest Gump,tt0109830,movie,0.181,96,single,1,torrent,Torrentio,1080,,0.061,0.352,2.481,1186050,192,,frame
+bw,Forrest Gump,tt0109830,movie,0.181,96,single,0,torrent,Torrentio,1080,,0.06,0.554,3.554,10304181,195,,frame
+bw,Forrest Gump,tt0109830,movie,0.181,96,race,,torrent+torrent,,,1,,,2.185,28691642,372,,
+bw,Forrest Gump,tt0109830,movie,0.181,96,http_single,0,direct,HTTP add-on,1080,,0,,10.948,14929094,3,,frame
+bw,Forrest Gump,tt0109830,movie,0.181,96,http_single,1,direct,HTTP add-on,1080,,0,,8.651,4335529,3,,frame
+bw,Forrest Gump,tt0109830,movie,0.181,96,http_race,,direct+direct,HTTP add-on,,0,,,8.836,5753494,5,,
+bw,Forrest Gump,tt0109830,movie,0.181,96,http_race,,direct+direct,HTTP add-on,,0,,,9.754,4991295,4,,
+bw,Forrest Gump,tt0109830,movie,0.181,96,http_probe,,direct,HTTP add-on,1080,,,,7.784,,,,first byte
+bw,Forrest Gump,tt0109830,movie,0.181,96,http_probe,,direct,HTTP add-on,1080,,,,6.107,,,,first byte
+bw,Forrest Gump,tt0109830,movie,0.181,96,http_probe,,direct,HTTP add-on,1080,,,,5.979,,,,first byte
+bw,Forrest Gump,tt0109830,movie,0.181,96,http_probe,,direct,HTTP add-on,1080,,,,0.694,,,http 502,first byte
+bw,Forrest Gump,tt0109830,movie,0.181,96,http_probe,,direct,HTTP add-on,1080,,,,2.334,,,http 404,first byte
+bw,Forrest Gump,tt0109830,movie,0.181,96,http_probe,,direct,HTTP add-on,1080,,,,0.575,,,,first byte
+main,The Matrix,tt0133093,movie,0.134,118,single,2,torrent,Torrentio,1080,,0.061,4.678,5.287,0,54,,frame
+main,The Matrix,tt0133093,movie,0.134,118,single,0,torrent,Torrentio,1080,,0.061,15.322,31.155,12176250,7,,frame
+main,The Matrix,tt0133093,movie,0.134,118,single,0,torrent,Torrentio,1080,,0.059,13.283,,13023758,53,,timeout
+main,The Matrix,tt0133093,movie,0.134,118,single,1,torrent,Torrentio,1080,,0.063,7.099,9.196,1689364,57,,frame
+main,The Matrix,tt0133093,movie,0.134,118,single,1,torrent,Torrentio,1080,,0.061,9.677,11.726,478956,56,,frame
+main,The Matrix,tt0133093,movie,0.134,118,race,,torrent+torrent,,,1,,,9.186,14894881,110,,
+main,The Matrix,tt0133093,movie,0.134,118,race,,torrent+torrent,,,1,,,13.17,21090546,58,,
+main,The Matrix,tt0133093,movie,0.134,118,http_single,0,direct,HTTP add-on,1080,,0,,8.197,4274708,3,,frame
+main,The Matrix,tt0133093,movie,0.134,118,http_single,1,direct,HTTP add-on,1080,,0,,12.123,6723319,3,,frame
+main,The Matrix,tt0133093,movie,0.134,118,http_race,,direct+direct,HTTP add-on,,0,,,9.81,6353950,5,,
+main,The Matrix,tt0133093,movie,0.134,118,http_race,,direct+direct,HTTP add-on,,0,,,10.775,8114426,6,,
+main,The Matrix,tt0133093,movie,0.134,118,http_probe,,direct,HTTP add-on,1080,,,,10.325,,,,first byte
+main,The Matrix,tt0133093,movie,0.134,118,http_probe,,direct,HTTP add-on,1080,,,,5.969,,,,first byte
+main,The Matrix,tt0133093,movie,0.134,118,http_probe,,direct,HTTP add-on,1080,,,,6.843,,,,first byte
+main,The Matrix,tt0133093,movie,0.134,118,http_probe,,direct,HTTP add-on,1080,,,,0.238,,,http 302,first byte
+main,The Matrix,tt0133093,movie,0.134,118,http_probe,,direct,HTTP add-on,1080,,,,3.19,,,http 404,first byte
+main,The Matrix,tt0133093,movie,0.134,118,http_probe,,direct,HTTP add-on,1080,,,,0.731,,,,first byte
+bw,The Matrix,tt0133093,movie,0.194,118,single,0,torrent,Torrentio,1080,,0.064,0.564,3.404,16698758,192,,frame
+bw,The Matrix,tt0133093,movie,0.194,118,single,1,torrent,Torrentio,1080,,0.061,0.82,7.417,6608267,186,,frame
+bw,The Matrix,tt0133093,movie,0.194,118,race,,torrent+torrent,,,0,,,2.216,21711279,395,,
+bw,The Matrix,tt0133093,movie,0.194,118,http_single,0,direct,HTTP add-on,1080,,0,,12.316,8472259,3,,frame
+bw,The Matrix,tt0133093,movie,0.194,118,http_single,1,direct,HTTP add-on,1080,,0,,19.417,7374108,3,,frame
+bw,The Matrix,tt0133093,movie,0.194,118,http_race,,direct+direct,HTTP add-on,,0,,,8.567,4664076,5,,
+bw,The Matrix,tt0133093,movie,0.194,118,http_race,,direct+direct,HTTP add-on,,1,,,12.5,5110209,5,,
+bw,The Matrix,tt0133093,movie,0.194,118,http_probe,,direct,HTTP add-on,1080,,,,5.56,,,,first byte
+bw,The Matrix,tt0133093,movie,0.194,118,http_probe,,direct,HTTP add-on,1080,,,,5.814,,,,first byte
+bw,The Matrix,tt0133093,movie,0.194,118,http_probe,,direct,HTTP add-on,1080,,,,10.194,,,,first byte
+bw,The Matrix,tt0133093,movie,0.194,118,http_probe,,direct,HTTP add-on,1080,,,,0.601,,,http 502,first byte
+bw,The Matrix,tt0133093,movie,0.194,118,http_probe,,direct,HTTP add-on,1080,,,,2.896,,,http 404,first byte
+bw,The Matrix,tt0133093,movie,0.194,118,http_probe,,direct,HTTP add-on,1080,,,,0.508,,,,first byte
+main,The Lord of the Rings: The Two Towers,tt0167261,movie,0.246,116,single,1,torrent,Torrentio,1080,,0.062,0.352,1.27,3027591,180,,frame
+main,The Lord of the Rings: The Two Towers,tt0167261,movie,0.246,116,single,1,torrent,Torrentio,1080,,0.058,0.406,1.369,9133171,186,,frame
+main,The Lord of the Rings: The Two Towers,tt0167261,movie,0.246,116,single,0,torrent,Torrentio,1080,,0.065,0.429,3.624,19565754,192,,frame
+main,The Lord of the Rings: The Two Towers,tt0167261,movie,0.246,116,single,0,torrent,Torrentio,1080,,0.062,0.503,4.441,17254081,191,,frame
+main,The Lord of the Rings: The Two Towers,tt0167261,movie,0.246,116,single,2,torrent,Torrentio,1080,,0.06,0.466,4.642,10861074,196,,frame
+main,The Lord of the Rings: The Two Towers,tt0167261,movie,0.246,116,race,,torrent+torrent,,,1,,,1.0,1300338,366,,
+main,The Lord of the Rings: The Two Towers,tt0167261,movie,0.246,116,race,,torrent+torrent,,,1,,,1.381,27700024,373,,
+main,The Lord of the Rings: The Two Towers,tt0167261,movie,0.246,116,http_single,0,direct,HTTP add-on,1080,,0,,1.593,13402825,4,,frame
+main,The Lord of the Rings: The Two Towers,tt0167261,movie,0.246,116,http_single,1,direct,HTTP add-on,1080,,0,,1.781,2246649,4,,frame
+main,The Lord of the Rings: The Two Towers,tt0167261,movie,0.246,116,http_race,,direct+direct,HTTP add-on,,0,,,1.502,931430,8,,
+main,The Lord of the Rings: The Two Towers,tt0167261,movie,0.246,116,http_race,,direct+direct,HTTP add-on,,1,,,1.666,2943692,8,,
+main,The Lord of the Rings: The Two Towers,tt0167261,movie,0.246,116,http_probe,,direct,HTTP add-on,1080,,,,0.823,,,,first byte
+main,The Lord of the Rings: The Two Towers,tt0167261,movie,0.246,116,http_probe,,direct,HTTP add-on,1080,,,,1.253,,,,first byte
+main,The Lord of the Rings: The Two Towers,tt0167261,movie,0.246,116,http_probe,,direct,HTTP add-on,1080,,,,8.321,,,,first byte
+main,The Lord of the Rings: The Two Towers,tt0167261,movie,0.246,116,http_probe,,direct,HTTP add-on,1080,,,,8.288,,,,first byte
+main,The Lord of the Rings: The Two Towers,tt0167261,movie,0.246,116,http_probe,,direct,HTTP add-on,1080,,,,9.665,,,,first byte
+main,The Lord of the Rings: The Two Towers,tt0167261,movie,0.246,116,http_probe,,direct,HTTP add-on,1080,,,,0.502,,,http 502,first byte
+bw,The Lord of the Rings: The Two Towers,tt0167261,movie,0.12,116,single,1,torrent,Torrentio,1080,,0.058,0.699,4.163,5397428,192,,frame
+bw,The Lord of the Rings: The Two Towers,tt0167261,movie,0.12,116,single,0,torrent,Torrentio,1080,,0.06,0.503,3.965,16373484,195,,frame
+bw,The Lord of the Rings: The Two Towers,tt0167261,movie,0.12,116,race,,torrent+torrent,,,1,,,7.509,32870885,384,,
+bw,The Lord of the Rings: The Two Towers,tt0167261,movie,0.12,116,http_single,0,direct,HTTP add-on,1080,,0,,1.499,998509,4,,frame
+bw,The Lord of the Rings: The Two Towers,tt0167261,movie,0.12,116,http_single,1,direct,HTTP add-on,1080,,0,,1.406,1228685,4,,frame
+bw,The Lord of the Rings: The Two Towers,tt0167261,movie,0.12,116,http_race,,direct+direct,HTTP add-on,,1,,,1.503,557073,8,,
+bw,The Lord of the Rings: The Two Towers,tt0167261,movie,0.12,116,http_race,,direct+direct,HTTP add-on,,1,,,1.494,3315044,8,,
+bw,The Lord of the Rings: The Two Towers,tt0167261,movie,0.12,116,http_probe,,direct,HTTP add-on,1080,,,,0.608,,,,first byte
+bw,The Lord of the Rings: The Two Towers,tt0167261,movie,0.12,116,http_probe,,direct,HTTP add-on,1080,,,,0.465,,,,first byte
+bw,The Lord of the Rings: The Two Towers,tt0167261,movie,0.12,116,http_probe,,direct,HTTP add-on,1080,,,,7.696,,,,first byte
+bw,The Lord of the Rings: The Two Towers,tt0167261,movie,0.12,116,http_probe,,direct,HTTP add-on,1080,,,,5.627,,,,first byte
+bw,The Lord of the Rings: The Two Towers,tt0167261,movie,0.12,116,http_probe,,direct,HTTP add-on,1080,,,,6.6,,,,first byte
+bw,The Lord of the Rings: The Two Towers,tt0167261,movie,0.12,116,http_probe,,direct,HTTP add-on,1080,,,,0.228,,,http 302,first byte
+main,Inception,tt1375666,movie,0.158,121,single,1,torrent,Torrentio,1080,,0.06,1.258,3.934,5607367,55,,frame
+main,Inception,tt1375666,movie,0.158,121,single,0,torrent,Torrentio,1080,,0.06,0.352,0.991,1227241,179,,frame
+main,Inception,tt1375666,movie,0.158,121,single,0,torrent,Torrentio,1080,,0.06,0.373,0.982,1612410,178,,frame
+main,Inception,tt1375666,movie,0.158,121,single,2,torrent,Torrentio,1080,,0.059,1.358,6.893,11321602,58,,frame
+main,Inception,tt1375666,movie,0.158,121,single,1,torrent,Torrentio,1080,,0.06,1.113,3.885,1543656,55,,frame
+main,Inception,tt1375666,movie,0.158,121,race,,torrent+torrent,,,0,,,1.432,2585577,227,,
+main,Inception,tt1375666,movie,0.158,121,race,,torrent+torrent,,,0,,,0.982,6884557,174,,
+main,Inception,tt1375666,movie,0.158,121,http_single,0,direct,HTTP add-on,1080,,0,,12.472,8158648,3,,frame
+main,Inception,tt1375666,movie,0.158,121,http_single,1,direct,HTTP add-on,1080,,0,,12.402,8624121,3,,frame
+main,Inception,tt1375666,movie,0.158,121,http_race,,direct+direct,HTTP add-on,,1,,,9.302,6168272,5,,
+main,Inception,tt1375666,movie,0.158,121,http_race,,direct+direct,HTTP add-on,,0,,,10.601,7109242,5,,
+main,Inception,tt1375666,movie,0.158,121,http_probe,,direct,HTTP add-on,1080,,,,5.401,,,,first byte
+main,Inception,tt1375666,movie,0.158,121,http_probe,,direct,HTTP add-on,1080,,,,6.689,,,,first byte
+main,Inception,tt1375666,movie,0.158,121,http_probe,,direct,HTTP add-on,1080,,,,6.917,,,,first byte
+main,Inception,tt1375666,movie,0.158,121,http_probe,,direct,HTTP add-on,1080,,,,2.87,,,,first byte
+main,Inception,tt1375666,movie,0.158,121,http_probe,,direct,HTTP add-on,1080,,,,2.727,,,http 404,first byte
+main,Inception,tt1375666,movie,0.158,121,http_probe,,direct,HTTP add-on,1080,,,,0.686,,,,first byte
+bw,Inception,tt1375666,movie,0.149,121,single,0,torrent,Torrentio,1080,,0.064,3.912,5.377,5757494,192,,frame
+bw,Inception,tt1375666,movie,0.149,121,single,1,torrent,Torrentio,1080,,0.064,6.314,8.389,2750479,53,,frame
+bw,Inception,tt1375666,movie,0.149,121,race,,torrent+torrent,,,0,,,9.931,156783335,245,,
+bw,Inception,tt1375666,movie,0.149,121,http_single,0,direct,HTTP add-on,1080,,0,,10.917,4325360,3,,frame
+bw,Inception,tt1375666,movie,0.149,121,http_single,1,direct,HTTP add-on,1080,,0,,11.225,4505284,3,,frame
+bw,Inception,tt1375666,movie,0.149,121,http_race,,direct+direct,HTTP add-on,,1,,,8.83,7628052,5,,
+bw,Inception,tt1375666,movie,0.149,121,http_race,,direct+direct,HTTP add-on,,0,,,8.093,4920908,5,,
+bw,Inception,tt1375666,movie,0.149,121,http_probe,,direct,HTTP add-on,1080,,,,6.836,,,,first byte
+bw,Inception,tt1375666,movie,0.149,121,http_probe,,direct,HTTP add-on,1080,,,,6.367,,,,first byte
+bw,Inception,tt1375666,movie,0.149,121,http_probe,,direct,HTTP add-on,1080,,,,6.262,,,,first byte
+bw,Inception,tt1375666,movie,0.149,121,http_probe,,direct,HTTP add-on,1080,,,,0.639,,,http 502,first byte
+bw,Inception,tt1375666,movie,0.149,121,http_probe,,direct,HTTP add-on,1080,,,,2.979,,,http 404,first byte
+bw,Inception,tt1375666,movie,0.149,121,http_probe,,direct,HTTP add-on,1080,,,,0.515,,,,first byte
+main,Star Wars: Episode V - The Empire Strikes Back,tt0080684,movie,0.211,119,single,0,torrent,Torrentio,1080,,0.061,0.404,1.616,676908,187,,frame
+main,Star Wars: Episode V - The Empire Strikes Back,tt0080684,movie,0.211,119,single,0,torrent,Torrentio,1080,,0.06,0.406,2.215,9720574,186,,frame
+main,Star Wars: Episode V - The Empire Strikes Back,tt0080684,movie,0.211,119,single,2,torrent,Torrentio,1080,,0.06,0.56,3.396,11846957,134,,frame
+main,Star Wars: Episode V - The Empire Strikes Back,tt0080684,movie,0.211,119,single,1,torrent,Torrentio,1080,,0.06,1.308,2.837,7776655,58,,frame
+main,Star Wars: Episode V - The Empire Strikes Back,tt0080684,movie,0.211,119,single,1,torrent,Torrentio,1080,,0.061,1.409,4.114,17236894,61,,frame
+main,Star Wars: Episode V - The Empire Strikes Back,tt0080684,movie,0.211,119,race,,torrent+torrent,,,0,,,1.318,15370974,197,,
+main,Star Wars: Episode V - The Empire Strikes Back,tt0080684,movie,0.211,119,race,,torrent+torrent,,,0,,,2.494,29036227,242,,
+main,Star Wars: Episode V - The Empire Strikes Back,tt0080684,movie,0.211,119,http_single,0,direct,HTTP add-on,1080,,0,,11.832,8067106,3,,frame
+main,Star Wars: Episode V - The Empire Strikes Back,tt0080684,movie,0.211,119,http_single,1,direct,HTTP add-on,1080,,0,,9.179,4707173,3,,frame
+main,Star Wars: Episode V - The Empire Strikes Back,tt0080684,movie,0.211,119,http_race,,direct+direct,HTTP add-on,,1,,,8.276,5237349,5,,
+main,Star Wars: Episode V - The Empire Strikes Back,tt0080684,movie,0.211,119,http_race,,direct+direct,HTTP add-on,,1,,,10.816,6532403,5,,
+main,Star Wars: Episode V - The Empire Strikes Back,tt0080684,movie,0.211,119,http_probe,,direct,HTTP add-on,1080,,,,7.223,,,,first byte
+main,Star Wars: Episode V - The Empire Strikes Back,tt0080684,movie,0.211,119,http_probe,,direct,HTTP add-on,1080,,,,7.079,,,,first byte
+main,Star Wars: Episode V - The Empire Strikes Back,tt0080684,movie,0.211,119,http_probe,,direct,HTTP add-on,1080,,,,6.59,,,,first byte
+main,Star Wars: Episode V - The Empire Strikes Back,tt0080684,movie,0.211,119,http_probe,,direct,HTTP add-on,1080,,,,0.305,,,http 302,first byte
+main,Star Wars: Episode V - The Empire Strikes Back,tt0080684,movie,0.211,119,http_probe,,direct,HTTP add-on,1080,,,,1.83,,,http 404,first byte
+main,Star Wars: Episode V - The Empire Strikes Back,tt0080684,movie,0.211,119,http_probe,,direct,HTTP add-on,1080,,,,1.081,,,,first byte
+bw,Star Wars: Episode V - The Empire Strikes Back,tt0080684,movie,0.169,119,single,0,torrent,Torrentio,1080,,0.059,0.705,8.144,9574734,192,,frame
+bw,Star Wars: Episode V - The Empire Strikes Back,tt0080684,movie,0.169,119,single,1,torrent,Torrentio,1080,,0.061,6.955,9.223,13792366,57,,frame
+bw,Star Wars: Episode V - The Empire Strikes Back,tt0080684,movie,0.169,119,race,,torrent+torrent,,,1,,,15.642,24335572,241,,
+bw,Star Wars: Episode V - The Empire Strikes Back,tt0080684,movie,0.169,119,http_single,0,direct,HTTP add-on,1080,,0,,8.089,2384032,3,,frame
+bw,Star Wars: Episode V - The Empire Strikes Back,tt0080684,movie,0.169,119,http_single,1,direct,HTTP add-on,1080,,0,,10.951,4619730,3,,frame
+bw,Star Wars: Episode V - The Empire Strikes Back,tt0080684,movie,0.169,119,http_race,,direct+direct,HTTP add-on,,0,,,11.582,4782425,6,,
+bw,Star Wars: Episode V - The Empire Strikes Back,tt0080684,movie,0.169,119,http_race,,direct+direct,HTTP add-on,,0,,,7.256,3006050,5,,
+bw,Star Wars: Episode V - The Empire Strikes Back,tt0080684,movie,0.169,119,http_probe,,direct,HTTP add-on,1080,,,,5.399,,,,first byte
+bw,Star Wars: Episode V - The Empire Strikes Back,tt0080684,movie,0.169,119,http_probe,,direct,HTTP add-on,1080,,,,6.101,,,,first byte
+bw,Star Wars: Episode V - The Empire Strikes Back,tt0080684,movie,0.169,119,http_probe,,direct,HTTP add-on,1080,,,,7.79,,,,first byte
+bw,Star Wars: Episode V - The Empire Strikes Back,tt0080684,movie,0.169,119,http_probe,,direct,HTTP add-on,1080,,,,10.563,,,http 302,first byte
+bw,Star Wars: Episode V - The Empire Strikes Back,tt0080684,movie,0.169,119,http_probe,,direct,HTTP add-on,1080,,,,1.741,,,http 404,first byte
+bw,Star Wars: Episode V - The Empire Strikes Back,tt0080684,movie,0.169,119,http_probe,,direct,HTTP add-on,1080,,,,0.526,,,,first byte
+main,Fight Club,tt0137523,movie,0.203,115,single,0,torrent,Torrentio,1080,,0.06,0.604,3.324,12602085,192,,frame
+main,Fight Club,tt0137523,movie,0.203,115,single,0,torrent,Torrentio,1080,,0.057,2.165,5.549,12358164,179,,frame
+main,Fight Club,tt0137523,movie,0.203,115,single,1,torrent,Torrentio,1080,,0.06,0.453,1.416,2147757,192,,frame
+main,Fight Club,tt0137523,movie,0.203,115,single,2,torrent,Torrentio,1080,,0.061,2.464,3.779,1469429,175,,frame
+main,Fight Club,tt0137523,movie,0.203,115,single,1,torrent,Torrentio,1080,,0.061,3.07,4.507,2896414,179,,frame
+main,Fight Club,tt0137523,movie,0.203,115,race,,torrent+torrent,,,1,,,3.162,3506644,360,,
+main,Fight Club,tt0137523,movie,0.203,115,race,,torrent+torrent,,,1,,,9.95,23642130,117,,
+main,Fight Club,tt0137523,movie,0.203,115,http_single,0,direct,HTTP add-on,1080,,0,,11.534,4903946,3,,frame
+main,Fight Club,tt0137523,movie,0.203,115,http_single,1,direct,HTTP add-on,1080,,0,,10.326,4240848,3,,frame
+main,Fight Club,tt0137523,movie,0.203,115,http_race,,direct+direct,HTTP add-on,,1,,,7.748,5453543,5,,
+main,Fight Club,tt0137523,movie,0.203,115,http_race,,direct+direct,HTTP add-on,,1,,,9.325,4141249,5,,
+main,Fight Club,tt0137523,movie,0.203,115,http_probe,,direct,HTTP add-on,1080,,,,2.213,,,,first byte
+main,Fight Club,tt0137523,movie,0.203,115,http_probe,,direct,HTTP add-on,1080,,,,3.904,,,,first byte
+main,Fight Club,tt0137523,movie,0.203,115,http_probe,,direct,HTTP add-on,1080,,,,5.2,,,,first byte
+main,Fight Club,tt0137523,movie,0.203,115,http_probe,,direct,HTTP add-on,1080,,,,0.435,,,http 502,first byte
+main,Fight Club,tt0137523,movie,0.203,115,http_probe,,direct,HTTP add-on,1080,,,,2.721,,,http 404,first byte
+main,Fight Club,tt0137523,movie,0.203,115,http_probe,,direct,HTTP add-on,1080,,,,0.639,,,,first byte
+bw,Fight Club,tt0137523,movie,0.124,115,single,0,torrent,Torrentio,1080,,0.061,0.409,3.717,9529093,195,,frame
+bw,Fight Club,tt0137523,movie,0.124,115,single,1,torrent,Torrentio,1080,,0.061,0.503,2.013,7409171,193,,frame
+bw,Fight Club,tt0137523,movie,0.124,115,race,,torrent+torrent,,,1,,,1.06,2206026,372,,
+bw,Fight Club,tt0137523,movie,0.124,115,http_single,0,direct,HTTP add-on,1080,,0,,10.305,10429735,3,,frame
+bw,Fight Club,tt0137523,movie,0.124,115,http_single,1,direct,HTTP add-on,1080,,0,,10.73,5144452,3,,frame
+bw,Fight Club,tt0137523,movie,0.124,115,http_race,,direct+direct,HTTP add-on,,0,,,7.494,4838649,5,,
+bw,Fight Club,tt0137523,movie,0.124,115,http_race,,direct+direct,HTTP add-on,,1,,,7.041,6259147,5,,
+bw,Fight Club,tt0137523,movie,0.124,115,http_probe,,direct,HTTP add-on,1080,,,,3.403,,,,first byte
+bw,Fight Club,tt0137523,movie,0.124,115,http_probe,,direct,HTTP add-on,1080,,,,3.194,,,,first byte
+bw,Fight Club,tt0137523,movie,0.124,115,http_probe,,direct,HTTP add-on,1080,,,,2.344,,,,first byte
+bw,Fight Club,tt0137523,movie,0.124,115,http_probe,,direct,HTTP add-on,1080,,,,0.601,,,http 502,first byte
+bw,Fight Club,tt0137523,movie,0.124,115,http_probe,,direct,HTTP add-on,1080,,,,3.224,,,http 404,first byte
+bw,Fight Club,tt0137523,movie,0.124,115,http_probe,,direct,HTTP add-on,1080,,,,0.493,,,,first byte
+main,Goodfellas,tt0099685,movie,0.182,80,single,2,torrent,Torrentio,1080,,0.06,2.514,8.877,27329538,99,,frame
+main,Goodfellas,tt0099685,movie,0.182,80,single,1,torrent,Torrentio,1080,,0.07,3.925,14.595,16548217,183,,frame
+main,Goodfellas,tt0099685,movie,0.182,80,single,1,torrent,Torrentio,1080,,0.061,5.342,10.539,14232964,57,,frame
+main,Goodfellas,tt0099685,movie,0.182,80,single,0,torrent,Torrentio,1080,,0.06,0.36,0.825,0,191,,frame
+main,Goodfellas,tt0099685,movie,0.182,80,single,0,torrent,Torrentio,1080,,0.06,0.453,0.906,0,189,,frame
+main,Goodfellas,tt0099685,movie,0.182,80,race,,torrent+torrent,,,0,,,1.079,4079707,375,,
+main,Goodfellas,tt0099685,movie,0.182,80,race,,torrent+torrent,,,0,,,0.895,2213402,378,,
+main,Goodfellas,tt0099685,movie,0.182,80,http_single,0,direct,HTTP add-on,1080,,0,,1.63,3425397,4,,frame
+main,Goodfellas,tt0099685,movie,0.182,80,http_single,1,direct,HTTP add-on,1080,,0,,10.372,4770714,3,,frame
+main,Goodfellas,tt0099685,movie,0.182,80,http_race,,direct+direct,HTTP add-on,,0,,,1.518,1751637,5,,
+main,Goodfellas,tt0099685,movie,0.182,80,http_race,,direct+direct,HTTP add-on,,0,,,1.515,382636,5,,
+main,Goodfellas,tt0099685,movie,0.182,80,http_probe,,direct,HTTP add-on,1080,,,,0.802,,,,first byte
+main,Goodfellas,tt0099685,movie,0.182,80,http_probe,,direct,HTTP add-on,1080,,,,10.871,,,,first byte
+main,Goodfellas,tt0099685,movie,0.182,80,http_probe,,direct,HTTP add-on,1080,,,,7.515,,,,first byte
+main,Goodfellas,tt0099685,movie,0.182,80,http_probe,,direct,HTTP add-on,1080,,,,5.565,,,,first byte
+main,Goodfellas,tt0099685,movie,0.182,80,http_probe,,direct,HTTP add-on,1080,,,,0.229,,,http 302,first byte
+main,Goodfellas,tt0099685,movie,0.182,80,http_probe,,direct,HTTP add-on,1080,,,,1.606,,,http 404,first byte
+bw,Goodfellas,tt0099685,movie,0.139,80,single,1,torrent,Torrentio,1080,,0.062,0.461,3.548,7290008,193,,frame
+bw,Goodfellas,tt0099685,movie,0.139,80,single,0,torrent,Torrentio,1080,,0.061,0.403,0.908,10444964,189,,frame
+bw,Goodfellas,tt0099685,movie,0.139,80,race,,torrent+torrent,,,0,,,1.209,2063819,384,,
+bw,Goodfellas,tt0099685,movie,0.139,80,http_single,0,direct,HTTP add-on,1080,,0,,1.602,13420544,4,,frame
+bw,Goodfellas,tt0099685,movie,0.139,80,http_single,1,direct,HTTP add-on,1080,,0,,8.205,4726079,3,,frame
+bw,Goodfellas,tt0099685,movie,0.139,80,http_race,,direct+direct,HTTP add-on,,0,,,1.526,31380566,5,,
+bw,Goodfellas,tt0099685,movie,0.139,80,http_race,,direct+direct,HTTP add-on,,0,,,1.431,2731802,5,,
+bw,Goodfellas,tt0099685,movie,0.139,80,http_probe,,direct,HTTP add-on,1080,,,,0.479,,,,first byte
+bw,Goodfellas,tt0099685,movie,0.139,80,http_probe,,direct,HTTP add-on,1080,,,,5.129,,,,first byte
+bw,Goodfellas,tt0099685,movie,0.139,80,http_probe,,direct,HTTP add-on,1080,,,,6.471,,,,first byte
+bw,Goodfellas,tt0099685,movie,0.139,80,http_probe,,direct,HTTP add-on,1080,,,,6.67,,,,first byte
+bw,Goodfellas,tt0099685,movie,0.139,80,http_probe,,direct,HTTP add-on,1080,,,,10.314,,,,first byte
+bw,Goodfellas,tt0099685,movie,0.139,80,http_probe,,direct,HTTP add-on,1080,,,,1.703,,,http 404,first byte
+main,One Flew Over the Cuckoo's Nest,tt0073486,movie,0.238,63,single,2,torrent,Torrentio,1080,,0.063,2.515,6.151,26950952,94,,frame
+main,One Flew Over the Cuckoo's Nest,tt0073486,movie,0.238,63,single,1,torrent,Torrentio,1080,,0.061,6.692,9.812,7472602,60,,frame
+main,One Flew Over the Cuckoo's Nest,tt0073486,movie,0.238,63,single,1,torrent,Torrentio,1080,,0.064,0.554,17.914,13749374,126,,frame
+main,One Flew Over the Cuckoo's Nest,tt0073486,movie,0.238,63,single,0,torrent,Torrentio,1080,,0.061,3.786,7.842,11667012,176,,frame
+main,One Flew Over the Cuckoo's Nest,tt0073486,movie,0.238,63,single,0,torrent,Torrentio,1080,,0.06,0.262,1.494,10613672,191,,frame
+main,One Flew Over the Cuckoo's Nest,tt0073486,movie,0.238,63,race,,torrent+torrent,,,0,,,1.778,17352147,315,,
+main,One Flew Over the Cuckoo's Nest,tt0073486,movie,0.238,63,race,,torrent+torrent,,,0,,,2.718,15211773,313,,
+main,One Flew Over the Cuckoo's Nest,tt0073486,movie,0.238,63,http_single,0,direct,HTTP add-on,1080,,0,,6.521,6535083,4,,frame
+main,One Flew Over the Cuckoo's Nest,tt0073486,movie,0.238,63,http_single,1,direct,HTTP add-on,1080,,0,,6.766,2043481,4,,frame
+main,One Flew Over the Cuckoo's Nest,tt0073486,movie,0.238,63,http_race,,direct+direct,HTTP add-on,,0,,,6.344,8529378,6,,
+main,One Flew Over the Cuckoo's Nest,tt0073486,movie,0.238,63,http_race,,direct+direct,HTTP add-on,,1,,,6.353,3577171,8,,
+main,One Flew Over the Cuckoo's Nest,tt0073486,movie,0.238,63,http_probe,,direct,HTTP add-on,1080,,,,2.272,,,,first byte
+main,One Flew Over the Cuckoo's Nest,tt0073486,movie,0.238,63,http_probe,,direct,HTTP add-on,1080,,,,2.165,,,,first byte
+main,One Flew Over the Cuckoo's Nest,tt0073486,movie,0.238,63,http_probe,,direct,HTTP add-on,1080,,,,2.122,,,,first byte
+main,One Flew Over the Cuckoo's Nest,tt0073486,movie,0.238,63,http_probe,,direct,HTTP add-on,1080,,,,1.001,,,,first byte
+main,One Flew Over the Cuckoo's Nest,tt0073486,movie,0.238,63,http_probe,,direct,HTTP add-on,1080,,,,0.254,,,http 302,first byte
+main,One Flew Over the Cuckoo's Nest,tt0073486,movie,0.238,63,http_probe,,direct,HTTP add-on,1080,,,,0.263,,,http 302,first byte
+bw,One Flew Over the Cuckoo's Nest,tt0073486,movie,0.174,63,single,1,torrent,Torrentio,1080,,0.06,0.713,15.981,11873713,119,,frame
+bw,One Flew Over the Cuckoo's Nest,tt0073486,movie,0.174,63,single,0,torrent,Torrentio,1080,,0.062,4.578,10.224,13142529,191,,frame
+bw,One Flew Over the Cuckoo's Nest,tt0073486,movie,0.174,63,race,,torrent+torrent,,,0,,,6.42,29688905,301,,
+bw,One Flew Over the Cuckoo's Nest,tt0073486,movie,0.174,63,http_single,0,direct,HTTP add-on,1080,,0,,6.285,3234696,4,,frame
+bw,One Flew Over the Cuckoo's Nest,tt0073486,movie,0.174,63,http_single,1,direct,HTTP add-on,1080,,0,,6.267,2051459,4,,frame
+bw,One Flew Over the Cuckoo's Nest,tt0073486,movie,0.174,63,http_race,,direct+direct,HTTP add-on,,0,,,6.471,2387992,5,,
+bw,One Flew Over the Cuckoo's Nest,tt0073486,movie,0.174,63,http_race,,direct+direct,HTTP add-on,,0,,,8.24,3341449,8,,
+bw,One Flew Over the Cuckoo's Nest,tt0073486,movie,0.174,63,http_probe,,direct,HTTP add-on,1080,,,,4.582,,,,first byte
+bw,One Flew Over the Cuckoo's Nest,tt0073486,movie,0.174,63,http_probe,,direct,HTTP add-on,1080,,,,2.245,,,,first byte
+bw,One Flew Over the Cuckoo's Nest,tt0073486,movie,0.174,63,http_probe,,direct,HTTP add-on,1080,,,,3.552,,,,first byte
+bw,One Flew Over the Cuckoo's Nest,tt0073486,movie,0.174,63,http_probe,,direct,HTTP add-on,1080,,,,0.464,,,,first byte
+bw,One Flew Over the Cuckoo's Nest,tt0073486,movie,0.174,63,http_probe,,direct,HTTP add-on,1080,,,,0.234,,,http 302,first byte
+bw,One Flew Over the Cuckoo's Nest,tt0073486,movie,0.174,63,http_probe,,direct,HTTP add-on,1080,,,,0.349,,,http 302,first byte
+main,Se7en,tt0114369,movie,0.178,94,single,0,torrent,Torrentio,1080,,0.061,11.123,19.059,15479281,54,,frame
+main,Se7en,tt0114369,movie,0.178,94,single,2,torrent,Torrentio,1080,,0.06,3.772,16.641,31821801,141,,frame
+main,Se7en,tt0114369,movie,0.178,94,single,0,torrent,Torrentio,1080,,0.062,1.962,3.466,3867599,188,,frame
+main,Se7en,tt0114369,movie,0.178,94,single,1,torrent,Torrentio,1080,,0.061,5.032,7.698,1879744,49,,frame
+main,Se7en,tt0114369,movie,0.178,94,single,1,torrent,Torrentio,1080,,0.065,8.148,11.097,4830185,50,,frame
+main,Se7en,tt0114369,movie,0.178,94,race,,torrent+torrent,,,0,,,12.36,24070038,104,,
+main,Se7en,tt0114369,movie,0.178,94,race,,torrent+torrent,,,0,,,7.683,19356621,102,,
+main,Se7en,tt0114369,movie,0.178,94,http_single,0,direct,HTTP add-on,1080,,0,,12.881,5184297,3,,frame
+main,Se7en,tt0114369,movie,0.178,94,http_single,1,direct,HTTP add-on,1080,,0,,8.557,4489069,3,,frame
+main,Se7en,tt0114369,movie,0.178,94,http_race,,direct+direct,HTTP add-on,,0,,,10.321,6159645,5,,
+main,Se7en,tt0114369,movie,0.178,94,http_race,,direct+direct,HTTP add-on,,0,,,11.975,7119068,6,,
+main,Se7en,tt0114369,movie,0.178,94,http_probe,,direct,HTTP add-on,1080,,,,9.461,,,,first byte
+main,Se7en,tt0114369,movie,0.178,94,http_probe,,direct,HTTP add-on,1080,,,,6.346,,,,first byte
+main,Se7en,tt0114369,movie,0.178,94,http_probe,,direct,HTTP add-on,1080,,,,6.263,,,,first byte
+main,Se7en,tt0114369,movie,0.178,94,http_probe,,direct,HTTP add-on,1080,,,,11.433,,,,first byte
+main,Se7en,tt0114369,movie,0.178,94,http_probe,,direct,HTTP add-on,1080,,,,2.562,,,http 404,first byte
+main,Se7en,tt0114369,movie,0.178,94,http_probe,,direct,HTTP add-on,1080,,,,0.224,,,http 302,first byte
+bw,Se7en,tt0114369,movie,0.169,94,single,0,torrent,Torrentio,1080,,0.06,1.158,2.836,3916020,189,,frame
+bw,Se7en,tt0114369,movie,0.169,94,single,1,torrent,Torrentio,1080,,0.059,1.056,2.885,11860504,39,,frame
+bw,Se7en,tt0114369,movie,0.169,94,race,,torrent+torrent,,,0,,,2.044,13765959,229,,
+bw,Se7en,tt0114369,movie,0.169,94,http_single,0,direct,HTTP add-on,1080,,0,,11.33,10933242,3,,frame
+bw,Se7en,tt0114369,movie,0.169,94,http_single,1,direct,HTTP add-on,1080,,0,,10.942,4997168,3,,frame
+bw,Se7en,tt0114369,movie,0.169,94,http_race,,direct+direct,HTTP add-on,,1,,,9.927,5824536,5,,
+bw,Se7en,tt0114369,movie,0.169,94,http_race,,direct+direct,HTTP add-on,,1,,,12.207,8276816,6,,
+bw,Se7en,tt0114369,movie,0.169,94,http_probe,,direct,HTTP add-on,1080,,,,6.898,,,,first byte
+bw,Se7en,tt0114369,movie,0.169,94,http_probe,,direct,HTTP add-on,1080,,,,6.044,,,,first byte
+bw,Se7en,tt0114369,movie,0.169,94,http_probe,,direct,HTTP add-on,1080,,,,5.768,,,,first byte
+bw,Se7en,tt0114369,movie,0.169,94,http_probe,,direct,HTTP add-on,1080,,,,0.254,,,http 302,first byte
+bw,Se7en,tt0114369,movie,0.169,94,http_probe,,direct,HTTP add-on,1080,,,,2.445,,,http 404,first byte
+bw,Se7en,tt0114369,movie,0.169,94,http_probe,,direct,HTTP add-on,1080,,,,5.821,,,,first byte
+main,The Silence of the Lambs,tt0102926,movie,0.234,97,single,0,torrent,Torrentio,1080,,0.062,3.319,7.467,10327056,186,,frame
+main,The Silence of the Lambs,tt0102926,movie,0.234,97,single,1,torrent,Torrentio,1080,,0.061,2.163,7.659,8741465,57,,frame
+main,The Silence of the Lambs,tt0102926,movie,0.234,97,single,0,torrent,Torrentio,1080,,0.06,2.174,13.596,12887297,190,,frame
+main,The Silence of the Lambs,tt0102926,movie,0.234,97,single,1,torrent,Torrentio,1080,,0.061,8.702,11.266,3084238,47,,frame
+main,The Silence of the Lambs,tt0102926,movie,0.234,97,single,2,torrent,Torrentio,1080,,0.061,6.442,17.543,14027213,60,,frame
+main,The Silence of the Lambs,tt0102926,movie,0.234,97,race,,torrent+torrent,,,1,,,9.62,20414942,103,,
+main,The Silence of the Lambs,tt0102926,movie,0.234,97,race,,torrent+torrent,,,0,,,8.25,22013696,101,,
+main,The Silence of the Lambs,tt0102926,movie,0.234,97,http_single,0,direct,HTTP add-on,1080,,0,,9.357,5998572,3,,frame
+main,The Silence of the Lambs,tt0102926,movie,0.234,97,http_single,1,direct,HTTP add-on,1080,,0,,9.923,4486694,3,,frame
+main,The Silence of the Lambs,tt0102926,movie,0.234,97,http_race,,direct+direct,HTTP add-on,,1,,,9.599,6752853,5,,
+main,The Silence of the Lambs,tt0102926,movie,0.234,97,http_race,,direct+direct,HTTP add-on,,1,,,12.166,6677192,6,,
+main,The Silence of the Lambs,tt0102926,movie,0.234,97,http_probe,,direct,HTTP add-on,1080,,,,0.236,,,http 302,first byte
+main,The Silence of the Lambs,tt0102926,movie,0.234,97,http_probe,,direct,HTTP add-on,1080,,,,6.282,,,,first byte
+main,The Silence of the Lambs,tt0102926,movie,0.234,97,http_probe,,direct,HTTP add-on,1080,,,,7.633,,,,first byte
+main,The Silence of the Lambs,tt0102926,movie,0.234,97,http_probe,,direct,HTTP add-on,1080,,,,9.971,,,,first byte
+main,The Silence of the Lambs,tt0102926,movie,0.234,97,http_probe,,direct,HTTP add-on,1080,,,,3.113,,,http 404,first byte
+main,The Silence of the Lambs,tt0102926,movie,0.234,97,http_probe,,direct,HTTP add-on,1080,,,,1.117,,,,first byte
+bw,The Silence of the Lambs,tt0102926,movie,0.149,97,single,0,torrent,Torrentio,1080,,0.069,0.478,2.397,5914305,184,,frame
+bw,The Silence of the Lambs,tt0102926,movie,0.149,97,single,1,torrent,Torrentio,1080,,0.063,1.26,6.102,11005084,56,,frame
+bw,The Silence of the Lambs,tt0102926,movie,0.149,97,race,,torrent+torrent,,,0,,,2.846,16872319,234,,
+bw,The Silence of the Lambs,tt0102926,movie,0.149,97,http_single,0,direct,HTTP add-on,1080,,0,,9.649,5546954,3,,frame
+bw,The Silence of the Lambs,tt0102926,movie,0.149,97,http_single,1,direct,HTTP add-on,1080,,0,,12.82,4723382,3,,frame
+bw,The Silence of the Lambs,tt0102926,movie,0.149,97,http_race,,direct+direct,HTTP add-on,,1,,,7.771,4080648,5,,
+bw,The Silence of the Lambs,tt0102926,movie,0.149,97,http_race,,direct+direct,HTTP add-on,,0,,,9.173,4735827,5,,
+bw,The Silence of the Lambs,tt0102926,movie,0.149,97,http_probe,,direct,HTTP add-on,1080,,,,5.881,,,,first byte
+bw,The Silence of the Lambs,tt0102926,movie,0.149,97,http_probe,,direct,HTTP add-on,1080,,,,7.889,,,,first byte
+bw,The Silence of the Lambs,tt0102926,movie,0.149,97,http_probe,,direct,HTTP add-on,1080,,,,11.631,,,,first byte
+bw,The Silence of the Lambs,tt0102926,movie,0.149,97,http_probe,,direct,HTTP add-on,1080,,,,0.649,,,http 502,first byte
+bw,The Silence of the Lambs,tt0102926,movie,0.149,97,http_probe,,direct,HTTP add-on,1080,,,,3.145,,,http 404,first byte
+bw,The Silence of the Lambs,tt0102926,movie,0.149,97,http_probe,,direct,HTTP add-on,1080,,,,0.588,,,,first byte
+main,It's a Wonderful Life,tt0038650,movie,0.226,56,single,1,torrent,Torrentio,1080,,0.062,0.454,2.031,3241741,116,,frame
+main,It's a Wonderful Life,tt0038650,movie,0.226,56,single,2,torrent,Torrentio,1080,,0.06,0.654,6.401,15540674,87,,frame
+main,It's a Wonderful Life,tt0038650,movie,0.226,56,single,1,torrent,Torrentio,1080,,0.059,0.555,2.153,5419488,115,,frame
+main,It's a Wonderful Life,tt0038650,movie,0.226,56,single,0,torrent,Torrentio,1080,,0.06,0.304,6.465,10781169,134,,frame
+main,It's a Wonderful Life,tt0038650,movie,0.226,56,single,0,torrent,Torrentio,1080,,0.06,0.415,2.845,8459881,134,,frame
+main,It's a Wonderful Life,tt0038650,movie,0.226,56,race,,torrent+torrent,,,1,,,2.154,40831555,249,,
+main,It's a Wonderful Life,tt0038650,movie,0.226,56,race,,torrent+torrent,,,1,,,3.875,17515016,116,,
+main,It's a Wonderful Life,tt0038650,movie,0.226,56,http_single,0,direct,HTTP add-on,1080,,0,,1.881,4528408,4,,frame
+main,It's a Wonderful Life,tt0038650,movie,0.226,56,http_single,1,direct,HTTP add-on,1080,,0,,1.717,812830,4,,frame
+main,It's a Wonderful Life,tt0038650,movie,0.226,56,http_race,,direct+direct,HTTP add-on,,1,,,1.507,477142,8,,
+main,It's a Wonderful Life,tt0038650,movie,0.226,56,http_race,,direct+direct,HTTP add-on,,1,,,1.565,3284047,8,,
+main,It's a Wonderful Life,tt0038650,movie,0.226,56,http_probe,,direct,HTTP add-on,1080,,,,0.85,,,,first byte
+main,It's a Wonderful Life,tt0038650,movie,0.226,56,http_probe,,direct,HTTP add-on,1080,,,,0.845,,,,first byte
+main,It's a Wonderful Life,tt0038650,movie,0.226,56,http_probe,,direct,HTTP add-on,1080,,,,3.605,,,,first byte
+main,It's a Wonderful Life,tt0038650,movie,0.226,56,http_probe,,direct,HTTP add-on,1080,,,,2.886,,,,first byte
+main,It's a Wonderful Life,tt0038650,movie,0.226,56,http_probe,,direct,HTTP add-on,1080,,,,2.065,,,,first byte
+main,It's a Wonderful Life,tt0038650,movie,0.226,56,http_probe,,direct,HTTP add-on,1080,,,,0.221,,,http 302,first byte
+bw,It's a Wonderful Life,tt0038650,movie,0.142,56,single,1,torrent,Torrentio,1080,,0.062,0.654,8.563,15844860,111,,frame
+bw,It's a Wonderful Life,tt0038650,movie,0.142,56,single,0,torrent,Torrentio,1080,,0.06,5.293,7.501,12735157,134,,frame
+bw,It's a Wonderful Life,tt0038650,movie,0.142,56,race,,torrent+torrent,,,1,,,7.318,34051236,248,,
+bw,It's a Wonderful Life,tt0038650,movie,0.142,56,http_single,0,direct,HTTP add-on,1080,,0,,1.512,373432,4,,frame
+bw,It's a Wonderful Life,tt0038650,movie,0.142,56,http_single,1,direct,HTTP add-on,1080,,0,,1.493,2843287,4,,frame
+bw,It's a Wonderful Life,tt0038650,movie,0.142,56,http_race,,direct+direct,HTTP add-on,,1,,,1.601,4084157,8,,
+bw,It's a Wonderful Life,tt0038650,movie,0.142,56,http_race,,direct+direct,HTTP add-on,,1,,,1.331,1288057,8,,
+bw,It's a Wonderful Life,tt0038650,movie,0.142,56,http_probe,,direct,HTTP add-on,1080,,,,0.569,,,,first byte
+bw,It's a Wonderful Life,tt0038650,movie,0.142,56,http_probe,,direct,HTTP add-on,1080,,,,0.421,,,,first byte
+bw,It's a Wonderful Life,tt0038650,movie,0.142,56,http_probe,,direct,HTTP add-on,1080,,,,1.943,,,,first byte
+bw,It's a Wonderful Life,tt0038650,movie,0.142,56,http_probe,,direct,HTTP add-on,1080,,,,2.873,,,,first byte
+bw,It's a Wonderful Life,tt0038650,movie,0.142,56,http_probe,,direct,HTTP add-on,1080,,,,1.999,,,,first byte
+bw,It's a Wonderful Life,tt0038650,movie,0.142,56,http_probe,,direct,HTTP add-on,1080,,,,0.267,,,http 302,first byte
+main,Spirited Away,tt0245429,movie,0.195,99,single,0,torrent,Torrentio,1080,,0.061,0.453,1.841,5963045,187,,frame
+main,Spirited Away,tt0245429,movie,0.195,99,single,1,torrent,Torrentio,1080,,0.061,0.416,0.85,0,191,,frame
+main,Spirited Away,tt0245429,movie,0.195,99,single,1,torrent,Torrentio,1080,,0.062,0.402,0.85,0,192,,frame
+main,Spirited Away,tt0245429,movie,0.195,99,single,2,torrent,Torrentio,1080,,0.061,1.002,1.939,760216,182,,frame
+main,Spirited Away,tt0245429,movie,0.195,99,single,0,torrent,Torrentio,1080,,0.061,1.107,3.038,8104582,183,,frame
+main,Spirited Away,tt0245429,movie,0.195,99,race,,torrent+torrent,,,1,,,0.816,2379478,379,,
+main,Spirited Away,tt0245429,movie,0.195,99,race,,torrent+torrent,,,0,,,1.783,28667102,368,,
+main,Spirited Away,tt0245429,movie,0.195,99,http_single,0,direct,HTTP add-on,1080,,0,,12.005,10960260,3,,frame
+main,Spirited Away,tt0245429,movie,0.195,99,http_single,1,direct,HTTP add-on,1080,,0,,9.617,3703741,3,,frame
+main,Spirited Away,tt0245429,movie,0.195,99,http_race,,direct+direct,HTTP add-on,,0,,,7.751,4634423,5,,
+main,Spirited Away,tt0245429,movie,0.195,99,http_race,,direct+direct,HTTP add-on,,0,,,11.259,6323669,6,,
+main,Spirited Away,tt0245429,movie,0.195,99,http_probe,,direct,HTTP add-on,1080,,,,9.596,,,,first byte
+main,Spirited Away,tt0245429,movie,0.195,99,http_probe,,direct,HTTP add-on,1080,,,,5.533,,,,first byte
+main,Spirited Away,tt0245429,movie,0.195,99,http_probe,,direct,HTTP add-on,1080,,,,7.538,,,,first byte
+main,Spirited Away,tt0245429,movie,0.195,99,http_probe,,direct,HTTP add-on,1080,,,,9.52,,,http 302,first byte
+main,Spirited Away,tt0245429,movie,0.195,99,http_probe,,direct,HTTP add-on,1080,,,,3.105,,,http 404,first byte
+main,Spirited Away,tt0245429,movie,0.195,99,http_probe,,direct,HTTP add-on,1080,,,,0.277,,,http 302,first byte
+bw,Spirited Away,tt0245429,movie,0.169,99,single,1,torrent,Torrentio,1080,,0.061,0.456,0.907,587291,179,,frame
+bw,Spirited Away,tt0245429,movie,0.169,99,single,0,torrent,Torrentio,1080,,0.059,0.62,2.689,14848746,184,,frame
+bw,Spirited Away,tt0245429,movie,0.169,99,race,,torrent+torrent,,,1,,,0.917,8832790,378,,
+bw,Spirited Away,tt0245429,movie,0.169,99,http_single,0,direct,HTTP add-on,1080,,0,,9.73,5081883,3,,frame
+bw,Spirited Away,tt0245429,movie,0.169,99,http_single,1,direct,HTTP add-on,1080,,0,,,9446885,3,,timeout
+bw,Spirited Away,tt0245429,movie,0.169,99,http_race,,direct+direct,HTTP add-on,,0,,,9.435,4171788,5,,
+bw,Spirited Away,tt0245429,movie,0.169,99,http_race,,direct+direct,HTTP add-on,,1,,,13.188,5752534,5,,
+bw,Spirited Away,tt0245429,movie,0.169,99,http_probe,,direct,HTTP add-on,1080,,,,2.839,,,,first byte
+bw,Spirited Away,tt0245429,movie,0.169,99,http_probe,,direct,HTTP add-on,1080,,,,0.263,,,http 302,first byte
+bw,Spirited Away,tt0245429,movie,0.169,99,http_probe,,direct,HTTP add-on,1080,,,,7.424,,,,first byte
+bw,Spirited Away,tt0245429,movie,0.169,99,http_probe,,direct,HTTP add-on,1080,,,,11.928,,,http 302,first byte
+bw,Spirited Away,tt0245429,movie,0.169,99,http_probe,,direct,HTTP add-on,1080,,,,2.985,,,http 404,first byte
+bw,Spirited Away,tt0245429,movie,0.169,99,http_probe,,direct,HTTP add-on,1080,,,,5.67,,,,first byte
+main,Breaking Bad,tt0903747:1:1,series,0.164,83,single,2,torrent,Torrentio,1080,,0.062,1.559,6.929,6851744,60,,frame
+main,Breaking Bad,tt0903747:1:1,series,0.164,83,single,0,torrent,Torrentio,1080,,0.06,0.36,1.078,7314072,190,,frame
+main,Breaking Bad,tt0903747:1:1,series,0.164,83,single,1,torrent,Torrentio,1080,,0.06,0.604,2.547,5061023,193,,frame
+main,Breaking Bad,tt0903747:1:1,series,0.164,83,single,1,torrent,Torrentio,1080,,0.061,0.805,8.593,27008813,200,,frame
+main,Breaking Bad,tt0903747:1:1,series,0.164,83,single,0,torrent,Torrentio,1080,,0.06,0.353,1.902,1701753,191,,frame
+main,Breaking Bad,tt0903747:1:1,series,0.164,83,race,,torrent+torrent,,,0,,,6.185,34510246,366,,
+main,Breaking Bad,tt0903747:1:1,series,0.164,83,race,,torrent+torrent,,,0,,,4.014,6142991,370,,
+main,Breaking Bad,tt0903747:1:1,series,0.164,83,http_single,0,direct,HTTP add-on,1080,,0,,3.585,3373284,5,,frame
+main,Breaking Bad,tt0903747:1:1,series,0.164,83,http_single,1,direct,HTTP add-on,1080,,0,,1.5,2938788,4,,frame
+main,Breaking Bad,tt0903747:1:1,series,0.164,83,http_race,,direct+direct,HTTP add-on,,1,,,1.458,513297,5,,
+main,Breaking Bad,tt0903747:1:1,series,0.164,83,http_race,,direct+direct,HTTP add-on,,1,,,1.499,1578267,5,,
+main,Breaking Bad,tt0903747:1:1,series,0.164,83,http_probe,,direct,HTTP add-on,1080,,,,0.984,,,,first byte
+main,Breaking Bad,tt0903747:1:1,series,0.164,83,http_probe,,direct,HTTP add-on,1080,,,,0.465,,,,first byte
+main,Breaking Bad,tt0903747:1:1,series,0.164,83,http_probe,,direct,HTTP add-on,1080,,,,0.439,,,,first byte
+main,Breaking Bad,tt0903747:1:1,series,0.164,83,http_probe,,direct,HTTP add-on,1080,,,,9.089,,,,first byte
+main,Breaking Bad,tt0903747:1:1,series,0.164,83,http_probe,,direct,HTTP add-on,1080,,,,5.615,,,,first byte
+main,Breaking Bad,tt0903747:1:1,series,0.164,83,http_probe,,direct,HTTP add-on,1080,,,,6.094,,,,first byte
+bw,Breaking Bad,tt0903747:1:1,series,0.147,83,single,1,torrent,Torrentio,1080,,0.061,1.175,,25249178,195,,timeout
+bw,Breaking Bad,tt0903747:1:1,series,0.147,83,single,0,torrent,Torrentio,1080,,0.061,0.352,2.313,2457475,195,,frame
+bw,Breaking Bad,tt0903747:1:1,series,0.147,83,race,,torrent+torrent,,,0,,,1.743,10959792,393,,
+bw,Breaking Bad,tt0903747:1:1,series,0.147,83,http_single,0,direct,HTTP add-on,1080,,0,,3.564,11773799,5,,frame
+bw,Breaking Bad,tt0903747:1:1,series,0.147,83,http_single,1,direct,HTTP add-on,1080,,0,,1.603,2531482,4,,frame
+bw,Breaking Bad,tt0903747:1:1,series,0.147,83,http_race,,direct+direct,HTTP add-on,,1,,,1.662,2362857,5,,
+bw,Breaking Bad,tt0903747:1:1,series,0.147,83,http_race,,direct+direct,HTTP add-on,,1,,,1.526,2014843,5,,
+bw,Breaking Bad,tt0903747:1:1,series,0.147,83,http_probe,,direct,HTTP add-on,1080,,,,0.994,,,,first byte
+bw,Breaking Bad,tt0903747:1:1,series,0.147,83,http_probe,,direct,HTTP add-on,1080,,,,0.676,,,,first byte
+bw,Breaking Bad,tt0903747:1:1,series,0.147,83,http_probe,,direct,HTTP add-on,1080,,,,0.386,,,,first byte
+bw,Breaking Bad,tt0903747:1:1,series,0.147,83,http_probe,,direct,HTTP add-on,1080,,,,5.432,,,,first byte
+bw,Breaking Bad,tt0903747:1:1,series,0.147,83,http_probe,,direct,HTTP add-on,1080,,,,6.101,,,,first byte
+bw,Breaking Bad,tt0903747:1:1,series,0.147,83,http_probe,,direct,HTTP add-on,1080,,,,5.38,,,,first byte
+main,Game of Thrones,tt0944947:1:1,series,0.219,109,single,0,torrent,Torrentio,1080,,0.062,0.303,2.421,1435961,196,,frame
+main,Game of Thrones,tt0944947:1:1,series,0.219,109,single,2,torrent,Torrentio,1080,,0.061,3.973,4.986,699241,47,,frame
+main,Game of Thrones,tt0944947:1:1,series,0.219,109,single,1,torrent,Torrentio,1080,,0.061,2.871,8.12,3292170,188,,frame
+main,Game of Thrones,tt0944947:1:1,series,0.219,109,single,1,torrent,Torrentio,1080,,0.06,1.659,7.823,6379313,190,,frame
+main,Game of Thrones,tt0944947:1:1,series,0.219,109,single,0,torrent,Torrentio,1080,,0.059,0.554,4.034,14094360,192,,frame
+main,Game of Thrones,tt0944947:1:1,series,0.219,109,race,,torrent+torrent,,,1,,,4.104,17424456,380,,
+main,Game of Thrones,tt0944947:1:1,series,0.219,109,race,,torrent+torrent,,,0,,,1.983,23770676,379,,
+main,Game of Thrones,tt0944947:1:1,series,0.219,109,http_single,0,direct,HTTP add-on,1080,,0,,3.774,1515306,5,,frame
+main,Game of Thrones,tt0944947:1:1,series,0.219,109,http_single,1,direct,HTTP add-on,1080,,0,,1.557,600819,4,,frame
+main,Game of Thrones,tt0944947:1:1,series,0.219,109,http_race,,direct+direct,HTTP add-on,,1,,,1.423,2173448,5,,
+main,Game of Thrones,tt0944947:1:1,series,0.219,109,http_race,,direct+direct,HTTP add-on,,1,,,1.388,2648115,5,,
+main,Game of Thrones,tt0944947:1:1,series,0.219,109,http_probe,,direct,HTTP add-on,1080,,,,0.913,,,,first byte
+main,Game of Thrones,tt0944947:1:1,series,0.219,109,http_probe,,direct,HTTP add-on,1080,,,,0.622,,,,first byte
+main,Game of Thrones,tt0944947:1:1,series,0.219,109,http_probe,,direct,HTTP add-on,1080,,,,6.24,,,,first byte
+main,Game of Thrones,tt0944947:1:1,series,0.219,109,http_probe,,direct,HTTP add-on,1080,,,,5.564,,,,first byte
+main,Game of Thrones,tt0944947:1:1,series,0.219,109,http_probe,,direct,HTTP add-on,1080,,,,5.914,,,,first byte
+main,Game of Thrones,tt0944947:1:1,series,0.219,109,http_probe,,direct,HTTP add-on,1080,,,,0.704,,,,first byte
+bw,Game of Thrones,tt0944947:1:1,series,0.108,109,single,1,torrent,Torrentio,1080,,0.06,0.728,2.893,7208798,193,,frame
+bw,Game of Thrones,tt0944947:1:1,series,0.108,109,single,0,torrent,Torrentio,1080,,0.06,0.402,3.199,8464927,196,,frame
+bw,Game of Thrones,tt0944947:1:1,series,0.108,109,race,,torrent+torrent,,,1,,,2.958,31042638,392,,
+bw,Game of Thrones,tt0944947:1:1,series,0.108,109,http_single,0,direct,HTTP add-on,1080,,0,,3.533,2268555,5,,frame
+bw,Game of Thrones,tt0944947:1:1,series,0.108,109,http_single,1,direct,HTTP add-on,1080,,0,,1.344,2575898,4,,frame
+bw,Game of Thrones,tt0944947:1:1,series,0.108,109,http_race,,direct+direct,HTTP add-on,,1,,,1.501,1953153,5,,
+bw,Game of Thrones,tt0944947:1:1,series,0.108,109,http_race,,direct+direct,HTTP add-on,,1,,,1.78,3690192,5,,
+bw,Game of Thrones,tt0944947:1:1,series,0.108,109,http_probe,,direct,HTTP add-on,1080,,,,1.095,,,,first byte
+bw,Game of Thrones,tt0944947:1:1,series,0.108,109,http_probe,,direct,HTTP add-on,1080,,,,0.671,,,,first byte
+bw,Game of Thrones,tt0944947:1:1,series,0.108,109,http_probe,,direct,HTTP add-on,1080,,,,6.244,,,,first byte
+bw,Game of Thrones,tt0944947:1:1,series,0.108,109,http_probe,,direct,HTTP add-on,1080,,,,5.435,,,,first byte
+bw,Game of Thrones,tt0944947:1:1,series,0.108,109,http_probe,,direct,HTTP add-on,1080,,,,8.331,,,,first byte
+bw,Game of Thrones,tt0944947:1:1,series,0.108,109,http_probe,,direct,HTTP add-on,1080,,,,0.506,,,,first byte
+main,The Office,tt0386676:2:1,series,0.168,59,single,1,torrent,Torrentio,1080,,0.062,1.666,5.715,23017276,189,,frame
+main,The Office,tt0386676:2:1,series,0.168,59,single,1,torrent,Torrentio,1080,,0.058,1.61,17.803,32249095,189,,frame
+main,The Office,tt0386676:2:1,series,0.168,59,single,0,torrent,Torrentio,1080,,0.06,1.006,2.28,18291546,189,,frame
+main,The Office,tt0386676:2:1,series,0.168,59,single,2,torrent,Torrentio,1080,,0.059,0.604,4.543,35294461,180,,frame
+main,The Office,tt0386676:2:1,series,0.168,59,single,0,torrent,Torrentio,1080,,0.061,7.498,12.186,20923474,57,,frame
+main,The Office,tt0386676:2:1,series,0.168,59,race,,torrent+torrent,,,1,,,7.801,65524900,114,,
+main,The Office,tt0386676:2:1,series,0.168,59,race,,torrent+torrent,,,0,,,10.615,52556308,111,,
+main,The Office,tt0386676:2:1,series,0.168,59,http_single,0,direct,HTTP add-on,1080,,0,,3.194,834074,5,,frame
+main,The Office,tt0386676:2:1,series,0.168,59,http_single,1,direct,HTTP add-on,1080,,0,,1.824,3193584,4,,frame
+main,The Office,tt0386676:2:1,series,0.168,59,http_race,,direct+direct,HTTP add-on,,1,,,1.277,2438329,5,,
+main,The Office,tt0386676:2:1,series,0.168,59,http_race,,direct+direct,HTTP add-on,,1,,,1.474,2270069,5,,
+main,The Office,tt0386676:2:1,series,0.168,59,http_probe,,direct,HTTP add-on,1080,,,,0.993,,,,first byte
+main,The Office,tt0386676:2:1,series,0.168,59,http_probe,,direct,HTTP add-on,1080,,,,0.344,,,,first byte
+main,The Office,tt0386676:2:1,series,0.168,59,http_probe,,direct,HTTP add-on,1080,,,,0.601,,,,first byte
+main,The Office,tt0386676:2:1,series,0.168,59,http_probe,,direct,HTTP add-on,1080,,,,7.384,,,,first byte
+main,The Office,tt0386676:2:1,series,0.168,59,http_probe,,direct,HTTP add-on,1080,,,,5.025,,,,first byte
+main,The Office,tt0386676:2:1,series,0.168,59,http_probe,,direct,HTTP add-on,1080,,,,6.31,,,,first byte
+bw,The Office,tt0386676:2:1,series,0.199,59,single,1,torrent,Torrentio,1080,,0.062,0.707,15.149,23883199,199,,frame
+bw,The Office,tt0386676:2:1,series,0.199,59,single,0,torrent,Torrentio,1080,,0.06,3.643,6.4,16988651,195,,frame
+bw,The Office,tt0386676:2:1,series,0.199,59,race,,torrent+torrent,,,0,,,3.116,28796631,375,,
+bw,The Office,tt0386676:2:1,series,0.199,59,http_single,0,direct,HTTP add-on,1080,,0,,3.354,2786621,5,,frame
+bw,The Office,tt0386676:2:1,series,0.199,59,http_single,1,direct,HTTP add-on,1080,,0,,1.689,3021165,4,,frame
+bw,The Office,tt0386676:2:1,series,0.199,59,http_race,,direct+direct,HTTP add-on,,1,,,1.413,2787931,5,,
+bw,The Office,tt0386676:2:1,series,0.199,59,http_race,,direct+direct,HTTP add-on,,1,,,1.358,292757,5,,
+bw,The Office,tt0386676:2:1,series,0.199,59,http_probe,,direct,HTTP add-on,1080,,,,1.128,,,,first byte
+bw,The Office,tt0386676:2:1,series,0.199,59,http_probe,,direct,HTTP add-on,1080,,,,0.378,,,,first byte
+bw,The Office,tt0386676:2:1,series,0.199,59,http_probe,,direct,HTTP add-on,1080,,,,0.595,,,,first byte
+bw,The Office,tt0386676:2:1,series,0.199,59,http_probe,,direct,HTTP add-on,1080,,,,11.024,,,,first byte
+bw,The Office,tt0386676:2:1,series,0.199,59,http_probe,,direct,HTTP add-on,1080,,,,5.899,,,,first byte
+bw,The Office,tt0386676:2:1,series,0.199,59,http_probe,,direct,HTTP add-on,1080,,,,7.414,,,,first byte
+main,The Wire,tt0306414:1:1,series,0.209,61,single,2,torrent,Torrentio,1080,,0.063,6.489,8.271,5761937,58,,frame
+main,The Wire,tt0306414:1:1,series,0.209,61,single,1,torrent,Torrentio,1080,,0.06,6.64,15.684,31073412,57,,frame
+main,The Wire,tt0306414:1:1,series,0.209,61,single,0,torrent,Torrentio,1080,,0.058,0.517,4.652,43303509,194,,frame
+main,The Wire,tt0306414:1:1,series,0.209,61,single,0,torrent,Torrentio,1080,,0.06,7.494,11.081,42769003,58,,frame
+main,The Wire,tt0306414:1:1,series,0.209,61,single,1,torrent,Torrentio,1080,,0.059,5.65,17.569,40856079,57,,frame
+main,The Wire,tt0306414:1:1,series,0.209,61,race,,torrent+torrent,,,0,,,7.297,81126918,377,,
+main,The Wire,tt0306414:1:1,series,0.209,61,race,,torrent+torrent,,,0,,,8.253,58280900,118,,
+main,The Wire,tt0306414:1:1,series,0.209,61,http_single,0,direct,HTTP add-on,1080,,0,,3.436,1354440,5,,frame
+main,The Wire,tt0306414:1:1,series,0.209,61,http_single,1,direct,HTTP add-on,1080,,0,,12.242,9141688,3,,frame
+main,The Wire,tt0306414:1:1,series,0.209,61,http_race,,direct+direct,HTTP add-on,,0,,,3.471,3023078,7,,
+main,The Wire,tt0306414:1:1,series,0.209,61,http_race,,direct+direct,HTTP add-on,,0,,,3.222,1530400,6,,
+main,The Wire,tt0306414:1:1,series,0.209,61,http_probe,,direct,HTTP add-on,1080,,,,0.906,,,,first byte
+main,The Wire,tt0306414:1:1,series,0.209,61,http_probe,,direct,HTTP add-on,1080,,,,8.721,,,,first byte
+main,The Wire,tt0306414:1:1,series,0.209,61,http_probe,,direct,HTTP add-on,1080,,,,6.012,,,,first byte
+main,The Wire,tt0306414:1:1,series,0.209,61,http_probe,,direct,HTTP add-on,1080,,,,8.598,,,,first byte
+main,The Wire,tt0306414:1:1,series,0.209,61,http_probe,,direct,HTTP add-on,1080,,,,0.696,,,,first byte
+main,The Wire,tt0306414:1:1,series,0.209,61,http_probe,,direct,HTTP add-on,1080,,,,0.742,,,,first byte
+bw,The Wire,tt0306414:1:1,series,0.158,61,single,0,torrent,Torrentio,1080,,0.06,0.411,4.548,27177317,193,,frame
+bw,The Wire,tt0306414:1:1,series,0.158,61,single,1,torrent,Torrentio,1080,,0.06,0.705,19.046,55825452,183,,frame
+bw,The Wire,tt0306414:1:1,series,0.158,61,race,,torrent+torrent,,,0,,,6.642,69985816,388,,
+bw,The Wire,tt0306414:1:1,series,0.158,61,http_single,0,direct,HTTP add-on,1080,,0,,3.586,3560243,5,,frame
+bw,The Wire,tt0306414:1:1,series,0.158,61,http_single,1,direct,HTTP add-on,1080,,0,,12.875,5716188,3,,frame
+bw,The Wire,tt0306414:1:1,series,0.158,61,http_race,,direct+direct,HTTP add-on,,0,,,3.327,2885430,6,,
+bw,The Wire,tt0306414:1:1,series,0.158,61,http_race,,direct+direct,HTTP add-on,,0,,,3.624,6072049,6,,
+bw,The Wire,tt0306414:1:1,series,0.158,61,http_probe,,direct,HTTP add-on,1080,,,,0.951,,,,first byte
+bw,The Wire,tt0306414:1:1,series,0.158,61,http_probe,,direct,HTTP add-on,1080,,,,7.632,,,,first byte
+bw,The Wire,tt0306414:1:1,series,0.158,61,http_probe,,direct,HTTP add-on,1080,,,,5.693,,,,first byte
+bw,The Wire,tt0306414:1:1,series,0.158,61,http_probe,,direct,HTTP add-on,1080,,,,9.761,,,,first byte
+bw,The Wire,tt0306414:1:1,series,0.158,61,http_probe,,direct,HTTP add-on,1080,,,,0.518,,,,first byte
+bw,The Wire,tt0306414:1:1,series,0.158,61,http_probe,,direct,HTTP add-on,1080,,,,0.504,,,,first byte
+main,Better Call Saul,tt3032476:1:1,series,0.128,64,single,1,torrent,Torrentio,1080,,0.061,5.498,16.835,81433913,61,,frame
+main,Better Call Saul,tt3032476:1:1,series,0.128,64,single,0,torrent,Torrentio,1080,,0.061,3.673,7.823,7269305,186,,frame
+main,Better Call Saul,tt3032476:1:1,series,0.128,64,single,2,torrent,Torrentio,1080,,0.061,4.477,11.383,17741028,58,,frame
+main,Better Call Saul,tt3032476:1:1,series,0.128,64,single,0,torrent,Torrentio,1080,,0.06,3.873,6.579,1367617,177,,frame
+main,Better Call Saul,tt3032476:1:1,series,0.128,64,single,1,torrent,Torrentio,1080,,0.061,3.912,10.559,50878339,182,,frame
+main,Better Call Saul,tt3032476:1:1,series,0.128,64,race,,torrent+torrent,,,0,,,7.111,10030597,118,,
+main,Better Call Saul,tt3032476:1:1,series,0.128,64,race,,torrent+torrent,,,0,,,9.221,44900473,123,,
+main,Better Call Saul,tt3032476:1:1,series,0.128,64,http_single,0,direct,HTTP add-on,1080,,0,,3.898,8800009,5,,frame
+main,Better Call Saul,tt3032476:1:1,series,0.128,64,http_single,1,direct,HTTP add-on,1080,,0,,1.578,4589744,4,,frame
+main,Better Call Saul,tt3032476:1:1,series,0.128,64,http_race,,direct+direct,HTTP add-on,,1,,,1.476,3201257,5,,
+main,Better Call Saul,tt3032476:1:1,series,0.128,64,http_race,,direct+direct,HTTP add-on,,1,,,1.503,8013235,5,,
+main,Better Call Saul,tt3032476:1:1,series,0.128,64,http_probe,,direct,HTTP add-on,1080,,,,1.035,,,,first byte
+main,Better Call Saul,tt3032476:1:1,series,0.128,64,http_probe,,direct,HTTP add-on,1080,,,,0.767,,,,first byte
+main,Better Call Saul,tt3032476:1:1,series,0.128,64,http_probe,,direct,HTTP add-on,1080,,,,7.148,,,,first byte
+main,Better Call Saul,tt3032476:1:1,series,0.128,64,http_probe,,direct,HTTP add-on,1080,,,,7.336,,,,first byte
+main,Better Call Saul,tt3032476:1:1,series,0.128,64,http_probe,,direct,HTTP add-on,1080,,,,9.321,,,,first byte
+main,Better Call Saul,tt3032476:1:1,series,0.128,64,http_probe,,direct,HTTP add-on,1080,,,,0.426,,,,first byte
+bw,Better Call Saul,tt3032476:1:1,series,0.161,64,single,0,torrent,Torrentio,1080,,0.061,0.654,2.967,1808311,186,,frame
+bw,Better Call Saul,tt3032476:1:1,series,0.161,64,single,1,torrent,Torrentio,1080,,0.061,4.175,9.202,38538457,188,,frame
+bw,Better Call Saul,tt3032476:1:1,series,0.161,64,race,,torrent+torrent,,,0,,,3.578,9964027,375,,
+bw,Better Call Saul,tt3032476:1:1,series,0.161,64,http_single,0,direct,HTTP add-on,1080,,0,,3.432,5516775,5,,frame
+bw,Better Call Saul,tt3032476:1:1,series,0.161,64,http_single,1,direct,HTTP add-on,1080,,0,,1.415,3545344,4,,frame
+bw,Better Call Saul,tt3032476:1:1,series,0.161,64,http_race,,direct+direct,HTTP add-on,,1,,,1.535,5814136,5,,
+bw,Better Call Saul,tt3032476:1:1,series,0.161,64,http_race,,direct+direct,HTTP add-on,,1,,,1.405,5930508,5,,
+bw,Better Call Saul,tt3032476:1:1,series,0.161,64,http_probe,,direct,HTTP add-on,1080,,,,1.058,,,,first byte
+bw,Better Call Saul,tt3032476:1:1,series,0.161,64,http_probe,,direct,HTTP add-on,1080,,,,0.524,,,,first byte
+bw,Better Call Saul,tt3032476:1:1,series,0.161,64,http_probe,,direct,HTTP add-on,1080,,,,1.875,,,,first byte
+bw,Better Call Saul,tt3032476:1:1,series,0.161,64,http_probe,,direct,HTTP add-on,1080,,,,4.002,,,,first byte
+bw,Better Call Saul,tt3032476:1:1,series,0.161,64,http_probe,,direct,HTTP add-on,1080,,,,7.429,,,,first byte
+bw,Better Call Saul,tt3032476:1:1,series,0.161,64,http_probe,,direct,HTTP add-on,1080,,,,0.381,,,,first byte
+main,Chernobyl,tt7366338:1:1,series,0.255,72,single,1,torrent,Torrentio,1080,,0.061,2.237,5.171,17825602,180,,frame
+main,Chernobyl,tt7366338:1:1,series,0.255,72,single,0,torrent,Torrentio,1080,,0.06,2.747,5.157,13620290,185,,frame
+main,Chernobyl,tt7366338:1:1,series,0.255,72,single,1,torrent,Torrentio,1080,,0.061,3.487,4.998,1568908,179,,frame
+main,Chernobyl,tt7366338:1:1,series,0.255,72,single,2,torrent,Torrentio,1080,,0.059,0.755,1.722,1359499,186,,frame
+main,Chernobyl,tt7366338:1:1,series,0.255,72,single,0,torrent,Torrentio,1080,,0.067,2.424,10.989,38559293,186,,frame
+main,Chernobyl,tt7366338:1:1,series,0.255,72,race,,torrent+torrent,,,1,,,4.286,12600263,361,,
+main,Chernobyl,tt7366338:1:1,series,0.255,72,race,,torrent+torrent,,,1,,,5.745,18728898,230,,
+main,Chernobyl,tt7366338:1:1,series,0.255,72,http_single,0,direct,HTTP add-on,1080,,0,,3.99,11559325,5,,frame
+main,Chernobyl,tt7366338:1:1,series,0.255,72,http_single,1,direct,HTTP add-on,1080,,0,,1.916,1284781,4,,frame
+main,Chernobyl,tt7366338:1:1,series,0.255,72,http_race,,direct+direct,HTTP add-on,,1,,,1.359,387664,5,,
+main,Chernobyl,tt7366338:1:1,series,0.255,72,http_race,,direct+direct,HTTP add-on,,1,,,1.327,2182453,5,,
+main,Chernobyl,tt7366338:1:1,series,0.255,72,http_probe,,direct,HTTP add-on,1080,,,,0.941,,,,first byte
+main,Chernobyl,tt7366338:1:1,series,0.255,72,http_probe,,direct,HTTP add-on,1080,,,,0.765,,,,first byte
+main,Chernobyl,tt7366338:1:1,series,0.255,72,http_probe,,direct,HTTP add-on,1080,,,,0.689,,,,first byte
+main,Chernobyl,tt7366338:1:1,series,0.255,72,http_probe,,direct,HTTP add-on,1080,,,,0.578,,,,first byte
+main,Chernobyl,tt7366338:1:1,series,0.255,72,http_probe,,direct,HTTP add-on,1080,,,,10.566,,,,first byte
+main,Chernobyl,tt7366338:1:1,series,0.255,72,http_probe,,direct,HTTP add-on,720,,,,0.568,,,,first byte
+bw,Chernobyl,tt7366338:1:1,series,0.161,72,single,1,torrent,Torrentio,1080,,0.061,4.643,6.422,9219573,188,,frame
+bw,Chernobyl,tt7366338:1:1,series,0.161,72,single,0,torrent,Torrentio,1080,,0.059,0.655,3.459,23757236,191,,frame
+bw,Chernobyl,tt7366338:1:1,series,0.161,72,race,,torrent+torrent,,,1,,,2.471,11084343,381,,
+bw,Chernobyl,tt7366338:1:1,series,0.161,72,http_single,0,direct,HTTP add-on,1080,,0,,3.564,32503467,5,,frame
+bw,Chernobyl,tt7366338:1:1,series,0.161,72,http_single,1,direct,HTTP add-on,1080,,0,,,6434399,1,,timeout
+bw,Chernobyl,tt7366338:1:1,series,0.161,72,http_race,,direct+direct,HTTP add-on,,1,,,1.417,360665,5,,
+bw,Chernobyl,tt7366338:1:1,series,0.161,72,http_race,,direct+direct,HTTP add-on,,1,,,1.427,2392729,5,,
+bw,Chernobyl,tt7366338:1:1,series,0.161,72,http_probe,,direct,HTTP add-on,1080,,,,0.916,,,,first byte
+bw,Chernobyl,tt7366338:1:1,series,0.161,72,http_probe,,direct,HTTP add-on,1080,,,,0.442,,,,first byte
+bw,Chernobyl,tt7366338:1:1,series,0.161,72,http_probe,,direct,HTTP add-on,1080,,,,0.375,,,,first byte
+bw,Chernobyl,tt7366338:1:1,series,0.161,72,http_probe,,direct,HTTP add-on,1080,,,,0.464,,,,first byte
+bw,Chernobyl,tt7366338:1:1,series,0.161,72,http_probe,,direct,HTTP add-on,1080,,,,4.594,,,,first byte
+bw,Chernobyl,tt7366338:1:1,series,0.161,72,http_probe,,direct,HTTP add-on,720,,,,0.633,,,,first byte
+main,Succession,tt7660850:1:1,series,0.186,60,single,2,torrent,Torrentio,1080,,0.06,0.453,7.372,38055433,193,,frame
+main,Succession,tt7660850:1:1,series,0.186,60,single,0,torrent,Torrentio,1080,,0.06,0.503,,7301871,189,,timeout
+main,Succession,tt7660850:1:1,series,0.186,60,single,0,torrent,Torrentio,1080,,0.059,1.157,,16203296,188,,timeout
+main,Succession,tt7660850:1:1,series,0.186,60,single,1,torrent,Torrentio,1080,,0.06,0.86,2.398,14721145,189,,frame
+main,Succession,tt7660850:1:1,series,0.186,60,single,1,torrent,Torrentio,1080,,0.059,0.611,2.386,5944663,192,,frame
+main,Succession,tt7660850:1:1,series,0.186,60,race,,torrent+torrent,,,1,,,2.089,25272951,377,,
+main,Succession,tt7660850:1:1,series,0.186,60,race,,torrent+torrent,,,1,,,2.103,20595958,383,,
+main,Succession,tt7660850:1:1,series,0.186,60,http_single,0,direct,HTTP add-on,1080,,0,,4.2,18603120,5,,frame
+main,Succession,tt7660850:1:1,series,0.186,60,http_single,1,direct,HTTP add-on,1080,,0,,1.634,1694792,4,,frame
+main,Succession,tt7660850:1:1,series,0.186,60,http_race,,direct+direct,HTTP add-on,,1,,,1.384,531000,5,,
+main,Succession,tt7660850:1:1,series,0.186,60,http_race,,direct+direct,HTTP add-on,,1,,,1.367,1903381,5,,
+main,Succession,tt7660850:1:1,series,0.186,60,http_probe,,direct,HTTP add-on,1080,,,,0.929,,,,first byte
+main,Succession,tt7660850:1:1,series,0.186,60,http_probe,,direct,HTTP add-on,1080,,,,0.961,,,,first byte
+main,Succession,tt7660850:1:1,series,0.186,60,http_probe,,direct,HTTP add-on,1080,,,,7.824,,,,first byte
+main,Succession,tt7660850:1:1,series,0.186,60,http_probe,,direct,HTTP add-on,1080,,,,7.632,,,,first byte
+main,Succession,tt7660850:1:1,series,0.186,60,http_probe,,direct,HTTP add-on,1080,,,,7.253,,,,first byte
+main,Succession,tt7660850:1:1,series,0.186,60,http_probe,,direct,HTTP add-on,1080,,,,1.015,,,,first byte
+bw,Succession,tt7660850:1:1,series,0.155,60,single,0,torrent,Torrentio,1080,,0.062,0.806,4.832,28747745,183,,frame
+bw,Succession,tt7660850:1:1,series,0.155,60,single,1,torrent,Torrentio,1080,,0.062,0.554,2.308,42244183,189,,frame
+bw,Succession,tt7660850:1:1,series,0.155,60,race,,torrent+torrent,,,1,,,2.945,27319331,381,,
+bw,Succession,tt7660850:1:1,series,0.155,60,http_single,0,direct,HTTP add-on,1080,,0,,1.501,14831745,4,,frame
+bw,Succession,tt7660850:1:1,series,0.155,60,http_single,1,direct,HTTP add-on,1080,,0,,16.889,7525744,3,,frame
+bw,Succession,tt7660850:1:1,series,0.155,60,http_race,,direct+direct,HTTP add-on,,0,,,1.763,2705626,5,,
+bw,Succession,tt7660850:1:1,series,0.155,60,http_race,,direct+direct,HTTP add-on,,0,,,1.58,2224227,5,,
+bw,Succession,tt7660850:1:1,series,0.155,60,http_probe,,direct,HTTP add-on,1080,,,,0.0,,,http 0,first byte
+bw,Succession,tt7660850:1:1,series,0.155,60,http_probe,,direct,HTTP add-on,1080,,,,0.549,,,,first byte
+bw,Succession,tt7660850:1:1,series,0.155,60,http_probe,,direct,HTTP add-on,1080,,,,6.182,,,,first byte
+bw,Succession,tt7660850:1:1,series,0.155,60,http_probe,,direct,HTTP add-on,1080,,,,6.835,,,,first byte
+bw,Succession,tt7660850:1:1,series,0.155,60,http_probe,,direct,HTTP add-on,1080,,,,0.243,,,http 302,first byte
+bw,Succession,tt7660850:1:1,series,0.155,60,http_probe,,direct,HTTP add-on,1080,,,,0.469,,,,first byte
+main,The Last of Us,tt3581920:1:1,series,0.183,89,single,1,torrent,Torrentio,1080,,0.061,0.503,2.805,21006401,156,,frame
+main,The Last of Us,tt3581920:1:1,series,0.183,89,single,2,torrent,Torrentio,1080,,0.059,0.503,2.241,6774675,159,,frame
+main,The Last of Us,tt3581920:1:1,series,0.183,89,single,1,torrent,Torrentio,1080,,0.059,0.562,2.796,16531627,161,,frame
+main,The Last of Us,tt3581920:1:1,series,0.183,89,single,0,torrent,Torrentio,1080,,0.06,0.509,2.266,5297166,192,,frame
+main,The Last of Us,tt3581920:1:1,series,0.183,89,single,0,torrent,Torrentio,1080,,0.06,0.607,4.812,7076682,193,,frame
+main,The Last of Us,tt3581920:1:1,series,0.183,89,race,,torrent+torrent,,,0,,,2.608,20867026,350,,
+main,The Last of Us,tt3581920:1:1,series,0.183,89,race,,torrent+torrent,,,0,,,3.792,61417580,348,,
+main,The Last of Us,tt3581920:1:1,series,0.183,89,http_single,0,direct,HTTP add-on,1080,,0,,4.588,3720459,7,,frame
+main,The Last of Us,tt3581920:1:1,series,0.183,89,http_single,1,direct,HTTP add-on,1080,,0,,1.64,5043990,4,,frame
+main,The Last of Us,tt3581920:1:1,series,0.183,89,http_race,,direct+direct,HTTP add-on,,1,,,1.425,2532600,5,,
+main,The Last of Us,tt3581920:1:1,series,0.183,89,http_race,,direct+direct,HTTP add-on,,1,,,1.49,2139935,5,,
+main,The Last of Us,tt3581920:1:1,series,0.183,89,http_probe,,direct,HTTP add-on,1080,,,,0.915,,,,first byte
+main,The Last of Us,tt3581920:1:1,series,0.183,89,http_probe,,direct,HTTP add-on,1080,,,,0.566,,,,first byte
+main,The Last of Us,tt3581920:1:1,series,0.183,89,http_probe,,direct,HTTP add-on,1080,,,,1.122,,,,first byte
+main,The Last of Us,tt3581920:1:1,series,0.183,89,http_probe,,direct,HTTP add-on,1080,,,,0.238,,,http 302,first byte
+main,The Last of Us,tt3581920:1:1,series,0.183,89,http_probe,,direct,HTTP add-on,1080,,,,6.117,,,,first byte
+main,The Last of Us,tt3581920:1:1,series,0.183,89,http_probe,,direct,HTTP add-on,1080,,,,6.751,,,,first byte
+bw,The Last of Us,tt3581920:1:1,series,0.193,89,single,1,torrent,Torrentio,1080,,0.079,0.555,7.073,35280545,157,,frame
+bw,The Last of Us,tt3581920:1:1,series,0.193,89,single,0,torrent,Torrentio,1080,,0.06,0.704,3.135,11545931,184,,frame
+bw,The Last of Us,tt3581920:1:1,series,0.193,89,race,,torrent+torrent,,,0,,,3.832,54595118,346,,
+bw,The Last of Us,tt3581920:1:1,series,0.193,89,http_single,0,direct,HTTP add-on,1080,,0,,3.982,1275826,7,,frame
+bw,The Last of Us,tt3581920:1:1,series,0.193,89,http_single,1,direct,HTTP add-on,1080,,0,,1.428,365151,4,,frame
+bw,The Last of Us,tt3581920:1:1,series,0.193,89,http_race,,direct+direct,HTTP add-on,,1,,,1.361,2909582,5,,
+bw,The Last of Us,tt3581920:1:1,series,0.193,89,http_race,,direct+direct,HTTP add-on,,1,,,1.424,2375419,5,,
+bw,The Last of Us,tt3581920:1:1,series,0.193,89,http_probe,,direct,HTTP add-on,1080,,,,1.01,,,,first byte
+bw,The Last of Us,tt3581920:1:1,series,0.193,89,http_probe,,direct,HTTP add-on,1080,,,,0.465,,,,first byte
+bw,The Last of Us,tt3581920:1:1,series,0.193,89,http_probe,,direct,HTTP add-on,1080,,,,0.588,,,,first byte
+bw,The Last of Us,tt3581920:1:1,series,0.193,89,http_probe,,direct,HTTP add-on,1080,,,,7.984,,,,first byte
+bw,The Last of Us,tt3581920:1:1,series,0.193,89,http_probe,,direct,HTTP add-on,1080,,,,5.787,,,,first byte
+bw,The Last of Us,tt3581920:1:1,series,0.193,89,http_probe,,direct,HTTP add-on,1080,,,,5.863,,,,first byte
+main,House of the Dragon,tt11198330:1:1,series,0.212,109,single,1,torrent,Torrentio,1080,,0.06,2.821,8.149,32819381,180,,frame
+main,House of the Dragon,tt11198330:1:1,series,0.212,109,single,1,torrent,Torrentio,1080,,0.061,0.553,6.366,29889526,184,,frame
+main,House of the Dragon,tt11198330:1:1,series,0.212,109,single,0,torrent,Torrentio,1080,,0.06,0.563,3.941,10052319,193,,frame
+main,House of the Dragon,tt11198330:1:1,series,0.212,109,single,0,torrent,Torrentio,1080,,0.062,0.453,5.853,12362819,198,,frame
+main,House of the Dragon,tt11198330:1:1,series,0.212,109,single,2,torrent,Torrentio,1080,,0.07,0.654,3.316,34493881,170,,frame
+main,House of the Dragon,tt11198330:1:1,series,0.212,109,race,,torrent+torrent,,,0,,,1.869,13448915,369,,
+main,House of the Dragon,tt11198330:1:1,series,0.212,109,race,,torrent+torrent,,,0,,,1.899,29119820,371,,
+main,House of the Dragon,tt11198330:1:1,series,0.212,109,http_single,0,direct,HTTP add-on,1080,,0,,4.551,7844075,7,,frame
+main,House of the Dragon,tt11198330:1:1,series,0.212,109,http_single,1,direct,HTTP add-on,1080,,0,,1.855,2816976,4,,frame
+main,House of the Dragon,tt11198330:1:1,series,0.212,109,http_race,,direct+direct,HTTP add-on,,1,,,1.386,4106994,5,,
+main,House of the Dragon,tt11198330:1:1,series,0.212,109,http_race,,direct+direct,HTTP add-on,,1,,,1.438,2285449,5,,
+main,House of the Dragon,tt11198330:1:1,series,0.212,109,http_probe,,direct,HTTP add-on,1080,,,,0.901,,,,first byte
+main,House of the Dragon,tt11198330:1:1,series,0.212,109,http_probe,,direct,HTTP add-on,1080,,,,0.745,,,,first byte
+main,House of the Dragon,tt11198330:1:1,series,0.212,109,http_probe,,direct,HTTP add-on,1080,,,,0.574,,,,first byte
+main,House of the Dragon,tt11198330:1:1,series,0.212,109,http_probe,,direct,HTTP add-on,1080,,,,5.983,,,,first byte
+main,House of the Dragon,tt11198330:1:1,series,0.212,109,http_probe,,direct,HTTP add-on,1080,,,,6.065,,,,first byte
+main,House of the Dragon,tt11198330:1:1,series,0.212,109,http_probe,,direct,HTTP add-on,1080,,,,9.706,,,,first byte
+bw,House of the Dragon,tt11198330:1:1,series,0.163,109,single,1,torrent,Torrentio,1080,,0.06,0.554,7.133,32531174,183,,frame
+bw,House of the Dragon,tt11198330:1:1,series,0.163,109,single,0,torrent,Torrentio,1080,,0.059,0.525,3.172,15098302,191,,frame
+bw,House of the Dragon,tt11198330:1:1,series,0.163,109,race,,torrent+torrent,,,0,,,3.279,15193272,371,,
+bw,House of the Dragon,tt11198330:1:1,series,0.163,109,http_single,0,direct,HTTP add-on,1080,,0,,4.597,7337469,7,,frame
+bw,House of the Dragon,tt11198330:1:1,series,0.163,109,http_single,1,direct,HTTP add-on,1080,,0,,1.529,2733164,4,,frame
+bw,House of the Dragon,tt11198330:1:1,series,0.163,109,http_race,,direct+direct,HTTP add-on,,1,,,1.287,600264,5,,
+bw,House of the Dragon,tt11198330:1:1,series,0.163,109,http_race,,direct+direct,HTTP add-on,,1,,,1.561,2070166,5,,
+bw,House of the Dragon,tt11198330:1:1,series,0.163,109,http_probe,,direct,HTTP add-on,1080,,,,0.922,,,,first byte
+bw,House of the Dragon,tt11198330:1:1,series,0.163,109,http_probe,,direct,HTTP add-on,1080,,,,0.416,,,,first byte
+bw,House of the Dragon,tt11198330:1:1,series,0.163,109,http_probe,,direct,HTTP add-on,1080,,,,0.581,,,,first byte
+bw,House of the Dragon,tt11198330:1:1,series,0.163,109,http_probe,,direct,HTTP add-on,1080,,,,9.798,,,,first byte
+bw,House of the Dragon,tt11198330:1:1,series,0.163,109,http_probe,,direct,HTTP add-on,1080,,,,6.556,,,,first byte
+bw,House of the Dragon,tt11198330:1:1,series,0.163,109,http_probe,,direct,HTTP add-on,1080,,,,7.061,,,,first byte
+main,Friends,tt0108778:1:1,series,0.143,69,single,0,torrent,Torrentio,1080,,0.061,0.761,2.27,2842468,194,,frame
+main,Friends,tt0108778:1:1,series,0.143,69,single,0,torrent,Torrentio,1080,,0.06,0.604,6.926,10776699,184,,frame
+main,Friends,tt0108778:1:1,series,0.143,69,single,1,torrent,Torrentio,1080,,0.06,1.121,19.999,44878227,193,,frame
+main,Friends,tt0108778:1:1,series,0.143,69,single,1,torrent,Torrentio,1080,,0.059,0.905,12.748,41814161,196,,frame
+main,Friends,tt0108778:1:1,series,0.143,69,single,2,torrent,Torrentio,1080,,0.061,0.402,15.31,18324493,64,,frame
+main,Friends,tt0108778:1:1,series,0.143,69,race,,torrent+torrent,,,0,,,6.063,14699996,384,,
+main,Friends,tt0108778:1:1,series,0.143,69,race,,torrent+torrent,,,0,,,3.612,13630990,374,,
+main,Friends,tt0108778:1:1,series,0.143,69,http_single,0,direct,HTTP add-on,1080,,0,,3.7,1068908,5,,frame
+main,Friends,tt0108778:1:1,series,0.143,69,http_single,1,direct,HTTP add-on,1080,,0,,1.506,6140020,4,,frame
+main,Friends,tt0108778:1:1,series,0.143,69,http_race,,direct+direct,HTTP add-on,,1,,,1.394,2499238,5,,
+main,Friends,tt0108778:1:1,series,0.143,69,http_race,,direct+direct,HTTP add-on,,1,,,1.438,1508965,5,,
+main,Friends,tt0108778:1:1,series,0.143,69,http_probe,,direct,HTTP add-on,1080,,,,0.893,,,,first byte
+main,Friends,tt0108778:1:1,series,0.143,69,http_probe,,direct,HTTP add-on,1080,,,,0.64,,,,first byte
+main,Friends,tt0108778:1:1,series,0.143,69,http_probe,,direct,HTTP add-on,1080,,,,0.409,,,,first byte
+main,Friends,tt0108778:1:1,series,0.143,69,http_probe,,direct,HTTP add-on,1080,,,,0.244,,,http 302,first byte
+main,Friends,tt0108778:1:1,series,0.143,69,http_probe,,direct,HTTP add-on,1080,,,,0.251,,,http 302,first byte
+main,Friends,tt0108778:1:1,series,0.143,69,http_probe,,direct,HTTP add-on,1080,,,,8.636,,,,first byte
+bw,Friends,tt0108778:1:1,series,0.089,69,single,0,torrent,Torrentio,1080,,0.062,0.905,3.466,81327567,187,,frame
+bw,Friends,tt0108778:1:1,series,0.089,69,single,1,torrent,Torrentio,1080,,0.059,0.957,18.689,126849996,193,,frame
+bw,Friends,tt0108778:1:1,series,0.089,69,race,,torrent+torrent,,,0,,,4.654,12443413,377,,
+bw,Friends,tt0108778:1:1,series,0.089,69,http_single,0,direct,HTTP add-on,1080,,0,,3.385,1368874,5,,frame
+bw,Friends,tt0108778:1:1,series,0.089,69,http_single,1,direct,HTTP add-on,1080,,0,,1.332,3515809,4,,frame
+bw,Friends,tt0108778:1:1,series,0.089,69,http_race,,direct+direct,HTTP add-on,,1,,,1.364,777797,5,,
+bw,Friends,tt0108778:1:1,series,0.089,69,http_race,,direct+direct,HTTP add-on,,1,,,1.459,2474445,5,,
+bw,Friends,tt0108778:1:1,series,0.089,69,http_probe,,direct,HTTP add-on,1080,,,,1.18,,,,first byte
+bw,Friends,tt0108778:1:1,series,0.089,69,http_probe,,direct,HTTP add-on,1080,,,,0.321,,,,first byte
+bw,Friends,tt0108778:1:1,series,0.089,69,http_probe,,direct,HTTP add-on,1080,,,,0.429,,,,first byte
+bw,Friends,tt0108778:1:1,series,0.089,69,http_probe,,direct,HTTP add-on,1080,,,,5.953,,,,first byte
+bw,Friends,tt0108778:1:1,series,0.089,69,http_probe,,direct,HTTP add-on,1080,,,,0.229,,,http 302,first byte
+bw,Friends,tt0108778:1:1,series,0.089,69,http_probe,,direct,HTTP add-on,1080,,,,7.826,,,,first byte
