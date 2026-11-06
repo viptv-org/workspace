@@ -48,6 +48,7 @@ suite.
   a heavy.sh slot rather than skipping this.
 - Gradle runs with `--max-workers=1 -Dorg.gradle.daemon.idletimeout=900000`.
   Backend builds use `CARGO_TARGET_DIR=/srv/fast/rust-target-backend-<issue>`.
+- Never run `gradlew --stop` or kill Gradle daemons: they are shared with other agents and the batch gate.
 - Don't poll a build with repeated tool calls: each call re-sends your whole
   context. Run it in the foreground, or wait inside one call
   (`while kill -0 $PID; do sleep 30; done`).
