@@ -58,6 +58,10 @@ direct-HTTP/HLS provider). No account, profile or provider credential was used.
   attempts (SYN-SENT bursts of up to ~175), so this counts connection churn, not steady
   peer count (about 13 established).
 
+Requests were paced: one discovery per title, at most six range GETs for the HTTP rows and
+one HTTP add-on fetch, each seconds apart because the trials between them take seconds;
+the torrent swarm traffic is the client's own.
+
 Torrent trials used a fresh worker and a fresh piece cache, and the measurement was always
 cold. The sample is 20 movies and 10 episodes (first episode of ten series), 30 titles,
 median 98 candidate rows per title. Each title ran: the first-ranked row twice, the second
