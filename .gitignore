@@ -30,3 +30,6 @@
 /target/
 /dist/
 /dist-js/
+
+# Python bytecode
+__pycache__/
