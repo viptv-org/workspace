@@ -126,6 +126,10 @@ landed (about every 30–60 minutes while merges land), on `edge`:
   compile and the release APK. `backend`: `scripts/agents/backend-batch-gate.sh`
   runs the engine sync check, the full suite and the `live-runtime` compile,
   in its own worktree;
+- each run writes its logs to its own `/tmp/viptv-gate-logs/<repo>/<time>-<sha>/`
+  directory and prints it as `logs <dir>`: tail that, and quote from it. One gate
+  per repo runs at a time; an overlapping run refuses with `exit 4` and names the
+  lock, so rerun it once the first finishes;
 - **green**: the script tags `good/<YYYY-MM-DD>-<n>` (`app`) and runs
   `scripts/agents/promote.sh`, which fast-forwards `main` to the tested commit
   and closes the issues the promoted PRs name. Then, without asking: for
