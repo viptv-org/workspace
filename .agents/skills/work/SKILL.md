@@ -26,8 +26,14 @@ concurrency (`3 at a time`). Default: every repo, up to 5 issues in flight.
   `ready-for-human` items.
 - **Check the queue every 30 minutes** while running: triage `needs-triage`
   issues (clear and agent-doable → `ready-for-agent`), dispatch every
-  unclaimed ready issue, restart agents that errored, and make sure every
-  approved PR is waiting to merge.
+  unclaimed ready issue, restart agents that errored, make sure every
+  approved PR is waiting to merge, and resolve pitches
+  (`scripts/agents/pitch.py open`).
+- **Pitch broad choices.** A user-visible, expensive-to-reverse choice the
+  specs don't answer goes to the maintainers as a pitch (`/pitch`), never as
+  a question in chat. You alone post pitches; subagents propose them. For an
+  issue labelled `needs-pitch`, the agent renders the options first. Over
+  the weekly cap, decide and report it.
 - **Never idle.** An empty frontier is not the end. When fewer than 3 agents
   are working and nothing is dispatchable, launch an audit agent on an area
   not audited recently. It reads the code against the `design` specs, files

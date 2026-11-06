@@ -67,6 +67,12 @@ suite.
   desktop (1280 and 1440) widths, plus TV when it changes, from a throwaway
   `ImageComposeScene` test. Save the PNGs to `/tmp`, check them for clipping,
   wrapping and misalignment, and send the paths. Don't commit them.
+- If the issue is labelled `needs-pitch`, or you hit a choice that users see,
+  that is expensive to reverse and that the specs don't answer, don't guess:
+  render the options as `.agents/skills/pitch/SKILL.md` describes and report
+  the question, the options with their renders, and your pick. Don't post the
+  pitch; the orchestrator does. Decide smaller choices yourself and note them
+  in the PR.
 
 ## Job order
 
