@@ -24,10 +24,10 @@ concurrency (`3 at a time`). Default: every repo, up to 5 issues in flight.
   `docs/agents/maintainers.txt` alike. Skip only an issue another maintainer
   has claimed (assigned, with a claim comment or linked branch), and
   `ready-for-human` items.
-- **Check the queue every 30 minutes** while running: triage `needs-triage`
-  issues (clear and agent-doable → `ready-for-agent`), dispatch every
-  unclaimed ready issue, restart agents that errored, and make sure every
-  approved PR is waiting to merge.
+- **Check the queue every 30 minutes** while running, on the timer below:
+  triage `needs-triage` issues (clear and agent-doable → `ready-for-agent`),
+  dispatch every unclaimed ready issue, restart agents that errored, and make
+  sure every approved PR is waiting to merge.
 - **Never idle.** An empty frontier is not the end. When fewer than 3 agents
   are working and nothing is dispatchable, launch an audit agent on an area
   not audited recently. It reads the code against the `design` specs, files
@@ -37,6 +37,26 @@ concurrency (`3 at a time`). Default: every repo, up to 5 issues in flight.
   retry, a completion rule), the brief asks for one shared fix and a test
   that covers every place it applies, never another sweep.
 - **Report briefly** to the owner after each merge, gate or decision.
+
+## Queue check on a timer
+
+`scripts/agents/queue-check.sh`, from the org root, is one check: it starts
+the batch gate for a repo whose `edge` is ahead of `main` (detached, own lock,
+log in `/tmp/viptv-gate-launch/<repo>.log`, no second run for an edge commit
+already RED), then prints the brief: the frontier, `needs-triage`, open PRs and
+`ready-for-human`.
+
+Start it on a timer when the run starts, so neither depends on memory:
+
+- Claude Code: `/loop 30m bash scripts/agents/queue-check.sh`
+- Any harness: `cd <org> && scripts/agents/queue-check.sh >>
+  .work/queue-check.log 2>&1` on a `*/30` line of `crontab -e`, reading that
+  log.
+
+Act on every brief: dispatch the frontier, triage `needs-triage`, merge green
+PRs, answer `RED` with its log to that issue's agent, and put
+`ready-for-human` items older than two days to the owner. Stop the timer when
+the run ends.
 
 ## Preflight
 
@@ -115,7 +135,9 @@ always builds. Closing keywords only fire on the default branch: an issue
 merged into `edge` stays open until its PR is promoted.
 
 **Batch gate.** Once per batch, as soon as the PRs merging together have
-landed (about every 30–60 minutes while merges land), on `edge`:
+landed (about every 30–60 minutes while merges land), on `edge` — the timer
+above starts it, or run the repo's `-batch-gate.sh` by hand when you need it
+sooner:
 
 - `app`: `scripts/agents/app-batch-gate.sh` runs the full suite, the web
   compile and the release APK. `backend`: `scripts/agents/backend-batch-gate.sh`
