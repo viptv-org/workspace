@@ -27,7 +27,7 @@ GitHub Actions check runs the full suite, and the batch gate reruns it on `edge`
 
 | Repo | Checks |
 |---|---|
-| `app` | `./gradlew :composeApp:desktopTest :composeApp:compileAndroidMain :composeApp:compileKotlinWasmJs` (`--max-workers=1`) |
+| `app` | `./gradlew :composeApp:desktopTest :composeApp:compileAndroidMain :composeApp:compileKotlinWasmJs :composeApp:compileKotlinIosSimulatorArm64 :composeApp:compileTestKotlinIosSimulatorArm64` (`--max-workers=1`) |
 | `backend` | `cargo test --manifest-path server/Cargo.toml` and `cargo test --manifest-path server/Cargo.toml --features live-runtime`; `python3 scripts/sync-engine.py check` |
 | `core` | `cargo test --workspace --all-features`; regenerate bindings with `cargo run -p viptv-typegen` and `cargo run -p viptv-typegen --bin engine` |
 | `design` | `python3 scripts/validate.py` |
