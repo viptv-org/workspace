@@ -1,0 +1,4324 @@
+{
+ "summary": {
+  "single_admission_median": 0.06,
+  "single_prebuffer_median": 0.583,
+  "single_player_median": 2.717,
+  "race_admission_median": 0.061,
+  "race_prebuffer_median": 0.516,
+  "race_player_median": 2.014,
+  "titles": 30,
+  "resolve_median": 0.202,
+  "resolve_p90": 0.235,
+  "single_median": 4.006,
+  "single_p90": 7.843,
+  "head_single_median": 4.006,
+  "head_single_p90": 7.843,
+  "second_single_median": 5.13,
+  "second_single_p90": 15.232,
+  "race_median": 3.322,
+  "race_p90": 7.846,
+  "ideal_race_median": 3.171,
+  "ideal_race_p90": 6.668,
+  "single_failures": 3,
+  "single_trials": 90,
+  "second_failures": 1,
+  "second_trials": 90,
+  "race_failures": 0,
+  "race_trials": 90,
+  "paired_n": 30,
+  "paired_delta_median": 0.46,
+  "paired_delta_p90": 3.697,
+  "race_better_1s": 11,
+  "race_better_05s": 15,
+  "race_worse_1s": 6,
+  "race_worse_05s": 9,
+  "race_slower_than_both": 3,
+  "race_within_half_second_of_ideal": 17,
+  "race_won_by_second_row": 11,
+  "race_same_hash": 0,
+  "second_row_faster_titles": 12,
+  "second_row_faster_gain_median": -3.454,
+  "second_row_faster_race_gain_median": 2.587,
+  "second_row_slower_titles": 18,
+  "second_row_slower_race_gain_median": -0.36,
+  "bytes_single_median": 12925555.0,
+  "bytes_race_median": 21543379.0,
+  "bytes_ratio_median": 1.851,
+  "sockets_single_median": 192.0,
+  "sockets_race_median": 375.0,
+  "sockets_ratio_median": 1.934,
+  "http_single_median": 4.429,
+  "http_single_p90": 12.162,
+  "http_second_median": 8.047,
+  "http_second_p90": 11.733,
+  "http_race_median": 2.473,
+  "http_race_p90": 9.846,
+  "http_best_single_median": 3.181,
+  "http_best_single_p90": 10.541,
+  "http_paired_n": 30,
+  "http_paired_delta_median": 1.253,
+  "http_paired_delta_p90": 3.395,
+  "http_race_better_1s": 16,
+  "http_race_worse_1s": 0,
+  "http_probe_count": 360,
+  "http_probe_ok": 283,
+  "http_probe_codes": {
+   "0": 1,
+   "200": 245,
+   "206": 38,
+   "302": 39,
+   "404": 28,
+   "502": 9
+  },
+  "http_probe_ttfb_median": 3.403,
+  "http_bytes_single_median": 5415876.5,
+  "http_bytes_race_median": 4053582.0,
+  "http_sockets_single_median": 4.0,
+  "http_sockets_race_median": 5.0
+ },
+ "rows": [
+  {
+   "id": "tt0111161",
+   "title": "The Shawshank Redemption",
+   "kind": "movie",
+   "resolve_s": 0.193,
+   "s0": 2.371,
+   "s1": 6.245,
+   "s2": 1.422,
+   "s0_trials": 3,
+   "s1_trials": 3,
+   "s0_failures": 0,
+   "s1_failures": 0,
+   "race": 2.847,
+   "race_trials": 3,
+   "race_failures": 0,
+   "single": 2.371,
+   "ideal_race": 2.371,
+   "h0": 10.659,
+   "h1": 10.925,
+   "http_race": 9.796,
+   "best_http": 10.659,
+   "bytes_single": 1616156,
+   "sockets_single": 195,
+   "bytes_race": 15201108,
+   "sockets_race": 376,
+   "race_same_hash": false,
+   "race_winner": 0,
+   "http_bytes_single": 9738265,
+   "http_sockets_single": 3,
+   "http_bytes_race": 7429077,
+   "http_sockets_race": 5,
+   "http_probes": [
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 5.627,
+     "total": 5.842,
+     "final": "https://p6.9xbud.com/vidstream/,,QfiMHboJiOiQ3clZWauFWbiwiIt92YuIXZ5FGbwhXOiojI0N3bo9lbyVHdlJnIsU2csFmZ6ICdp1Was9VZ6l2ci"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 3.354,
+     "total": 3.594,
+     "final": "https://p6.9xbud.com/vidstream/,,QfiMHboJiOiQ3clZWauFWbiwiIt92YuIXZ5FGbwhXOiojI0N3bo9lbyVHdlJnIsU2csFmZ6ICdp1Was9VZ6l2ci"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 3.627,
+     "total": 4.409,
+     "final": "https://o6.9xbud.com/vidstream/,0nIzxGaiojI0NXZmlmbh1mIsISbvNmLyVWehxGc4ljI6ICdz9Gaf5mc1RXZyJCLlNHbhZmOiQXatlGbfVmepNnIs"
+    },
+    {
+     "detail": "MultiLang Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 11.443,
+     "total": 11.443,
+     "final": "https://vidsrc.party/v/jFzdmBjvH5TVtBE4/stream"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 404,
+     "ttfb": 1.761,
+     "total": 1.761,
+     "final": "https://afrilix.notorrent2.workers.dev/v1/afrilix/movies/278?tipe=movie&timestamp=1793949204"
+    },
+    {
+     "detail": "Audio Latino [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 0.583,
+     "total": 0.599,
+     "final": "https://vod-limit-stream.dramasfree.com/f0d0460a45ac71f0bfae5014c1da0102/8f8810c8405040f19b0569cfc8806594-13a7e8a7966ac7"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 2.629,
+     "total": 3.312,
+     "final": "https://f5.9xbud.com/vidstream/,,QfiMHboJiOiQ3clZWauFWbiwiIt92YuIXZ5FGbwhXOiojI0N3bo9lbyVHdlJnIsU2csFmZ6ICdp1Was9VZ6l2ci"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 3.025,
+     "total": 3.222,
+     "final": "https://o12.9xbud.com/vidstream/9JycshmI6ICdzVmZp5WYtJCLi02bj5icllXYsBHe5IiOiQ3cvh2XuJXd0VmciwSZzxWYmpjI0lWbpx2XlpXazJCL"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 5.519,
+     "total": 5.978,
+     "final": "https://p4.9xbud.com/vidstream/,,QfiMHboJiOiQ3clZWauFWbiwiIt92YuIXZ5FGbwhXOiojI0N3bo9lbyVHdlJnIsU2csFmZ6ICdp1Was9VZ6l2ci"
+    },
+    {
+     "detail": "MultiLang Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 302,
+     "ttfb": 0.24,
+     "total": 12.134,
+     "final": "https://premium26.notorrent2.workers.dev/api/play/movie/278?timestamp=1793952439"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 404,
+     "ttfb": 1.386,
+     "total": 1.386,
+     "final": "https://afrilix.notorrent2.workers.dev/v1/afrilix/movies/278?tipe=movie&timestamp=1793952451"
+    },
+    {
+     "detail": "Audio Latino [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 0.506,
+     "total": 0.519,
+     "final": "https://vod-limit-stream.dramasfree.com/f0d0460a45ac71f0bfae5014c1da0102/8f8810c8405040f19b0569cfc8806594-13a7e8a7966ac7"
+    }
+   ],
+   "http_probe_ttfb": [
+    5.627,
+    3.354,
+    3.627,
+    11.443,
+    0.583,
+    2.629,
+    3.025,
+    5.519,
+    0.506
+   ]
+  },
+  {
+   "id": "tt0068646",
+   "title": "The Godfather",
+   "kind": "movie",
+   "resolve_s": 0.223,
+   "s0": 5.311,
+   "s1": 5.705,
+   "s2": 4.296,
+   "s0_trials": 3,
+   "s1_trials": 3,
+   "s0_failures": 0,
+   "s1_failures": 0,
+   "race": 3.045,
+   "race_trials": 3,
+   "race_failures": 0,
+   "single": 5.311,
+   "ideal_race": 5.311,
+   "h0": 1.575,
+   "h1": 7.965,
+   "http_race": 1.453,
+   "best_http": 1.575,
+   "bytes_single": 7593651,
+   "sockets_single": 194,
+   "bytes_race": 26814401,
+   "sockets_race": 328,
+   "race_same_hash": false,
+   "race_winner": 0,
+   "http_bytes_single": 2011412,
+   "http_sockets_single": 4,
+   "http_bytes_race": 2117508,
+   "http_sockets_race": 5,
+   "http_probes": [
+    {
+     "detail": "Audio Latino [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 0.561,
+     "total": 0.573,
+     "final": "https://vod-limit-stream.dramasfree.com/80915ba5695e71f1a414f6f7d6580102/c559900a2c9140429270ade51f9bf8db-microframe-fd."
+    },
+    {
+     "detail": "Audio Castellano [FREE TRIAL]",
+     "height": 1080,
+     "code": 206,
+     "ttfb": 2.105,
+     "total": 2.105,
+     "final": "https://stream-9251-178-118.pkcdn.org/hls/eaocxbfvlyikkfn2mcz74n2hfzmrctnkgoiqcntrjtdlwpfcs928173323/index.m3u8?timestam"
+    },
+    {
+     "detail": "Audio Castellano [FREE TRIAL]",
+     "height": 1080,
+     "code": 206,
+     "ttfb": 1.901,
+     "total": 1.901,
+     "final": "https://stream-9251-178-118.pkcdn.org/hls/eaocxlcdeeikkfn2mcz74n2hf34mfie7yuv5ofwgov5bnhiag862349197/index.m3u8?timestam"
+    },
+    {
+     "detail": "T\u00fcrk\u00e7e Ses [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 0.497,
+     "total": 0.509,
+     "final": "https://vod-limit-stream.dramasfree.com/80915ba5695e71f1a414f6f7d6580102/c559900a2c9140429270ade51f9bf8db-microframe-fd."
+    },
+    {
+     "detail": "T\u00fcrk\u00e7e Ses [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 0.607,
+     "total": 0.621,
+     "final": "https://vod-limit-stream.dramasfree.com/90d6506bea8371ef9e795014c1ca0102/70bed0dc282c485cbf3d0f9db309fd91-1cf307a1a2c689"
+    },
+    {
+     "detail": "T\u00fcrk\u00e7e Ses [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 0.942,
+     "total": 0.965,
+     "final": "https://vod-limit-stream.dramasfree.com/00eb9de3f36171f0b43e3108f4940102/3ff3d7bcb56646899a7f150dcd9eaed4-microframe-sd."
+    },
+    {
+     "detail": "Audio Latino [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 0.508,
+     "total": 0.52,
+     "final": "https://vod-limit-stream.dramasfree.com/80915ba5695e71f1a414f6f7d6580102/c559900a2c9140429270ade51f9bf8db-microframe-fd."
+    },
+    {
+     "detail": "Audio Castellano [FREE TRIAL]",
+     "height": 1080,
+     "code": 206,
+     "ttfb": 2.038,
+     "total": 2.038,
+     "final": "https://stream-9251-178-118.pkcdn.org/hls/eaocxbfvlyikkfn2mcz74n2hfzmrctnkgoiqcntrjtdlwpfcs115234812/index.m3u8?timestam"
+    },
+    {
+     "detail": "Audio Castellano [FREE TRIAL]",
+     "height": 1080,
+     "code": 206,
+     "ttfb": 3.612,
+     "total": 3.612,
+     "final": "https://stream-9251-178-118.pkcdn.org/hls/eaocxlcdeeikkfn2mcz74n2hf34mfie7yuv5ofwgov5bnhiag539941819/index.m3u8?timestam"
+    },
+    {
+     "detail": "T\u00fcrk\u00e7e Ses [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 0.467,
+     "total": 0.483,
+     "final": "https://vod-limit-stream.dramasfree.com/80915ba5695e71f1a414f6f7d6580102/c559900a2c9140429270ade51f9bf8db-microframe-fd."
+    },
+    {
+     "detail": "T\u00fcrk\u00e7e Ses [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 0.728,
+     "total": 0.74,
+     "final": "https://vod-limit-stream.dramasfree.com/90d6506bea8371ef9e795014c1ca0102/70bed0dc282c485cbf3d0f9db309fd91-1cf307a1a2c689"
+    },
+    {
+     "detail": "T\u00fcrk\u00e7e Ses [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 0.472,
+     "total": 0.484,
+     "final": "https://vod-limit-stream.dramasfree.com/00eb9de3f36171f0b43e3108f4940102/3ff3d7bcb56646899a7f150dcd9eaed4-microframe-sd."
+    }
+   ],
+   "http_probe_ttfb": [
+    0.561,
+    2.105,
+    1.901,
+    0.497,
+    0.607,
+    0.942,
+    0.508,
+    2.038,
+    3.612,
+    0.467,
+    0.728,
+    0.472
+   ]
+  },
+  {
+   "id": "tt0468569",
+   "title": "The Dark Knight",
+   "kind": "movie",
+   "resolve_s": 0.218,
+   "s0": 1.817,
+   "s1": 4.442,
+   "s2": 2.692,
+   "s0_trials": 3,
+   "s1_trials": 3,
+   "s0_failures": 0,
+   "s1_failures": 0,
+   "race": 1.452,
+   "race_trials": 3,
+   "race_failures": 0,
+   "single": 1.817,
+   "ideal_race": 1.817,
+   "h0": 13.458,
+   "h1": 7.564,
+   "http_race": 5.024,
+   "best_http": 7.564,
+   "bytes_single": 12867996,
+   "sockets_single": 195,
+   "bytes_race": 13923202,
+   "sockets_race": 253,
+   "race_same_hash": false,
+   "race_winner": 0,
+   "http_bytes_single": 14847540,
+   "http_sockets_single": 3,
+   "http_bytes_race": 15869162,
+   "http_sockets_race": 5,
+   "http_probes": [
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 302,
+     "ttfb": 0.219,
+     "total": 12.115,
+     "final": "https://proxyvip.notorrent2.workers.dev/?url=https://streamstart.cfd/Apollo/movie/155?verify=false&timestamp=1793949341"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 302,
+     "ttfb": 0.252,
+     "total": 12.151,
+     "final": "https://proxyvip.notorrent2.workers.dev/?url=https://streamstart.cfd/Arke/movie/155?verify=false&timestamp=1793949353"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 302,
+     "ttfb": 0.256,
+     "total": 12.136,
+     "final": "https://proxyvip.notorrent2.workers.dev/?url=https://streamstart.cfd/Zelos/movie/155?verify=false&timestamp=1793949366"
+    },
+    {
+     "detail": "MultiLang Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 10.506,
+     "total": 10.506,
+     "final": "https://vidsrc.party/v/FOg_6gr2iFopP3fb/stream"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 404,
+     "ttfb": 2.793,
+     "total": 2.793,
+     "final": "https://afrilix.notorrent2.workers.dev/v1/afrilix/movies/155?tipe=movie&timestamp=1793949388"
+    },
+    {
+     "detail": "Audio Latino [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 0.791,
+     "total": 0.802,
+     "final": "https://vod-limit-stream.dramasfree.com/90b7bb4ed49771efbfd886c6360c0102/42c5998a011d4b2dad8894326710fc06-db8acbf68d8483"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 6.429,
+     "total": 7.705,
+     "final": "https://o3.9xbud.com/vidstream/,,QfiMHboJiOiQ3clZWauFWbiwiIt92YuIXZ5FGbwhXOiojI0N3bo9lbyVHdlJnIsU2csFmZ6ICdp1Was9VZ6l2ci"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 6.571,
+     "total": 8.033,
+     "final": "https://o6.9xbud.com/vidstream/,,QfiMHboJiOiQ3clZWauFWbiwiIt92YuIXZ5FGbwhXOiojI0N3bo9lbyVHdlJnIsU2csFmZ6ICdp1Was9VZ6l2ci"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 5.959,
+     "total": 5.959,
+     "final": "https://o12.9xbud.com/vidstream/,,QfiMHboJiOiQ3clZWauFWbiwiIt92YuIXZ5FGbwhXOiojI0N3bo9lbyVHdlJnIsU2csFmZ6ICdp1Was9VZ6l2c"
+    },
+    {
+     "detail": "MultiLang Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 4.968,
+     "total": 4.969,
+     "final": "https://vidsrc.party/v/vydG6YBu_YZOOu7y/stream"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 404,
+     "ttfb": 2.802,
+     "total": 2.802,
+     "final": "https://afrilix.notorrent2.workers.dev/v1/afrilix/movies/155?tipe=movie&timestamp=1793952582"
+    },
+    {
+     "detail": "Audio Latino [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 0.473,
+     "total": 0.485,
+     "final": "https://vod-limit-stream.dramasfree.com/90b7bb4ed49771efbfd886c6360c0102/42c5998a011d4b2dad8894326710fc06-db8acbf68d8483"
+    }
+   ],
+   "http_probe_ttfb": [
+    10.506,
+    0.791,
+    6.429,
+    6.571,
+    5.959,
+    4.968,
+    0.473
+   ]
+  },
+  {
+   "id": "tt0071562",
+   "title": "The Godfather Part II",
+   "kind": "movie",
+   "resolve_s": 0.226,
+   "s0": 7.856,
+   "s1": 3.143,
+   "s2": 6.889,
+   "s0_trials": 3,
+   "s1_trials": 3,
+   "s0_failures": 0,
+   "s1_failures": 0,
+   "race": 4.318,
+   "race_trials": 3,
+   "race_failures": 0,
+   "single": 7.856,
+   "ideal_race": 3.143,
+   "h0": 1.656,
+   "h1": 8.13,
+   "http_race": 1.546,
+   "best_http": 1.656,
+   "bytes_single": 25413709,
+   "sockets_single": 192,
+   "bytes_race": 40273252,
+   "sockets_race": 384,
+   "race_same_hash": false,
+   "race_winner": 0,
+   "http_bytes_single": 2635812,
+   "http_sockets_single": 4,
+   "http_bytes_race": 2555246,
+   "http_sockets_race": 5,
+   "http_probes": [
+    {
+     "detail": "Audio Latino [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 0.616,
+     "total": 0.629,
+     "final": "https://vod-limit-stream.dramasfree.com/3079fe53053f71f0bff75014c1ca0102/f0488c6c55c3455a92e14262b654aca9-b68b72a7c10468"
+    },
+    {
+     "detail": "Audio Castellano [FREE TRIAL]",
+     "height": 1080,
+     "code": 206,
+     "ttfb": 2.02,
+     "total": 2.02,
+     "final": "https://stream-45165-48-68.pkcdn.org/hls/kaohp4nvlyikkfn2mcz74zifgyfiuyo7hial4ie4hd5c2kl2d655443954/index.m3u8?timestamp"
+    },
+    {
+     "detail": "Audio Castellano [FREE TRIAL]",
+     "height": 1080,
+     "code": 206,
+     "ttfb": 1.909,
+     "total": 1.909,
+     "final": "https://stream-45165-48-68.pkcdn.org/hls/kaohogreeaikkfn2mcz74zifg2yr7xrcwajcg375kcf6vzsp4797216657/index.m3u8?timestamp"
+    },
+    {
+     "detail": "Audio Castellano [FREE TRIAL]",
+     "height": 1080,
+     "code": 206,
+     "ttfb": 3.643,
+     "total": 3.643,
+     "final": "https://stream-45165-48-68.pkcdn.org/hls/kaohphnvlyikkfn2mcz743cmhs53op3etsgcxgwxv76hl3elf775238957/index.m3u8?timestamp"
+    },
+    {
+     "detail": "Audio Castellano [FREE TRIAL]",
+     "height": 1080,
+     "code": 206,
+     "ttfb": 2.755,
+     "total": 2.755,
+     "final": "https://stream-45165-48-68.pkcdn.org/hls/kaohpjsdeeikkfn2mcz743cmhrk35zbuaocnkblzwsssr4it6639979311/index.m3u8?timestamp"
+    },
+    {
+     "detail": "T\u00fcrk\u00e7e Ses [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 0.598,
+     "total": 0.619,
+     "final": "https://vod-limit-stream.dramasfree.com/3079fe53053f71f0bff75014c1ca0102/f0488c6c55c3455a92e14262b654aca9-b68b72a7c10468"
+    },
+    {
+     "detail": "Audio Latino [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 0.465,
+     "total": 0.478,
+     "final": "https://vod-limit-stream.dramasfree.com/3079fe53053f71f0bff75014c1ca0102/f0488c6c55c3455a92e14262b654aca9-b68b72a7c10468"
+    },
+    {
+     "detail": "Audio Castellano [FREE TRIAL]",
+     "height": 1080,
+     "code": 206,
+     "ttfb": 2.808,
+     "total": 2.808,
+     "final": "https://stream-45165-48-68.pkcdn.org/hls/kaohp4nvlyikkfn2mcz74zifgyfiuyo7hial4ie4hd5c2kl2d126224612/index.m3u8?timestamp"
+    },
+    {
+     "detail": "Audio Castellano [FREE TRIAL]",
+     "height": 1080,
+     "code": 206,
+     "ttfb": 1.864,
+     "total": 1.864,
+     "final": "https://stream-45165-48-68.pkcdn.org/hls/kaohogreeaikkfn2mcz74zifg2yr7xrcwajcg375kcf6vzsp4766835913/index.m3u8?timestamp"
+    },
+    {
+     "detail": "Audio Castellano [FREE TRIAL]",
+     "height": 1080,
+     "code": 206,
+     "ttfb": 1.909,
+     "total": 1.909,
+     "final": "https://stream-45165-48-68.pkcdn.org/hls/kaohphnvlyikkfn2mcz743cmhs53op3etsgcxgwxv76hl3elf833342261/index.m3u8?timestamp"
+    },
+    {
+     "detail": "Audio Castellano [FREE TRIAL]",
+     "height": 1080,
+     "code": 206,
+     "ttfb": 1.887,
+     "total": 1.888,
+     "final": "https://stream-45165-48-68.pkcdn.org/hls/kaohpjsdeeikkfn2mcz743cmhrk35zbuaocnkblzwsssr4it6732492135/index.m3u8?timestamp"
+    },
+    {
+     "detail": "T\u00fcrk\u00e7e Ses [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 0.463,
+     "total": 0.477,
+     "final": "https://vod-limit-stream.dramasfree.com/3079fe53053f71f0bff75014c1ca0102/f0488c6c55c3455a92e14262b654aca9-b68b72a7c10468"
+    }
+   ],
+   "http_probe_ttfb": [
+    0.616,
+    2.02,
+    1.909,
+    3.643,
+    2.755,
+    0.598,
+    0.465,
+    2.808,
+    1.864,
+    1.909,
+    1.887,
+    0.463
+   ]
+  },
+  {
+   "id": "tt0108052",
+   "title": "Schindler's List",
+   "kind": "movie",
+   "resolve_s": 0.229,
+   "s0": 4.047,
+   "s1": 3.688,
+   "s2": 9.441,
+   "s0_trials": 3,
+   "s1_trials": 3,
+   "s0_failures": 0,
+   "s1_failures": 0,
+   "race": 3.48,
+   "race_trials": 3,
+   "race_failures": 0,
+   "single": 4.047,
+   "ideal_race": 3.688,
+   "h0": 12.671,
+   "h1": 6.743,
+   "http_race": 4.748,
+   "best_http": 6.743,
+   "bytes_single": 35662805,
+   "sockets_single": 189,
+   "bytes_race": 25623796,
+   "sockets_race": 290,
+   "race_same_hash": false,
+   "race_winner": 0,
+   "http_bytes_single": 5314978,
+   "http_sockets_single": 3,
+   "http_bytes_race": 8454304,
+   "http_sockets_race": 5,
+   "http_probes": [
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 302,
+     "ttfb": 0.258,
+     "total": 12.137,
+     "final": "https://proxyvip.notorrent2.workers.dev/?url=https://streamstart.cfd/Apollo/movie/424?verify=false&timestamp=1793949495"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 302,
+     "ttfb": 0.304,
+     "total": 12.16,
+     "final": "https://proxyvip.notorrent2.workers.dev/?url=https://streamstart.cfd/Arke/movie/424?verify=false&timestamp=1793949507"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 302,
+     "ttfb": 0.298,
+     "total": 12.156,
+     "final": "https://proxyvip.notorrent2.workers.dev/?url=https://streamstart.cfd/Zelos/movie/424?verify=false&timestamp=1793949519"
+    },
+    {
+     "detail": "MultiLang Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 8.599,
+     "total": 8.6,
+     "final": "https://vidsrc.party/v/M-w_RDIosCc9I53Q/stream"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 404,
+     "ttfb": 2.698,
+     "total": 2.698,
+     "final": "https://afrilix.notorrent2.workers.dev/v1/afrilix/movies/424?tipe=movie&timestamp=1793949540"
+    },
+    {
+     "detail": "Audio Latino [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 0.842,
+     "total": 0.865,
+     "final": "https://vod-limit-stream.dramasfree.com/70eb9003d48671efbfd886c6360c0102/5fa7e257e1144ea98bbd533768bc3eb4-d443a50d38157e"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 11.803,
+     "total": 12.053,
+     "final": "https://o6.9xbud.com/vidstream/9JycshmI6ICdzVmZp5WYtJCLi02bj5icllXYsBHe5IiOiQ3cvh2XuJXd0VmciwSZzxWYmpjI0lWbpx2XlpXazJCLl"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 302,
+     "ttfb": 0.285,
+     "total": 12.15,
+     "final": "https://proxyvip.notorrent2.workers.dev/?url=https://streamstart.cfd/Arke/movie/424?verify=false&timestamp=1793952689"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 11.553,
+     "total": 12.019,
+     "final": "https://o3.9xbud.com/vidstream/9JycshmI6ICdzVmZp5WYtJCLi02bj5icllXYsBHe5IiOiQ3cvh2XuJXd0VmciwSZzxWYmpjI0lWbpx2XlpXazJCLl"
+    },
+    {
+     "detail": "MultiLang Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 302,
+     "ttfb": 0.222,
+     "total": 12.119,
+     "final": "https://premium26.notorrent2.workers.dev/api/play/movie/424?timestamp=1793952713"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 404,
+     "ttfb": 2.881,
+     "total": 2.881,
+     "final": "https://afrilix.notorrent2.workers.dev/v1/afrilix/movies/424?tipe=movie&timestamp=1793952725"
+    },
+    {
+     "detail": "Audio Latino [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 0.534,
+     "total": 0.553,
+     "final": "https://vod-limit-stream.dramasfree.com/70eb9003d48671efbfd886c6360c0102/5fa7e257e1144ea98bbd533768bc3eb4-d443a50d38157e"
+    }
+   ],
+   "http_probe_ttfb": [
+    8.599,
+    0.842,
+    11.803,
+    11.553,
+    0.534
+   ]
+  },
+  {
+   "id": "tt0167260",
+   "title": "The Lord of the Rings: The Return of the King",
+   "kind": "movie",
+   "resolve_s": 0.235,
+   "s0": 3.864,
+   "s1": 5.089,
+   "s2": 5.756,
+   "s0_trials": 3,
+   "s1_trials": 3,
+   "s0_failures": 0,
+   "s1_failures": 0,
+   "race": 3.164,
+   "race_trials": 3,
+   "race_failures": 0,
+   "single": 3.864,
+   "ideal_race": 3.864,
+   "h0": 1.699,
+   "h1": 1.619,
+   "http_race": 1.532,
+   "best_http": 1.619,
+   "bytes_single": 12983114,
+   "sockets_single": 198,
+   "bytes_race": 21375479,
+   "sockets_race": 384,
+   "race_same_hash": false,
+   "race_winner": 0,
+   "http_bytes_single": 10009355,
+   "http_sockets_single": 4,
+   "http_bytes_race": 1903193,
+   "http_sockets_race": 8,
+   "http_probes": [
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 0.689,
+     "total": 0.704,
+     "final": "https://vod-limit-stream.dramasfree.com/d0411dc3d48871efb1655114c0db0102/8dc4de83fab34d948efaf2c2cc06701a-b2e0a8ab3e3c9b"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 0.929,
+     "total": 0.943,
+     "final": "https://vod-limit-stream.dramasfree.com/40d127aa00a771f086444177d1c00102/eafb596e5a114cd0985bbc36caaf8234-30394fdf0ba433"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 302,
+     "ttfb": 0.202,
+     "total": 12.107,
+     "final": "https://proxyvip.notorrent2.workers.dev/?url=https://streamstart.cfd/Apollo/movie/122?verify=false&timestamp=1793949613"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 302,
+     "ttfb": 0.204,
+     "total": 12.108,
+     "final": "https://proxyvip.notorrent2.workers.dev/?url=https://streamstart.cfd/Arke/movie/122?verify=false&timestamp=1793949625"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 302,
+     "ttfb": 0.235,
+     "total": 12.124,
+     "final": "https://proxyvip.notorrent2.workers.dev/?url=https://streamstart.cfd/Zelos/movie/122?verify=false&timestamp=1793949637"
+    },
+    {
+     "detail": "MultiLang Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 302,
+     "ttfb": 10.498,
+     "total": 12.254,
+     "final": "https://vidsrc.party/v/wZGmp4vT8joPbb_J/stream"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 0.55,
+     "total": 0.565,
+     "final": "https://vod-limit-stream.dramasfree.com/d0411dc3d48871efb1655114c0db0102/8dc4de83fab34d948efaf2c2cc06701a-b2e0a8ab3e3c9b"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 0.417,
+     "total": 0.425,
+     "final": "https://vod-limit-stream.dramasfree.com/40d127aa00a771f086444177d1c00102/eafb596e5a114cd0985bbc36caaf8234-30394fdf0ba433"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 8.448,
+     "total": 9.323,
+     "final": "https://o7.9xbud.com/vidstream/,,QfiMHboJiOiQ3clZWauFWbiwiIt92YuIXZ5FGbwhXOiojI0N3bo9lbyVHdlJnIsU2csFmZ6ICdp1Was9VZ6l2ci"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 6.829,
+     "total": 7.462,
+     "final": "https://c8.9xbud.com/vidstream/9JycshmI6ICdzVmZp5WYtJCLi02bj5icllXYsBHe5IiOiQ3cvh2XuJXd0VmciwSZzxWYmpjI0lWbpx2XlpXazJCLl"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 6.659,
+     "total": 8.529,
+     "final": "https://o4.9xbud.com/vidstream/,,QfiMHboJiOiQ3clZWauFWbiwiIt92YuIXZ5FGbwhXOiojI0N3bo9lbyVHdlJnIsU2csFmZ6ICdp1Was9VZ6l2ci"
+    },
+    {
+     "detail": "MultiLang Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 502,
+     "ttfb": 0.728,
+     "total": 0.728,
+     "final": "https://premium26.notorrent2.workers.dev/api/play/movie/122?timestamp=1793952843"
+    }
+   ],
+   "http_probe_ttfb": [
+    0.689,
+    0.929,
+    0.55,
+    0.417,
+    8.448,
+    6.829,
+    6.659
+   ]
+  },
+  {
+   "id": "tt0110912",
+   "title": "Pulp Fiction",
+   "kind": "movie",
+   "resolve_s": 0.148,
+   "s0": 7.138,
+   "s1": 0.854,
+   "s2": 4.538,
+   "s0_trials": 3,
+   "s1_trials": 3,
+   "s0_failures": 0,
+   "s1_failures": 0,
+   "race": 4.229,
+   "race_trials": 3,
+   "race_failures": 0,
+   "single": 7.138,
+   "ideal_race": 0.854,
+   "h0": 10.365,
+   "h1": 11.724,
+   "http_race": 9.229,
+   "best_http": 10.365,
+   "bytes_single": 14157079,
+   "sockets_single": 191,
+   "bytes_race": 14010163,
+   "sockets_race": 382,
+   "race_same_hash": false,
+   "race_winner": 1,
+   "http_bytes_single": 10030065,
+   "http_sockets_single": 3,
+   "http_bytes_race": 4026516,
+   "http_sockets_race": 5,
+   "http_probes": [
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 6.891,
+     "total": 7.516,
+     "final": "https://c9.9xbud.com/vidstream/9JycshmI6ICdzVmZp5WYtJCLi02bj5icllXYsBHe5IiOiQ3cvh2XuJXd0VmciwSZzxWYmpjI0lWbpx2XlpXazJCLl"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 6.561,
+     "total": 7.291,
+     "final": "https://c13.9xbud.com/vidstream/,0nIzxGaiojI0NXZmlmbh1mIsISbvNmLyVWehxGc4ljI6ICdz9Gaf5mc1RXZyJCLlNHbhZmOiQXatlGbfVmepNnI"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 8.378,
+     "total": 8.597,
+     "final": "https://o13.9xbud.com/vidstream/9JycshmI6ICdzVmZp5WYtJCLi02bj5icllXYsBHe5IiOiQ3cvh2XuJXd0VmciwSZzxWYmpjI0lWbpx2XlpXazJCL"
+    },
+    {
+     "detail": "MultiLang Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 502,
+     "ttfb": 0.452,
+     "total": 0.452,
+     "final": "https://premium26.notorrent2.workers.dev/api/play/movie/680?timestamp=1793949744"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 404,
+     "ttfb": 2.934,
+     "total": 2.934,
+     "final": "https://afrilix.notorrent2.workers.dev/v1/afrilix/movies/680?tipe=movie&timestamp=1793949744"
+    },
+    {
+     "detail": "Audio Latino [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 0.745,
+     "total": 0.764,
+     "final": "https://vod-limit-stream.dramasfree.com/50befabdcb3071ef98c587c7371d0102/3ebfee838d2043909d14a4fde7a3d647-b199829785194b"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 4.406,
+     "total": 4.407,
+     "final": "https://p6.9xbud.com/vidstream/9JycshmI6ICdzVmZp5WYtJCLi02bj5icllXYsBHe5IiOiQ3cvh2XuJXd0VmciwSZzxWYmpjI0lWbpx2XlpXazJCLl"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 5.641,
+     "total": 6.371,
+     "final": "https://c9.9xbud.com/vidstream/,0nIzxGaiojI0NXZmlmbh1mIsISbvNmLyVWehxGc4ljI6ICdz9Gaf5mc1RXZyJCLlNHbhZmOiQXatlGbfVmepNnIs"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 6.004,
+     "total": 6.906,
+     "final": "https://f4.9xbud.com/vidstream/9JycshmI6ICdzVmZp5WYtJCLi02bj5icllXYsBHe5IiOiQ3cvh2XuJXd0VmciwSZzxWYmpjI0lWbpx2XlpXazJCLl"
+    },
+    {
+     "detail": "MultiLang Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 302,
+     "ttfb": 0.25,
+     "total": 12.131,
+     "final": "https://premium26.notorrent2.workers.dev/api/play/movie/680?timestamp=1793952880"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 404,
+     "ttfb": 2.377,
+     "total": 2.377,
+     "final": "https://afrilix.notorrent2.workers.dev/v1/afrilix/movies/680?tipe=movie&timestamp=1793952893"
+    },
+    {
+     "detail": "Audio Latino [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 0.486,
+     "total": 0.501,
+     "final": "https://vod-limit-stream.dramasfree.com/50befabdcb3071ef98c587c7371d0102/3ebfee838d2043909d14a4fde7a3d647-b199829785194b"
+    }
+   ],
+   "http_probe_ttfb": [
+    6.891,
+    6.561,
+    8.378,
+    0.745,
+    4.406,
+    5.641,
+    6.004,
+    0.486
+   ]
+  },
+  {
+   "id": "tt0120737",
+   "title": "The Lord of the Rings: The Fellowship of the Ring",
+   "kind": "movie",
+   "resolve_s": 0.185,
+   "s0": 7.508,
+   "s1": 1.501,
+   "s2": 3.312,
+   "s0_trials": 3,
+   "s1_trials": 3,
+   "s0_failures": 0,
+   "s1_failures": 0,
+   "race": 0.785,
+   "race_trials": 3,
+   "race_failures": 0,
+   "single": 7.508,
+   "ideal_race": 1.501,
+   "h0": 12.88,
+   "h1": 10.043,
+   "http_race": 8.611,
+   "best_http": 10.043,
+   "bytes_single": 22497568,
+   "sockets_single": 197,
+   "bytes_race": 666596,
+   "sockets_race": 371,
+   "race_same_hash": false,
+   "race_winner": 1,
+   "http_bytes_single": 5252006,
+   "http_sockets_single": 3,
+   "http_bytes_race": 17536188,
+   "http_sockets_race": 6,
+   "http_probes": [
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 5.523,
+     "total": 5.743,
+     "final": "https://o13.9xbud.com/vidstream/9JycshmI6ICdzVmZp5WYtJCLi02bj5icllXYsBHe5IiOiQ3cvh2XuJXd0VmciwSZzxWYmpjI0lWbpx2XlpXazJCL"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 5.643,
+     "total": 6.37,
+     "final": "https://c14.9xbud.com/vidstream/,,QfiMHboJiOiQ3clZWauFWbiwiIt92YuIXZ5FGbwhXOiojI0N3bo9lbyVHdlJnIsU2csFmZ6ICdp1Was9VZ6l2c"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 7.89,
+     "total": 8.716,
+     "final": "https://p4.9xbud.com/vidstream/,,QfiMHboJiOiQ3clZWauFWbiwiIt92YuIXZ5FGbwhXOiojI0N3bo9lbyVHdlJnIsU2csFmZ6ICdp1Was9VZ6l2ci"
+    },
+    {
+     "detail": "MultiLang Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 6.551,
+     "total": 6.551,
+     "final": "https://vidsrc.party/v/aeASIaOrZtpMrvhh/stream"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 404,
+     "ttfb": 1.803,
+     "total": 1.803,
+     "final": "https://afrilix.notorrent2.workers.dev/v1/afrilix/movies/120?tipe=movie&timestamp=1793949873"
+    },
+    {
+     "detail": "Audio Latino [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 0.666,
+     "total": 0.681,
+     "final": "https://vod-limit-stream.dramasfree.com/90dce184d3e971efbffd5014c1da0102/2a7d0399a6544d748c8a25262a0e0d3e-06b08d030d1968"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 4.742,
+     "total": 4.743,
+     "final": "https://o7.9xbud.com/vidstream/,0nIzxGaiojI0NXZmlmbh1mIsISbvNmLyVWehxGc4ljI6ICdz9Gaf5mc1RXZyJCLlNHbhZmOiQXatlGbfVmepNnIs"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 5.962,
+     "total": 5.962,
+     "final": "https://o7.9xbud.com/vidstream/,0nIzxGaiojI0NXZmlmbh1mIsISbvNmLyVWehxGc4ljI6ICdz9Gaf5mc1RXZyJCLlNHbhZmOiQXatlGbfVmepNnIs"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 5.469,
+     "total": 5.47,
+     "final": "https://o7.9xbud.com/vidstream/9JycshmI6ICdzVmZp5WYtJCLi02bj5icllXYsBHe5IiOiQ3cvh2XuJXd0VmciwSZzxWYmpjI0lWbpx2XlpXazJCLl"
+    },
+    {
+     "detail": "MultiLang Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 302,
+     "ttfb": 5.28,
+     "total": 12.655,
+     "final": "https://vidsrc.party/v/r4J00eUMVU4oG8xV/stream"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 404,
+     "ttfb": 1.309,
+     "total": 1.31,
+     "final": "https://afrilix.notorrent2.workers.dev/v1/afrilix/movies/120?tipe=movie&timestamp=1793952969"
+    },
+    {
+     "detail": "Audio Latino [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 0.482,
+     "total": 0.495,
+     "final": "https://vod-limit-stream.dramasfree.com/90dce184d3e971efbffd5014c1da0102/2a7d0399a6544d748c8a25262a0e0d3e-06b08d030d1968"
+    }
+   ],
+   "http_probe_ttfb": [
+    5.523,
+    5.643,
+    7.89,
+    6.551,
+    0.666,
+    4.742,
+    5.962,
+    5.469,
+    0.482
+   ]
+  },
+  {
+   "id": "tt0109830",
+   "title": "Forrest Gump",
+   "kind": "movie",
+   "resolve_s": 0.201,
+   "s0": 12.543,
+   "s1": 4.76,
+   "s2": 10.076,
+   "s0_trials": 3,
+   "s1_trials": 3,
+   "s0_failures": 0,
+   "s1_failures": 0,
+   "race": 16.607,
+   "race_trials": 3,
+   "race_failures": 0,
+   "single": 12.543,
+   "ideal_race": 4.76,
+   "h0": 11.756,
+   "h1": 11.07,
+   "http_race": 9.295,
+   "best_http": 11.07,
+   "bytes_single": 10304181,
+   "sockets_single": 195,
+   "bytes_race": 28691642,
+   "sockets_race": 372,
+   "race_same_hash": false,
+   "race_winner": 1,
+   "http_bytes_single": 14929094,
+   "http_sockets_single": 3,
+   "http_bytes_race": 5753494,
+   "http_sockets_race": 5,
+   "http_probes": [
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 11.204,
+     "total": 12.009,
+     "final": "https://o4.9xbud.com/vidstream/,0nIzxGaiojI0NXZmlmbh1mIsISbvNmLyVWehxGc4ljI6ICdz9Gaf5mc1RXZyJCLlNHbhZmOiQXatlGbfVmepNnIs"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 7.621,
+     "total": 7.849,
+     "final": "https://o13.9xbud.com/vidstream/,0nIzxGaiojI0NXZmlmbh1mIsISbvNmLyVWehxGc4ljI6ICdz9Gaf5mc1RXZyJCLlNHbhZmOiQXatlGbfVmepNnI"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 6.365,
+     "total": 7.098,
+     "final": "https://c14.9xbud.com/vidstream/,0nIzxGaiojI0NXZmlmbh1mIsISbvNmLyVWehxGc4ljI6ICdz9Gaf5mc1RXZyJCLlNHbhZmOiQXatlGbfVmepNnI"
+    },
+    {
+     "detail": "MultiLang Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 302,
+     "ttfb": 10.554,
+     "total": 12.279,
+     "final": "https://vidsrc.party/v/c4lwNsZnRx6jlWVO/stream"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 404,
+     "ttfb": 2.942,
+     "total": 2.942,
+     "final": "https://afrilix.notorrent2.workers.dev/v1/afrilix/movies/13?tipe=movie&timestamp=1793949987"
+    },
+    {
+     "detail": "Audio Latino [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 0.91,
+     "total": 0.919,
+     "final": "https://vod-limit-stream.dramasfree.com/70657113d4c171ef9b7687c7361c0102/b5bc44b512374a64a2b8d42aa9e93aca-c5cf88daf60928"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 7.784,
+     "total": 8.669,
+     "final": "https://f6.9xbud.com/vidstream/,0nIzxGaiojI0NXZmlmbh1mIsISbvNmLyVWehxGc4ljI6ICdz9Gaf5mc1RXZyJCLlNHbhZmOiQXatlGbfVmepNnIs"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 6.107,
+     "total": 6.76,
+     "final": "https://f5.9xbud.com/vidstream/,0nIzxGaiojI0NXZmlmbh1mIsISbvNmLyVWehxGc4ljI6ICdz9Gaf5mc1RXZyJCLlNHbhZmOiQXatlGbfVmepNnIs"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 5.979,
+     "total": 6.869,
+     "final": "https://o6.9xbud.com/vidstream/9JycshmI6ICdzVmZp5WYtJCLi02bj5icllXYsBHe5IiOiQ3cvh2XuJXd0VmciwSZzxWYmpjI0lWbpx2XlpXazJCLl"
+    },
+    {
+     "detail": "MultiLang Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 502,
+     "ttfb": 0.694,
+     "total": 0.695,
+     "final": "https://premium26.notorrent2.workers.dev/api/play/movie/13?timestamp=1793953053"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 404,
+     "ttfb": 2.334,
+     "total": 2.334,
+     "final": "https://afrilix.notorrent2.workers.dev/v1/afrilix/movies/13?tipe=movie&timestamp=1793953054"
+    },
+    {
+     "detail": "Audio Latino [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 0.575,
+     "total": 0.586,
+     "final": "https://vod-limit-stream.dramasfree.com/70657113d4c171ef9b7687c7361c0102/b5bc44b512374a64a2b8d42aa9e93aca-c5cf88daf60928"
+    }
+   ],
+   "http_probe_ttfb": [
+    11.204,
+    7.621,
+    6.365,
+    0.91,
+    7.784,
+    6.107,
+    5.979,
+    0.575
+   ]
+  },
+  {
+   "id": "tt0133093",
+   "title": "The Matrix",
+   "kind": "movie",
+   "resolve_s": 0.134,
+   "s0": 17.279,
+   "s1": 9.196,
+   "s2": 5.287,
+   "s0_trials": 3,
+   "s1_trials": 3,
+   "s0_failures": 1,
+   "s1_failures": 0,
+   "race": 9.186,
+   "race_trials": 3,
+   "race_failures": 0,
+   "single": 17.279,
+   "ideal_race": 9.196,
+   "h0": 10.256,
+   "h1": 15.77,
+   "http_race": 10.293,
+   "best_http": 10.256,
+   "bytes_single": 16698758,
+   "sockets_single": 192,
+   "bytes_race": 21711279,
+   "sockets_race": 395,
+   "race_same_hash": false,
+   "race_winner": 0,
+   "http_bytes_single": 8472259,
+   "http_sockets_single": 3,
+   "http_bytes_race": 4664076,
+   "http_sockets_race": 5,
+   "http_probes": [
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 10.325,
+     "total": 10.855,
+     "final": "https://p4.9xbud.com/vidstream/,0nIzxGaiojI0NXZmlmbh1mIsISbvNmLyVWehxGc4ljI6ICdz9Gaf5mc1RXZyJCLlNHbhZmOiQXatlGbfVmepNnIs"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 5.969,
+     "total": 6.658,
+     "final": "https://f5.9xbud.com/vidstream/9JycshmI6ICdzVmZp5WYtJCLi02bj5icllXYsBHe5IiOiQ3cvh2XuJXd0VmciwSZzxWYmpjI0lWbpx2XlpXazJCLl"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 6.843,
+     "total": 7.714,
+     "final": "https://o3.9xbud.com/vidstream/,,QfiMHboJiOiQ3clZWauFWbiwiIt92YuIXZ5FGbwhXOiojI0N3bo9lbyVHdlJnIsU2csFmZ6ICdp1Was9VZ6l2ci"
+    },
+    {
+     "detail": "MultiLang Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 302,
+     "ttfb": 0.238,
+     "total": 12.142,
+     "final": "https://premium26.notorrent2.workers.dev/api/play/movie/603?timestamp=1793950170"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 404,
+     "ttfb": 3.19,
+     "total": 3.19,
+     "final": "https://afrilix.notorrent2.workers.dev/v1/afrilix/movies/603?tipe=movie&timestamp=1793950182"
+    },
+    {
+     "detail": "Audio Latino [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 0.731,
+     "total": 0.742,
+     "final": "https://vod-limit-stream.dramasfree.com/b022bc0ad48771ef80005014c1da0102/ce0387d4bfbd48e69baf5c4b2bfbe940-300577fe9ea40c"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 5.56,
+     "total": 5.56,
+     "final": "https://f6.9xbud.com/vidstream/9JycshmI6ICdzVmZp5WYtJCLi02bj5icllXYsBHe5IiOiQ3cvh2XuJXd0VmciwSZzxWYmpjI0lWbpx2XlpXazJCLl"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 5.814,
+     "total": 6.444,
+     "final": "https://c13.9xbud.com/vidstream/9JycshmI6ICdzVmZp5WYtJCLi02bj5icllXYsBHe5IiOiQ3cvh2XuJXd0VmciwSZzxWYmpjI0lWbpx2XlpXazJCL"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 10.194,
+     "total": 10.636,
+     "final": "https://p6.9xbud.com/vidstream/,,QfiMHboJiOiQ3clZWauFWbiwiIt92YuIXZ5FGbwhXOiojI0N3bo9lbyVHdlJnIsU2csFmZ6ICdp1Was9VZ6l2ci"
+    },
+    {
+     "detail": "MultiLang Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 502,
+     "ttfb": 0.601,
+     "total": 0.601,
+     "final": "https://premium26.notorrent2.workers.dev/api/play/movie/603?timestamp=1793953128"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 404,
+     "ttfb": 2.896,
+     "total": 2.896,
+     "final": "https://afrilix.notorrent2.workers.dev/v1/afrilix/movies/603?tipe=movie&timestamp=1793953129"
+    },
+    {
+     "detail": "Audio Latino [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 0.508,
+     "total": 0.517,
+     "final": "https://vod-limit-stream.dramasfree.com/b022bc0ad48771ef80005014c1da0102/ce0387d4bfbd48e69baf5c4b2bfbe940-300577fe9ea40c"
+    }
+   ],
+   "http_probe_ttfb": [
+    10.325,
+    5.969,
+    6.843,
+    0.731,
+    5.56,
+    5.814,
+    10.194,
+    0.508
+   ]
+  },
+  {
+   "id": "tt0167261",
+   "title": "The Lord of the Rings: The Two Towers",
+   "kind": "movie",
+   "resolve_s": 0.246,
+   "s0": 3.965,
+   "s1": 1.369,
+   "s2": 4.642,
+   "s0_trials": 3,
+   "s1_trials": 3,
+   "s0_failures": 0,
+   "s1_failures": 0,
+   "race": 1.381,
+   "race_trials": 3,
+   "race_failures": 0,
+   "single": 3.965,
+   "ideal_race": 1.369,
+   "h0": 1.546,
+   "h1": 1.593,
+   "http_race": 1.502,
+   "best_http": 1.546,
+   "bytes_single": 16373484,
+   "sockets_single": 195,
+   "bytes_race": 32870885,
+   "sockets_race": 384,
+   "race_same_hash": false,
+   "race_winner": 1,
+   "http_bytes_single": 998509,
+   "http_sockets_single": 4,
+   "http_bytes_race": 557073,
+   "http_sockets_race": 8,
+   "http_probes": [
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 0.823,
+     "total": 0.837,
+     "final": "https://vod-limit-stream.dramasfree.com/80351592d4b471ef9b7687c7361c0102/050acbc1e5674ef68a8fa6b1900247f7-b72d7c3d56a1be"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 1.253,
+     "total": 1.266,
+     "final": "https://vod-limit-stream.dramasfree.com/d0ac85f9f4e971f0bc3f4177d0d10102/ca990c132c054d5aaa12d6f3d3055779-microframe-sd."
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 8.321,
+     "total": 9.053,
+     "final": "https://c13.9xbud.com/vidstream/,0nIzxGaiojI0NXZmlmbh1mIsISbvNmLyVWehxGc4ljI6ICdz9Gaf5mc1RXZyJCLlNHbhZmOiQXatlGbfVmepNnI"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 8.288,
+     "total": 9.21,
+     "final": "https://f4.9xbud.com/vidstream/9JycshmI6ICdzVmZp5WYtJCLi02bj5icllXYsBHe5IiOiQ3cvh2XuJXd0VmciwSZzxWYmpjI0lWbpx2XlpXazJCLl"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 9.665,
+     "total": 9.906,
+     "final": "https://p5.9xbud.com/vidstream/,,QfiMHboJiOiQ3clZWauFWbiwiIt92YuIXZ5FGbwhXOiojI0N3bo9lbyVHdlJnIsU2csFmZ6ICdp1Was9VZ6l2ci"
+    },
+    {
+     "detail": "MultiLang Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 502,
+     "ttfb": 0.502,
+     "total": 0.502,
+     "final": "https://premium26.notorrent2.workers.dev/api/play/movie/121?timestamp=1793950381"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 0.608,
+     "total": 0.621,
+     "final": "https://vod-limit-stream.dramasfree.com/80351592d4b471ef9b7687c7361c0102/050acbc1e5674ef68a8fa6b1900247f7-b72d7c3d56a1be"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 0.465,
+     "total": 0.482,
+     "final": "https://vod-limit-stream.dramasfree.com/d0ac85f9f4e971f0bc3f4177d0d10102/ca990c132c054d5aaa12d6f3d3055779-microframe-sd."
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 7.696,
+     "total": 7.696,
+     "final": "https://c9.9xbud.com/vidstream/9JycshmI6ICdzVmZp5WYtJCLi02bj5icllXYsBHe5IiOiQ3cvh2XuJXd0VmciwSZzxWYmpjI0lWbpx2XlpXazJCLl"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 5.627,
+     "total": 5.627,
+     "final": "https://c9.9xbud.com/vidstream/9JycshmI6ICdzVmZp5WYtJCLi02bj5icllXYsBHe5IiOiQ3cvh2XuJXd0VmciwSZzxWYmpjI0lWbpx2XlpXazJCLl"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 6.6,
+     "total": 7.464,
+     "final": "https://p6.9xbud.com/vidstream/9JycshmI6ICdzVmZp5WYtJCLi02bj5icllXYsBHe5IiOiQ3cvh2XuJXd0VmciwSZzxWYmpjI0lWbpx2XlpXazJCLl"
+    },
+    {
+     "detail": "MultiLang Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 302,
+     "ttfb": 0.228,
+     "total": 12.129,
+     "final": "https://premium26.notorrent2.workers.dev/api/play/movie/121?timestamp=1793953223"
+    }
+   ],
+   "http_probe_ttfb": [
+    0.823,
+    1.253,
+    8.321,
+    8.288,
+    9.665,
+    0.608,
+    0.465,
+    7.696,
+    5.627,
+    6.6
+   ]
+  },
+  {
+   "id": "tt1375666",
+   "title": "Inception",
+   "kind": "movie",
+   "resolve_s": 0.158,
+   "s0": 0.991,
+   "s1": 3.934,
+   "s2": 6.893,
+   "s0_trials": 3,
+   "s1_trials": 3,
+   "s0_failures": 0,
+   "s1_failures": 0,
+   "race": 1.432,
+   "race_trials": 3,
+   "race_failures": 0,
+   "single": 0.991,
+   "ideal_race": 0.991,
+   "h0": 11.694,
+   "h1": 11.813,
+   "http_race": 9.066,
+   "best_http": 11.694,
+   "bytes_single": 5757494,
+   "sockets_single": 192,
+   "bytes_race": 156783335,
+   "sockets_race": 245,
+   "race_same_hash": false,
+   "race_winner": 0,
+   "http_bytes_single": 4325360,
+   "http_sockets_single": 3,
+   "http_bytes_race": 7628052,
+   "http_sockets_race": 5,
+   "http_probes": [
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 5.401,
+     "total": 5.612,
+     "final": "https://p5.9xbud.com/vidstream/9JycshmI6ICdzVmZp5WYtJCLi02bj5icllXYsBHe5IiOiQ3cvh2XuJXd0VmciwSZzxWYmpjI0lWbpx2XlpXazJCLl"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 6.689,
+     "total": 7.472,
+     "final": "https://o6.9xbud.com/vidstream/,0nIzxGaiojI0NXZmlmbh1mIsISbvNmLyVWehxGc4ljI6ICdz9Gaf5mc1RXZyJCLlNHbhZmOiQXatlGbfVmepNnIs"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 6.917,
+     "total": 7.989,
+     "final": "https://o4.9xbud.com/vidstream/9JycshmI6ICdzVmZp5WYtJCLi02bj5icllXYsBHe5IiOiQ3cvh2XuJXd0VmciwSZzxWYmpjI0lWbpx2XlpXazJCLl"
+    },
+    {
+     "detail": "MultiLang Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 2.87,
+     "total": 2.87,
+     "final": "https://vidsrc.party/v/9cvterC1KwgAzTSc/stream"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 404,
+     "ttfb": 2.727,
+     "total": 2.727,
+     "final": "https://afrilix.notorrent2.workers.dev/v1/afrilix/movies/27205?tipe=movie&timestamp=1793950433"
+    },
+    {
+     "detail": "Audio Latino [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 0.686,
+     "total": 0.697,
+     "final": "https://vod-limit-stream.dramasfree.com/40705d874b5071f0bc2586c6360c0102/1088d148d3b94f4683bd6be98b99c1a2-c687f75e8621d1"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 6.836,
+     "total": 7.556,
+     "final": "https://f5.9xbud.com/vidstream/9JycshmI6ICdzVmZp5WYtJCLi02bj5icllXYsBHe5IiOiQ3cvh2XuJXd0VmciwSZzxWYmpjI0lWbpx2XlpXazJCLl"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 6.367,
+     "total": 6.596,
+     "final": "https://o12.9xbud.com/vidstream/9JycshmI6ICdzVmZp5WYtJCLi02bj5icllXYsBHe5IiOiQ3cvh2XuJXd0VmciwSZzxWYmpjI0lWbpx2XlpXazJCL"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 6.262,
+     "total": 6.262,
+     "final": "https://p5.9xbud.com/vidstream/,,QfiMHboJiOiQ3clZWauFWbiwiIt92YuIXZ5FGbwhXOiojI0N3bo9lbyVHdlJnIsU2csFmZ6ICdp1Was9VZ6l2ci"
+    },
+    {
+     "detail": "MultiLang Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 502,
+     "ttfb": 0.639,
+     "total": 0.639,
+     "final": "https://premium26.notorrent2.workers.dev/api/play/movie/27205?timestamp=1793953284"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 404,
+     "ttfb": 2.979,
+     "total": 2.979,
+     "final": "https://afrilix.notorrent2.workers.dev/v1/afrilix/movies/27205?tipe=movie&timestamp=1793953285"
+    },
+    {
+     "detail": "Audio Latino [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 0.515,
+     "total": 0.528,
+     "final": "https://vod-limit-stream.dramasfree.com/40705d874b5071f0bc2586c6360c0102/1088d148d3b94f4683bd6be98b99c1a2-c687f75e8621d1"
+    }
+   ],
+   "http_probe_ttfb": [
+    5.401,
+    6.689,
+    6.917,
+    2.87,
+    0.686,
+    6.836,
+    6.367,
+    6.262,
+    0.515
+   ]
+  },
+  {
+   "id": "tt0080684",
+   "title": "Star Wars: Episode V - The Empire Strikes Back",
+   "kind": "movie",
+   "resolve_s": 0.211,
+   "s0": 2.215,
+   "s1": 4.114,
+   "s2": 3.396,
+   "s0_trials": 3,
+   "s1_trials": 3,
+   "s0_failures": 0,
+   "s1_failures": 0,
+   "race": 2.494,
+   "race_trials": 3,
+   "race_failures": 0,
+   "single": 2.215,
+   "ideal_race": 2.215,
+   "h0": 9.96,
+   "h1": 10.065,
+   "http_race": 9.546,
+   "best_http": 9.96,
+   "bytes_single": 9574734,
+   "sockets_single": 192,
+   "bytes_race": 24335572,
+   "sockets_race": 241,
+   "race_same_hash": false,
+   "race_winner": 1,
+   "http_bytes_single": 2384032,
+   "http_sockets_single": 3,
+   "http_bytes_race": 4782425,
+   "http_sockets_race": 6,
+   "http_probes": [
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 7.223,
+     "total": 8.138,
+     "final": "https://f4.9xbud.com/vidstream/9JycshmI6ICdzVmZp5WYtJCLi02bj5icllXYsBHe5IiOiQ3cvh2XuJXd0VmciwSZzxWYmpjI0lWbpx2XlpXazJCLl"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 7.079,
+     "total": 8.138,
+     "final": "https://o5.9xbud.com/vidstream/,,QfiMHboJiOiQ3clZWauFWbiwiIt92YuIXZ5FGbwhXOiojI0N3bo9lbyVHdlJnIsU2csFmZ6ICdp1Was9VZ6l2ci"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 6.59,
+     "total": 6.807,
+     "final": "https://p5.9xbud.com/vidstream/,0nIzxGaiojI0NXZmlmbh1mIsISbvNmLyVWehxGc4ljI6ICdz9Gaf5mc1RXZyJCLlNHbhZmOiQXatlGbfVmepNnIs"
+    },
+    {
+     "detail": "MultiLang Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 302,
+     "ttfb": 0.305,
+     "total": 12.178,
+     "final": "https://premium26.notorrent2.workers.dev/api/play/movie/1891?timestamp=1793950527"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 404,
+     "ttfb": 1.83,
+     "total": 1.83,
+     "final": "https://afrilix.notorrent2.workers.dev/v1/afrilix/movies/1891?tipe=movie&timestamp=1793950540"
+    },
+    {
+     "detail": "Audio Latino [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 1.081,
+     "total": 1.099,
+     "final": "https://vod-limit-stream.dramasfree.com/e07684f6240871f08c6b4177d1c10102/08240b467b7f486a92806b6c6253628d-354b987d9c3ef0"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 5.399,
+     "total": 5.4,
+     "final": "https://c9.9xbud.com/vidstream/,,QfiMHboJiOiQ3clZWauFWbiwiIt92YuIXZ5FGbwhXOiojI0N3bo9lbyVHdlJnIsU2csFmZ6ICdp1Was9VZ6l2ci"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 6.101,
+     "total": 7.669,
+     "final": "https://o5.9xbud.com/vidstream/,0nIzxGaiojI0NXZmlmbh1mIsISbvNmLyVWehxGc4ljI6ICdz9Gaf5mc1RXZyJCLlNHbhZmOiQXatlGbfVmepNnIs"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 7.79,
+     "total": 8.238,
+     "final": "https://p6.9xbud.com/vidstream/,0nIzxGaiojI0NXZmlmbh1mIsISbvNmLyVWehxGc4ljI6ICdz9Gaf5mc1RXZyJCLlNHbhZmOiQXatlGbfVmepNnIs"
+    },
+    {
+     "detail": "MultiLang Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 302,
+     "ttfb": 10.563,
+     "total": 12.303,
+     "final": "https://vidsrc.party/v/Hq53tEKitKludRa2/stream"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 404,
+     "ttfb": 1.741,
+     "total": 1.741,
+     "final": "https://afrilix.notorrent2.workers.dev/v1/afrilix/movies/1891?tipe=movie&timestamp=1793953392"
+    },
+    {
+     "detail": "Audio Latino [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 0.526,
+     "total": 0.536,
+     "final": "https://vod-limit-stream.dramasfree.com/e07684f6240871f08c6b4177d1c10102/08240b467b7f486a92806b6c6253628d-354b987d9c3ef0"
+    }
+   ],
+   "http_probe_ttfb": [
+    7.223,
+    7.079,
+    6.59,
+    1.081,
+    5.399,
+    6.101,
+    7.79,
+    0.526
+   ]
+  },
+  {
+   "id": "tt0137523",
+   "title": "Fight Club",
+   "kind": "movie",
+   "resolve_s": 0.203,
+   "s0": 3.717,
+   "s1": 2.013,
+   "s2": 3.779,
+   "s0_trials": 3,
+   "s1_trials": 3,
+   "s0_failures": 0,
+   "s1_failures": 0,
+   "race": 3.162,
+   "race_trials": 3,
+   "race_failures": 0,
+   "single": 3.717,
+   "ideal_race": 2.013,
+   "h0": 10.919,
+   "h1": 10.528,
+   "http_race": 7.621,
+   "best_http": 10.528,
+   "bytes_single": 9529093,
+   "sockets_single": 195,
+   "bytes_race": 2206026,
+   "sockets_race": 372,
+   "race_same_hash": false,
+   "race_winner": 1,
+   "http_bytes_single": 10429735,
+   "http_sockets_single": 3,
+   "http_bytes_race": 4838649,
+   "http_sockets_race": 5,
+   "http_probes": [
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 2.213,
+     "total": 2.439,
+     "final": "https://p6.9xbud.com/vidstream/,,QfiMHboJiOiQ3clZWauFWbiwiIt92YuIXZ5FGbwhXOiojI0N3bo9lbyVHdlJnIsU2csFmZ6ICdp1Was9VZ6l2ci"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 3.904,
+     "total": 5.425,
+     "final": "https://o4.9xbud.com/vidstream/9JycshmI6ICdzVmZp5WYtJCLi02bj5icllXYsBHe5IiOiQ3cvh2XuJXd0VmciwSZzxWYmpjI0lWbpx2XlpXazJCLl"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 5.2,
+     "total": 6.233,
+     "final": "https://c8.9xbud.com/vidstream/9JycshmI6ICdzVmZp5WYtJCLi02bj5icllXYsBHe5IiOiQ3cvh2XuJXd0VmciwSZzxWYmpjI0lWbpx2XlpXazJCLl"
+    },
+    {
+     "detail": "MultiLang Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 502,
+     "ttfb": 0.435,
+     "total": 0.435,
+     "final": "https://premium26.notorrent2.workers.dev/api/play/movie/550?timestamp=1793950619"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 404,
+     "ttfb": 2.721,
+     "total": 2.721,
+     "final": "https://afrilix.notorrent2.workers.dev/v1/afrilix/movies/550?tipe=movie&timestamp=1793950619"
+    },
+    {
+     "detail": "Audio Latino [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 0.639,
+     "total": 0.65,
+     "final": "https://vod-limit-stream.dramasfree.com/204b604cd48671ef80005014c1da0102/92d48436232947c0ba6c58da62b35130-9904607c6b1e06"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 3.403,
+     "total": 4.22,
+     "final": "https://o7.9xbud.com/vidstream/,,QfiMHboJiOiQ3clZWauFWbiwiIt92YuIXZ5FGbwhXOiojI0N3bo9lbyVHdlJnIsU2csFmZ6ICdp1Was9VZ6l2ci"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 3.194,
+     "total": 3.831,
+     "final": "https://c14.9xbud.com/vidstream/9JycshmI6ICdzVmZp5WYtJCLi02bj5icllXYsBHe5IiOiQ3cvh2XuJXd0VmciwSZzxWYmpjI0lWbpx2XlpXazJCL"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 2.344,
+     "total": 2.344,
+     "final": "https://p6.9xbud.com/vidstream/9JycshmI6ICdzVmZp5WYtJCLi02bj5icllXYsBHe5IiOiQ3cvh2XuJXd0VmciwSZzxWYmpjI0lWbpx2XlpXazJCLl"
+    },
+    {
+     "detail": "MultiLang Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 502,
+     "ttfb": 0.601,
+     "total": 0.601,
+     "final": "https://premium26.notorrent2.workers.dev/api/play/movie/550?timestamp=1793953483"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 404,
+     "ttfb": 3.224,
+     "total": 3.225,
+     "final": "https://afrilix.notorrent2.workers.dev/v1/afrilix/movies/550?tipe=movie&timestamp=1793953484"
+    },
+    {
+     "detail": "Audio Latino [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 0.493,
+     "total": 0.505,
+     "final": "https://vod-limit-stream.dramasfree.com/204b604cd48671ef80005014c1da0102/92d48436232947c0ba6c58da62b35130-9904607c6b1e06"
+    }
+   ],
+   "http_probe_ttfb": [
+    2.213,
+    3.904,
+    5.2,
+    0.639,
+    3.403,
+    3.194,
+    2.344,
+    0.493
+   ]
+  },
+  {
+   "id": "tt0099685",
+   "title": "Goodfellas",
+   "kind": "movie",
+   "resolve_s": 0.182,
+   "s0": 0.906,
+   "s1": 10.539,
+   "s2": 8.877,
+   "s0_trials": 3,
+   "s1_trials": 3,
+   "s0_failures": 0,
+   "s1_failures": 0,
+   "race": 1.079,
+   "race_trials": 3,
+   "race_failures": 0,
+   "single": 0.906,
+   "ideal_race": 0.906,
+   "h0": 1.616,
+   "h1": 9.288,
+   "http_race": 1.516,
+   "best_http": 1.616,
+   "bytes_single": 10444964,
+   "sockets_single": 189,
+   "bytes_race": 2063819,
+   "sockets_race": 384,
+   "race_same_hash": false,
+   "race_winner": 0,
+   "http_bytes_single": 13420544,
+   "http_sockets_single": 4,
+   "http_bytes_race": 31380566,
+   "http_sockets_race": 5,
+   "http_probes": [
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 0.802,
+     "total": 0.818,
+     "final": "https://vod-limit-stream.dramasfree.com/2080f6b2d48671ef951f87c7371d0102/5e755df465044254a30d7b90b89d077e-c4584c40c3b8ad"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 10.871,
+     "total": 11.161,
+     "final": "https://o12.9xbud.com/vidstream/,,QfiMHboJiOiQ3clZWauFWbiwiIt92YuIXZ5FGbwhXOiojI0N3bo9lbyVHdlJnIsU2csFmZ6ICdp1Was9VZ6l2c"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 7.515,
+     "total": 8.322,
+     "final": "https://f6.9xbud.com/vidstream/,,QfiMHboJiOiQ3clZWauFWbiwiIt92YuIXZ5FGbwhXOiojI0N3bo9lbyVHdlJnIsU2csFmZ6ICdp1Was9VZ6l2ci"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 5.565,
+     "total": 5.766,
+     "final": "https://o12.9xbud.com/vidstream/9JycshmI6ICdzVmZp5WYtJCLi02bj5icllXYsBHe5IiOiQ3cvh2XuJXd0VmciwSZzxWYmpjI0lWbpx2XlpXazJCL"
+    },
+    {
+     "detail": "MultiLang Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 302,
+     "ttfb": 0.229,
+     "total": 12.122,
+     "final": "https://premium26.notorrent2.workers.dev/api/play/movie/769?timestamp=1793950731"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 404,
+     "ttfb": 1.606,
+     "total": 1.606,
+     "final": "https://afrilix.notorrent2.workers.dev/v1/afrilix/movies/769?tipe=movie&timestamp=1793950743"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 0.479,
+     "total": 0.492,
+     "final": "https://vod-limit-stream.dramasfree.com/2080f6b2d48671ef951f87c7371d0102/5e755df465044254a30d7b90b89d077e-c4584c40c3b8ad"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 5.129,
+     "total": 5.629,
+     "final": "https://p6.9xbud.com/vidstream/9JycshmI6ICdzVmZp5WYtJCLi02bj5icllXYsBHe5IiOiQ3cvh2XuJXd0VmciwSZzxWYmpjI0lWbpx2XlpXazJCLl"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 6.471,
+     "total": 6.704,
+     "final": "https://o13.9xbud.com/vidstream/,,QfiMHboJiOiQ3clZWauFWbiwiIt92YuIXZ5FGbwhXOiojI0N3bo9lbyVHdlJnIsU2csFmZ6ICdp1Was9VZ6l2c"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 6.67,
+     "total": 7.564,
+     "final": "https://f4.9xbud.com/vidstream/,,QfiMHboJiOiQ3clZWauFWbiwiIt92YuIXZ5FGbwhXOiojI0N3bo9lbyVHdlJnIsU2csFmZ6ICdp1Was9VZ6l2ci"
+    },
+    {
+     "detail": "MultiLang Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 10.314,
+     "total": 10.314,
+     "final": "https://vidsrc.party/v/Eyn5TE2IgYre1bDB/stream"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 404,
+     "ttfb": 1.703,
+     "total": 1.704,
+     "final": "https://afrilix.notorrent2.workers.dev/v1/afrilix/movies/769?tipe=movie&timestamp=1793953563"
+    }
+   ],
+   "http_probe_ttfb": [
+    0.802,
+    10.871,
+    7.515,
+    5.565,
+    0.479,
+    5.129,
+    6.471,
+    6.67,
+    10.314
+   ]
+  },
+  {
+   "id": "tt0073486",
+   "title": "One Flew Over the Cuckoo's Nest",
+   "kind": "movie",
+   "resolve_s": 0.238,
+   "s0": 7.842,
+   "s1": 15.981,
+   "s2": 6.151,
+   "s0_trials": 3,
+   "s1_trials": 3,
+   "s0_failures": 0,
+   "s1_failures": 0,
+   "race": 2.718,
+   "race_trials": 3,
+   "race_failures": 0,
+   "single": 7.842,
+   "ideal_race": 7.842,
+   "h0": 6.403,
+   "h1": 6.517,
+   "http_race": 6.412,
+   "best_http": 6.403,
+   "bytes_single": 13142529,
+   "sockets_single": 191,
+   "bytes_race": 29688905,
+   "sockets_race": 301,
+   "race_same_hash": false,
+   "race_winner": 0,
+   "http_bytes_single": 3234696,
+   "http_sockets_single": 4,
+   "http_bytes_race": 2387992,
+   "http_sockets_race": 5,
+   "http_probes": [
+    {
+     "detail": "Audio Castellano [FREE TRIAL]",
+     "height": 1080,
+     "code": 206,
+     "ttfb": 2.272,
+     "total": 2.272,
+     "final": "https://stream-3638-215-22.pkcdn.org/hls/leohp4yhh4ikkfn2mbj7qmckh6cy4ambxgbvl6l53aaosavls869542219/index.m3u8?timestamp"
+    },
+    {
+     "detail": "Audio Castellano [FREE TRIAL]",
+     "height": 1080,
+     "code": 206,
+     "ttfb": 2.165,
+     "total": 2.165,
+     "final": "https://stream-96255-141-139.pkcdn.org/hls/dyoblqukbiikkfn2md37qoq4mwynxvzu7mmkd3s4gws2vwx4n462979684/index.m3u8?timesta"
+    },
+    {
+     "detail": "Audio Castellano [FREE TRIAL]",
+     "height": 1080,
+     "code": 206,
+     "ttfb": 2.122,
+     "total": 2.122,
+     "final": "https://stream-96255-141-139.pkcdn.org/hls/dqoboxzleyikkfn2mdy76osph6h2kf2xu5flkikdcdjwlyviy711885591/index.m3u8?timesta"
+    },
+    {
+     "detail": "T\u00fcrk\u00e7e Ses [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 1.001,
+     "total": 1.011,
+     "final": "https://vod-limit-stream.dramasfree.com/6072d75a647b71f1a25cf6f7f45a0102/4dedfb8e5b7545149d5887d539050182-microframe-sd."
+    },
+    {
+     "detail": "Original Audio [FREE]",
+     "height": 1080,
+     "code": 302,
+     "ttfb": 0.254,
+     "total": 12.135,
+     "final": "https://proxyvip.notorrent2.workers.dev/?url=https://voe.sx/e/zicibqq7zpku&timestamp=1793950817"
+    },
+    {
+     "detail": "Original Audio [FREE]",
+     "height": 1080,
+     "code": 302,
+     "ttfb": 0.263,
+     "total": 12.141,
+     "final": "https://proxyvip.notorrent2.workers.dev/?url=https://voe.sx/e/wxxw6qwm0tax&timestamp=1793950830"
+    },
+    {
+     "detail": "Audio Castellano [FREE TRIAL]",
+     "height": 1080,
+     "code": 206,
+     "ttfb": 4.582,
+     "total": 4.582,
+     "final": "https://stream-3638-215-22.pkcdn.org/hls/leohp4yhh4ikkfn2mbj7qmckh6cy4ambxgbvl6l53aaosavls921842671/index.m3u8?timestamp"
+    },
+    {
+     "detail": "Audio Castellano [FREE TRIAL]",
+     "height": 1080,
+     "code": 206,
+     "ttfb": 2.245,
+     "total": 2.245,
+     "final": "https://stream-96255-141-139.pkcdn.org/hls/dyoblqukbiikkfn2md37qoq4mwynxvzu7mmkd3s4gws2vwx4n999533283/index.m3u8?timesta"
+    },
+    {
+     "detail": "Audio Castellano [FREE TRIAL]",
+     "height": 1080,
+     "code": 206,
+     "ttfb": 3.552,
+     "total": 3.553,
+     "final": "https://stream-96255-141-139.pkcdn.org/hls/dqoboxzleyikkfn2mdy76osph6h2kf2xu5flkikdcdjwlyviy924566531/index.m3u8?timesta"
+    },
+    {
+     "detail": "T\u00fcrk\u00e7e Ses [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 0.464,
+     "total": 0.478,
+     "final": "https://vod-limit-stream.dramasfree.com/6072d75a647b71f1a25cf6f7f45a0102/4dedfb8e5b7545149d5887d539050182-microframe-sd."
+    },
+    {
+     "detail": "Original Audio [FREE]",
+     "height": 1080,
+     "code": 302,
+     "ttfb": 0.234,
+     "total": 12.125,
+     "final": "https://proxyvip.notorrent2.workers.dev/?url=https://voe.sx/e/zicibqq7zpku&timestamp=1793953604"
+    },
+    {
+     "detail": "Original Audio [FREE]",
+     "height": 1080,
+     "code": 302,
+     "ttfb": 0.349,
+     "total": 12.181,
+     "final": "https://proxyvip.notorrent2.workers.dev/?url=https://voe.sx/e/wxxw6qwm0tax&timestamp=1793953616"
+    }
+   ],
+   "http_probe_ttfb": [
+    2.272,
+    2.165,
+    2.122,
+    1.001,
+    4.582,
+    2.245,
+    3.552,
+    0.464
+   ]
+  },
+  {
+   "id": "tt0114369",
+   "title": "Se7en",
+   "kind": "movie",
+   "resolve_s": 0.178,
+   "s0": 3.466,
+   "s1": 7.698,
+   "s2": 16.641,
+   "s0_trials": 3,
+   "s1_trials": 3,
+   "s0_failures": 0,
+   "s1_failures": 0,
+   "race": 7.683,
+   "race_trials": 3,
+   "race_failures": 0,
+   "single": 3.466,
+   "ideal_race": 3.466,
+   "h0": 12.105,
+   "h1": 9.75,
+   "http_race": 11.148,
+   "best_http": 9.75,
+   "bytes_single": 3916020,
+   "sockets_single": 189,
+   "bytes_race": 13765959,
+   "sockets_race": 229,
+   "race_same_hash": false,
+   "race_winner": 0,
+   "http_bytes_single": 10933242,
+   "http_sockets_single": 3,
+   "http_bytes_race": 5824536,
+   "http_sockets_race": 5,
+   "http_probes": [
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 9.461,
+     "total": 10.092,
+     "final": "https://c13.9xbud.com/vidstream/,,QfiMHboJiOiQ3clZWauFWbiwiIt92YuIXZ5FGbwhXOiojI0N3bo9lbyVHdlJnIsU2csFmZ6ICdp1Was9VZ6l2c"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 6.346,
+     "total": 7.093,
+     "final": "https://f4.9xbud.com/vidstream/,,QfiMHboJiOiQ3clZWauFWbiwiIt92YuIXZ5FGbwhXOiojI0N3bo9lbyVHdlJnIsU2csFmZ6ICdp1Was9VZ6l2ci"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 6.263,
+     "total": 6.894,
+     "final": "https://c13.9xbud.com/vidstream/,0nIzxGaiojI0NXZmlmbh1mIsISbvNmLyVWehxGc4ljI6ICdz9Gaf5mc1RXZyJCLlNHbhZmOiQXatlGbfVmepNnI"
+    },
+    {
+     "detail": "MultiLang Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 11.433,
+     "total": 11.433,
+     "final": "https://vidsrc.party/v/X_e7DU9HU5snpwZc/stream"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 404,
+     "ttfb": 2.562,
+     "total": 2.562,
+     "final": "https://afrilix.notorrent2.workers.dev/v1/afrilix/movies/807?tipe=movie&timestamp=1793950958"
+    },
+    {
+     "detail": "Audio Latino [FREE TRIAL]",
+     "height": 1080,
+     "code": 302,
+     "ttfb": 0.224,
+     "total": 12.12,
+     "final": "https://proxyvip.notorrent2.workers.dev/?url=https://vimeos.net/co2ffonn68d4&timestamp=1793950961"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 6.898,
+     "total": 7.526,
+     "final": "https://c9.9xbud.com/vidstream/,,QfiMHboJiOiQ3clZWauFWbiwiIt92YuIXZ5FGbwhXOiojI0N3bo9lbyVHdlJnIsU2csFmZ6ICdp1Was9VZ6l2ci"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 6.044,
+     "total": 7.08,
+     "final": "https://o3.9xbud.com/vidstream/,,QfiMHboJiOiQ3clZWauFWbiwiIt92YuIXZ5FGbwhXOiojI0N3bo9lbyVHdlJnIsU2csFmZ6ICdp1Was9VZ6l2ci"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 5.768,
+     "total": 5.965,
+     "final": "https://o13.9xbud.com/vidstream/9JycshmI6ICdzVmZp5WYtJCLi02bj5icllXYsBHe5IiOiQ3cvh2XuJXd0VmciwSZzxWYmpjI0lWbpx2XlpXazJCL"
+    },
+    {
+     "detail": "MultiLang Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 302,
+     "ttfb": 0.254,
+     "total": 12.135,
+     "final": "https://premium26.notorrent2.workers.dev/api/play/movie/807?timestamp=1793953712"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 404,
+     "ttfb": 2.445,
+     "total": 2.445,
+     "final": "https://afrilix.notorrent2.workers.dev/v1/afrilix/movies/807?tipe=movie&timestamp=1793953724"
+    },
+    {
+     "detail": "Audio Latino [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 5.821,
+     "total": 5.954,
+     "final": "https://p5.9xbud.com/vidstream/9JycshmI6ICdzVmZp5WYtJCLi02bj5icllXYsBHe5IiOiQ3cvh2XuJXd0VmciwSZzxWYmpjI0lWbpx2XlpXazJCLl"
+    }
+   ],
+   "http_probe_ttfb": [
+    9.461,
+    6.346,
+    6.263,
+    11.433,
+    6.898,
+    6.044,
+    5.768,
+    5.821
+   ]
+  },
+  {
+   "id": "tt0102926",
+   "title": "The Silence of the Lambs",
+   "kind": "movie",
+   "resolve_s": 0.234,
+   "s0": 7.467,
+   "s1": 7.659,
+   "s2": 17.543,
+   "s0_trials": 3,
+   "s1_trials": 3,
+   "s0_failures": 0,
+   "s1_failures": 0,
+   "race": 8.25,
+   "race_trials": 3,
+   "race_failures": 0,
+   "single": 7.467,
+   "ideal_race": 7.467,
+   "h0": 9.503,
+   "h1": 11.372,
+   "http_race": 9.386,
+   "best_http": 9.503,
+   "bytes_single": 5914305,
+   "sockets_single": 184,
+   "bytes_race": 16872319,
+   "sockets_race": 234,
+   "race_same_hash": false,
+   "race_winner": 0,
+   "http_bytes_single": 5546954,
+   "http_sockets_single": 3,
+   "http_bytes_race": 4080648,
+   "http_sockets_race": 5,
+   "http_probes": [
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 302,
+     "ttfb": 0.236,
+     "total": 12.126,
+     "final": "https://proxyvip.notorrent2.workers.dev/?url=https://streamstart.cfd/Apollo/movie/274?verify=false&timestamp=1793951105"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 6.282,
+     "total": 7.384,
+     "final": "https://o4.9xbud.com/vidstream/9JycshmI6ICdzVmZp5WYtJCLi02bj5icllXYsBHe5IiOiQ3cvh2XuJXd0VmciwSZzxWYmpjI0lWbpx2XlpXazJCLl"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 7.633,
+     "total": 8.403,
+     "final": "https://f4.9xbud.com/vidstream/,,QfiMHboJiOiQ3clZWauFWbiwiIt92YuIXZ5FGbwhXOiojI0N3bo9lbyVHdlJnIsU2csFmZ6ICdp1Was9VZ6l2ci"
+    },
+    {
+     "detail": "MultiLang Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 9.971,
+     "total": 9.971,
+     "final": "https://vidsrc.party/v/EIF7u9yg5jBATIQF/stream"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 404,
+     "ttfb": 3.113,
+     "total": 3.113,
+     "final": "https://afrilix.notorrent2.workers.dev/v1/afrilix/movies/274?tipe=movie&timestamp=1793951143"
+    },
+    {
+     "detail": "Audio Latino [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 1.117,
+     "total": 1.13,
+     "final": "https://vod-limit-stream.dramasfree.com/20cb624bf50671f0a0694177d1c10102/32518c5493114f258aeb01bb0ce2e118-microframe-sd."
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 5.881,
+     "total": 5.882,
+     "final": "https://o5.9xbud.com/vidstream/,0nIzxGaiojI0NXZmlmbh1mIsISbvNmLyVWehxGc4ljI6ICdz9Gaf5mc1RXZyJCLlNHbhZmOiQXatlGbfVmepNnIs"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 7.889,
+     "total": 9.329,
+     "final": "https://o4.9xbud.com/vidstream/,,QfiMHboJiOiQ3clZWauFWbiwiIt92YuIXZ5FGbwhXOiojI0N3bo9lbyVHdlJnIsU2csFmZ6ICdp1Was9VZ6l2ci"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 11.631,
+     "total": 12.048,
+     "final": "https://c8.9xbud.com/vidstream/,,QfiMHboJiOiQ3clZWauFWbiwiIt92YuIXZ5FGbwhXOiojI0N3bo9lbyVHdlJnIsU2csFmZ6ICdp1Was9VZ6l2ci"
+    },
+    {
+     "detail": "MultiLang Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 502,
+     "ttfb": 0.649,
+     "total": 0.65,
+     "final": "https://premium26.notorrent2.workers.dev/api/play/movie/274?timestamp=1793953815"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 404,
+     "ttfb": 3.145,
+     "total": 3.145,
+     "final": "https://afrilix.notorrent2.workers.dev/v1/afrilix/movies/274?tipe=movie&timestamp=1793953816"
+    },
+    {
+     "detail": "Audio Latino [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 0.588,
+     "total": 0.599,
+     "final": "https://vod-limit-stream.dramasfree.com/20cb624bf50671f0a0694177d1c10102/32518c5493114f258aeb01bb0ce2e118-microframe-sd."
+    }
+   ],
+   "http_probe_ttfb": [
+    6.282,
+    7.633,
+    9.971,
+    1.117,
+    5.881,
+    7.889,
+    11.631,
+    0.588
+   ]
+  },
+  {
+   "id": "tt0038650",
+   "title": "It's a Wonderful Life",
+   "kind": "movie",
+   "resolve_s": 0.226,
+   "s0": 6.465,
+   "s1": 2.153,
+   "s2": 6.401,
+   "s0_trials": 3,
+   "s1_trials": 3,
+   "s0_failures": 0,
+   "s1_failures": 0,
+   "race": 3.875,
+   "race_trials": 3,
+   "race_failures": 0,
+   "single": 6.465,
+   "ideal_race": 2.153,
+   "h0": 1.696,
+   "h1": 1.605,
+   "http_race": 1.536,
+   "best_http": 1.605,
+   "bytes_single": 12735157,
+   "sockets_single": 134,
+   "bytes_race": 34051236,
+   "sockets_race": 248,
+   "race_same_hash": false,
+   "race_winner": 1,
+   "http_bytes_single": 373432,
+   "http_sockets_single": 4,
+   "http_bytes_race": 4084157,
+   "http_sockets_race": 8,
+   "http_probes": [
+    {
+     "detail": "Audio Latino [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 0.85,
+     "total": 0.858,
+     "final": "https://vod-limit-stream.dramasfree.com/f0793942230f71f0800236a5e8aa0102/eada1fb288a64eadab1781b0e2bff93a-7352ea2b5dc038"
+    },
+    {
+     "detail": "Audio Latino [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 0.845,
+     "total": 0.857,
+     "final": "https://vod-limit-stream.dramasfree.com/10572fc1087f71f191865114c0db0102/a5eb23c6591a4c74a622887e01b54ca4-microframe-ld."
+    },
+    {
+     "detail": "Audio Castellano [FREE TRIAL]",
+     "height": 1080,
+     "code": 206,
+     "ttfb": 3.605,
+     "total": 3.605,
+     "final": "https://stream-96255-141-139.pkcdn.org/hls/dqobpqorheikkfn2mbppqlaog4bywrbjwncyq7px5upsedmwm292243969/index.m3u8?timesta"
+    },
+    {
+     "detail": "Audio Castellano [FREE TRIAL]",
+     "height": 1080,
+     "code": 206,
+     "ttfb": 2.886,
+     "total": 2.886,
+     "final": "https://stream-4891-212-105.pkcdn.org/hls/juohopnxbaikkfn2mappsmyrgaxztkqknf4jsawplqatekr5s664871276/index.m3u8?timestam"
+    },
+    {
+     "detail": "Audio Castellano [FREE TRIAL]",
+     "height": 1080,
+     "code": 206,
+     "ttfb": 2.065,
+     "total": 2.065,
+     "final": "https://stream-9251-178-118.pkcdn.org/hls/eiocsm37eeikkfn2md576zqimirvv35sb2lynphpxgv4pkt42376865829/index.m3u8?timestam"
+    },
+    {
+     "detail": "Original Audio [FREE]",
+     "height": 1080,
+     "code": 302,
+     "ttfb": 0.221,
+     "total": 12.118,
+     "final": "https://proxyvip.notorrent2.workers.dev/?url=https://voe.sx/e/uxjltnhtmvvk&timestamp=1793951283"
+    },
+    {
+     "detail": "Audio Latino [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 0.569,
+     "total": 0.577,
+     "final": "https://vod-limit-stream.dramasfree.com/f0793942230f71f0800236a5e8aa0102/eada1fb288a64eadab1781b0e2bff93a-7352ea2b5dc038"
+    },
+    {
+     "detail": "Audio Latino [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 0.421,
+     "total": 0.43,
+     "final": "https://vod-limit-stream.dramasfree.com/10572fc1087f71f191865114c0db0102/a5eb23c6591a4c74a622887e01b54ca4-microframe-ld."
+    },
+    {
+     "detail": "Audio Castellano [FREE TRIAL]",
+     "height": 1080,
+     "code": 206,
+     "ttfb": 1.943,
+     "total": 1.943,
+     "final": "https://stream-96255-141-139.pkcdn.org/hls/dqobpqorheikkfn2mbppqlaog4bywrbjwncyq7px5upsedmwm591348329/index.m3u8?timesta"
+    },
+    {
+     "detail": "Audio Castellano [FREE TRIAL]",
+     "height": 1080,
+     "code": 206,
+     "ttfb": 2.873,
+     "total": 2.874,
+     "final": "https://stream-4891-212-105.pkcdn.org/hls/juohopnxbaikkfn2mappsmyrgaxztkqknf4jsawplqatekr5s549738722/index.m3u8?timestam"
+    },
+    {
+     "detail": "Audio Castellano [FREE TRIAL]",
+     "height": 1080,
+     "code": 206,
+     "ttfb": 1.999,
+     "total": 2.0,
+     "final": "https://stream-9251-178-118.pkcdn.org/hls/eiocsm37eeikkfn2md576zqimirvv35sb2lynphpxgv4pkt42986861635/index.m3u8?timestam"
+    },
+    {
+     "detail": "Original Audio [FREE]",
+     "height": 1080,
+     "code": 302,
+     "ttfb": 0.267,
+     "total": 12.14,
+     "final": "https://proxyvip.notorrent2.workers.dev/?url=https://voe.sx/e/uxjltnhtmvvk&timestamp=1793953881"
+    }
+   ],
+   "http_probe_ttfb": [
+    0.85,
+    0.845,
+    3.605,
+    2.886,
+    2.065,
+    0.569,
+    0.421,
+    1.943,
+    2.873,
+    1.999
+   ]
+  },
+  {
+   "id": "tt0245429",
+   "title": "Spirited Away",
+   "kind": "movie",
+   "resolve_s": 0.195,
+   "s0": 2.689,
+   "s1": 0.85,
+   "s2": 1.939,
+   "s0_trials": 3,
+   "s1_trials": 3,
+   "s0_failures": 0,
+   "s1_failures": 0,
+   "race": 0.917,
+   "race_trials": 3,
+   "race_failures": 0,
+   "single": 2.689,
+   "ideal_race": 0.85,
+   "h0": 10.867,
+   "h1": 9.617,
+   "http_race": 10.347,
+   "best_http": 9.617,
+   "bytes_single": 14848746,
+   "sockets_single": 184,
+   "bytes_race": 8832790,
+   "sockets_race": 378,
+   "race_same_hash": false,
+   "race_winner": 1,
+   "http_bytes_single": 5081883,
+   "http_sockets_single": 3,
+   "http_bytes_race": 4171788,
+   "http_sockets_race": 5,
+   "http_probes": [
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 9.596,
+     "total": 10.223,
+     "final": "https://c13.9xbud.com/vidstream/,0nIzxGaiojI0NXZmlmbh1mIsISbvNmLyVWehxGc4ljI6ICdz9Gaf5mc1RXZyJCLlNHbhZmOiQXatlGbfVmepNnI"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 5.533,
+     "total": 5.743,
+     "final": "https://o12.9xbud.com/vidstream/9JycshmI6ICdzVmZp5WYtJCLi02bj5icllXYsBHe5IiOiQ3cvh2XuJXd0VmciwSZzxWYmpjI0lWbpx2XlpXazJCL"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 7.538,
+     "total": 8.725,
+     "final": "https://o6.9xbud.com/vidstream/,,QfiMHboJiOiQ3clZWauFWbiwiIt92YuIXZ5FGbwhXOiojI0N3bo9lbyVHdlJnIsU2csFmZ6ICdp1Was9VZ6l2ci"
+    },
+    {
+     "detail": "MultiLang Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 302,
+     "ttfb": 9.52,
+     "total": 12.742,
+     "final": "https://vidsrc.party/v/2NwY0MwNQQgAF4ts/stream"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 404,
+     "ttfb": 3.105,
+     "total": 3.105,
+     "final": "https://afrilix.notorrent2.workers.dev/v1/afrilix/movies/129?tipe=movie&timestamp=1793951372"
+    },
+    {
+     "detail": "Audio Latino [FREE TRIAL]",
+     "height": 1080,
+     "code": 302,
+     "ttfb": 0.277,
+     "total": 12.161,
+     "final": "https://proxyvip.notorrent2.workers.dev/?url=https://vimeos.net/z6eufmn1jlj2&timestamp=1793951375"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 2.839,
+     "total": 3.572,
+     "final": "https://c9.9xbud.com/vidstream/,,QfiMHboJiOiQ3clZWauFWbiwiIt92YuIXZ5FGbwhXOiojI0N3bo9lbyVHdlJnIsU2csFmZ6ICdp1Was9VZ6l2ci"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 302,
+     "ttfb": 0.263,
+     "total": 12.14,
+     "final": "https://proxyvip.notorrent2.workers.dev/?url=https://streamstart.cfd/Arke/movie/129?verify=false&timestamp=1793953929"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 7.424,
+     "total": 8.655,
+     "final": "https://o4.9xbud.com/vidstream/,,QfiMHboJiOiQ3clZWauFWbiwiIt92YuIXZ5FGbwhXOiojI0N3bo9lbyVHdlJnIsU2csFmZ6ICdp1Was9VZ6l2ci"
+    },
+    {
+     "detail": "MultiLang Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 302,
+     "ttfb": 11.928,
+     "total": 12.001,
+     "final": "https://vidsrc.party/v/NcC_hlwn9NAy75dQ/stream"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 404,
+     "ttfb": 2.985,
+     "total": 2.985,
+     "final": "https://afrilix.notorrent2.workers.dev/v1/afrilix/movies/129?tipe=movie&timestamp=1793953962"
+    },
+    {
+     "detail": "Audio Latino [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 5.67,
+     "total": 5.838,
+     "final": "https://p5.9xbud.com/vidstream/9JycshmI6ICdzVmZp5WYtJCLi02bj5icllXYsBHe5IiOiQ3cvh2XuJXd0VmciwSZzxWYmpjI0lWbpx2XlpXazJCLl"
+    }
+   ],
+   "http_probe_ttfb": [
+    9.596,
+    5.533,
+    7.538,
+    2.839,
+    7.424,
+    5.67
+   ]
+  },
+  {
+   "id": "tt0903747:1:1",
+   "title": "Breaking Bad",
+   "kind": "series",
+   "resolve_s": 0.164,
+   "s0": 1.902,
+   "s1": 5.57,
+   "s2": 6.929,
+   "s0_trials": 3,
+   "s1_trials": 3,
+   "s0_failures": 0,
+   "s1_failures": 1,
+   "race": 4.014,
+   "race_trials": 3,
+   "race_failures": 0,
+   "single": 1.902,
+   "ideal_race": 1.902,
+   "h0": 3.575,
+   "h1": 1.551,
+   "http_race": 1.513,
+   "best_http": 1.551,
+   "bytes_single": 2457475,
+   "sockets_single": 195,
+   "bytes_race": 10959792,
+   "sockets_race": 393,
+   "race_same_hash": false,
+   "race_winner": 0,
+   "http_bytes_single": 11773799,
+   "http_sockets_single": 5,
+   "http_bytes_race": 2362857,
+   "http_sockets_race": 5,
+   "http_probes": [
+    {
+     "detail": "Original Audio",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 0.984,
+     "total": 0.984,
+     "final": "https://quietmidnightgardeningideas.site/J5aAmhrzk/pl/H4sIAAAAAAAAAw3Hy3KDIBQA0F_CRzJJl018jyQgXJEdghkb0TgpUy1f357dUQM6Hk"
+    },
+    {
+     "detail": "Original Audio",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 0.465,
+     "total": 0.469,
+     "final": "https://vod-limit-stream.dramasfree.com/a114d4c1542545d6a66c8892896bcc42/d81787c968f046518811de824a2104ed-cde85f7981033e"
+    },
+    {
+     "detail": "Original Audio",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 0.439,
+     "total": 0.446,
+     "final": "https://vod-limit-stream.dramasfree.com/a114d4c1542545d6a66c8892896bcc42/d81787c968f046518811de824a2104ed-cde85f7981033e"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 9.089,
+     "total": 9.886,
+     "final": "https://o6.9xbud.com/vidstream/,0nIzxGaiojI0NXZmlmbh1mIsISbvNmLyVWehxGc4ljI6ICdz9Gaf5mc1RXZyJCLlNHbhZmOiQXatlGbfVmepNnIs"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 5.615,
+     "total": 5.903,
+     "final": "https://p4.9xbud.com/vidstream/,0nIzxGaiojI0NXZmlmbh1mIsISbvNmLyVWehxGc4ljI6ICdz9Gaf5mc1RXZyJCLlNHbhZmOiQXatlGbfVmepNnIs"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 6.094,
+     "total": 6.653,
+     "final": "https://f5.9xbud.com/vidstream/9JycshmI6ICdzVmZp5WYtJCLi02bj5icllXYsBHe5IiOiQ3cvh2XuJXd0VmciwSZzxWYmpjI0lWbpx2XlpXazJCLl"
+    },
+    {
+     "detail": "Original Audio",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 0.994,
+     "total": 0.994,
+     "final": "https://quietmidnightgardeningideas.site/J5aAmhrzk/pl/H4sIAAAAAAAAAw3MyXaDIBQA0F8SEBu7TC16rNI6PdQdgm2i0GpG4tc35.4vJlLRna"
+    },
+    {
+     "detail": "Original Audio",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 0.676,
+     "total": 0.683,
+     "final": "https://vod-limit-stream.dramasfree.com/a114d4c1542545d6a66c8892896bcc42/d81787c968f046518811de824a2104ed-cde85f7981033e"
+    },
+    {
+     "detail": "Original Audio",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 0.386,
+     "total": 0.394,
+     "final": "https://vod-limit-stream.dramasfree.com/a114d4c1542545d6a66c8892896bcc42/d81787c968f046518811de824a2104ed-cde85f7981033e"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 5.432,
+     "total": 6.238,
+     "final": "https://o4.9xbud.com/vidstream/,0nIzxGaiojI0NXZmlmbh1mIsISbvNmLyVWehxGc4ljI6ICdz9Gaf5mc1RXZyJCLlNHbhZmOiQXatlGbfVmepNnIs"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 6.101,
+     "total": 6.862,
+     "final": "https://o5.9xbud.com/vidstream/,0nIzxGaiojI0NXZmlmbh1mIsISbvNmLyVWehxGc4ljI6ICdz9Gaf5mc1RXZyJCLlNHbhZmOiQXatlGbfVmepNnIs"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 5.38,
+     "total": 5.543,
+     "final": "https://o13.9xbud.com/vidstream/9JycshmI6ICdzVmZp5WYtJCLi02bj5icllXYsBHe5IiOiQ3cvh2XuJXd0VmciwSZzxWYmpjI0lWbpx2XlpXazJCL"
+    }
+   ],
+   "http_probe_ttfb": [
+    0.984,
+    0.465,
+    0.439,
+    9.089,
+    5.615,
+    6.094,
+    0.994,
+    0.676,
+    0.386,
+    5.432,
+    6.101,
+    5.38
+   ]
+  },
+  {
+   "id": "tt0944947:1:1",
+   "title": "Game of Thrones",
+   "kind": "series",
+   "resolve_s": 0.219,
+   "s0": 3.199,
+   "s1": 7.823,
+   "s2": 4.986,
+   "s0_trials": 3,
+   "s1_trials": 3,
+   "s0_failures": 0,
+   "s1_failures": 0,
+   "race": 2.958,
+   "race_trials": 3,
+   "race_failures": 0,
+   "single": 3.199,
+   "ideal_race": 3.199,
+   "h0": 3.654,
+   "h1": 1.45,
+   "http_race": 1.462,
+   "best_http": 1.45,
+   "bytes_single": 8464927,
+   "sockets_single": 196,
+   "bytes_race": 31042638,
+   "sockets_race": 392,
+   "race_same_hash": false,
+   "race_winner": 1,
+   "http_bytes_single": 2268555,
+   "http_sockets_single": 5,
+   "http_bytes_race": 1953153,
+   "http_sockets_race": 5,
+   "http_probes": [
+    {
+     "detail": "Original Audio",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 0.913,
+     "total": 0.913,
+     "final": "https://highperformancebrands.site/2VoJOn8at/pl/H4sIAAAAAAAAAx3PWXKDIAAA0CsBRhP7V1xDAxORRfnTYBZFSzNOJ_H0nem7wYu78HpAYA.u"
+    },
+    {
+     "detail": "Original Audio",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 0.622,
+     "total": 0.627,
+     "final": "https://vod-limit-stream.dramasfree.com/32964b93c7054186912b88ceda23f454/84225ae0a0fa4861956c0b87dcf51c35-ed7f1192f946b5"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 6.24,
+     "total": 7.173,
+     "final": "https://f5.9xbud.com/vidstream/9JycshmI6ICdzVmZp5WYtJCLi02bj5icllXYsBHe5IiOiQ3cvh2XuJXd0VmciwSZzxWYmpjI0lWbpx2XlpXazJCLl"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 5.564,
+     "total": 5.719,
+     "final": "https://o12.9xbud.com/vidstream/,0nIzxGaiojI0NXZmlmbh1mIsISbvNmLyVWehxGc4ljI6ICdz9Gaf5mc1RXZyJCLlNHbhZmOiQXatlGbfVmepNnI"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 5.914,
+     "total": 6.153,
+     "final": "https://o13.9xbud.com/vidstream/,,QfiMHboJiOiQ3clZWauFWbiwiIt92YuIXZ5FGbwhXOiojI0N3bo9lbyVHdlJnIsU2csFmZ6ICdp1Was9VZ6l2c"
+    },
+    {
+     "detail": "Audio Latino",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 0.704,
+     "total": 0.709,
+     "final": "https://vod-limit-stream.dramasfree.com/10227b9e6dea71f0bfd086c6360c0102/c989ed1bf27d4ddaa3a934e0426e1590-700bf35ed6d162"
+    },
+    {
+     "detail": "Original Audio",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 1.095,
+     "total": 1.096,
+     "final": "https://highperformancebrands.site/2VoJOn8at/pl/H4sIAAAAAAAAAw3OW3KDIBQA0C2hwCT2LzZgQiZO5XFR_kDScXwkdmrT6Orbs4KT7FJ8QxFj"
+    },
+    {
+     "detail": "Original Audio",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 0.671,
+     "total": 0.676,
+     "final": "https://vod-limit-stream.dramasfree.com/32964b93c7054186912b88ceda23f454/84225ae0a0fa4861956c0b87dcf51c35-ed7f1192f946b5"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 6.244,
+     "total": 6.765,
+     "final": "https://c9.9xbud.com/vidstream/9JycshmI6ICdzVmZp5WYtJCLi02bj5icllXYsBHe5IiOiQ3cvh2XuJXd0VmciwSZzxWYmpjI0lWbpx2XlpXazJCLl"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 5.435,
+     "total": 6.175,
+     "final": "https://o5.9xbud.com/vidstream/9JycshmI6ICdzVmZp5WYtJCLi02bj5icllXYsBHe5IiOiQ3cvh2XuJXd0VmciwSZzxWYmpjI0lWbpx2XlpXazJCLl"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 8.331,
+     "total": 9.258,
+     "final": "https://o3.9xbud.com/vidstream/,0nIzxGaiojI0NXZmlmbh1mIsISbvNmLyVWehxGc4ljI6ICdz9Gaf5mc1RXZyJCLlNHbhZmOiQXatlGbfVmepNnIs"
+    },
+    {
+     "detail": "Audio Latino",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 0.506,
+     "total": 0.513,
+     "final": "https://vod-limit-stream.dramasfree.com/10227b9e6dea71f0bfd086c6360c0102/c989ed1bf27d4ddaa3a934e0426e1590-700bf35ed6d162"
+    }
+   ],
+   "http_probe_ttfb": [
+    0.913,
+    0.622,
+    6.24,
+    5.564,
+    5.914,
+    0.704,
+    1.095,
+    0.671,
+    6.244,
+    5.435,
+    8.331,
+    0.506
+   ]
+  },
+  {
+   "id": "tt0386676:2:1",
+   "title": "The Office",
+   "kind": "series",
+   "resolve_s": 0.168,
+   "s0": 6.4,
+   "s1": 15.149,
+   "s2": 4.543,
+   "s0_trials": 3,
+   "s1_trials": 3,
+   "s0_failures": 0,
+   "s1_failures": 0,
+   "race": 7.801,
+   "race_trials": 3,
+   "race_failures": 0,
+   "single": 6.4,
+   "ideal_race": 6.4,
+   "h0": 3.274,
+   "h1": 1.756,
+   "http_race": 1.385,
+   "best_http": 1.756,
+   "bytes_single": 16988651,
+   "sockets_single": 195,
+   "bytes_race": 28796631,
+   "sockets_race": 375,
+   "race_same_hash": false,
+   "race_winner": 0,
+   "http_bytes_single": 2786621,
+   "http_sockets_single": 5,
+   "http_bytes_race": 2787931,
+   "http_sockets_race": 5,
+   "http_probes": [
+    {
+     "detail": "Original Audio",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 0.993,
+     "total": 0.993,
+     "final": "https://highincomecreators.site/Y2EGNiCj7/pl/H4sIAAAAAAAAAwXB3XaCIAAA4FcC1Ka7LCHHCZb8JncielpCuR1rq6ff923CFKYC5eU4wSkbKzh"
+    },
+    {
+     "detail": "Original Audio",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 0.344,
+     "total": 0.345,
+     "final": "https://vod-limit-stream.dramasfree.com/83061e3c240a41bc8d1d8c0c507a29db/6a91bfce325d419f88979f3a48369f06-3b736eb5010cca"
+    },
+    {
+     "detail": "Original Audio",
+     "height": 1080,
+     "code": 206,
+     "ttfb": 0.601,
+     "total": 0.601,
+     "final": "https://astream-20-1.voxzer.org/stream/5e04ba71c8554f62b0761006/1080/index.m3u8?timestamp=1793951586"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 7.384,
+     "total": 7.803,
+     "final": "https://c9.9xbud.com/vidstream/,0nIzxGaiojI0NXZmlmbh1mIsISbvNmLyVWehxGc4ljI6ICdz9Gaf5mc1RXZyJCLlNHbhZmOiQXatlGbfVmepNnIs"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 5.025,
+     "total": 5.155,
+     "final": "https://p5.9xbud.com/vidstream/,0nIzxGaiojI0NXZmlmbh1mIsISbvNmLyVWehxGc4ljI6ICdz9Gaf5mc1RXZyJCLlNHbhZmOiQXatlGbfVmepNnIs"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 6.31,
+     "total": 6.473,
+     "final": "https://p6.9xbud.com/vidstream/,,QfiMHboJiOiQ3clZWauFWbiwiIt92YuIXZ5FGbwhXOiojI0N3bo9lbyVHdlJnIsU2csFmZ6ICdp1Was9VZ6l2ci"
+    },
+    {
+     "detail": "Original Audio",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 1.128,
+     "total": 1.128,
+     "final": "https://highincomecreators.site/Y2EGNiCj7/pl/H4sIAAAAAAAAAw3O0XqCIBgA0FcC1CW7tcjYxE_kx8adRM4Smy0s19Ov8wQHp.nKxqujo1FH0.6"
+    },
+    {
+     "detail": "Original Audio",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 0.378,
+     "total": 0.378,
+     "final": "https://vod-limit-stream.dramasfree.com/83061e3c240a41bc8d1d8c0c507a29db/6a91bfce325d419f88979f3a48369f06-3b736eb5010cca"
+    },
+    {
+     "detail": "Original Audio",
+     "height": 1080,
+     "code": 206,
+     "ttfb": 0.595,
+     "total": 0.595,
+     "final": "https://astream-20-1.voxzer.org/stream/5e04ba71c8554f62b0761006/1080/index.m3u8?timestamp=1793954137"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 11.024,
+     "total": 11.545,
+     "final": "https://c9.9xbud.com/vidstream/,0nIzxGaiojI0NXZmlmbh1mIsISbvNmLyVWehxGc4ljI6ICdz9Gaf5mc1RXZyJCLlNHbhZmOiQXatlGbfVmepNnIs"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 5.899,
+     "total": 6.388,
+     "final": "https://o6.9xbud.com/vidstream/,0nIzxGaiojI0NXZmlmbh1mIsISbvNmLyVWehxGc4ljI6ICdz9Gaf5mc1RXZyJCLlNHbhZmOiQXatlGbfVmepNnIs"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 7.414,
+     "total": 7.911,
+     "final": "https://o7.9xbud.com/vidstream/9JycshmI6ICdzVmZp5WYtJCLi02bj5icllXYsBHe5IiOiQ3cvh2XuJXd0VmciwSZzxWYmpjI0lWbpx2XlpXazJCLl"
+    }
+   ],
+   "http_probe_ttfb": [
+    0.993,
+    0.344,
+    0.601,
+    7.384,
+    5.025,
+    6.31,
+    1.128,
+    0.378,
+    0.595,
+    11.024,
+    5.899,
+    7.414
+   ]
+  },
+  {
+   "id": "tt0306414:1:1",
+   "title": "The Wire",
+   "kind": "series",
+   "resolve_s": 0.209,
+   "s0": 4.652,
+   "s1": 17.569,
+   "s2": 8.271,
+   "s0_trials": 3,
+   "s1_trials": 3,
+   "s0_failures": 0,
+   "s1_failures": 0,
+   "race": 7.297,
+   "race_trials": 3,
+   "race_failures": 0,
+   "single": 4.652,
+   "ideal_race": 4.652,
+   "h0": 3.511,
+   "h1": 12.559,
+   "http_race": 3.399,
+   "best_http": 3.511,
+   "bytes_single": 27177317,
+   "sockets_single": 193,
+   "bytes_race": 69985816,
+   "sockets_race": 388,
+   "race_same_hash": false,
+   "race_winner": 0,
+   "http_bytes_single": 3560243,
+   "http_sockets_single": 5,
+   "http_bytes_race": 2885430,
+   "http_sockets_race": 6,
+   "http_probes": [
+    {
+     "detail": "Original Audio",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 0.906,
+     "total": 0.906,
+     "final": "https://remoteincomeformula.site/wzprFJsxb/pl/H4sIAAAAAAAAAw3O25JDMAAA0F_KpVr20da9iRFJkDcRO7ZCO5gpvn73fMHBrvF.MHag61xb6O"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 8.721,
+     "total": 9.079,
+     "final": "https://o7.9xbud.com/vidstream/9JycshmI6ICdzVmZp5WYtJCLi02bj5icllXYsBHe5IiOiQ3cvh2XuJXd0VmciwSZzxWYmpjI0lWbpx2XlpXazJCLl"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 6.012,
+     "total": 6.639,
+     "final": "https://c13.9xbud.com/vidstream/,0nIzxGaiojI0NXZmlmbh1mIsISbvNmLyVWehxGc4ljI6ICdz9Gaf5mc1RXZyJCLlNHbhZmOiQXatlGbfVmepNnI"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 8.598,
+     "total": 8.598,
+     "final": "https://o3.9xbud.com/vidstream/,,QfiMHboJiOiQ3clZWauFWbiwiIt92YuIXZ5FGbwhXOiojI0N3bo9lbyVHdlJnIsU2csFmZ6ICdp1Was9VZ6l2ci"
+    },
+    {
+     "detail": "Audio Latino",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 0.696,
+     "total": 0.704,
+     "final": "https://vod-limit-stream.dramasfree.com/403e4684b85d71efbfaa87c7371d0102/2a12f490168e4458bf4db796c6fd2cc0-701ff46255808c"
+    },
+    {
+     "detail": "Audio Latino",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 0.742,
+     "total": 0.748,
+     "final": "https://vod-limit-stream.dramasfree.com/7d2f5714814942c9abb9d9ae3eaa7560/972ab9cdda8c45169a71559191f538a0-55b35d6716fabb"
+    },
+    {
+     "detail": "Original Audio",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 0.951,
+     "total": 0.951,
+     "final": "https://remoteincomeformula.site/wzprFJsxb/pl/H4sIAAAAAAAAAwXB2XKCMBQA0F8Kwaj00SG4DancJDfAGwEplXWQKubre06x2_nEsxtmvXJb1x"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 7.632,
+     "total": 7.633,
+     "final": "https://o12.9xbud.com/vidstream/,,QfiMHboJiOiQ3clZWauFWbiwiIt92YuIXZ5FGbwhXOiojI0N3bo9lbyVHdlJnIsU2csFmZ6ICdp1Was9VZ6l2c"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 5.693,
+     "total": 6.221,
+     "final": "https://c8.9xbud.com/vidstream/,0nIzxGaiojI0NXZmlmbh1mIsISbvNmLyVWehxGc4ljI6ICdz9Gaf5mc1RXZyJCLlNHbhZmOiQXatlGbfVmepNnIs"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 9.761,
+     "total": 11.627,
+     "final": "https://o6.9xbud.com/vidstream/,0nIzxGaiojI0NXZmlmbh1mIsISbvNmLyVWehxGc4ljI6ICdz9Gaf5mc1RXZyJCLlNHbhZmOiQXatlGbfVmepNnIs"
+    },
+    {
+     "detail": "Audio Latino",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 0.518,
+     "total": 0.525,
+     "final": "https://vod-limit-stream.dramasfree.com/403e4684b85d71efbfaa87c7371d0102/2a12f490168e4458bf4db796c6fd2cc0-701ff46255808c"
+    },
+    {
+     "detail": "Audio Latino",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 0.504,
+     "total": 0.511,
+     "final": "https://vod-limit-stream.dramasfree.com/7d2f5714814942c9abb9d9ae3eaa7560/972ab9cdda8c45169a71559191f538a0-55b35d6716fabb"
+    }
+   ],
+   "http_probe_ttfb": [
+    0.906,
+    8.721,
+    6.012,
+    8.598,
+    0.696,
+    0.742,
+    0.951,
+    7.632,
+    5.693,
+    9.761,
+    0.518,
+    0.504
+   ]
+  },
+  {
+   "id": "tt3032476:1:1",
+   "title": "Better Call Saul",
+   "kind": "series",
+   "resolve_s": 0.128,
+   "s0": 6.579,
+   "s1": 10.559,
+   "s2": 11.383,
+   "s0_trials": 3,
+   "s1_trials": 3,
+   "s0_failures": 0,
+   "s1_failures": 0,
+   "race": 7.111,
+   "race_trials": 3,
+   "race_failures": 0,
+   "single": 6.579,
+   "ideal_race": 6.579,
+   "h0": 3.665,
+   "h1": 1.497,
+   "http_race": 1.49,
+   "best_http": 1.497,
+   "bytes_single": 1808311,
+   "sockets_single": 186,
+   "bytes_race": 9964027,
+   "sockets_race": 375,
+   "race_same_hash": false,
+   "race_winner": 0,
+   "http_bytes_single": 5516775,
+   "http_sockets_single": 5,
+   "http_bytes_race": 5814136,
+   "http_sockets_race": 5,
+   "http_probes": [
+    {
+     "detail": "Original Audio",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 1.035,
+     "total": 1.035,
+     "final": "https://growthmindsetcollective.site/rNyXmX1Ap/pl/H4sIAAAAAAAAAw3N2XKCMBhA4VfKYjumd7UCNgx_JWRB7kLCmMrWCkXl6evtmfnmWP.6Za"
+    },
+    {
+     "detail": "Original Audio",
+     "height": 1080,
+     "code": 206,
+     "ttfb": 0.767,
+     "total": 0.767,
+     "final": "https://vs7z-limit.dramasfree.com/0029bf97b9704ee89a695ae2b8fbfef4/158fb65ef02b41a685948d80694b4b28-6e1a327a13e18b2932cb"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 7.148,
+     "total": 7.901,
+     "final": "https://o4.9xbud.com/vidstream/,0nIzxGaiojI0NXZmlmbh1mIsISbvNmLyVWehxGc4ljI6ICdz9Gaf5mc1RXZyJCLlNHbhZmOiQXatlGbfVmepNnIs"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 7.336,
+     "total": 7.854,
+     "final": "https://c8.9xbud.com/vidstream/9JycshmI6ICdzVmZp5WYtJCLi02bj5icllXYsBHe5IiOiQ3cvh2XuJXd0VmciwSZzxWYmpjI0lWbpx2XlpXazJCLl"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 9.321,
+     "total": 10.01,
+     "final": "https://o3.9xbud.com/vidstream/9JycshmI6ICdzVmZp5WYtJCLi02bj5icllXYsBHe5IiOiQ3cvh2XuJXd0VmciwSZzxWYmpjI0lWbpx2XlpXazJCLl"
+    },
+    {
+     "detail": "Audio Latino",
+     "height": 1080,
+     "code": 206,
+     "ttfb": 0.426,
+     "total": 0.426,
+     "final": "https://vs7z-limit.dramasfree.com/7e6fe7295ebd46248438f62d0f9e3a19/0bfd4986ef124cb4a8938f7118e7141e-ed5cda27bf643ff9771a"
+    },
+    {
+     "detail": "Original Audio",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 1.058,
+     "total": 1.059,
+     "final": "https://growthmindsetcollective.site/rNyXmX1Ap/pl/H4sIAAAAAAAAAwXBy3KDIBQA0F.6iDa1S2d8xEZTEUTYCZg6iiZRptF8fc.Bk28CrdTNhO"
+    },
+    {
+     "detail": "Original Audio",
+     "height": 1080,
+     "code": 206,
+     "ttfb": 0.524,
+     "total": 0.524,
+     "final": "https://vs7z-limit.dramasfree.com/0029bf97b9704ee89a695ae2b8fbfef4/158fb65ef02b41a685948d80694b4b28-6e1a327a13e18b2932cb"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 1.875,
+     "total": 2.092,
+     "final": "https://p6.9xbud.com/vidstream/,0nIzxGaiojI0NXZmlmbh1mIsISbvNmLyVWehxGc4ljI6ICdz9Gaf5mc1RXZyJCLlNHbhZmOiQXatlGbfVmepNnIs"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 4.002,
+     "total": 4.529,
+     "final": "https://c9.9xbud.com/vidstream/9JycshmI6ICdzVmZp5WYtJCLi02bj5icllXYsBHe5IiOiQ3cvh2XuJXd0VmciwSZzxWYmpjI0lWbpx2XlpXazJCLl"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 7.429,
+     "total": 7.95,
+     "final": "https://c8.9xbud.com/vidstream/,0nIzxGaiojI0NXZmlmbh1mIsISbvNmLyVWehxGc4ljI6ICdz9Gaf5mc1RXZyJCLlNHbhZmOiQXatlGbfVmepNnIs"
+    },
+    {
+     "detail": "Audio Latino",
+     "height": 1080,
+     "code": 206,
+     "ttfb": 0.381,
+     "total": 0.381,
+     "final": "https://vs7z-limit.dramasfree.com/7e6fe7295ebd46248438f62d0f9e3a19/0bfd4986ef124cb4a8938f7118e7141e-ed5cda27bf643ff9771a"
+    }
+   ],
+   "http_probe_ttfb": [
+    1.035,
+    0.767,
+    7.148,
+    7.336,
+    9.321,
+    0.426,
+    1.058,
+    0.524,
+    1.875,
+    4.002,
+    7.429,
+    0.381
+   ]
+  },
+  {
+   "id": "tt7366338:1:1",
+   "title": "Chernobyl",
+   "kind": "series",
+   "resolve_s": 0.255,
+   "s0": 5.157,
+   "s1": 5.171,
+   "s2": 1.722,
+   "s0_trials": 3,
+   "s1_trials": 3,
+   "s0_failures": 0,
+   "s1_failures": 0,
+   "race": 4.286,
+   "race_trials": 3,
+   "race_failures": 0,
+   "single": 5.157,
+   "ideal_race": 5.157,
+   "h0": 3.777,
+   "h1": 1.916,
+   "http_race": 1.388,
+   "best_http": 1.916,
+   "bytes_single": 23757236,
+   "sockets_single": 191,
+   "bytes_race": 11084343,
+   "sockets_race": 381,
+   "race_same_hash": false,
+   "race_winner": 1,
+   "http_bytes_single": 32503467,
+   "http_sockets_single": 5,
+   "http_bytes_race": 360665,
+   "http_sockets_race": 5,
+   "http_probes": [
+    {
+     "detail": "Original Audio",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 0.941,
+     "total": 0.942,
+     "final": "https://nextgenmarketinghub.site/XbwfCL2HU/pl/H4sIAAAAAAAAAw3M0VaDIBgA4FcC5pp2uZJx3AET.bFxB.LJiSZ1dtJ4.voe4MNPGXZoQHlBnD"
+    },
+    {
+     "detail": "Original Audio",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 0.765,
+     "total": 0.769,
+     "final": "https://vod-limit-stream.dramasfree.com/6bd2fe0cf4504ce58a1fa9abe9ed6d47/5dc66728b6f54094b74f635063ad30c7-9deedd9003c5ef"
+    },
+    {
+     "detail": "Audio Latino",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 0.689,
+     "total": 0.695,
+     "final": "https://vod-limit-stream.dramasfree.com/10e02151d0e871f0bf863108f4940102/2afd7b427c3083290166c025cdc28349-sd.m3u8?hdnts="
+    },
+    {
+     "detail": "\u00c1udio Portugu\u00eas",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 0.578,
+     "total": 0.585,
+     "final": "https://vod-limit-stream.dramasfree.com/10162bb3d0ec71f0a4045014c1da0102/1fd758afa3b6ae4636ef7b215db87c8a-sd.m3u8?hdnts="
+    },
+    {
+     "detail": "Audio Latino",
+     "height": 1080,
+     "code": 206,
+     "ttfb": 10.566,
+     "total": 10.566,
+     "final": "https://stream-4891-212-105.pkcdn.org/hls/juohorkrfeikkfn2mbr76masesms5sgj2ovxxcul5wkt2iivo964921197/index.m3u8?timestam"
+    },
+    {
+     "detail": "Original Audio [FREE]",
+     "height": 720,
+     "code": 206,
+     "ttfb": 0.568,
+     "total": 0.568,
+     "final": "https://astream-17-1.voxzer.org/stream/5e9d8273a79beb73b0bf912f/720/index.m3u8?timestamp=1793951957"
+    },
+    {
+     "detail": "Original Audio",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 0.916,
+     "total": 0.916,
+     "final": "https://nextgenmarketinghub.site/XbwfCL2HU/pl/H4sIAAAAAAAAAw3L3VaDIAAA4FdCmS27NGSOhJMIjHEnP.fYBPOs5Smevr77z9qjrY9l_VQe4H"
+    },
+    {
+     "detail": "Original Audio",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 0.442,
+     "total": 0.447,
+     "final": "https://vod-limit-stream.dramasfree.com/6bd2fe0cf4504ce58a1fa9abe9ed6d47/5dc66728b6f54094b74f635063ad30c7-9deedd9003c5ef"
+    },
+    {
+     "detail": "Audio Latino",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 0.375,
+     "total": 0.38,
+     "final": "https://vod-limit-stream.dramasfree.com/10e02151d0e871f0bf863108f4940102/2afd7b427c3083290166c025cdc28349-sd.m3u8?hdnts="
+    },
+    {
+     "detail": "\u00c1udio Portugu\u00eas",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 0.464,
+     "total": 0.47,
+     "final": "https://vod-limit-stream.dramasfree.com/10162bb3d0ec71f0a4045014c1da0102/1fd758afa3b6ae4636ef7b215db87c8a-sd.m3u8?hdnts="
+    },
+    {
+     "detail": "Audio Latino",
+     "height": 1080,
+     "code": 206,
+     "ttfb": 4.594,
+     "total": 4.594,
+     "final": "https://stream-4891-212-105.pkcdn.org/hls/juohorkrfeikkfn2mbr76masesms5sgj2ovxxcul5wkt2iivo298943539/index.m3u8?timestam"
+    },
+    {
+     "detail": "Original Audio [FREE]",
+     "height": 720,
+     "code": 206,
+     "ttfb": 0.633,
+     "total": 0.633,
+     "final": "https://astream-17-1.voxzer.org/stream/5e9d8273a79beb73b0bf912f/720/index.m3u8?timestamp=1793954333"
+    }
+   ],
+   "http_probe_ttfb": [
+    0.941,
+    0.765,
+    0.689,
+    0.578,
+    10.566,
+    0.568,
+    0.916,
+    0.442,
+    0.375,
+    0.464,
+    4.594,
+    0.633
+   ]
+  },
+  {
+   "id": "tt7660850:1:1",
+   "title": "Succession",
+   "kind": "series",
+   "resolve_s": 0.186,
+   "s0": 4.832,
+   "s1": 2.386,
+   "s2": 7.372,
+   "s0_trials": 3,
+   "s1_trials": 3,
+   "s0_failures": 2,
+   "s1_failures": 0,
+   "race": 2.103,
+   "race_trials": 3,
+   "race_failures": 0,
+   "single": 4.832,
+   "ideal_race": 2.386,
+   "h0": 2.851,
+   "h1": 9.261,
+   "http_race": 1.482,
+   "best_http": 2.851,
+   "bytes_single": 28747745,
+   "sockets_single": 183,
+   "bytes_race": 27319331,
+   "sockets_race": 381,
+   "race_same_hash": false,
+   "race_winner": 1,
+   "http_bytes_single": 14831745,
+   "http_sockets_single": 4,
+   "http_bytes_race": 2705626,
+   "http_sockets_race": 5,
+   "http_probes": [
+    {
+     "detail": "Original Audio",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 0.929,
+     "total": 0.929,
+     "final": "https://solopreneurstrategyguide.site/GOsQFbDna/pl/H4sIAAAAAAAAAw3O0W6CMBQA0F8qFIPuVSihkxpKuYX7RlsJUkAmy6J8_fyBk.OiUxjeb"
+    },
+    {
+     "detail": "Original Audio",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 0.961,
+     "total": 0.968,
+     "final": "https://vod-limit-stream.dramasfree.com/2d4a54a44dda42859d7a744001a89e89/3068bda8d72b4e13a77f5d6bf0767857-3814e36d2d2079"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 7.824,
+     "total": 8.453,
+     "final": "https://c14.9xbud.com/vidstream/,,QfiMHboJiOiQ3clZWauFWbiwiIt92YuIXZ5FGbwhXOiojI0N3bo9lbyVHdlJnIsU2csFmZ6ICdp1Was9VZ6l2c"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 7.632,
+     "total": 8.415,
+     "final": "https://o7.9xbud.com/vidstream/9JycshmI6ICdzVmZp5WYtJCLi02bj5icllXYsBHe5IiOiQ3cvh2XuJXd0VmciwSZzxWYmpjI0lWbpx2XlpXazJCLl"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 7.253,
+     "total": 9.595,
+     "final": "https://o7.9xbud.com/vidstream/9JycshmI6ICdzVmZp5WYtJCLi02bj5icllXYsBHe5IiOiQ3cvh2XuJXd0VmciwSZzxWYmpjI0lWbpx2XlpXazJCLl"
+    },
+    {
+     "detail": "Audio Latino",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 1.015,
+     "total": 1.02,
+     "final": "https://vod-limit-stream.dramasfree.com/00075d34e4ff71ef9ba087c7361c0102/416730f0a2314ce892a1986d3145b28e-3cd8b4d91f144d"
+    },
+    {
+     "detail": "Original Audio",
+     "height": 1080,
+     "code": 0,
+     "ttfb": 0.0,
+     "total": 12.002,
+     "final": "https://addon.notorrent2.workers.dev/redirect?p=NvfnQzEse1O3%2FOnek2YvIdUkBOBIZVR3yxR7PAv4jwKonP7WIJ%2F5ZJYE0%2BbEd9xagn"
+    },
+    {
+     "detail": "Original Audio",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 0.549,
+     "total": 0.553,
+     "final": "https://vod-limit-stream.dramasfree.com/2d4a54a44dda42859d7a744001a89e89/3068bda8d72b4e13a77f5d6bf0767857-3814e36d2d2079"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 6.182,
+     "total": 6.928,
+     "final": "https://o3.9xbud.com/vidstream/,,QfiMHboJiOiQ3clZWauFWbiwiIt92YuIXZ5FGbwhXOiojI0N3bo9lbyVHdlJnIsU2csFmZ6ICdp1Was9VZ6l2ci"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 6.835,
+     "total": 7.762,
+     "final": "https://o5.9xbud.com/vidstream/9JycshmI6ICdzVmZp5WYtJCLi02bj5icllXYsBHe5IiOiQ3cvh2XuJXd0VmciwSZzxWYmpjI0lWbpx2XlpXazJCLl"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 302,
+     "ttfb": 0.243,
+     "total": 12.129,
+     "final": "https://proxyvip.notorrent2.workers.dev/?url=https://streamstart.cfd/Zelos/tv/76331/1/1?verify=false&timestamp=179395440"
+    },
+    {
+     "detail": "Audio Latino",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 0.469,
+     "total": 0.472,
+     "final": "https://vod-limit-stream.dramasfree.com/00075d34e4ff71ef9ba087c7361c0102/416730f0a2314ce892a1986d3145b28e-3cd8b4d91f144d"
+    }
+   ],
+   "http_probe_ttfb": [
+    0.929,
+    0.961,
+    7.824,
+    7.632,
+    7.253,
+    1.015,
+    0.549,
+    6.182,
+    6.835,
+    0.469
+   ]
+  },
+  {
+   "id": "tt3581920:1:1",
+   "title": "The Last of Us",
+   "kind": "series",
+   "resolve_s": 0.183,
+   "s0": 3.135,
+   "s1": 2.805,
+   "s2": 2.241,
+   "s0_trials": 3,
+   "s1_trials": 3,
+   "s0_failures": 0,
+   "s1_failures": 0,
+   "race": 3.792,
+   "race_trials": 3,
+   "race_failures": 0,
+   "single": 3.135,
+   "ideal_race": 2.805,
+   "h0": 4.285,
+   "h1": 1.534,
+   "http_race": 1.425,
+   "best_http": 1.534,
+   "bytes_single": 11545931,
+   "sockets_single": 184,
+   "bytes_race": 54595118,
+   "sockets_race": 346,
+   "race_same_hash": false,
+   "race_winner": 0,
+   "http_bytes_single": 1275826,
+   "http_sockets_single": 7,
+   "http_bytes_race": 2909582,
+   "http_sockets_race": 5,
+   "http_probes": [
+    {
+     "detail": "Original Audio",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 0.915,
+     "total": 0.916,
+     "final": "https://premiumcontentengine.site/4rFcpuJH9/pl/H4sIAAAAAAAAAwXB22KCIAAA0F8SEBt71GBlAyeKtzcCmylqLdfMr985LfZ3F.PvgMFnYgEK2"
+    },
+    {
+     "detail": "Original Audio",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 0.566,
+     "total": 0.573,
+     "final": "https://vod-limit-stream.dramasfree.com/36914f30954871ed826087c7361c0102/1e3aaf3989e69e0eadf1b4fb20e9f289-sd.mp4.m3u8?hd"
+    },
+    {
+     "detail": "Original Audio",
+     "height": 1080,
+     "code": 206,
+     "ttfb": 1.122,
+     "total": 1.122,
+     "final": "https://astream-8-1.voxzer.org/stream/63c575c59f7bd1c6c519aa1d/1080/index.m3u8?timestamp=1793952117"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 302,
+     "ttfb": 0.238,
+     "total": 12.126,
+     "final": "https://proxyvip.notorrent2.workers.dev/?url=https://streamstart.cfd/Apollo/tv/100088/1/1?verify=false&timestamp=1793952"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 6.117,
+     "total": 7.106,
+     "final": "https://o5.9xbud.com/vidstream/,,QfiMHboJiOiQ3clZWauFWbiwiIt92YuIXZ5FGbwhXOiojI0N3bo9lbyVHdlJnIsU2csFmZ6ICdp1Was9VZ6l2ci"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 6.751,
+     "total": 7.406,
+     "final": "https://o7.9xbud.com/vidstream/,0nIzxGaiojI0NXZmlmbh1mIsISbvNmLyVWehxGc4ljI6ICdz9Gaf5mc1RXZyJCLlNHbhZmOiQXatlGbfVmepNnIs"
+    },
+    {
+     "detail": "Original Audio",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 1.01,
+     "total": 1.01,
+     "final": "https://premiumcontentengine.site/4rFcpuJH9/pl/H4sIAAAAAAAAAwXBYXeCIBQA0L8EKqv2sYKsJZ3g8Uy.qbhcwGonT5q_fveyxaJJ6q6lrv0mC"
+    },
+    {
+     "detail": "Original Audio",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 0.465,
+     "total": 0.47,
+     "final": "https://vod-limit-stream.dramasfree.com/36914f30954871ed826087c7361c0102/1e3aaf3989e69e0eadf1b4fb20e9f289-sd.mp4.m3u8?hd"
+    },
+    {
+     "detail": "Original Audio",
+     "height": 1080,
+     "code": 206,
+     "ttfb": 0.588,
+     "total": 0.588,
+     "final": "https://astream-8-1.voxzer.org/stream/63c575c59f7bd1c6c519aa1d/1080/index.m3u8?timestamp=1793954451"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 7.984,
+     "total": 8.619,
+     "final": "https://c14.9xbud.com/vidstream/,,QfiMHboJiOiQ3clZWauFWbiwiIt92YuIXZ5FGbwhXOiojI0N3bo9lbyVHdlJnIsU2csFmZ6ICdp1Was9VZ6l2c"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 5.787,
+     "total": 6.316,
+     "final": "https://c8.9xbud.com/vidstream/,,QfiMHboJiOiQ3clZWauFWbiwiIt92YuIXZ5FGbwhXOiojI0N3bo9lbyVHdlJnIsU2csFmZ6ICdp1Was9VZ6l2ci"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 5.863,
+     "total": 5.864,
+     "final": "https://o12.9xbud.com/vidstream/,0nIzxGaiojI0NXZmlmbh1mIsISbvNmLyVWehxGc4ljI6ICdz9Gaf5mc1RXZyJCLlNHbhZmOiQXatlGbfVmepNnI"
+    }
+   ],
+   "http_probe_ttfb": [
+    0.915,
+    0.566,
+    1.122,
+    6.117,
+    6.751,
+    1.01,
+    0.465,
+    0.588,
+    7.984,
+    5.787,
+    5.863
+   ]
+  },
+  {
+   "id": "tt11198330:1:1",
+   "title": "House of the Dragon",
+   "kind": "series",
+   "resolve_s": 0.212,
+   "s0": 3.941,
+   "s1": 7.133,
+   "s2": 3.316,
+   "s0_trials": 3,
+   "s1_trials": 3,
+   "s0_failures": 0,
+   "s1_failures": 0,
+   "race": 1.899,
+   "race_trials": 3,
+   "race_failures": 0,
+   "single": 3.941,
+   "ideal_race": 3.941,
+   "h0": 4.574,
+   "h1": 1.692,
+   "http_race": 1.412,
+   "best_http": 1.692,
+   "bytes_single": 15098302,
+   "sockets_single": 191,
+   "bytes_race": 15193272,
+   "sockets_race": 371,
+   "race_same_hash": false,
+   "race_winner": 0,
+   "http_bytes_single": 7337469,
+   "http_sockets_single": 7,
+   "http_bytes_race": 600264,
+   "http_sockets_race": 5,
+   "http_probes": [
+    {
+     "detail": "Original Audio",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 0.901,
+     "total": 0.901,
+     "final": "https://onlinecoursecreator.site/KI4A15DKB/pl/H4sIAAAAAAAAAw3Oy3KDIBQA0F8S0Ens0voKDaTgBZSdQTJOgibTPGr8.nZ_FifZDIiQHg0pOm"
+    },
+    {
+     "detail": "Original Audio",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 0.745,
+     "total": 0.751,
+     "final": "https://vod-limit-stream.dramasfree.com/a887c834997142879f59499e59dbbae9/0793188e53bd4805b190744f0851cded-1d68bc39989327"
+    },
+    {
+     "detail": "Original Audio",
+     "height": 1080,
+     "code": 206,
+     "ttfb": 0.574,
+     "total": 0.574,
+     "final": "https://astream-11-1.voxzer.org/stream/634442629f7bd1c6c5199c57/1080/index.m3u8?timestamp=1793952181"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 5.983,
+     "total": 6.219,
+     "final": "https://p4.9xbud.com/vidstream/,,QfiMHboJiOiQ3clZWauFWbiwiIt92YuIXZ5FGbwhXOiojI0N3bo9lbyVHdlJnIsU2csFmZ6ICdp1Was9VZ6l2ci"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 6.065,
+     "total": 7.038,
+     "final": "https://o6.9xbud.com/vidstream/9JycshmI6ICdzVmZp5WYtJCLi02bj5icllXYsBHe5IiOiQ3cvh2XuJXd0VmciwSZzxWYmpjI0lWbpx2XlpXazJCLl"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 9.706,
+     "total": 9.974,
+     "final": "https://p6.9xbud.com/vidstream/9JycshmI6ICdzVmZp5WYtJCLi02bj5icllXYsBHe5IiOiQ3cvh2XuJXd0VmciwSZzxWYmpjI0lWbpx2XlpXazJCLl"
+    },
+    {
+     "detail": "Original Audio",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 0.922,
+     "total": 0.922,
+     "final": "https://onlinecoursecreator.site/KI4A15DKB/pl/H4sIAAAAAAAAAwXB0XqCIBgA0FdCRKvdzQ0sG7YMfso7BJopqCu_r.bT7xxNtEkjbGOzSdZXTZ"
+    },
+    {
+     "detail": "Original Audio",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 0.416,
+     "total": 0.423,
+     "final": "https://vod-limit-stream.dramasfree.com/a887c834997142879f59499e59dbbae9/0793188e53bd4805b190744f0851cded-1d68bc39989327"
+    },
+    {
+     "detail": "Original Audio",
+     "height": 1080,
+     "code": 206,
+     "ttfb": 0.581,
+     "total": 0.581,
+     "final": "https://astream-11-1.voxzer.org/stream/634442629f7bd1c6c5199c57/1080/index.m3u8?timestamp=1793954499"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 9.798,
+     "total": 10.422,
+     "final": "https://f4.9xbud.com/vidstream/,,QfiMHboJiOiQ3clZWauFWbiwiIt92YuIXZ5FGbwhXOiojI0N3bo9lbyVHdlJnIsU2csFmZ6ICdp1Was9VZ6l2ci"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 6.556,
+     "total": 7.335,
+     "final": "https://o4.9xbud.com/vidstream/9JycshmI6ICdzVmZp5WYtJCLi02bj5icllXYsBHe5IiOiQ3cvh2XuJXd0VmciwSZzxWYmpjI0lWbpx2XlpXazJCLl"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 7.061,
+     "total": 7.321,
+     "final": "https://p4.9xbud.com/vidstream/9JycshmI6ICdzVmZp5WYtJCLi02bj5icllXYsBHe5IiOiQ3cvh2XuJXd0VmciwSZzxWYmpjI0lWbpx2XlpXazJCLl"
+    }
+   ],
+   "http_probe_ttfb": [
+    0.901,
+    0.745,
+    0.574,
+    5.983,
+    6.065,
+    9.706,
+    0.922,
+    0.416,
+    0.581,
+    9.798,
+    6.556,
+    7.061
+   ]
+  },
+  {
+   "id": "tt0108778:1:1",
+   "title": "Friends",
+   "kind": "series",
+   "resolve_s": 0.143,
+   "s0": 3.466,
+   "s1": 18.689,
+   "s2": 15.31,
+   "s0_trials": 3,
+   "s1_trials": 3,
+   "s0_failures": 0,
+   "s1_failures": 0,
+   "race": 4.654,
+   "race_trials": 3,
+   "race_failures": 0,
+   "single": 3.466,
+   "ideal_race": 3.466,
+   "h0": 3.542,
+   "h1": 1.419,
+   "http_race": 1.416,
+   "best_http": 1.419,
+   "bytes_single": 81327567,
+   "sockets_single": 187,
+   "bytes_race": 12443413,
+   "sockets_race": 377,
+   "race_same_hash": false,
+   "race_winner": 0,
+   "http_bytes_single": 1368874,
+   "http_sockets_single": 5,
+   "http_bytes_race": 777797,
+   "http_sockets_race": 5,
+   "http_probes": [
+    {
+     "detail": "Original Audio",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 0.893,
+     "total": 0.893,
+     "final": "https://innovationdrivenstudio.site/oFIWDnzZD/pl/H4sIAAAAAAAAAwXB3XqCIAAA0FfiR1vu0hmYJiUCKncKLlMsV_ua.vQ7B2PP94BvUAP23R4"
+    },
+    {
+     "detail": "Original Audio",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 0.64,
+     "total": 0.64,
+     "final": "https://vod-limit-stream.dramasfree.com/04302a8c671a4c958a2ab1fea4c4df39/66c475b7af2b492cae6b42166e5d35bb-f060720af225ce"
+    },
+    {
+     "detail": "Original Audio",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 0.409,
+     "total": 0.409,
+     "final": "https://vod-limit-stream.dramasfree.com/04302a8c671a4c958a2ab1fea4c4df39/66c475b7af2b492cae6b42166e5d35bb-f060720af225ce"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 302,
+     "ttfb": 0.244,
+     "total": 12.129,
+     "final": "https://proxyvip.notorrent2.workers.dev/?url=https://streamstart.cfd/Apollo/tv/1668/1/1?verify=false&timestamp=179395227"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 302,
+     "ttfb": 0.251,
+     "total": 12.133,
+     "final": "https://proxyvip.notorrent2.workers.dev/?url=https://streamstart.cfd/Arke/tv/1668/1/1?verify=false&timestamp=1793952288"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 8.636,
+     "total": 8.636,
+     "final": "https://f5.9xbud.com/vidstream/,,QfiMHboJiOiQ3clZWauFWbiwiIt92YuIXZ5FGbwhXOiojI0N3bo9lbyVHdlJnIsU2csFmZ6ICdp1Was9VZ6l2ci"
+    },
+    {
+     "detail": "Original Audio",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 1.18,
+     "total": 1.181,
+     "final": "https://innovationdrivenstudio.site/oFIWDnzZD/pl/H4sIAAAAAAAAAwXBXXeCIBgA4L_Ehy7bXTuKWvo6USC4o7BRktlOW8tfv.dZUYLjxJIhOdF"
+    },
+    {
+     "detail": "Original Audio",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 0.321,
+     "total": 0.322,
+     "final": "https://vod-limit-stream.dramasfree.com/04302a8c671a4c958a2ab1fea4c4df39/66c475b7af2b492cae6b42166e5d35bb-f060720af225ce"
+    },
+    {
+     "detail": "Original Audio",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 0.429,
+     "total": 0.429,
+     "final": "https://vod-limit-stream.dramasfree.com/04302a8c671a4c958a2ab1fea4c4df39/66c475b7af2b492cae6b42166e5d35bb-f060720af225ce"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 5.953,
+     "total": 6.452,
+     "final": "https://o3.9xbud.com/vidstream/9JycshmI6ICdzVmZp5WYtJCLi02bj5icllXYsBHe5IiOiQ3cvh2XuJXd0VmciwSZzxWYmpjI0lWbpx2XlpXazJCLl"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 302,
+     "ttfb": 0.229,
+     "total": 12.124,
+     "final": "https://proxyvip.notorrent2.workers.dev/?url=https://streamstart.cfd/Arke/tv/1668/1/1?verify=false&timestamp=1793954559"
+    },
+    {
+     "detail": "Original Audio [FREE TRIAL]",
+     "height": 1080,
+     "code": 200,
+     "ttfb": 7.826,
+     "total": 7.826,
+     "final": "https://p6.9xbud.com/vidstream/,0nIzxGaiojI0NXZmlmbh1mIsISbvNmLyVWehxGc4ljI6ICdz9Gaf5mc1RXZyJCLlNHbhZmOiQXatlGbfVmepNnIs"
+    }
+   ],
+   "http_probe_ttfb": [
+    0.893,
+    0.64,
+    0.409,
+    8.636,
+    1.18,
+    0.321,
+    0.429,
+    5.953,
+    7.826
+   ]
+  }
+ ]
+}
