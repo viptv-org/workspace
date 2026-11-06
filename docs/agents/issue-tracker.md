@@ -41,49 +41,40 @@ the session's final report. `/triage` turns it into an agent brief.
 
 One issue, one branch, one PR. Unrelated fixes never share a branch.
 
-**Pick up.** Take only open `ready-for-agent` issues that have no open
-blocker and no linked branch:
+**Pick up.** `scripts/agents/frontier.sh` lists what may start: open
+`ready-for-agent` issues, unassigned, with no open blocker and no linked
+branch, written or labelled by a maintainer (`maintainers.txt`). Read the
+issue and its comments before implementation.
 
-```bash
-gh search issues --owner viptv-org --state open --label ready-for-agent
-gh api repos/viptv-org/<repo>/issues/<n> --jq .issue_dependencies_summary.blocked_by   # must be 0
-gh issue develop --list <n> -R viptv-org/<repo>                                     # must be empty
-gh issue view <n> -R viptv-org/<repo> --comments
-```
-
-**Start.** Branch from the issue so GitHub links them, then claim it:
-
-```bash
-gh issue develop <n> -R viptv-org/<repo> --name <kind>/<n>-<slug> --base main --checkout
-gh issue edit <n> -R viptv-org/<repo> --add-assignee @me
-```
-
+**Start.** `scripts/agents/claim.sh <repo> <n> <kind>/<n>-<slug>` creates the
+linked branch and its worktree, assigns the issue and comments the claim.
 `<kind>` is `fix`, `feature`, `chore`, `docs` or `research`, e.g.
-`fix/142-undecodable-autoplay`. Parallel agents each use their own worktree
-(`--worktree ../wt-<repo>-<n>`); never put two issues in one checkout.
+`fix/142-undecodable-autoplay`. One worktree per issue; never put two issues
+in one checkout.
 
 **Work.** `/implement` (with `/tdd`). Commit continuously: after each green
 cycle or logical step, with `Refs #<n>` in each message, and push the branch
 regularly so an interruption never loses work. Run targeted tests while
-iterating, then `/code-review` against `origin/main`, then the repo's full
-checks from `AGENTS.md` **once**, after merging `origin/main`, right before
-the PR. Rerun a known flaky test alone, never the whole suite.
+iterating and `/code-review` against the base branch; the PR's GitHub Actions
+check runs the full suite (`work-brief.md` has the commands and the compile
+gate before pushing).
 
 **Open the PR.** Body from the `/pr` template, last line
-`Closes viptv-org/<repo>#<n>`. Only the PR carries the closing keyword.
+`Closes viptv-org/<repo>#<n>`. Only the PR carries the closing keyword. The
+base is `edge` in `app` and `backend`, `main` elsewhere.
 
 ```bash
 git push -u origin <kind>/<n>-<slug>
-gh pr create --base main --title "<imperative summary>" --body-file /tmp/pr.md
+gh pr create --base <base> --title "<imperative summary>" --body-file /tmp/pr.md
 ```
 
-**Merge.** In `app` and `backend`, PRs target `edge` and merge once their
-GitHub Actions check is green; the batch gate tests `edge` and `scripts/agents/promote.sh` fast-forwards green
-commits to `main`, tags them `good/<YYYY-MM-DD>-<n>` (app) and closes their
-issues. Other repos merge into `main`. Merge with a merge commit; `design` and
-`backend` allow squash only (`--squash`). Only promoted builds reach devices
-and the update feed. Merged is not deployed: deployment needs separate approval
-and the served-hash check in `AGENTS.md`.
+**Merge.** `scripts/agents/merge-pr.sh <repo> <pr>` merges with the repo's
+method once the check is green, and removes the worktree and branches only
+after GitHub confirms the merge. In `app` and `backend` the batch gate tests
+`edge` and `scripts/agents/promote.sh` fast-forwards green commits to `main`,
+tags them `good/<YYYY-MM-DD>-<n>` (app) and closes their issues. Only promoted
+builds reach devices and the update feed. Merged is not deployed: deployment
+needs separate approval and the served-hash check in `AGENTS.md`.
 
 ## When a skill says "publish to the issue tracker"
 
