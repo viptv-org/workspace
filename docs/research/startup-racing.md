@@ -35,8 +35,9 @@ Details under [Recommendation](#recommendation).
 ## What was measured
 
 All times are wall clock on this host, one session, against a throwaway backend bound to
-loopback with a fresh SQLite database and two public add-ons (one torrent indexer, one
-direct-HTTP/HLS provider). No account, profile or provider credential was used.
+loopback with a fresh SQLite database and its own local owner account, and two public
+add-ons: Torrentio for torrents and NoTorrent (community directory, public) for direct
+HTTP/HLS rows. No existing account or profile data and no provider credential were used.
 
 - **Resolve**: `POST /api/streams` to the last provider answer (discovery complete),
   including the engine's parse, release facts and hard filters.
@@ -48,8 +49,9 @@ direct-HTTP/HLS provider). No account, profile or provider credential was used.
 - **First frame**: from `loadfile` to mpv's `playback-restart` event, with mpv idle and
   configured like the desktop client (`cache=yes`, 64 MiB demuxer cache, 10 s readahead,
   `vo=null`, `ao=null`, `hwdec=auto-safe`). Player startup is excluded; mpv is warm.
-- **Single**: the ranked best match only (client default), falling back on failure as the
-  client does (20 s first-frame deadline, 2 s notice, next row).
+- **Single**: the ranked best match only, which is the client's default. Failures are
+  counted per attempt; the shipped fallback's cost is computed from the second row's own
+  measurement (20 s deadline, 2 s notice, next row).
 - **Race**: ranked best match and second best opened together; the first frame wins and
   the other row's player, torrent worker and playback lease are cancelled at that frame.
 - **Bytes**: interface receive counter over the whole trial, so both racers count.
@@ -93,8 +95,8 @@ changes nothing before the start.
 | Race, best match + second | 3.32 s | 7.85 s | 0 of 90 |
 | Ideal race (min of the two singles) | 3.17 s | 6.67 s | — |
 
-Paired per title: race − single median **−0.46 s**, p90 **−3.70 s** (a positive number here
-means racing was faster; quartiles: 0.66 s slower to 2.58 s faster). Racing was ≥1 s faster
+Paired per title, single − race: median **+0.46 s**, p90 **+3.70 s** (positive means racing
+was faster; quartiles: 0.66 s slower to 2.58 s faster). Racing was ≥1 s faster
 on 11 titles and ≥1 s slower on 6. The second row won 11 of 30 races. The measured race was
 within 0.5 s of the ideal min(row 1, row 2) on 17 of 30 titles, and 3 races were more than
 0.5 s slower than both singles (two swarms competing on one host).
@@ -134,7 +136,10 @@ benefit, but the fallback already covers it at 3.3 % of starts.
 ### Direct/HTTP rows (HTTP add-on)
 
 The HTTP rows are HLS delivered by third-party hosts through the add-on's redirect. They
-never entered the ranked top three: 30 of 30 titles ranked Torrentio torrents first.
+never entered the ranked top three: 30 of 30 titles ranked Torrentio torrents first. The
+throwaway backend has no playback gateway, so its `/api/playback` refuses direct delivery
+(`gateway_required`); these rows were played from the add-on's own URL, which is the same
+URL the backend would have handed over.
 
 | | value |
 | --- | ---: |
@@ -206,10 +211,10 @@ and the last two columns the bytes downloaded by the bandwidth-pass single and r
 - **No debrid rows.** With no debrid credential allowed, the "HTTP/debrid" class is a
   public HLS provider. Cached debrid links are the case the numbers do not cover; they
   should behave like the fastest HTTP rows (1.5–4 s) where a race has little to recover.
-- **Measured race is a simulation of the client's race**, not the client: both rows were
-  opened by the harness with the same admission, grant and player calls, and the loser was
-  cancelled at the winner's first frame. It does not include the client's 1.5 s grace
-  window, its ranking-time deduplication or its UI.
+- **The measured race is not the client's race**: both rows were opened by the harness with
+  the same admission, grant and player calls, and the loser was cancelled at the winner's
+  first frame. It does not include the client's 1.5 s grace window, its UI or its own
+  cancellation timing.
 - **20 s first-frame deadline** (the direct-source deadline). A torrent that would have
   framed at 22 s is counted as a failure; the client's torrent runtime has its own
   deadline.
