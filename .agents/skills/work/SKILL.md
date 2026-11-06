@@ -140,7 +140,10 @@ above starts it, or run the repo's `-batch-gate.sh` by hand when you need it
 sooner:
 
 - `app`: `scripts/agents/app-batch-gate.sh` runs the full suite, the web
-  compile and the release APK. `backend`: `scripts/agents/backend-batch-gate.sh`
+  compile and the release APK; a gradle run that fails on a Kotlin incremental
+  cache fault is rerun once with the clone's `build/kotlin` caches deleted, its
+  fault log kept as `<log>-cache-fault.log`. `backend`:
+  `scripts/agents/backend-batch-gate.sh`
   runs the engine sync check, the full suite and the `live-runtime` compile,
   in its own worktree;
 - each run writes its logs to its own `/tmp/viptv-gate-logs/<repo>/<time>-<sha>/`
