@@ -11,6 +11,7 @@ Every active repo has all of them.
 | `needs-info` | waiting on the reporter | do not start |
 | `ready-for-agent` | actionable scope and acceptance criteria | pick up (see `issue-tracker.md`) |
 | `ready-for-human` | needs judgment, authority or device access | do not start |
+| `needs-pitch` | a broad choice the maintainers want to pick from rendered options | render options first (`/pitch`) |
 | `wontfix` | rejected or already implemented | closed as not planned |
 
 Agent readiness requires an actionable scope and acceptance criteria; missing
