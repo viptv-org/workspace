@@ -100,20 +100,15 @@ When a subagent reports:
    merging and show them to the owner when they asked for the change. On a
    gap, send the agent back with the specific fix; batch small nits into a
    follow-up PR instead of holding the merge.
-2. **Merge.** Wait for the PR's GitHub Actions check to go green, then merge;
-   if it goes red, send the failure to the agent. `playback-gateway` has no
-   CI: merge on the agent's full-suite evidence. In `app` and `backend` the
-   PR targets `edge`; elsewhere `main`.
-   If it isn't `MERGEABLE`, have the agent merge its base branch and resolve
-   the conflicts first. Merge with `scripts/agents/merge-pr.sh <repo> <pr>`: it
-   merges with the repo's method and removes the worktree and branches only
-   after GitHub confirms the merge. `gh pr merge <pr> -R viptv-org/<repo> --merge --delete-branch`
-   (`design` and `backend` are squash-only: `--squash`). If the GraphQL merge
-   fails on a large diff, use
-   `gh api -X PUT repos/viptv-org/<repo>/pulls/<pr>/merge -f merge_method=merge -f sha=<head>`.
-3. **Clean up.** `git -C <repo> worktree remove --force <worktree>` and
-   `git -C <repo> branch -D <branch>`.
-4. **Refill.** Back to step 1: the merge may have unblocked issues.
+2. **Merge.** `scripts/agents/merge-pr.sh <repo> <pr>` is the only merge
+   path. It refuses a PR whose checks are not green, merges with the repo's
+   method, and removes the worktree and branches only after GitHub confirms
+   the merge. If the check goes red, send the failure to the agent instead.
+   `playback-gateway` has no CI: merge on the agent's full-suite evidence. In
+   `app` and `backend` the PR targets `edge`; elsewhere `main`. If it isn't
+   `MERGEABLE`, have the agent merge its base branch and resolve the
+   conflicts first.
+3. **Refill.** Back to step 1: the merge may have unblocked issues.
 
 `main` in `app` and `backend` only moves by promotion from a green gate, so it
 always builds. Closing keywords only fire on the default branch: an issue
