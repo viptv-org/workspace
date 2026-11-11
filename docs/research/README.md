@@ -8,3 +8,4 @@ Research is grouped by feature. It records evidence and unresolved questions; th
 - [Source autoplay ("Best match"): when to start, ranking, dub/language, device decode, fallback, per-series memory](source-autoplay.md)
 - [Agent work tracking: GitHub Issues + one org Project, one branch and one PR per fix](agent-issue-workflow.md)
 - [Racing two sources at startup: measured time-to-first-frame, failures, bandwidth and connections](startup-racing.md)
+- [Fast subtitle synchronization: native feasibility, correction protocol and isolated decoder/VAD baseline](subtitle-sync.md)
