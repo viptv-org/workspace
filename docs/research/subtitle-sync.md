@@ -160,4 +160,3 @@ Recorded values and fixture/probe hashes: [machine-baseline.json](subtitle-sync/
 - Which sources provide a proven immutable media/audio identity suitable for persistent reuse? Default to session-only where absent.
 - What held-out speech/music/dubbed/translation corpus and ground-truth methodology are available with redistribution/benchmark rights?
 - Do confidence/coverage targets survive realistic dialogue density and subtitle paraphrasing on low-end hardware? No measured answer yet.
-
