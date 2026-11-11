@@ -1,0 +1,220 @@
+{
+  "measured_at_utc": "2026-11-11",
+  "machine": "Linux x86_64 Intel i5-9500 six physical cores 15300 MiB RAM",
+  "image": "sha256:da680d94f7a2deaca0a33b14d65f7dade7001842b877cecedab238ff8e0a6e11",
+  "decoder_version": "FFmpeg 9.0.2 GCC14 Debian14.2.0-19 GPL enabled",
+  "native_build": "GCC/G++ 12.2.0 -O2 -DNDEBUG -DWEBRTC_POSIX static Linux x86_64",
+  "vad": "WebRTC source e283ca41df3a84b0e87fb1f5cb9b21580a286b09, native mode 2, 16kHz mono s16 20ms",
+  "vad_sha256": "8ed41f14dcc855c99b96222cdaa9fc385a2c618c9a63db445b94b5f7455e4277",
+  "fixture": "owned generated 20s gated 440Hz tone/silence, AAC stereo 48kHz 96kbit/s",
+  "fixture_bytes": 129399,
+  "fixture_sha256": "7abe599781c2aeb4794f95b59ed40d7dfcc8a6da408b048dae3281fe13a2181a",
+  "scope": "decoder/downmix/resample/pipe/native VAD only; no estimator, bindings, player, HTTP/torrent/HLS, or accuracy test",
+  "network": "Docker network none; only owned bind-mounted fixture; no upstream readers",
+  "limits": {
+    "cpu_cores": 1,
+    "memory_bytes": 268435456,
+    "swap_bytes": 0,
+    "pids": 64,
+    "tmpfs_bytes": 33554432,
+    "per_invocation_timeout_seconds": 35
+  },
+  "rows": [
+    {
+      "label": "idle-3s",
+      "exit_code": 0,
+      "outer_wall_seconds": 3.331533030141145,
+      "container_cpu_seconds": 0.002349,
+      "cgroup_charged_memory_peak_bytes": 5189632
+    },
+    {
+      "label": "batch-1",
+      "exit_code": 0,
+      "outer_wall_seconds": 0.24475701013579965,
+      "container_cpu_seconds": 0.049203,
+      "cgroup_charged_memory_peak_bytes": 6754304,
+      "vad": {
+        "frames": 1000,
+        "speech_frames": 41,
+        "media_seconds": 20.0,
+        "wall_seconds": 0.030821,
+        "user_seconds": 0.002395,
+        "system_seconds": 0.001197,
+        "maxrss_kib": 1576
+      },
+      "decoder": {
+        "user_seconds": 0.024,
+        "system_seconds": 0.012,
+        "internal_wall_seconds": 0.016,
+        "maxrss_kib": 16256
+      },
+      "container_cpu_seconds_per_media_second": 0.00246015,
+      "average_container_cpu_percent_one_core": 159.64115375880078
+    },
+    {
+      "label": "batch-2",
+      "exit_code": 0,
+      "outer_wall_seconds": 0.269722614903003,
+      "container_cpu_seconds": 0.055867,
+      "cgroup_charged_memory_peak_bytes": 5603328,
+      "vad": {
+        "frames": 1000,
+        "speech_frames": 41,
+        "media_seconds": 20.0,
+        "wall_seconds": 0.024667,
+        "user_seconds": 0.003222,
+        "system_seconds": 0.000805,
+        "maxrss_kib": 1656
+      },
+      "decoder": {
+        "user_seconds": 0.033,
+        "system_seconds": 0.009,
+        "internal_wall_seconds": 0.017,
+        "maxrss_kib": 16420
+      },
+      "container_cpu_seconds_per_media_second": 0.00279335,
+      "average_container_cpu_percent_one_core": 226.48477723274007
+    },
+    {
+      "label": "batch-3",
+      "exit_code": 0,
+      "outer_wall_seconds": 0.2226115446537733,
+      "container_cpu_seconds": 0.049086,
+      "cgroup_charged_memory_peak_bytes": 5742592,
+      "vad": {
+        "frames": 1000,
+        "speech_frames": 41,
+        "media_seconds": 20.0,
+        "wall_seconds": 0.025367,
+        "user_seconds": 0.002474,
+        "system_seconds": 0.001237,
+        "maxrss_kib": 1652
+      },
+      "decoder": {
+        "user_seconds": 0.032,
+        "system_seconds": 0.005,
+        "internal_wall_seconds": 0.018,
+        "maxrss_kib": 16504
+      },
+      "container_cpu_seconds_per_media_second": 0.0024543,
+      "average_container_cpu_percent_one_core": 193.5033705207553
+    },
+    {
+      "label": "paced-20s",
+      "exit_code": 0,
+      "outer_wall_seconds": 19.796800026204437,
+      "container_cpu_seconds": 0.626919,
+      "cgroup_charged_memory_peak_bytes": 10846208,
+      "vad": {
+        "frames": 1000,
+        "speech_frames": 41,
+        "media_seconds": 20.0,
+        "wall_seconds": 19.500511,
+        "user_seconds": 0.027558,
+        "system_seconds": 0.017875,
+        "maxrss_kib": 1572
+      },
+      "decoder": {
+        "user_seconds": 0.306,
+        "system_seconds": 0.108,
+        "internal_wall_seconds": 19.491,
+        "maxrss_kib": 16472
+      },
+      "container_cpu_seconds_per_media_second": 0.03134595,
+      "average_container_cpu_percent_one_core": 3.2148849842960527
+    }
+  ],
+  "limitations": [
+    "Synthetic tone/silence is not dialogue or alignment evidence.",
+    "No estimator, binding, player, authenticated API, startup/rebuffer, upstream media or mobile energy measurement.",
+    "Separate-process peak RSS does not equal concurrent aggregate PSS. Cgroup charged memory can exclude shared file pages charged elsewhere.",
+    "Batch throughput/CPU per media second is not real-time incremental CPU.",
+    "One short paced run; no p95 or sustained-resource conclusion."
+  ],
+  "constraint_trials": {
+    "deadline_seconds": 35,
+    "same_fixture": true,
+    "same_image": true,
+    "rows": [
+      {
+        "cpu_cap_cores": 0.25,
+        "memory_cap_mib": 128,
+        "exit_code": 0,
+        "timed_out": false,
+        "outer_wall_seconds": 19.94291103305295,
+        "container_cpu_seconds": 0.730405,
+        "throttled_periods": 11,
+        "cpu_periods": 195,
+        "throttled_seconds": 0.864988,
+        "memory_events_after": {
+          "low": 0,
+          "high": 0,
+          "max": 0,
+          "oom": 0,
+          "oom_kill": 0,
+          "oom_group_kill": 0,
+          "sock_throttled": 0
+        },
+        "cgroup_charged_memory_peak_bytes": 10645504,
+        "vad": {
+          "frames": 1000,
+          "speech_frames": 41,
+          "media_seconds": 20.0,
+          "wall_seconds": 19.541428,
+          "user_seconds": 0.025482,
+          "system_seconds": 0.016488,
+          "maxrss_kib": 1552
+        },
+        "decoder": {
+          "user_seconds": 0.261,
+          "system_seconds": 0.135,
+          "internal_wall_seconds": 19.49,
+          "maxrss_kib": 16060
+        },
+        "average_container_cpu_percent_one_core": 3.7377258202420007
+      },
+      {
+        "cpu_cap_cores": 0.1,
+        "memory_cap_mib": 64,
+        "exit_code": 0,
+        "timed_out": false,
+        "outer_wall_seconds": 20.642647945322096,
+        "container_cpu_seconds": 0.746332,
+        "throttled_periods": 38,
+        "cpu_periods": 196,
+        "throttled_seconds": 5.263391,
+        "memory_events_after": {
+          "low": 0,
+          "high": 0,
+          "max": 0,
+          "oom": 0,
+          "oom_kill": 0,
+          "oom_group_kill": 0,
+          "sock_throttled": 0
+        },
+        "cgroup_charged_memory_peak_bytes": 10141696,
+        "vad": {
+          "frames": 1000,
+          "speech_frames": 41,
+          "media_seconds": 20.0,
+          "wall_seconds": 19.69418,
+          "user_seconds": 0.032506,
+          "system_seconds": 0.007801,
+          "maxrss_kib": 1680
+        },
+        "decoder": {
+          "user_seconds": 0.221,
+          "system_seconds": 0.165,
+          "internal_wall_seconds": 19.491,
+          "maxrss_kib": 16520
+        },
+        "average_container_cpu_percent_one_core": 3.789606878783478
+      }
+    ],
+    "limitations": [
+      "Quota caps are not a low-end ARM/mobile device or sustained thermal/battery test.",
+      "Throttled time is a cgroup scheduler aggregate, not measured playback stall time.",
+      "No estimator/alignment/player/startup/rebuffer tests; these results do not establish feature acceptance."
+    ]
+  }
+}
