@@ -6,6 +6,7 @@ import re
 import subprocess
 import time
 import uuid
+from scratch import validate_probe_directory
 
 parser = argparse.ArgumentParser(description='Run short, isolated decoder/VAD baselines. Obtain a shared-host benchmark window first.')
 parser.add_argument('--image', required=True)
@@ -16,9 +17,10 @@ args = parser.parse_args()
 if not re.fullmatch(r'sha256:[0-9a-f]{64}', args.image):
     parser.error('--image must be an already-local immutable image ID')
 IMAGE = args.image
-ROOT = args.directory.resolve()
-if not (ROOT / 'vad-probe').is_file():
-    parser.error('--directory must contain the built vad-probe and be writable by --uid')
+try:
+    ROOT = validate_probe_directory(args.directory, args.uid)
+except (OSError, ValueError) as error:
+    parser.error(str(error))
 if args.constraints_only and not (ROOT / 'owned-synthetic.m4a').is_file():
     parser.error('--constraints-only requires the fixture from a previous baseline')
 docker = ['docker'] if os.geteuid() == 0 else ['sudo', '-n', 'docker']

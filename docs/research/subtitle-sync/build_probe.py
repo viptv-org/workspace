@@ -1,17 +1,22 @@
 from pathlib import Path
 import argparse
+import hashlib
 import io
+import json
+import os
 import subprocess
 import tarfile
 import urllib.request
+from scratch import MARKER, REVISION, claim_empty_directory
 
 parser = argparse.ArgumentParser(description='Build a Linux-only native WebRTC VAD research probe in an owned scratch directory.')
 parser.add_argument('--directory', type=Path, required=True)
 args = parser.parse_args()
-root = args.directory.resolve()
-root.mkdir(parents=True, exist_ok=True)
-revision = 'e283ca41df3a84b0e87fb1f5cb9b21580a286b09'
-archive = urllib.request.urlopen('https://codeload.github.com/wiseman/py-webrtcvad/tar.gz/' + revision, timeout=20).read()
+try:
+    root, marker = claim_empty_directory(args.directory, os.getuid())
+except (OSError, ValueError) as error:
+    parser.error(str(error))
+archive = urllib.request.urlopen('https://codeload.github.com/wiseman/py-webrtcvad/tar.gz/' + REVISION, timeout=20).read()
 with tarfile.open(fileobj=io.BytesIO(archive), mode='r:gz') as tar:
     for entry in tar.getmembers():
         parts = Path(entry.name).parts
@@ -20,8 +25,10 @@ with tarfile.open(fileobj=io.BytesIO(archive), mode='r:gz') as tar:
         if parts[1] == 'LICENSE' or parts[1:3] == ('cbits', 'webrtc'):
             target = root.joinpath(*parts[1:])
             target.parent.mkdir(parents=True, exist_ok=True)
-            target.write_bytes(tar.extractfile(entry).read())
-(root / 'vad_probe.c').write_bytes((Path(__file__).parent / 'vad_probe.c').read_bytes())
+            with target.open('xb') as output:
+                output.write(tar.extractfile(entry).read())
+with (root / 'vad_probe.c').open('xb') as output:
+    output.write((Path(__file__).parent / 'vad_probe.c').read_bytes())
 sources = sorted((root / 'cbits/webrtc/common_audio').rglob('*.c')) + [root / 'vad_probe.c']
 objects = []
 for index, source in enumerate(sources):
@@ -31,3 +38,6 @@ for index, source in enumerate(sources):
 target = root / 'checks.o'
 subprocess.run(['g++', '-O2', '-DNDEBUG', '-DWEBRTC_POSIX', '-I' + str(root / 'cbits'), '-c', str(root / 'cbits/webrtc/rtc_base/checks.cc'), '-o', str(target)], check=True)
 subprocess.run(['g++', '-static', '-o', str(root / 'vad-probe'), *objects, str(target), '-lm', '-pthread'], check=True)
+(root / 'vad-probe').chmod(0o755)
+marker.update(build_complete=True, probe_sha256=hashlib.sha256((root / 'vad-probe').read_bytes()).hexdigest())
+(root / MARKER).write_text(json.dumps(marker) + '\n')
