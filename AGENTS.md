@@ -10,14 +10,16 @@ setup.sh, update.sh, run.sh) are the shared notes and tooling.
 
 | Repo | Owns |
 |---|---|
-| `app` | The only client: Kotlin Compose Multiplatform for Android, Android TV, desktop and web |
+| `app` | Kotlin Compose Multiplatform client for Android, Android TV, desktop and web |
 | `backend` | Rust API, auth, catalog, continuation, image proxy; serves the web app |
 | `core` | Shared Rust engine and its generated wire types; vendored into `backend`, a submodule of `app` |
 | `design` | Product specs, copy and the design system; read it before changing UX |
 | `playback-gateway` | Ingestion, output jobs and viewer leases |
+| `tv-web` | Shared TV client: browser/webOS/Tizen hosts and the native Roku host |
+| `video` | Playback adapters and session controller consumed by `tv-web` through hash-pinned vendored source |
 | `workspace` | This repo: setup, agent tooling, these notes |
 
-`tv-web`, `web`, `desktop`, `video`, `tauri-video-plugin`, `android` and `roku`
+`web`, `desktop`, `tauri-video-plugin`, `android` and `roku`
 are archived clients: don't change them or keep their docs in sync.
 
 ## Checks
